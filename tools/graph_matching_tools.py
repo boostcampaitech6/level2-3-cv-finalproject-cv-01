@@ -189,21 +189,6 @@ def save_plot(ohlc, all_points, back_candles, save_dir: str):
     return
 
 
-# def get_ohlc(df):
-    
-#     df = df.reset_index()
-#     df = df[df['Volume']!=0]
-#     df.reset_index(drop=True, inplace=True)
-#     ohlc         = df.loc[:, ["Date", "Open", "High", "Low", "Close"] ]
-#     # format       = '%d.%m.%Y %H:%M:%S.%f' 
-#     ohlc["Date"] = pd.DatetimeIndex(ohlc["Date"]) 
-#     ohlc["Date"] = ohlc["Date"].map(mpdates.date2num)
-#     ohlc["Pivot"] = 0
-#     ohlc["Pivot"]    = ohlc.apply(lambda x: pivot_id(ohlc, x.name, 3, 3), axis=1)
-#     ohlc['PointPos'] = ohlc.apply(lambda row: pivot_point_position(row), axis=1)
-
-#     return ohlc
-
 def get_ohlc(df):
     df = df.reset_index()
     df = df[df['Volume'] != 0]
