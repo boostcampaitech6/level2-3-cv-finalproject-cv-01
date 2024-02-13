@@ -23,6 +23,7 @@ def plot_candlestick_chart(data, company_name):
     return fig
 
 
+
 # 주식 데이터를 가져오는 함수
 def get_stock_data(ticker, period, interval):
     stock = yf.Ticker(ticker)
