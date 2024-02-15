@@ -2,6 +2,14 @@ import yfinance as yf
 import streamlit as st
 import plotly.graph_objs as go
 from datetime import datetime, timedelta
+import sys
+sys.path.append('../candle_matching') # 상위 폴더로 이동 후 candle_matching 폴더를 path에 추가
+import find_candle_patterns
+# import pattern_descriptions
+from pattern_descriptions import descriptions
+
+
+
 
 # 애플리케이션 메인 타이틀 및 사이드바 설정
 st.title('Stock Price Prediction')
@@ -110,4 +118,67 @@ else:
 # 차트 레이아웃 및 Streamlit에 차트 표시 부분은 동일하게 유지
 
 # Streamlit에 차트 표시
+st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+# pattern matching 시각화
+
+with st.sidebar:
+    show_patterns = st.checkbox('Show Candlestick Patterns', True)
+
+if data.columns[0] == 'Date':
+    interval = '1D'
+
+elif data.columns[0] == 'Datetime':
+    interval = '1H'
+
+stock = find_candle_patterns.cleanPx(data, interval)
+stock.reset_index(inplace=False)
+stock_patterns = find_candle_patterns.detect_candle_patterns(stock)
+
+OUTPUT_FOLDER = '/data/ephemeral/home/Final_Project/level2-3-cv-finalproject-cv-01/candle_matching/output/'
+# stock_patterns.to_csv(OUTPUT_FOLDER + 'test.csv', index=False)
+
+
+fig = go.Figure(data=[go.Candlestick(
+    x=stock_patterns['Date'],
+    open=stock_patterns['Open'],
+    high=stock_patterns['High'],
+    low=stock_patterns['Low'],
+    close=stock_patterns['Close'],
+    name='Candlesticks'
+)])
+
+
+if show_patterns:
+    for i, row in stock_patterns.iterrows():
+
+        if row['candlestick_match_count'] > 0:
+
+            pattern_name = row['candlestick_pattern']
+            description = descriptions.get(pattern_name, "No description available.").replace('\n', '<br>')
+        
+            fig.add_annotation(
+                x=row['Date'], 
+                y=row['High'], 
+                text=row['candlestick_pattern'],
+                hovertext=description,
+                showarrow=True,
+                arrowhead=1,
+                ax=0,
+                ay=-40,
+                align='left', 
+            )
+
+
+fig.update_layout(
+    title='Candlestick Pattern Match',
+    yaxis_title='Price (KRW)',
+    xaxis_title='Date',
+    xaxis_rangeslider_visible=False,
+)
+
+
 st.plotly_chart(fig, use_container_width=True)
