@@ -4,6 +4,7 @@ import yfinance as yf
 import plotly.graph_objs as go
 import sys
 sys.path.append('../candle_matching') # 상위 폴더로 이동 후 candle_matching 폴더를 path에 추가
+print(sys.path)
 import find_candle_patterns
 from pattern_descriptions import descriptions
 
@@ -111,62 +112,18 @@ def app():
     st.plotly_chart(fig, use_container_width=True)
 
 
-    # pattern matching 시각화
-
+    # candle matching 시각화
     with st.sidebar:
         show_patterns = st.checkbox('Show Candlestick Patterns', True)
 
-    # if data.columns[0] == 'Date':
-    #     interval = '1D'
-
-    # elif data.columns[0] == 'Datetime':
-    #     interval = '1H'
-
-    stock = find_candle_patterns.cleanPx(data, interval)
-    stock.reset_index(inplace=False)
-    stock_patterns = find_candle_patterns.detect_candle_patterns(stock)
-
-    OUTPUT_FOLDER = '/data/ephemeral/home/Final_Project/level2-3-cv-finalproject-cv-01/candle_matching/output/'
-    # stock_patterns.to_csv(OUTPUT_FOLDER + 'test.csv', index=False)
-
-
-    fig = go.Figure(data=[go.Candlestick(
-        x=stock_patterns['Date'],
-        open=stock_patterns['Open'],
-        high=stock_patterns['High'],
-        low=stock_patterns['Low'],
-        close=stock_patterns['Close'],
-        name='Candlesticks'
-    )])
-
-
-    if show_patterns:
-        for i, row in stock_patterns.iterrows():
-
-            if row['candlestick_match_count'] > 0:
-
-                pattern_name = row['candlestick_pattern']
-                description = descriptions.get(pattern_name, "No description available.").replace('\n', '<br>')
-            
-                fig.add_annotation(
-                    x=row['Date'], 
-                    y=row['High'], 
-                    text=row['candlestick_pattern'],
-                    hovertext=description,
-                    showarrow=True,
-                    arrowhead=1,
-                    ax=0,
-                    ay=-40,
-                    align='left', 
-                )
-
-
-    fig.update_layout(
-        title='Candlestick Pattern Match',
-        yaxis_title='Price (KRW)',
-        xaxis_title='Date',
-        xaxis_rangeslider_visible=False,
-    )
-
-
+    fig = find_candle_patterns.visualize_candle_matching(data, period, interval, show_patterns)
     st.plotly_chart(fig, use_container_width=True)
+
+
+    # Non-DL model matching 시각화
+        
+    # DL model matching 시각화
+
+    # Image-based CNN model matching 시각화
+        
+    

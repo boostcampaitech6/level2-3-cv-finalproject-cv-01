@@ -5,6 +5,10 @@ import pytz
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import requests
+from bs4 import BeautifulSoup
+
+
 
 
 def korea_stock_tree():
