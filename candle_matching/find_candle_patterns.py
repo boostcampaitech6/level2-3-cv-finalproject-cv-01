@@ -31,7 +31,6 @@ plt.rcParams.update({'figure.figsize':(15,7), 'figure.dpi':120})
 
 def cleanPx(stock, freq='1H'):
 
-
     if freq == '1wk':
         freq = 'W'
 
@@ -60,7 +59,6 @@ def cleanPx(stock, freq='1H'):
         stock_vol = stock_vol.resample(freq).sum()
 
         stock = pd.concat([stock_ohlc, stock_vol], axis=1)
-        # stock.index = stock.index.tz_localize('UTC').tz_convert('Asia/Seoul')
 
         return stock.dropna()
 
@@ -81,7 +79,6 @@ def cleanPx(stock, freq='1H'):
         stock_vol = stock_vol.resample(freq).sum()
 
         stock = pd.concat([stock_ohlc, stock_vol], axis=1)
-        # stock.index = stock.index.tz_localize('UTC').tz_convert('Asia/Seoul')
 
         return stock.dropna()
 
@@ -265,36 +262,50 @@ def detect_candle_patterns(period, interval, stock):
     return stock, found_pattern_nums
 
 
-def visualize_candle_matching(data, period, interval, show_patterns):
+def visualize_candle_matching(data, period, interval, tickvals, ticktext, show_bull_patterns, show_bear_patterns, show_recent_candles):
 
     stock = cleanPx(data, interval)
-
-
     stock.reset_index(inplace=False)
+    
+    if show_recent_candles:
+        stock = stock.tail(20)
+    
     stock_patterns, found_pattern_nums = detect_candle_patterns(period, interval, stock)
 
-    if show_patterns:
+    
+    if found_pattern_nums > 0:
 
-        if found_pattern_nums > 0:
+        if interval in ['1m', '2m', '5m', '15m', '30m', '60m', '90m']:
 
-            for i, row in stock_patterns.iterrows():
+                    fig = go.Figure(data=[go.Candlestick(
+                    x=stock_patterns['Datetime'],
+                    open=stock_patterns['Open'],
+                    high=stock_patterns['High'],
+                    low=stock_patterns['Low'],
+                    close=stock_patterns['Close'],
+                    name='Candlesticks'
+                    )])
 
-                if row['candlestick_match_count'] > 0:
+        else:
+            fig = go.Figure(data=[go.Candlestick(
+                x=stock_patterns['Date'],
+                open=stock_patterns['Open'],
+                high=stock_patterns['High'],
+                low=stock_patterns['Low'],
+                close=stock_patterns['Close'],
+                name='Candlesticks'
+            )])
+        
+        
+        for i, row in stock_patterns.iterrows():
 
-                    pattern_name = row['candlestick_pattern']
-                    description = descriptions.get(pattern_name, "No description available.").replace('\n', '<br>')
-                
-                    if interval in ['1m', '2m', '5m', '15m', '30m', '60m', '90m']:
+            if row['candlestick_match_count'] > 0:
 
-                        fig = go.Figure(data=[go.Candlestick(
-                        x=stock_patterns['Datetime'],
-                        open=stock_patterns['Open'],
-                        high=stock_patterns['High'],
-                        low=stock_patterns['Low'],
-                        close=stock_patterns['Close'],
-                        name='Candlesticks'
-                        )])
-
+                pattern_name = row['candlestick_pattern']
+                description = descriptions.get(pattern_name, "No description available.").replace('\n', '<br>')
+            
+                if interval in ['1m', '2m', '5m', '15m', '30m', '60m', '90m']:
+                    if ('Bull' in pattern_name and show_bull_patterns) or ('Bear' in pattern_name and show_bear_patterns):                        
                         fig.add_annotation(
                         x=row['Datetime'], 
                         y=row['High'], 
@@ -316,32 +327,24 @@ def visualize_candle_matching(data, period, interval, show_patterns):
                         )
 
 
-                        # if period == '1d':
-                        #     fig.update_xaxes(
-                        #         tickmode='array',
-                        #         tickvals=tickvals,
-                        #         ticktext=ticktext,
-                        #         type='category'
-                        #     )
+                        if period == '1d':
+                            fig.update_xaxes(
+                                tickmode='array',
+                                tickvals=tickvals,
+                                ticktext=ticktext,
+                                type='category'
+                            )
 
-                        # else:
-                        #     fig.update_xaxes(
-                        #     tickmode='array',
-                        #     tickvals=tickvals,
-                        #     ticktext=ticktext,
-                        #     type='category'
-                        # )
+                        else:
+                            fig.update_xaxes(
+                            tickmode='array',
+                            tickvals=tickvals,
+                            ticktext=ticktext,
+                            type='category'
+                        )
 
-                    else:
-                        fig = go.Figure(data=[go.Candlestick(
-                            x=stock_patterns['Date'],
-                            open=stock_patterns['Open'],
-                            high=stock_patterns['High'],
-                            low=stock_patterns['Low'],
-                            close=stock_patterns['Close'],
-                            name='Candlesticks'
-                        )])
-
+                else:
+                    if ('Bull' in pattern_name and show_bull_patterns) or ('Bear' in pattern_name and show_bear_patterns):                        
                         fig.add_annotation(
                         x=row['Date'], 
                         y=row['High'], 
@@ -360,29 +363,31 @@ def visualize_candle_matching(data, period, interval, show_patterns):
                         xaxis_title='Date',
                         xaxis_rangeslider_visible=False,
                         xaxis_type='category'
-                       )
-                    # fig.update_xaxes(
-                    #     tickmode='array',
-                    #     tickvals=tickvals,
-                    #     ticktext=ticktext,
-                    #     type='category'
-                    # )
+                        )
+                fig.update_xaxes(
+                    tickmode='array',
+                    tickvals=tickvals,
+                    ticktext=ticktext,
+                    type='category'
+                )
 
-        # 캔들스틱 패턴이 없는 경우
-        else:
-            fig.update_layout(
-                        title='Candlestick Pattern Match')
-            fig.add_annotation(
-                x=0.5,  # x position (0.5 for the middle of the plot)
-                y=0.5,  # y position (0.5 for the middle of the plot)
-                xref="paper",  # refers to the whole x axis (paper position)
-                yref="paper",  # refers to the whole y axis (paper position)
-                text="No candlestick patterns found in the selected period",  # the text to display
-                showarrow=False,  # no arrow for this annotation
-                font=dict(size=20)  # font size of the text
-            )
 
-    return fig
+
+    # 캔들스틱 패턴이 없는 경우
+    else:
+        fig.update_layout(
+                    title='Candlestick Pattern Match')
+        fig.add_annotation(
+            x=0.5,  # x position (0.5 for the middle of the plot)
+            y=0.5,  # y position (0.5 for the middle of the plot)
+            xref="paper",  # refers to the whole x axis (paper position)
+            yref="paper",  # refers to the whole y axis (paper position)
+            text="No candlestick patterns found in the selected period",  # the text to display
+            showarrow=False,  # no arrow for this annotation
+            font=dict(size=20)  # font size of the text
+        )
+
+    return fig, stock_patterns
 
 
 

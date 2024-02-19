@@ -3,9 +3,17 @@ import streamlit as st
 import yfinance as yf
 import plotly.graph_objs as go
 import sys
+import time
+import base64
+from io import BytesIO
+# 상위 폴더로 이동 후 candle_matching 폴더를 path에 추가
+sys.path.append('../candle_matching') 
+import find_candle_patterns, get_candle_info_wiki
+from pattern_descriptions import descriptions
 
 def app():
-    st.title('Stock Price Prediction')
+    
+    st.title('Candle Matching')
     with st.sidebar:
         st.header('User Input Features')
 
@@ -25,10 +33,11 @@ def app():
         default_company_index = company_list.index('Naver')
         company = st.selectbox('Choose a stock', company_list, index=default_company_index)
 
-
         # 기간 선택
-        period = st.selectbox('Select period', options=[
-            '1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y'])
+        period_options = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y']
+        default_period_index = period_options.index('1mo')
+        period = st.selectbox('Select period', options=period_options, index=default_period_index)
+
 
         # 기간에 따른 간격 선택
         interval_options = {
@@ -43,7 +52,9 @@ def app():
             '10y': ['1d', '5d', '1wk', '1mo']
         }
         valid_intervals = interval_options[period]
-        interval = st.selectbox('Select interval', options=valid_intervals)
+        default_interval_index = valid_intervals.index('1d')
+        interval = st.selectbox('Select interval', options=valid_intervals, index=default_interval_index)
+        # interval = st.selectbox('Select interval', options=valid_intervals)
 
     ticker = company_options[company]
 
@@ -69,7 +80,7 @@ def app():
 
     # 차트 레이아웃 설정
     fig.update_layout(
-        title=f'{company} Stock Price',
+        title=f'{company} Stock Price of {period} period with {interval} interval',
         yaxis_title='Price (KRW)',
         xaxis_title='Date',
         xaxis_rangeslider_visible=False
@@ -115,11 +126,49 @@ def app():
 
     st.plotly_chart(fig, use_container_width=True)
 
+    # 캔들스틱 차트 데이터 다운로드
+    csv = data.to_csv(index=False).encode('utf-8')
+    st.download_button(
+        label="Download as CSV",
+        data=csv,
+        file_name=f'{company}_{period}_{interval}_stockdata.csv',
+        mime='text/csv',
+    )
 
-    # Non-DL model matching 시각화
-        
-    # DL model matching 시각화
 
-    # Image-based CNN model matching 시각화
-        
+    # candle matching 시각화
+
+    with st.spinner('Matching Candle Patterns...'):
+        # progress_bar = st.progress(0)
+        progress_placeholder = st.empty()
+        progress_bar = progress_placeholder.progress(0)
+        for i in range(100):
+            # Update progress bar
+            progress_bar.progress(i + 1)
+            time.sleep(0.01)  # Sleep for 50 milliseconds
+
+    show_bull_patterns = st.checkbox('Show Bull Patterns', True)
+    show_bear_patterns = st.checkbox('Show Bear Patterns', True)
+    show_recent_candles = st.checkbox('Show Recent 20 Candles', True)
+    
+    fig_candle_patterns, stock_patterns_result = find_candle_patterns.visualize_candle_matching(data, period, interval, tickvals, ticktext, show_bull_patterns, show_bear_patterns, show_recent_candles)
+
+    progress_placeholder.empty()
+    with st.spinner('Drawing plot...'):
+
+        for i in range(100):
+            # Update progress bar
+            time.sleep(0.015)  # Sleep for 50 milliseconds
+
+    st.plotly_chart(fig_candle_patterns, use_container_width=True)
+
+
+    # 캔들스틱 차트 데이터 다운로드
+    csv_candle_result = stock_patterns_result.to_csv(index=False).encode('utf-8')
+    st.download_button(
+        label="Download candle matching result as CSV",
+        data=csv_candle_result,
+        file_name=f'{company}_{period}_{interval}_candle_matching_result.csv',
+        mime='text/csv',
+    )
     
