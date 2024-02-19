@@ -50,35 +50,11 @@ def get_today_date():
     return today
 
 def update_and_save_korea_df():
-    # 오늘 날짜를 'YYYYMMDD' 포맷으로 가져오는 함수
-# 한국 주식 시장의 상위 20개 회사의 정보를 수집하는 함수
-    today_date = get_today_date()
-    korea_df_info = stock.get_market_cap_by_ticker(today_date)
-    top_companies = korea_df_info.head(20)
 
-    # 등락률 정보를 담을 DataFrame 생성
-    korea_df = pd.DataFrame()
-
-    # 상위 20개 회사의 등락률 정보 가져오기
-    for ticker in top_companies.index:
-        company_name = stock.get_market_ticker_name(ticker)  # 티커를 회사명으로 변환
-        ohlcv = stock.get_market_ohlcv_by_date(fromdate=today_date, todate=today_date, ticker=ticker)
-        if not ohlcv.empty:
-            fluctuation_rate = ((ohlcv['종가'] - ohlcv['시가']) / ohlcv['시가'] * 100).iloc[0]
-        else:
-            fluctuation_rate = None  # 또는 다른 플레이스홀더 값, 예를 들어 0 또는 np.nan
-        temp_df = pd.DataFrame({
-            '회사명': [company_name],
-            '티커' : [ticker],
-            '시가총액': [top_companies.loc[ticker, '시가총액']],
-            '등락률': [fluctuation_rate],
-            '시가': [ohlcv['시가'].iloc[0]],
-            '종가': [ohlcv['종가'].iloc[0]],
-            '거래량': [ohlcv['거래량'].iloc[0]]
-        })
-        korea_df = pd.concat([korea_df, temp_df], ignore_index=True)
-
-    korea_df['시가총액'] = korea_df['시가총액']/1e8
+    korea_df = fdr.StockListing('KOSPI')
+    korea_df = korea_df.head(20)
+    korea_df['Code'] = korea_df['Code'].apply(lambda x: x + '.KS')
+    korea_df['ChagesRatio'] = korea_df['ChagesRatio']/1e8
 
     korea_df.to_csv('stock_df/korea_stocks.csv', index=False)
     print("korea_df updated")

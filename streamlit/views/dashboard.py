@@ -1,6 +1,4 @@
 # pages/home.py
-import requests
-from bs4 import BeautifulSoup
 import streamlit as st
 from datetime import datetime
 import pytz
@@ -8,14 +6,16 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
+
 def korea_stock_tree():
     korea_df = pd.read_csv('views/stock_df/korea_stocks.csv')
     # 등락률에 따라 색상을 할당하기 위한 색상 범위 설정
     color_group = [-np.inf, -3, -0.01, 0, 0.01, 3, np.inf]
-    korea_df['colors'] = pd.cut(korea_df['등락률'], bins=color_group, labels=['red', 'indianred', 'gray', 'lightgreen', 'lime', 'green'])
+
+    korea_df['colors'] = pd.cut(korea_df['ChagesRatio'], bins=color_group, labels=['red', 'indianred', 'gray', 'lightgreen', 'lime', 'green'])
 
     # 트리맵 생성
-    fig = px.treemap(korea_df, path=[px.Constant("전체"), '회사명'], values='시가총액', color='colors', height=700,
+    fig = px.treemap(korea_df, path=[px.Constant("all"), 'Name'], values='Marcap', color='colors', height=700,
                     color_discrete_map = {
                             '(?)': '#262931',
                             'red': 'rgba(255, 0, 0, 0.8)',  # 80% 불투명도의 빨간색
@@ -25,8 +25,9 @@ def korea_stock_tree():
                             'lime': 'rgba(0, 255, 0, 0.9)',
                             'green': 'rgba(0, 128, 0, 0.9)'
                         },
-                    hover_data={'등락률': ':.2f'},
-                    custom_data=['등락률', '시가총액'])
+
+                    hover_data={'ChagesRatio': ':.2f'},
+                    custom_data=['ChagesRatio', 'Marcap'])
 
     # 트리맵의 호버 템플릿과 텍스트 템플릿 업데이트
     fig.update_traces(
@@ -139,7 +140,7 @@ def app():
     elif market_choice == 'USA':
         st.subheader("USA Market Heatmap")
         st.plotly_chart(usa_stock_map, use_container_width=True)
- 
+
     news_items = get_news()
 
     st.subheader('News')
@@ -182,3 +183,4 @@ def app():
                 </div>
             </a>
         """, unsafe_allow_html=True)
+
