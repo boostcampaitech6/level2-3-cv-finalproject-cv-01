@@ -19,7 +19,10 @@ from matplotlib.dates import DateFormatter
 from matplotlib.dates import MonthLocator
 import talib
 import yfinance as yf
+import streamlit as st
+import plotly.graph_objs as go
 from candle_rankings import candle_rankings
+from pattern_descriptions import descriptions
 import seaborn as sns
 sns.set()
 
@@ -27,6 +30,17 @@ plt.rcParams.update({'figure.figsize':(15,7), 'figure.dpi':120})
 
 
 def cleanPx(stock, freq='1H'):
+
+
+    if freq == '1wk':
+        freq = 'W'
+
+    elif freq == '1mo':
+        freq = 'M'
+
+    else:
+        freq = 'min'
+
 
     stock = stock.reset_index().rename(columns={'Datetime': 'Date'})
 
@@ -95,81 +109,283 @@ def cleanPx(stock, freq='1H'):
     else:
         print('case_4', 'No matching columns')
 
-def detect_candle_patterns(stock):
+def detect_candle_patterns(period, interval, stock):
 
     stock.reset_index(inplace=True)
-    stock.columns = ['Date', 'Open', 'High', 'Low', 'Close', 'Volume']
-    stock.set_index('Date', inplace=True)
 
-    candle_names = talib.get_function_groups()['Pattern Recognition']
-    removed = ['CDLCOUNTERATTACK', 'CDLLONGLINE', 'CDLSHORTLINE', 
-            'CDLSTALLEDPATTERN', 'CDLKICKINGBYLENGTH']
-    candle_names = [name for name in candle_names if name not in removed]
+    if interval in  ['1d', '5d', '1wk', '1mo'] :
 
-    stock.reset_index(inplace=True)
-    stock = stock[['Date', 'Open', 'High', 'Low', 'Close']]
-    stock.columns = ['Date', 'Open', 'High', 'Low', 'Close']
+        stock.columns = ['Date', 'Open', 'High', 'Low', 'Close', 'Volume']
+        stock.set_index('Date', inplace=True)
 
-    # extract OHLC 
-    op = stock['Open']
-    hi = stock['High']
-    lo = stock['Low']
-    cl = stock['Close']
+        candle_names = talib.get_function_groups()['Pattern Recognition']
+        removed = ['CDLCOUNTERATTACK', 'CDLLONGLINE', 'CDLSHORTLINE', 
+                'CDLSTALLEDPATTERN', 'CDLKICKINGBYLENGTH']
+        candle_names = [name for name in candle_names if name not in removed]
 
-    # create columns for each pattern
-    for candle in candle_names:
-        # below is same as;
-        # df["CDL3LINESTRIKE"] = talib.CDL3LINESTRIKE(op, hi, lo, cl)
-        stock[candle] = getattr(talib, candle)(op, hi, lo, cl)
+        stock.reset_index(inplace=True)
+        stock = stock[['Date', 'Open', 'High', 'Low', 'Close']]
+        stock.columns = ['Date', 'Open', 'High', 'Low', 'Close']
 
-    stock['candlestick_pattern'] = np.nan
-    stock['candlestick_match_count'] = np.nan
+        # extract OHLC 
+        op = stock['Open']
+        hi = stock['High']
+        lo = stock['Low']
+        cl = stock['Close']
+
+        # create columns for each pattern
+        for candle in candle_names:
+            # below is same as;
+            # df["CDL3LINESTRIKE"] = talib.CDL3LINESTRIKE(op, hi, lo, cl)
+            stock[candle] = getattr(talib, candle)(op, hi, lo, cl)
+
+        stock['candlestick_pattern'] = np.nan
+        stock['candlestick_match_count'] = np.nan
 
 
-    for index, row in stock.iterrows():
+        for index, row in stock.iterrows():
 
-        # no pattern found
-        if len(row[candle_names]) - sum(row[candle_names] == 0) == 0:
-            stock.loc[index,'candlestick_pattern'] = "NO_PATTERN"
-            stock.loc[index, 'candlestick_match_count'] = 0
-        # single pattern found
-        elif len(row[candle_names]) - sum(row[candle_names] == 0) == 1:
-            # bull pattern 100 or 200
-            if any(row[candle_names].values > 0):
-                pattern = list(compress(row[candle_names].keys(), row[candle_names].values != 0))[0] + '_Bull'
-                stock.loc[index, 'candlestick_pattern'] = pattern
-                stock.loc[index, 'candlestick_match_count'] = 1
-            # bear pattern -100 or -200
-            else:
-                pattern = list(compress(row[candle_names].keys(), row[candle_names].values != 0))[0] + '_Bear'
-                stock.loc[index, 'candlestick_pattern'] = pattern
-                stock.loc[index, 'candlestick_match_count'] = 1
-        # multiple patterns matched -- select best performance
-        else:
-            # filter out pattern names from bool list of values
-            patterns = list(compress(row[candle_names].keys(), row[candle_names].values != 0))
-            container = []
-            for pattern in patterns:
-                if row[pattern] > 0:
-                    container.append(pattern + '_Bull')
+            # no pattern found
+            if len(row[candle_names]) - sum(row[candle_names] == 0) == 0:
+                stock.loc[index,'candlestick_pattern'] = "NO_PATTERN"
+                stock.loc[index, 'candlestick_match_count'] = 0
+            # single pattern found
+            elif len(row[candle_names]) - sum(row[candle_names] == 0) == 1:
+                # bull pattern 100 or 200
+                if any(row[candle_names].values > 0):
+                    pattern = list(compress(row[candle_names].keys(), row[candle_names].values != 0))[0] + '_Bull'
+                    stock.loc[index, 'candlestick_pattern'] = pattern
+                    stock.loc[index, 'candlestick_match_count'] = 1
+                # bear pattern -100 or -200
                 else:
-                    container.append(pattern + '_Bear')
-            rank_list = [candle_rankings[p] for p in container]
-            if len(rank_list) == len(container):
-                rank_index_best = rank_list.index(min(rank_list))
-                stock.loc[index, 'candlestick_pattern'] = container[rank_index_best]
-                stock.loc[index, 'candlestick_match_count'] = len(container)
+                    pattern = list(compress(row[candle_names].keys(), row[candle_names].values != 0))[0] + '_Bear'
+                    stock.loc[index, 'candlestick_pattern'] = pattern
+                    stock.loc[index, 'candlestick_match_count'] = 1
+            # multiple patterns matched -- select best performance
+            else:
+                # filter out pattern names from bool list of values
+                patterns = list(compress(row[candle_names].keys(), row[candle_names].values != 0))
+                container = []
+                for pattern in patterns:
+                    if row[pattern] > 0:
+                        container.append(pattern + '_Bull')
+                    else:
+                        container.append(pattern + '_Bear')
+                rank_list = [candle_rankings[p] for p in container]
+                if len(rank_list) == len(container):
+                    rank_index_best = rank_list.index(min(rank_list))
+                    stock.loc[index, 'candlestick_pattern'] = container[rank_index_best]
+                    stock.loc[index, 'candlestick_match_count'] = len(container)
 
-        # clean up candle columns
-    try:
-        stock.drop(candle_names, axis = 1, inplace = True)
-    except:
-        pass
+            # clean up candle columns
+        try:
+            stock.drop(candle_names, axis = 1, inplace = True)
+        except:
+            pass
 
-    stock.loc[stock.candlestick_pattern == 'NO_PATTERN', 'candlestick_pattern'] = ''
-    stock.candlestick_pattern = stock.candlestick_pattern.apply(lambda x: x[3:])
+        stock.loc[stock.candlestick_pattern == 'NO_PATTERN', 'candlestick_pattern'] = ''
+        stock.candlestick_pattern = stock.candlestick_pattern.apply(lambda x: x[3:])
 
-    return stock
+
+    elif interval in ['1m', '2m', '5m', '15m', '30m', '60m', '90m']:
+
+        stock.columns = ['Datetime', 'Open', 'High', 'Low', 'Close', 'Volume']
+        stock.set_index('Datetime', inplace=True)
+
+        candle_names = talib.get_function_groups()['Pattern Recognition']
+        removed = ['CDLCOUNTERATTACK', 'CDLLONGLINE', 'CDLSHORTLINE', 
+                'CDLSTALLEDPATTERN', 'CDLKICKINGBYLENGTH']
+        candle_names = [name for name in candle_names if name not in removed]
+
+        stock.reset_index(inplace=True)
+        stock = stock[['Datetime', 'Open', 'High', 'Low', 'Close']]
+        stock.columns = ['Datetime', 'Open', 'High', 'Low', 'Close']
+
+        # extract OHLC 
+        op = stock['Open']
+        hi = stock['High']
+        lo = stock['Low']
+        cl = stock['Close']
+
+        # create columns for each pattern
+        for candle in candle_names:
+            # below is same as;
+            # df["CDL3LINESTRIKE"] = talib.CDL3LINESTRIKE(op, hi, lo, cl)
+            stock[candle] = getattr(talib, candle)(op, hi, lo, cl)
+
+        stock['candlestick_pattern'] = np.nan
+        stock['candlestick_match_count'] = np.nan
+
+
+        for index, row in stock.iterrows():
+
+            # no pattern found
+            if len(row[candle_names]) - sum(row[candle_names] == 0) == 0:
+                stock.loc[index,'candlestick_pattern'] = "NO_PATTERN"
+                stock.loc[index, 'candlestick_match_count'] = 0
+            # single pattern found
+            elif len(row[candle_names]) - sum(row[candle_names] == 0) == 1:
+                # bull pattern 100 or 200
+                if any(row[candle_names].values > 0):
+                    pattern = list(compress(row[candle_names].keys(), row[candle_names].values != 0))[0] + '_Bull'
+                    stock.loc[index, 'candlestick_pattern'] = pattern
+                    stock.loc[index, 'candlestick_match_count'] = 1
+                # bear pattern -100 or -200
+                else:
+                    pattern = list(compress(row[candle_names].keys(), row[candle_names].values != 0))[0] + '_Bear'
+                    stock.loc[index, 'candlestick_pattern'] = pattern
+                    stock.loc[index, 'candlestick_match_count'] = 1
+            # multiple patterns matched -- select best performance
+            else:
+                # filter out pattern names from bool list of values
+                patterns = list(compress(row[candle_names].keys(), row[candle_names].values != 0))
+                container = []
+                for pattern in patterns:
+                    if row[pattern] > 0:
+                        container.append(pattern + '_Bull')
+                    else:
+                        container.append(pattern + '_Bear')
+                rank_list = [candle_rankings[p] for p in container]
+                if len(rank_list) == len(container):
+                    rank_index_best = rank_list.index(min(rank_list))
+                    stock.loc[index, 'candlestick_pattern'] = container[rank_index_best]
+                    stock.loc[index, 'candlestick_match_count'] = len(container)
+
+            # clean up candle columns
+        try:
+            stock.drop(candle_names, axis = 1, inplace = True)
+        except:
+            pass
+
+        stock.loc[stock.candlestick_pattern == 'NO_PATTERN', 'candlestick_pattern'] = ''
+        stock.candlestick_pattern = stock.candlestick_pattern.apply(lambda x: x[3:])
+
+    found_pattern_nums = int(len(stock.candlestick_pattern)) - int((stock.candlestick_pattern == "").sum())
+
+    return stock, found_pattern_nums
+
+
+def visualize_candle_matching(data, period, interval, show_patterns):
+
+    stock = cleanPx(data, interval)
+
+
+    stock.reset_index(inplace=False)
+    stock_patterns, found_pattern_nums = detect_candle_patterns(period, interval, stock)
+
+    if show_patterns:
+
+        if found_pattern_nums > 0:
+
+            for i, row in stock_patterns.iterrows():
+
+                if row['candlestick_match_count'] > 0:
+
+                    pattern_name = row['candlestick_pattern']
+                    description = descriptions.get(pattern_name, "No description available.").replace('\n', '<br>')
+                
+                    if interval in ['1m', '2m', '5m', '15m', '30m', '60m', '90m']:
+
+                        fig = go.Figure(data=[go.Candlestick(
+                        x=stock_patterns['Datetime'],
+                        open=stock_patterns['Open'],
+                        high=stock_patterns['High'],
+                        low=stock_patterns['Low'],
+                        close=stock_patterns['Close'],
+                        name='Candlesticks'
+                        )])
+
+                        fig.add_annotation(
+                        x=row['Datetime'], 
+                        y=row['High'], 
+                        text=row['candlestick_pattern'],
+                        hovertext=description,
+                        showarrow=True,
+                        arrowhead=1,
+                        ax=0,
+                        ay=-40,
+                        align='left', 
+                        )
+
+                        fig.update_layout(
+                        title='Candlestick Pattern Match',
+                        yaxis_title='Price (KRW)',
+                        xaxis_title='Datetime',
+                        xaxis_rangeslider_visible=False,
+                        xaxis_type='category'
+                        )
+
+
+                        # if period == '1d':
+                        #     fig.update_xaxes(
+                        #         tickmode='array',
+                        #         tickvals=tickvals,
+                        #         ticktext=ticktext,
+                        #         type='category'
+                        #     )
+
+                        # else:
+                        #     fig.update_xaxes(
+                        #     tickmode='array',
+                        #     tickvals=tickvals,
+                        #     ticktext=ticktext,
+                        #     type='category'
+                        # )
+
+                    else:
+                        fig = go.Figure(data=[go.Candlestick(
+                            x=stock_patterns['Date'],
+                            open=stock_patterns['Open'],
+                            high=stock_patterns['High'],
+                            low=stock_patterns['Low'],
+                            close=stock_patterns['Close'],
+                            name='Candlesticks'
+                        )])
+
+                        fig.add_annotation(
+                        x=row['Date'], 
+                        y=row['High'], 
+                        text=row['candlestick_pattern'],
+                        hovertext=description,
+                        showarrow=True,
+                        arrowhead=1,
+                        ax=0,
+                        ay=-40,
+                        align='left', 
+                        )
+
+                        fig.update_layout(
+                        title='Candlestick Pattern Match',
+                        yaxis_title='Price (KRW)',
+                        xaxis_title='Date',
+                        xaxis_rangeslider_visible=False,
+                        xaxis_type='category'
+                       )
+                    # fig.update_xaxes(
+                    #     tickmode='array',
+                    #     tickvals=tickvals,
+                    #     ticktext=ticktext,
+                    #     type='category'
+                    # )
+
+        # 캔들스틱 패턴이 없는 경우
+        else:
+            fig.update_layout(
+                        title='Candlestick Pattern Match')
+            fig.add_annotation(
+                x=0.5,  # x position (0.5 for the middle of the plot)
+                y=0.5,  # y position (0.5 for the middle of the plot)
+                xref="paper",  # refers to the whole x axis (paper position)
+                yref="paper",  # refers to the whole y axis (paper position)
+                text="No candlestick patterns found in the selected period",  # the text to display
+                showarrow=False,  # no arrow for this annotation
+                font=dict(size=20)  # font size of the text
+            )
+
+    return fig
+
+
+
 
 
 
