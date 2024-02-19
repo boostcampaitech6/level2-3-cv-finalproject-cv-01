@@ -45,9 +45,9 @@ def update_and_save_usa_df():
     usa_df.to_csv('stock_df/usa_stocks.csv', index=False)
     print("USA_df updated")
 
-# def get_today_date():
-#     today = datetime.today().strftime('%Y%m%d')
-#     return today
+def get_today_date():
+    today = datetime.today().strftime('%Y%m%d')
+    return today
 
 def update_and_save_korea_df():
 
