@@ -6,10 +6,8 @@ import sys
 import time
 import base64
 from io import BytesIO
-# 상위 폴더로 이동 후 candle_matching 폴더를 path에 추가
-sys.path.append('../candle_matching') 
-import find_candle_patterns
-from pattern_descriptions import descriptions
+from candle_matching import find_candle_patterns
+# from candle_matching.pattern_descriptions import descriptions
 
 def app():
     
