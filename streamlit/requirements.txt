@@ -85,3 +85,5 @@ watchdog==4.0.0
 webencodings==0.5.1
 yapf==0.40.2
 yfinance
+finance-datareader
+schedule
