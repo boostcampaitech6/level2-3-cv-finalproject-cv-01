@@ -2,7 +2,7 @@
 import streamlit as st
 import yfinance as yf
 import plotly.graph_objs as go
-import sys
+from cnn_model import cnn_model_inference
 
 def app():
     st.title('Stock Price Prediction')
@@ -121,5 +121,6 @@ def app():
     # DL model matching 시각화
 
     # Image-based CNN model matching 시각화
+    cnn_model_inference( company, ticker, period, interval)
         
     
