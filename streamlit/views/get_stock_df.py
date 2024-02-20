@@ -4,7 +4,13 @@ import schedule
 import time
 import pandas as pd
 from datetime import datetime
-from pykrx import stock
+import os
+# from pykrx import stock
+
+current_file_path = os.path.realpath(__file__)
+parent_directory = os.path.dirname(current_file_path)
+data_directory = os.path.join(parent_directory, 'stock_df')
+
 
 def update_and_save_usa_df():
     # Your existing code to update usa_df
@@ -42,7 +48,11 @@ def update_and_save_usa_df():
     # NaN 값 처리 (옵셔널)
     usa_df.fillna(0, inplace=True)
 
-    usa_df.to_csv('stock_df/usa_stocks.csv', index=False)
+    # CSV로 저장
+    
+
+
+    # usa_df.to_csv('stock_df/usa_stocks.csv', index=False)
     print("USA_df updated")
 
 def get_today_date():
@@ -54,9 +64,10 @@ def update_and_save_korea_df():
     korea_df = fdr.StockListing('KOSPI')
     korea_df = korea_df.head(20)
     korea_df['Code'] = korea_df['Code'].apply(lambda x: x + '.KS')
-    korea_df['ChagesRatio'] = korea_df['ChagesRatio']/1e8
+    korea_df['ChagesRatio'] = korea_df['ChagesRatio']
 
-    korea_df.to_csv('stock_df/korea_stocks.csv', index=False)
+    
+    korea_df.to_csv(os.path.join(data_directory, 'korea_stocks.csv'), index=False)
     print("korea_df updated")
 
 # Step 1: Fetch data and calculate fluctuation rates
@@ -81,7 +92,8 @@ def update_stock_summary():
         data[name] = {'Close': close, 'Open': open_, 'Fluctuation Rate': fluc}
     
     df = pd.DataFrame(data).T
-    df.to_csv('stock_df/summary_data.csv')
+    
+    df.to_csv(os.path.join(data_directory, 'summary_data.csv'))
     print("summary_data updated")
 
 
@@ -91,12 +103,12 @@ update_stock_summary()
 update_and_save_usa_df()
 update_and_save_korea_df()
 
-# 2시간마다 데이터 업데이트 및 저장을 예약
-schedule.every(2).hours.do(update_stock_summary)
-schedule.every(2).hours.do(update_and_save_usa_df)
-schedule.every(2).hours.do(update_and_save_korea_df)
+# # 2시간마다 데이터 업데이트 및 저장을 예약
+# schedule.every(2).hours.do(update_stock_summary)
+# schedule.every(2).hours.do(update_and_save_usa_df)
+# schedule.every(2).hours.do(update_and_save_korea_df)
 
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)

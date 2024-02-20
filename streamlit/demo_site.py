@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu  # 추가
 # 페이지 모듈 임포트
 from views import home, dashboard, prediction, candle_matching, about_us
-st.set_page_config(layout="wide")
+st.set_page_config(layout="centered")
 # 옵션 메뉴를 사이드바에 추가
 with st.sidebar:
     selected = option_menu("Main Menu", ["Home", "Dashboard", "Prediction", "Candle Matching", "About Us"],
