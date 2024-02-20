@@ -8,7 +8,7 @@ import base64
 from io import BytesIO
 # 상위 폴더로 이동 후 candle_matching 폴더를 path에 추가
 sys.path.append('../candle_matching') 
-import find_candle_patterns, get_candle_info_wiki
+import find_candle_patterns
 from pattern_descriptions import descriptions
 
 def app():
@@ -52,9 +52,12 @@ def app():
             '10y': ['1d', '5d', '1wk', '1mo']
         }
         valid_intervals = interval_options[period]
-        default_interval_index = valid_intervals.index('1d')
-        interval = st.selectbox('Select interval', options=valid_intervals, index=default_interval_index)
-        # interval = st.selectbox('Select interval', options=valid_intervals)
+
+        if period == '1mo' :
+            default_interval_index = valid_intervals.index('1d')
+            interval = st.selectbox('Select interval', options=valid_intervals, index=default_interval_index)
+        else:
+            interval = st.selectbox('Select interval', options=valid_intervals)
 
     ticker = company_options[company]
 
