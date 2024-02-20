@@ -2,7 +2,7 @@
 import streamlit as st
 import yfinance as yf
 import plotly.graph_objs as go
-import sys
+from models.hmm import HMM
 
 def app():
     st.title('Stock Price Prediction')
@@ -117,6 +117,11 @@ def app():
 
 
     # Non-DL model matching 시각화
+    if st.button("Start Non-DL model matching"):        
+        hmm = HMM(data)
+        predicted_close_prices = hmm.test_predictions()
+        fig = hmm.visualize_hmm(predicted_close_prices)
+        st.plotly_chart(fig, use_container_width=True) 
         
     # DL model matching 시각화
 
