@@ -5,7 +5,7 @@ import time
 import numpy as np
 import torch 
 from PIL import Image
-from cnn_model.cnn_inference import get_CNN5d_5d, get_CNN5d_20d, get_CNN20d_5d, get_CNN20d_20d, inference, image_to_np, grad_cam, image_to_tensor, time_calc
+from .cnn_inference import get_CNN5d_5d, get_CNN5d_20d, get_CNN20d_5d, get_CNN20d_20d, inference, image_to_np, grad_cam, image_to_tensor, time_calc
 
 def get_stock_data(ticker, period, interval):
         stock = yf.Ticker(ticker)
@@ -130,13 +130,13 @@ def cnn_model_inference(company, ticker, period, interval):
                     percent = round(model_pred[pred_idx].item()*100,2)
 
                     if pred_idx == 0:
-                        img = Image.open('cnn_model/bear.png').resize((256,256))
+                        img = Image.open('models/cnn/bear.png').resize((256,256))
                         p_col1.image(img)
                         p_col2.markdown(f'''AI 모델의 분석 결과  
                                         **{company}**의 **{output_period}** 이후 주가는  
                                         :red[**{percent}%**] 확률로 :red[**하락**]을 예측합니다''')
                     elif pred_idx == 1:
-                        img = Image.open('cnn_model/bull.png').resize((256,256))
+                        img = Image.open('models/cnn/bull.png').resize((256,256))
                         p_col1.image(img)
                         p_col2.markdown(f'''AI 모델의 분석 결과  
                                         **{company}**의 **{output_period}** 이후 주가는  
