@@ -2,7 +2,7 @@
 import streamlit as st
 import yfinance as yf
 import plotly.graph_objs as go
-from cnn_model import cnn_model_inference
+from models.cnn import cnn_model_inference
 from models.hmm import HMM
 
 def app():
