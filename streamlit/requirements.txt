@@ -88,3 +88,6 @@ yfinance
 finance-datareader
 schedule
 ta-lib-bin
+torch==2.1.0
+grad-cam
+hmmlearn

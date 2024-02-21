@@ -10,6 +10,8 @@ import numpy as np
 import torch
 from .models.lstm.model import LSTM
 from .models.lstm.utils import load_data, predict, predict_dates
+from models import HMM
+from models import cnn_model_inference
 
 def app():
     st.title('Stock Price Prediction')
@@ -223,6 +225,11 @@ def app():
 
         # Add a message to the stock prediction graph
         st.markdown("### **No data available for the selected stock**")    
+    if st.button("Start Non-DL model matching"):        
+        hmm = HMM(data)
+        predicted_close_prices = hmm.test_predictions()
+        fig = hmm.visualize_hmm(predicted_close_prices)
+        st.plotly_chart(fig, use_container_width=True) 
         
     # DL model matching 시각화
     data_close = data[["Close"]]
@@ -267,5 +274,6 @@ def app():
     st.plotly_chart(fig2)
 
     # Image-based CNN model matching 시각화
+    cnn_model_inference( company, ticker, period, interval)
         
     
