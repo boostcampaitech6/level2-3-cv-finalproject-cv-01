@@ -21,8 +21,8 @@ import talib
 import yfinance as yf
 import streamlit as st
 import plotly.graph_objs as go
-from candle_rankings import candle_rankings
-from pattern_descriptions import descriptions
+from .candle_rankings import candle_rankings
+from .pattern_descriptions import descriptions
 import seaborn as sns
 sns.set()
 
