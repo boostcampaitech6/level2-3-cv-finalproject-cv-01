@@ -36,8 +36,9 @@ def app():
 
 
         # 기간 선택
-        period = st.selectbox('Select period', options=[
-            '1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y'])
+        period_options = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y']
+        default_period_index = period_options.index('1mo')
+        period = st.selectbox('Select period', options=period_options, index=default_period_index)
 
         # 기간에 따른 간격 선택
         interval_options = {
@@ -52,8 +53,12 @@ def app():
             '10y': ['1d', '5d', '1wk', '1mo']
         }
         valid_intervals = interval_options[period]
-        interval = st.selectbox('Select interval', options=valid_intervals)
-
+        
+        if period == '1mo' :
+            default_interval_index = valid_intervals.index('1d')
+            interval = st.selectbox('Select interval', options=valid_intervals, index=default_interval_index)
+        else:
+            interval = st.selectbox('Select interval', options=valid_intervals)
     ticker = company_options[company]
 
     # 주식 데이터를 가져오는 함수
@@ -247,7 +252,7 @@ def app():
     y_test = torch.from_numpy(y_test).type(torch.Tensor)
     
     model = LSTM()
-    model_state_dict = torch.load('/data/ephemeral/home/level2-3-cv-finalproject-cv-01/streamlit/views/models/lstm/lstm.pth')
+    model_state_dict = torch.load('../streamlit/views/models/lstm/lstm.pth')
     model.load_state_dict(model_state_dict)
     
     # make predictions
@@ -274,6 +279,6 @@ def app():
     st.plotly_chart(fig2)
 
     # Image-based CNN model matching 시각화
-    cnn_model_inference( company, ticker, period, interval)
+    cnn_model_inference(company, ticker, period, interval)
         
     
