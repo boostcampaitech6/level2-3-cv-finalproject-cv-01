@@ -1,0 +1,160 @@
+.home1 {
+  position: relative;
+  font-weight: 700;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+  cursor: pointer;
+}
+.stockPrediction1 {
+  position: relative;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.stockPrediction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+  cursor: pointer;
+}
+.stockPredictionFrame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xs) 0 0;
+}
+.aboutUs1 {
+  position: relative;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.fRAME,
+.fRAMEWrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.fRAME {
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.fRAMEWrapper {
+  width: 1070px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 13px 0 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.aboutUsChild {
+  width: 277px;
+  display: none;
+  z-index: 2;
+}
+.blankLine,
+.blankLine1,
+.cnn,
+.p,
+.p1,
+.p2 {
+  margin-block-start: 0;
+  margin-block-end: 10px;
+}
+.p3 {
+  margin: 0;
+}
+.cnnContainer1 {
+  width: 100%;
+}
+.cnnContainer {
+  width: 1223px;
+  height: 366px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -245px;
+  left: 108px;
+  font-size: 28px;
+  display: flex;
+  font-style: italic;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: left;
+  align-items: center;
+}
+.boostcampAi6thCv01gmailc {
+  position: absolute;
+  margin: 0 !important;
+  bottom: -446px;
+  left: 118px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+.contactUs {
+  margin: 0 !important;
+  position: absolute;
+  bottom: -397px;
+  left: 67px;
+  font-size: var(--font-size-29xl);
+  font-style: italic;
+  font-weight: 700;
+  font-family: inherit;
+  text-align: center;
+}
+.aboutUs {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-42xl) var(--padding-36xl) 258px 57px;
+  box-sizing: border-box;
+  gap: 82px 0;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1000px) {
+  .contactUs {
+    font-size: var(--font-size-19xl);
+  }
+}
+@media screen and (max-width: 725px) {
+  .aboutUs {
+    gap: 82px 0;
+    padding-left: 28px;
+    padding-right: 27px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cnnContainer {
+    font-size: 22px;
+  }
+  .boostcampAi6thCv01gmailc {
+    font-size: var(--font-size-lgi);
+  }
+  .contactUs {
+    font-size: var(--font-size-10xl);
+  }
+  .aboutUs {
+    gap: 82px 0;
+  }
+}
