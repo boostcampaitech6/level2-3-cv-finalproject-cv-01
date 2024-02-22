@@ -107,9 +107,9 @@ class HMM:
             # ),
         ])   
         fig.update_layout(
-            title='Hidden Markov Model',
-            yaxis_title='Price (KRW)',
-            xaxis_title='Datetime',
+            title='Hidden Markov Model Prediction',
+            yaxis_title='Stock Price',
+            xaxis_title='Date',
             xaxis_rangeslider_visible=False,
             xaxis_type='category'
         )
