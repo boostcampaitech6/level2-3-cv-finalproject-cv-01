@@ -117,6 +117,7 @@ def get_CNN5d_5d():
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     state_dict = torch.load('models/cnn/I5R5_Model.tar',map_location=torch.device(device))
     model.load_state_dict(state_dict['model_state_dict'])
+    model = model.to(device)
     return model
 
 def get_CNN5d_20d():
@@ -124,6 +125,7 @@ def get_CNN5d_20d():
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     state_dict = torch.load('models/cnn/I5R20_Model.tar',map_location=torch.device(device))
     model.load_state_dict(state_dict['model_state_dict'])
+    model = model.to(device)
     return model
 
 def get_CNN20d_5d():
@@ -131,6 +133,7 @@ def get_CNN20d_5d():
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     state_dict = torch.load('models/cnn/I20R5_Model.tar',map_location=torch.device(device))
     model.load_state_dict(state_dict['model_state_dict'])
+    model = model.to(device)
     return model
 
 def get_CNN20d_20d():
@@ -138,6 +141,7 @@ def get_CNN20d_20d():
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     state_dict = torch.load('models/cnn/I20R20_Model.tar',map_location=torch.device(device))
     model.load_state_dict(state_dict['model_state_dict'])
+    model = model.to(device)
     return model
 
 def rasterize(data_frame, period):
