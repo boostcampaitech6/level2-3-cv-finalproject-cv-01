@@ -1,7 +1,7 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Prediction.module.css";
-import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets"; // 차트 컴포넌트 임포트
+// import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets"; 
 import Select from 'react-select';
 import React, { useState } from 'react';
 import { companyOptions, periodOptions, intervalOptions } from '../docs/prediction_data';
@@ -16,6 +16,11 @@ const Prediction: FunctionComponent = () => {
   const onAboutUsContainerClick = useCallback(() => {
     navigate("/about-us");
   }, [navigate]);
+
+  const handlePredictClick = () => {
+    console.log("Predict button clicked");
+    // 여기에 예측 로직 또는 다른 동작을 추가할 수 있습니다.
+  };
 
   const [isClearable, setIsClearable] = useState(true);
   const [isSearchable, setIsSearchable] = useState(true);
@@ -87,6 +92,12 @@ const Prediction: FunctionComponent = () => {
           />
         </div>
       </div>
+
+      
+      <button className={styles.predictBtn} onClick={handlePredictClick}>
+        Predict
+      </button>
+      
 
       {/* <div className={styles.chart}>
         <AdvancedRealTimeChart theme="light" autosize />
