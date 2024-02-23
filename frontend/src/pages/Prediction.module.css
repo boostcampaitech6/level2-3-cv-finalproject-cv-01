@@ -28,7 +28,7 @@
 .aboutUs,
 .prediction {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .aboutUs {
   align-items: center;
@@ -37,56 +37,22 @@
     var(--padding-3xs);
   cursor: pointer;
 }
-
-
 .prediction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
+  position: relative;
   background-color: var(--color-white);
   overflow: hidden;
-  padding: var(--padding-3xs);
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--padding-42xl) 186px 914px 187px;
   box-sizing: border-box;
   gap: var(--gap-xl);
+  letter-spacing: normal;
+  text-align: center;
   font-size: var(--font-size-5xl);
   color: var(--color-black);
   font-family: var(--font-inter);
 }
-
-
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-
-.selectContainer {
-  display: flex;
-  flex-direction: row; 
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.basic-single {
-  min-height: 38px;
-  box-sizing: border-box;
-}
-
-
-.prediction, .selectContainer {
-  overflow: visible;
-}
-
-
-
 @media screen and (max-width: 825px) {
   .prediction {
     flex-wrap: wrap;
@@ -106,4 +72,35 @@
     padding-right: var(--padding-xl);
     box-sizing: border-box;
   }
+}
+
+.menuBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 메뉴 항목 간의 공간을 균등하게 분배 */
+  align-items: center; /* 세로 방향에서 중앙 정렬 */
+  width: 70%; /* 메뉴바의 너비를 부모 컨테이너(여기서는 .prediction)의 너비와 동일하게 설정 */
+  padding: 20px auto; /* 메뉴바 내부의 여백 */
+  margin: 0px auto;
+  /* 필요한 경우 추가 스타일 */
+}
+
+/* .chart {
+  width: 80%; 
+  height: 500px; 
+  margin: 20px auto; 
+} */
+
+.selectContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 메뉴 항목 간의 공간을 균등하게 분배 */
+  align-items: center; /* 세로 방향에서 중앙 정렬 */
+  width: 50%; /* 메뉴바의 너비를 부모 컨테이너(여기서는 .prediction)의 너비와 동일하게 설정 */
+  padding: 20px auto; /* 메뉴바 내부의 여백 */
+  margin: 0px auto;
+}
+
+.selectContainer {
+  overflow: visible;
 }

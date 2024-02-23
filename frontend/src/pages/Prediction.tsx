@@ -1,11 +1,12 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from 'react';
-import Select from 'react-select';
 import styles from "./Prediction.module.css";
+import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets"; // 차트 컴포넌트 임포트
+import Select from 'react-select';
+import React, { useState } from 'react';
 import { companyOptions, periodOptions, intervalOptions } from '../docs/prediction_data';
 
-const PredictionWithSelect: FunctionComponent = () => {
+const Prediction: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onHomeContainerClick = useCallback(() => {
@@ -24,7 +25,7 @@ const PredictionWithSelect: FunctionComponent = () => {
 
   return (
     <div className={styles.prediction}>
-      <div className={styles.header}>
+      <div className={styles.menuBar}> {/* menuBar div 추가 */}
         <div className={styles.home} onClick={onHomeContainerClick}>
           <i className={styles.home1}>HOME</i>
         </div>
@@ -35,61 +36,63 @@ const PredictionWithSelect: FunctionComponent = () => {
           <i className={styles.aboutUs1}>About Us</i>
         </div>
       </div>
-      
-    <div className={styles.selectContainer}>
-      <div className={styles.selectBlock}>
-        <label className={styles.selectLabel}>Stock</label>
-        <Select
-          className="basic-single"
-          classNamePrefix="select"
-          defaultValue={companyOptions[0]}
-          isDisabled={isDisabled}
-          isLoading={isLoading}
-          isClearable={isClearable}
-          isRtl={isRtl}
-          isSearchable={isSearchable}
-          name="color"
-          options={companyOptions}
-        />
-        
+
+      <div className={styles.selectContainer}>
+        <div className={styles.selectBlock}>
+          <label className={styles.selectLabel}>Stock</label>
+          <Select
+            className="basic-single"
+            classNamePrefix="select"
+            defaultValue={companyOptions[0]}
+            isDisabled={isDisabled}
+            isLoading={isLoading}
+            isClearable={isClearable}
+            isRtl={isRtl}
+            isSearchable={isSearchable}
+            name="color"
+            options={companyOptions}
+          />
+          
+        </div>
+
+        <div className={styles.selectBlock}>
+          <label className={styles.selectLabel}>Period</label>
+          <Select
+            className="basic-single"
+            classNamePrefix="select"
+            defaultValue={periodOptions[0]}
+            isDisabled={isDisabled}
+            isLoading={isLoading}
+            isClearable={isClearable}
+            isRtl={isRtl}
+            isSearchable={isSearchable}
+            name="color"
+            options={periodOptions}
+          />
+        </div>
+
+        <div className={styles.selectBlock}>
+          <label className={styles.selectLabel}>Interval</label>
+          <Select
+            className="basic-single"
+            classNamePrefix="select"
+            defaultValue={intervalOptions[0]}
+            isDisabled={isDisabled}
+            isLoading={isLoading}
+            isClearable={isClearable}
+            isRtl={isRtl}
+            isSearchable={isSearchable}
+            name="color"
+            options={periodOptions}
+          />
+        </div>
       </div>
-    </div>
 
-
-    <div className={styles.selectContainer}>
-      <div className={styles.selectBlock}>
-        <label className={styles.selectLabel}>Period</label>
-        <Select
-          className="basic-single"
-          classNamePrefix="select"
-          defaultValue={periodOptions[0]}
-          isDisabled={isDisabled}
-          isLoading={isLoading}
-          isClearable={isClearable}
-          isRtl={isRtl}
-          isSearchable={isSearchable}
-          name="color"
-          options={periodOptions}
-        />
-        
-    </div>
-        
-
-        <Select
-          className="basic-single"
-          classNamePrefix="select"
-          defaultValue={intervalOptions[0]}
-          isDisabled={isDisabled}
-          isLoading={isLoading}
-          isClearable={isClearable}
-          isRtl={isRtl}
-          isSearchable={isSearchable}
-          name="color"
-          options={intervalOptions}
-        />
-      </div>
+      {/* <div className={styles.chart}>
+        <AdvancedRealTimeChart theme="light" autosize />
+      </div> */}
     </div>
   );
 };
 
-export default PredictionWithSelect;
+export default Prediction;
