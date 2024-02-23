@@ -12,13 +12,10 @@ const Prediction: FunctionComponent = () => {
   const [selectedInterval, setSelectedInterval] = useState<string | null>(null);
   const [intervalOptions, setIntervalOptions] = useState<{ label: string, value: string }[]>([]);
 
+  
+
   // 출력값을 저장할 state
   const [predictionResult, setPredictionResult] = useState<string>('');
-
-
-  const handleIntervalChange = (option: { value: string; label: string } | null) => {
-    setSelectedInterval(option ? option.value : null);
-  };
 
   useEffect(() => {
     if (selectedPeriod) {
@@ -31,6 +28,7 @@ const Prediction: FunctionComponent = () => {
         setSelectedInterval(newIntervalOptions[0].value);
       }
     } else {
+      // 선택된 period가 없다면 interval 선택지를 비웁니다.
       setIntervalOptions([]);
       setSelectedInterval(null);
 
@@ -45,19 +43,18 @@ const Prediction: FunctionComponent = () => {
     navigate("/about-us");
   }, [navigate]);
 
-  // Predict 버튼 클릭 핸들러
+
   const handlePredictClick = () => {
-    // 모든 값을 선택했는지 확인합니다.
-    if (!selectedStock || !selectedPeriod || !selectedInterval) {
-      const missingSelections = [];
-      if (!selectedStock) missingSelections.push('Stock');
-      if (!selectedPeriod) missingSelections.push('Period');
-      if (!selectedInterval) missingSelections.push('Interval');
-      setPredictionResult(`Please select ${missingSelections.join(', ')}`);
-    } else {
-      setPredictionResult(`Stock: ${selectedStock}, Period: ${selectedPeriod}, Interval: ${selectedInterval}`);
-    }
+    // 선택된 값들을 결과 상태에 저장합니다.
+    const result = `Stock: ${selectedStock}, Period: ${selectedPeriod}, Interval: ${selectedInterval}`;
+    setPredictionResult(result);
   };
+
+
+
+  // const handlePredictClick = () => {
+  //   console.log("Predict button clicked");
+  // };
 
   const [isClearable, setIsClearable] = useState(true);
   const [isSearchable, setIsSearchable] = useState(true);
@@ -116,31 +113,27 @@ const Prediction: FunctionComponent = () => {
           />
         </div>
 
-
         <div className={styles.selectBlock}>
           <label className={styles.selectLabel}>Interval</label>
           <Select
             className="basic-single"
             classNamePrefix="select"
-            value={selectedInterval ? intervalOptions.find(option => option.value === selectedInterval) : null}
-            onChange={(option) => setSelectedInterval(option?.value || null)}
-            options={intervalOptions}
-            placeholder="Select..."
-            isClearable={isClearable}
+            defaultValue={intervalOptions[0]}
             isDisabled={isDisabled}
             isLoading={isLoading}
+            isClearable={isClearable}
             isRtl={isRtl}
             isSearchable={isSearchable}
             name="interval"
+            options={intervalOptions}
           />
         </div>
-
       </div>
 
       <button className={styles.predictBtn} onClick={handlePredictClick}>
         Predict
       </button>
-
+      {/* 예측 결과를 보여주는 부분입니다. */}
       <div className={styles.predictionResult}>
         {predictionResult}
       </div>
