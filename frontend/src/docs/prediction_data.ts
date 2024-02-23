@@ -7,15 +7,15 @@ export interface SelectOption {
 
 
   export const companyOptions: readonly SelectOption[] = [
-    { label: 'Tesla', value: 'Tesla'},
-    { label: 'Apple', value: 'AAPL'},
-    { label: 'Google', value: 'GOOGL'},
-    { label: 'Nvidia', value: 'Tesla'},
-    { label: 'Samsung', value: '005930.KS'},
-    { label: 'Naver', value: '035420.KS'},
-    { label: 'Kakao', value: '035720.KS'},
-    { label: 'SK Hynix', value: '000660.KS'},
-    { label: 'BTC-USD', value: 'BTC-USD'},
+    { label: 'Tesla', value: 'NASDAQ:TSLA'},
+    { label: 'Apple', value: 'NASDAQ:AAPL'},
+    { label: 'Google', value: 'NASDAQ:GOOGL'},
+    { label: 'Nvidia', value: 'NASDAQ:Tesla'},
+    // { label: 'Samsung', value: 'KRX:005930'},
+    // { label: 'Naver', value: 'KRX:035420'},
+    // { label: 'Kakao', value: 'KRX:035720'},
+    { label: 'SK Hynix', value: 'KRX:000660'},
+    { label: 'BTC-USD', value: 'BINANCE:BTCUSDT'},
     
   ];
 
@@ -34,9 +34,10 @@ export interface SelectOption {
 
 
   export const intervalOptionsMap = {
-    '1d': ['1m', '2m', '5m', '15m', '30m', '60m', '90m'],
-    '5d': ['5m', '15m', '30m', '60m', '90m'],
-    '1mo': ['30m', '60m', '90m', '1d'],
+    '1d': ['1m', '3m', '5m', '15m', '30m', '60m'],
+    // '1d': ['1m', '2m', '5m', '15m', '30m', '60m', '90m'],
+    '5d': ['5m', '15m', '30m', '60m'],
+    '1mo': ['30m', '60m','1d'],
     '3mo': ['1d', '5d', '1wk', '1mo'],
     '6mo': ['1d', '5d', '1wk', '1mo'],
     '1y': ['1d', '5d', '1wk', '1mo'],

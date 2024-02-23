@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 import styles from './Prediction.module.css';
 import { companyOptions, periodOptions, intervalOptionsMap } from '../docs/prediction_data';
+import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 
 const Prediction: FunctionComponent = () => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Prediction: FunctionComponent = () => {
   const handleIntervalChange = (option: { value: string; label: string } | null) => {
     setSelectedInterval(option ? option.value : null);
   };
+  const [chartKey, setChartKey] = useState<string>("");
 
   useEffect(() => {
     if (selectedPeriod) {
@@ -47,15 +49,20 @@ const Prediction: FunctionComponent = () => {
 
   // Predict 버튼 클릭 핸들러
   const handlePredictClick = () => {
-    // 모든 값을 선택했는지 확인합니다.
+
     if (!selectedStock || !selectedPeriod || !selectedInterval) {
       const missingSelections = [];
       if (!selectedStock) missingSelections.push('Stock');
       if (!selectedPeriod) missingSelections.push('Period');
       if (!selectedInterval) missingSelections.push('Interval');
       setPredictionResult(`Please select ${missingSelections.join(', ')}`);
-    } else {
+    } 
+    else {
       setPredictionResult(`Stock: ${selectedStock}, Period: ${selectedPeriod}, Interval: ${selectedInterval}`);
+      setShowChart(true);
+      setChartKey(`${selectedStock}-${selectedPeriod}-${selectedInterval}-${new Date().getTime()}`);
+      const periodForChart = convertPeriodToTradingViewFormat(selectedPeriod);
+      const intervalForChart = convertIntervalToTradingViewFormat(selectedInterval);
     }
   };
 
@@ -64,6 +71,39 @@ const Prediction: FunctionComponent = () => {
   const [isDisabled, setIsDisabled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isRtl, setIsRtl] = useState(false);
+  const [showChart, setShowChart] = useState(false); // 차트 표시 상태
+
+  // 변환 함수 정의
+  const convertIntervalToTradingViewFormat = (interval: string | null): "1" | "3" | "5" | "15" | "30" | "60" |"D" | "W" | undefined => {
+    const mapping: { [key: string]: "1" | "3" | "5" | "15" | "30" | "60" |"D" | "W" } = {
+      '1m': '1',
+      '3m': '3',
+      '5m': '5',
+      '15m': '15',
+      '30m': '30',
+      '60m': '60',
+      '1d': 'D',
+      '1w': 'W',
+      // 매핑이 필요한 다른 간격을 추가합니다.
+    };
+    return interval ? mapping[interval] : undefined;
+  };
+ 
+  const convertPeriodToTradingViewFormat = (period: string | null): "1D" | "5D" | "1M" | "3M" | "6M" |"12M" | "YTD"  | "60M" | "ALL" | undefined => {
+    const mapping: { [key: string]: "1D" | "5D" | "1M" | "3M" | "6M" | "YTD" | "12M" | "60M" | "ALL" } = {
+      '1d': '1D',
+      '5d': '5D',
+      '1mo': '1M',
+      '3mo': '3M',
+      '6mo': '6M',
+      '1y': '12M',
+      '2y': 'ALL', // "2Y"와 그 이상은 "ALL"로 변경
+      '5y': 'ALL',
+      '10y': 'ALL',
+    };
+    return period ? mapping[period] : undefined;
+  };
+
 
   return (
     <div className={styles.prediction}>
@@ -144,7 +184,34 @@ const Prediction: FunctionComponent = () => {
       <div className={styles.predictionResult}>
         {predictionResult}
       </div>
+
+      {showChart && selectedStock && selectedInterval && (
+        <div className={styles.chart}>
+          <AdvancedRealTimeChart
+            key={chartKey}
+            theme="dark"
+            symbol={selectedStock}
+            range={convertPeriodToTradingViewFormat(selectedPeriod)}
+            // interval='60'
+            // interval={convertIntervalToTradingViewFormat(selectedInterval)}
+            timezone="Asia/Seoul"
+            style="1"
+            locale="kr"
+            withdateranges={true}
+            toolbar_bg="#f1f3f6"
+            allow_symbol_change={true}
+            container_id={`tradingview_${chartKey}`}
+            // allow_symbol_change={false}
+            // container_id="tradingview_dcf24"
+          />
+        </div>
+      )}
+
     </div>
+
+
+
+
   );
 };
 

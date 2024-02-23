@@ -123,3 +123,9 @@
 .predictBtn:hover {
   background-color: #f0f0f0; /* 마우스 오버시 배경 색상 변경 */
 }
+
+.chart {
+  width: 100%; 
+  height: 500px; 
+  min-height: 500px;
+}
