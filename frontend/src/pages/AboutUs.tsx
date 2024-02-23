@@ -1,7 +1,7 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import FrameComponent1 from "../components/FrameComponent1";
-import FrameComponent from "../components/FrameComponent";
+import FrameComponentGitub from "../components/FrameComponentGitub";
 import styles from "./AboutUs.module.css";
 
 const AboutUs: FunctionComponent = () => {
@@ -35,7 +35,7 @@ const AboutUs: FunctionComponent = () => {
       </header>
       <FrameComponent1 />
       <div className={styles.aboutUsChild} />
-      <FrameComponent />
+      <FrameComponentGitub />
       <section className={styles.cnnContainer}>
         <span className={styles.cnnContainer1}>
           <p className={styles.p}>

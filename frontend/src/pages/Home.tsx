@@ -6,6 +6,12 @@ import styles from "./Home.module.css";
 const Home: FunctionComponent = () => {
   const navigate = useNavigate();
 
+
+  const onHomeContainerClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+
   const onStockPredictionContainerClick = useCallback(() => {
     navigate("/prediction");
   }, [navigate]);
