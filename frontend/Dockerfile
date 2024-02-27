@@ -1,8 +1,7 @@
 # frontend/Dockerfile
-FROM node:lts-slim
+FROM node
 
-COPY . /workspace
 WORKDIR /workspace
-RUN npm install
+RUN npm install axios
 
 CMD ["npm", "start"]
