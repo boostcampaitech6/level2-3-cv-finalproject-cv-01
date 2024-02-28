@@ -1,6 +1,7 @@
 import streamlit as st
 import plotly.graph_objects as go
 import yfinance as yf
+from models import cnn_model_inference
 
 def app():
     
@@ -34,6 +35,13 @@ CNN은 이미지 인식과 처리 분야에서 뛰어난 성능을 보이는 기
 """
 )
     st.title("Stock Prediction")
+
+
+    st.caption(f"주식 시장의 미래를 예측합니다. CNN 모델을 활용하여 주가의 움직임을 예측합니다.  ")
+    
+    
+
+
     # 회사 선택
     company_options = {
         "Tesla": "TSLA",
@@ -48,12 +56,16 @@ CNN은 이미지 인식과 처리 분야에서 뛰어난 성능을 보이는 기
     }
     company_list = list(company_options.keys())
     default_company_index = company_list.index('Naver')
-    company = st.selectbox('Choose a stock', company_list, index=default_company_index)
-
+    st.caption(f"아래에서 원하는 종목과 기간을 선택하세요.")
+    
+    company = st.selectbox('원하는 주식 종목을 선택하세요.', company_list, index=default_company_index)
+    st.caption(f"현재 선택할 수 있는 종목은 Tesla, Apple, Google, Nvidia, Samsung, Naver, Kakao, SK Hynix, BTC-USD 입니다.")
     # 기간 선택
+    
     period_options = ['1mo', '3mo', '6mo', '1y']
     default_period_index = period_options.index('1mo')
-    period = st.selectbox('Select period', options=period_options, index=default_period_index)
+    period = st.selectbox('원하는 기간을 선택하세요.', options=period_options, index=default_period_index)
+    st.caption(f"1개월 부터 1년까지의 기간을 선택할 수 있습니다.")
 
     # 간격 선택 (기간에 따른 간격 선택 제한)
     interval_options = {
@@ -118,6 +130,12 @@ CNN은 이미지 인식과 처리 분야에서 뛰어난 성능을 보이는 기
 
 
     st.plotly_chart(fig, use_container_width=True)
+
+
+    # CNN 모델 예측 결과
+    cnn_model_inference(company, ticker, period, interval)
+
+
     st.markdown("""
 ---
                 """)
