@@ -1,0 +1,39 @@
+.profile,
+.profileFrame {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.profile {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(166px, 1fr));
+}
+.profileFrame {
+  align-self: stretch;
+  display: flex;
+  padding: 0 0 0 var(--padding-11xs);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1050px) {
+  .profile {
+    grid-row-gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(166px, 287px));
+  }
+}
+@media screen and (max-width: 725px) {
+  .profile {
+    grid-template-columns: repeat(2, minmax(166px, 287px));
+  }
+}
+@media screen and (max-width: 450px) {
+  .profile {
+    grid-template-columns: minmax(166px, 1fr);
+  }
+}
