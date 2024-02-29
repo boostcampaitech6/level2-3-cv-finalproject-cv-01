@@ -2,44 +2,42 @@ import streamlit as st
 import plotly.graph_objects as go
 import yfinance as yf
 from models import cnn_model_inference
+import streamlit.components.v1 as components
+from PIL import Image
 
 def app():
+    # st.set_page_config(layout="wide")
+    # 첫 화면
+    img = Image.open('첫화면테스트.png')
+    st.image(img)
+
     
+    # st.title("알려주가AI 사용 방법")
+
+    
+    img_2 = Image.open('demo_1.png')
+    st.image(img_2)
+
+
+
+    img_3 = Image.open('demo_2.png')
+    st.image(img_3)
+
+
     st.markdown(
     """
-    # 📈 Predicting Stocks with CNN!
-
-주식 시장은 방대한 양의 데이터와 복잡한 비선형적 특성을 가지고 있습니다. 이러한 다이내믹한 데이터를 정확히 분석하고 모델링하기 위해서는 숨겨진 패턴과 시장의 기본 원리를 효과적으로 파악할 수 있는 최적화된 기술이 필요합니다. 여기서 CNN(합성곱 신경망) 모델의 사용은 중요한 역할을 합니다.
-
-CNN은 이미지 인식과 처리 분야에서 뛰어난 성능을 보이는 기술입니다. 우리 서비스는 과거 주식 가격의 변동을 이미지로 변환하고, 이러한 이미지를 분석하여 미래의 주가 움직임을 예측합니다. CNN 모델은 이미지 속에 숨어있는 복잡한 패턴과 추세를 감지하고 학습함으로써, 시계열 데이터만으로는 파악하기 어려운 관계와 특징을 찾아냅니다.
-
-이 방법은 기존의 수치 기반 시계열 분석과는 차별화된 접근 방식을 제공합니다. 시각적 데이터에서 특징을 추출하고 학습하는 CNN의 능력을 활용하여, 주식 시장의 미묘한 변화와 숨겨진 패턴을 보다 정밀하게 포착할 수 있습니다. 이를 통해 보다 정확하고 신뢰할 수 있는 주가 예측을 제공하고자 합니다.
-
----
-
-# ✨ How to use it?
-
-1. 메뉴바에서 `Prediction`을 눌러주세요. ✋
-2. `Choose a stock`에서 미래 주가가 궁금한 종목을 선택해 주세요. 🧑‍💻
-3. 조회하고 싶은 기간과 간격을 설정해 주세요. 🗓️
-4. 이제 `Prediction` 버튼만 누르면 우리 모델이 열심히 예측할 거에요! 👀
-5. 추가적으로 `Candle matching`을 누르면 캔들 매칭을 통한 정보도 확인 가능해요! 😎
-
----
-
-# 📛 Disclaimer
-
-모든 데이터와 정보는 정보 제공 목적으로만 제공됩니다. 그 어떤 데이터와 정보도 일반적인 자문이나 맞춤형 자문 같은 투자 자문으로 간주되지 않습니다. 모델의 예측 결과는 여러분의 투자 형태와 투자 목적 또는 기대치에 적합하지 않을 수 있습니다. 
-
----
-"""
-)
-    st.title("Stock Prediction")
+    #### 🤖 자 이제 알려주가AI와 함께 
+    #### 📈 주식 투자의 달인이 되어볼까요?! 
+    """
+    )
+    st.text('')
+    st.text('')
+    st.text('')
 
 
-    st.caption(f"주식 시장의 미래를 예측합니다. CNN 모델을 활용하여 주가의 움직임을 예측합니다.  ")
-    
-    
+    # st.caption(f"주식 시장의 미래를 예측합니다. CNN 모델을 활용하여 주가의 움직임을 예측합니다.  ")
+
+
 
 
     # 회사 선택
@@ -56,16 +54,20 @@ CNN은 이미지 인식과 처리 분야에서 뛰어난 성능을 보이는 기
     }
     company_list = list(company_options.keys())
     default_company_index = company_list.index('Naver')
-    st.caption(f"아래에서 원하는 종목과 기간을 선택하세요.")
-    
-    company = st.selectbox('원하는 주식 종목을 선택하세요.', company_list, index=default_company_index)
+    # st.caption(f"아래에서 원하는 종목과 기간을 선택하세요.")
+    st.markdown('''
+                ### 1. 원하는 주식 종목을 선택하세요.
+                ''')
+    company = st.selectbox('', company_list, index=default_company_index)
     st.caption(f"현재 선택할 수 있는 종목은 Tesla, Apple, Google, Nvidia, Samsung, Naver, Kakao, SK Hynix, BTC-USD 입니다.")
     # 기간 선택
     
     period_options = ['1mo', '3mo', '6mo', '1y']
     default_period_index = period_options.index('1mo')
-    period = st.selectbox('원하는 기간을 선택하세요.', options=period_options, index=default_period_index)
-    st.caption(f"1개월 부터 1년까지의 기간을 선택할 수 있습니다.")
+
+    period = '1mo'
+    # period = st.selectbox('원하는 기간을 선택하세요.', options=period_options, index=default_period_index)
+    # st.caption(f"1개월 부터 1년까지의 기간을 선택할 수 있습니다.")
 
     # 간격 선택 (기간에 따른 간격 선택 제한)
     interval_options = {
@@ -133,12 +135,28 @@ CNN은 이미지 인식과 처리 분야에서 뛰어난 성능을 보이는 기
 
 
     # CNN 모델 예측 결과
+    
     cnn_model_inference(company, ticker, period, interval)
 
 
+    # 설문
+    html_content  = """
+            <div formsappId="65dee1274bfcc0164b71b039"></div>
+            <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'standard', {'width':'100vw','height':'600px','opacity':0});"></script>
+                        """
+    
+    components.html(html_content, height=600)
+
+
+
     st.markdown("""
----
+                # 📛 Disclaimer
+
+    모든 데이터와 정보는 정보 제공 목적으로만 제공됩니다. 그 어떤 데이터와 정보도 일반적인 자문이나 맞춤형 자문 같은 투자 자문으로 간주되지 않습니다. 모델의 예측 결과는 여러분의 투자 형태와 투자 목적 또는 기대치에 적합하지 않을 수 있습니다. 
                 """)
+
+    # About us
+
 
     st.title("About us")
     st.markdown(
@@ -149,51 +167,93 @@ CNN은 이미지 인식과 처리 분야에서 뛰어난 성능을 보이는 기
 """
 )
     html_code = """
-    <br/>
-<table>
-    <tr height="160px">
-        <td align="center" width="150px">
-            <a href="https://github.com/minyun-e"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/6ac5b0db-2f18-4e80-a571-77c0812c0bdc"></a>
-            <br/>
-            <a href="https://github.com/minyun-e"><strong>김민윤</strong></a>
-            <br />
-        </td>
-        <td align="center" width="150px">
-            <a href="https://github.com/2018007956"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/cabba669-dda2-4ead-9f73-00128c0ae175"/></a>
-            <br/>
-            <a href="https://github.com/2018007956"><strong>김채아</strong></a>
-            <br />
-        </td>
-        <td align="center" width="150px">
-            <a href="https://github.com/Eddie-JUB"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2829c82d-ecc8-49fd-9cb3-ae642fbe7513"/></a>
-            <br/>
-            <a href="https://github.com/Eddie-JUB"><strong>배종욱</strong></a>
-            <br />
-        </td>
-        <td align="center" width="150px">
-            <a href="https://github.com/FinalCold"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/fdeb0582-a6f1-4d70-9d08-dc2f9639d7a5"/></a>
-            <br />
-            <a href="https://github.com/FinalCold"><strong>박찬종</strong></a>
-            <br />
-        </td>
-        <td align="center" width="150px">
-            <a href="https://github.com/MalMyeong"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/0583f648-d097-44d9-9f05-58102434f42d"/></a>
-            <br />
-            <a href="https://github.com/MalMyeong"><strong>조명현</strong></a>
-            <br />
-        </td>
-        <td align="center" width="150px">
-              <a href="https://github.com/classaen7"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2806abc1-5913-4906-b44b-d8b92d7c5aa5"/></a>
-              <br />
-              <a href="https://github.com/classaen7"><strong>최시현</strong></a>
-              <br />
-          </td>
-    </tr>
-</table>  
-<br/>
-<br/>
+                <table style="border-collapse: collapse; border: none;">
+                    <tr height="160px">
+                        <td align="center" width="150px" style="border: none;">
+                            <a href="https://github.com/minyun-e"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/6ac5b0db-2f18-4e80-a571-77c0812c0bdc"></a>
+                            <br/>
+                            <a href="https://github.com/minyun-e"><strong>김민윤</strong></a>
+                        </td>
+                        <td align="center" width="150px" style="border: none;">
+                            <a href="https://github.com/2018007956"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/cabba669-dda2-4ead-9f73-00128c0ae175"></a>
+                            <br/>
+                            <a href="https://github.com/2018007956"><strong>김채아</strong></a>
+                        </td>
+                        <td align="center" width="150px" style="border: none;">
+                            <a href="https://github.com/Eddie-JUB"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2829c82d-ecc8-49fd-9cb3-ae642fbe7513"></a>
+                            <br/>
+                            <a href="https://github.com/Eddie-JUB"><strong>배종욱</strong></a>
+                        </td>
+                    </tr>
+                    <tr height="160px">
+                        <td align="center" width="150px" style="border: none;">
+                            <a href="https://github.com/FinalCold"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/fdeb0582-a6f1-4d70-9d08-dc2f9639d7a5"></a>
+                            <br/>
+                            <a href="https://github.com/FinalCold"><strong>박찬종</strong></a>
+                        </td>
+                        <td align="center" width="150px" style="border: none;">
+                            <a href="https://github.com/MalMyeong"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/0583f648-d097-44d9-9f05-58102434f42d"></a>
+                            <br/>
+                            <a href="https://github.com/MalMyeong"><strong>조명현</strong></a>
+                        </td>
+                        <td align="center" width="150px" style="border: none;">
+                            <a href="https://github.com/classaen7"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2806abc1-5913-4906-b44b-d8b92d7c5aa5"></a>
+                            <br/>
+                            <a href="https://github.com/classaen7"><strong>최시현</strong></a>
+                        </td>
+                    </tr>
+                </table>
 
-"""
+                """
+
+
+
+#     html_code = """
+#     <br/>
+# <table>
+#     <tr height="160px">
+#         <td align="center" width="150px">
+#             <a href="https://github.com/minyun-e"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/6ac5b0db-2f18-4e80-a571-77c0812c0bdc"></a>
+#             <br/>
+#             <a href="https://github.com/minyun-e"><strong>김민윤</strong></a>
+#             <br />
+#         </td>
+#         <td align="center" width="150px">
+#             <a href="https://github.com/2018007956"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/cabba669-dda2-4ead-9f73-00128c0ae175"/></a>
+#             <br/>
+#             <a href="https://github.com/2018007956"><strong>김채아</strong></a>
+#             <br />
+#         </td>
+#         <td align="center" width="150px">
+#             <a href="https://github.com/Eddie-JUB"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2829c82d-ecc8-49fd-9cb3-ae642fbe7513"/></a>
+#             <br/>
+#             <a href="https://github.com/Eddie-JUB"><strong>배종욱</strong></a>
+#             <br />
+#         </td>
+#         <td align="center" width="150px">
+#             <a href="https://github.com/FinalCold"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/fdeb0582-a6f1-4d70-9d08-dc2f9639d7a5"/></a>
+#             <br />
+#             <a href="https://github.com/FinalCold"><strong>박찬종</strong></a>
+#             <br />
+#         </td>
+#         <td align="center" width="150px">
+#             <a href="https://github.com/MalMyeong"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/0583f648-d097-44d9-9f05-58102434f42d"/></a>
+#             <br />
+#             <a href="https://github.com/MalMyeong"><strong>조명현</strong></a>
+#             <br />
+#         </td>
+#         <td align="center" width="150px">
+#               <a href="https://github.com/classaen7"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2806abc1-5913-4906-b44b-d8b92d7c5aa5"/></a>
+#               <br />
+#               <a href="https://github.com/classaen7"><strong>최시현</strong></a>
+#               <br />
+#           </td>
+#     </tr>
+# </table>  
+# <br/>
+# <br/>
+
+# """
 
 
     st.markdown(html_code, unsafe_allow_html=True)

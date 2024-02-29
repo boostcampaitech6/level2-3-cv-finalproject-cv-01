@@ -29,19 +29,30 @@ def cnn_model_inference(company, ticker, period, interval):
     
     # st.header('Stock Predict by CNN Model', divider='grey')
     
-    st.markdown('''이미지 기반 CNN 인공지능 모델로 주가를 예측합니다.
-                위의 주가 그래프의 마지막 5일 및 20일의 주식 정보를 통해 향후 주가를 예측합니다.  
-                아래의 "주가 예측하기" 버튼을 누르면 예측 결과를 확인할 수 있습니다.
+    st.markdown(f'''
+                과연 {company} 주가는 어떻게 변할까요?  \n
                 ''')
+                    
 
-    st.text('')
-    st.text('')
+    # st.markdown('''이미지 기반 CNN 인공지능 모델로 주가를 예측합니다.
+    #             위의 주가 그래프의 마지막 5일 및 20일의 주식 정보를 통해 향후 주가를 예측합니다.  
+    #             아래의 "주가 예측하기" 버튼을 누르면 예측 결과를 확인할 수 있습니다.
+    #             ''')
+    st.markdown(
+    """
+    ### 2. 주가 예측하기
+    #### 아래의 주가예측하기 버튼을 클릭해서 주가를 예측해보세요!
+    """
+    )
+    # st.text('')
+    # st.text('')
     
     # cp, bt = st.columns([7,1])
     
     # st.caption(f"최근 :blue[**{5}**]일 및 :blue[**{20}**]일 동안의 데이터를 통해 :blue[**{5}**]일 및 :blue[**{20}**]일 이후의 :blue[**{company}**] 주가 상승/하락을 예측합니다")
     # cp.caption(f"최근 :blue[**{5}**]일 및 :blue[**{20}**]일 동안의 데이터를 통해 :blue[**{5}**]일 및 :blue[**{20}**]일 이후의 :blue[**{company}**] 주가 상승/하락을 예측합니다")
     col1, col2, col3 = st.columns([1,1,1])
+
     if col2.button('주가 예측하기'):
 
         # Case-1: 5d_5d
@@ -89,8 +100,8 @@ def cnn_model_inference(company, ticker, period, interval):
                 elif company == 'Google':
                     img = Image.open('models/cnn/ask.jpg')
                     # img = Image.open('models/cnn/ant.png').resize((256,256))
-                elif company == 'Nivida':
-                    img = Image.open('models/cnn/nvidia.jpg')
+                elif company == 'Nvidia':
+                    img = Image.open('models/cnn/nvidia2.jpg')
                     # img = Image.open('models/cnn/nvidia.jpg').resize((256,256))
                 elif company == 'Tesla':
                     img = Image.open('models/cnn/tesla.jpg')
@@ -162,12 +173,5 @@ def cnn_model_inference(company, ticker, period, interval):
 
             elif i == 1:
                 pass
-                # p_col1.markdown(f'''
-                #                     \n
-                #                     \n
-                #                     투신자판:  \n
-                #                     투자는 신중하게 자기가 판단해서
-                #                 ''')                    
 
             my_bar.empty()
-
