@@ -4,7 +4,7 @@ version: "3.10"
 services:
 
   frontend:
-    image: front:init
+    image: kchaea/stock-frontend:v0.0
     build:
       context: frontend/.
       dockerfile: Dockerfile
@@ -17,7 +17,7 @@ services:
       - ./assets:/assets
 
   backend:
-    image: back:init
+    image: kchaea/stock-backend:v0.0
     build:
       context: backend/.
       dockerfile: Dockerfile
