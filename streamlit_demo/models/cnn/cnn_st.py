@@ -31,9 +31,17 @@ def cnn_model_inference(company, ticker, period, interval):
     
     st.markdown(f'''
                 과연 {company} 주가는 어떻게 변할까요?  \n
+                알려주가AI와 함께 확인해볼까요?
                 ''')
                     
 
+    st.text('')
+    st.text('')
+    st.text('')
+    st.text('')
+    st.text('')
+    st.text('')
+    
     # st.markdown('''이미지 기반 CNN 인공지능 모델로 주가를 예측합니다.
     #             위의 주가 그래프의 마지막 5일 및 20일의 주식 정보를 통해 향후 주가를 예측합니다.  
     #             아래의 "주가 예측하기" 버튼을 누르면 예측 결과를 확인할 수 있습니다.
@@ -41,7 +49,9 @@ def cnn_model_inference(company, ticker, period, interval):
     st.markdown(
     """
     ### 2. 주가 예측하기
-    #### 아래의 주가예측하기 버튼을 클릭해서 주가를 예측해보세요!
+    아래의 주가예측하기 버튼을 클릭해서 \n
+    알려주가 AI가 알려주는 주가예측 결과를
+    확인 해보세요!
     """
     )
     # st.text('')
@@ -109,42 +119,41 @@ def cnn_model_inference(company, ticker, period, interval):
                 elif company == 'Samsung':
                     img = Image.open('models/cnn/samsung.png')
                     # img = Image.open('models/cnn/samsung.png').resize((256,256))
-                elif company == '035420.KS':
-                    img = Image.open('models/cnn/ant.jpg')
+                elif company == 'DOGE-USD':
+                    img = Image.open('models/cnn/doge.png')
                     # img = Image.open('models/cnn/ant.jpg').resize((256,256))
                 elif company == 'Kakao':
                     img = Image.open('models/cnn/kakao.jpg')
                     # img = Image.open('models/cnn/kakao.jpg').resize((256,256))
                 elif company == 'Naver':
-                    img = Image.open('models/cnn/ant.jpg')
+                    img = Image.open('models/cnn/기도짤.jpg')
                     # img = Image.open('models/cnn/ant.jpg').resize((256,256))
                 else:
                     img = Image.open('models/cnn/ant.jpg').resize((256,256))
 
                 if pred_idx_5 == 0 and pred_idx_20 ==0:
                     p_col1.image(img, use_column_width=True)
-
                     p_col2.markdown(f'''
                                     \n  
                                     \n  
-                                    **인공지능 모델이 {company} 주가를 분석한 결과**  \n
-                                    오늘인 {today} 기준으로  \n
-                                    **5일** 이후인 {next_5d}에 \n
-                                    {percent_5} 확률로 :red[**하락**]을  \n
-                                    **20일** 이후인 {next_20d}에 \n
-                                    {percent_20} 확률로 :red[**하락**]을 예측합니다''')
+                                    **알려주가 AI가 {company} 주가를 분석한 결과**  \n
+                                    오늘인 **{today}** 기준으로  \n
+                                    **5일** 뒤인 **{next_5d}**에 \n
+                                    **{percent_5}%** 확신으로 :red[**하락**]을  \n
+                                    **20일** 뒤인 **{next_20d}**에 \n
+                                    **{percent_20}%** 확신으로 :red[**하락**]을 예측합니다''')
                 
                 elif pred_idx_5 == 0 and pred_idx_20 ==1:
                     p_col1.image(img, use_column_width=True)
                     p_col2.markdown(f'''
                                     \n
                                     \n
-                                    **인공지능 모델이 {company} 주가를 분석한 결과**  \n
-                                    오늘인 {today} 기준으로  \n
-                                    **5일** 이후인 {next_5d}에 \n
-                                    {percent_5} 확률로 :red[**하락**]을  \n
-                                    **20일** 이후인 {next_20d}에 \n
-                                    {percent_20} 확률로 :blue[**상승**]을 예측합니다''')
+                                    **알려주가 AI가 {company} 주가를 분석한 결과**  \n
+                                    오늘인 **{today}** 기준으로  \n
+                                    **5일** 뒤인 **{next_5d}**에 \n
+                                    **{percent_5}%** 확신으로 :red[**하락**]을  \n
+                                    **20일** 뒤인 **{next_20d}**에 \n
+                                    **{percent_20}%** 확신으로 :blue[**상승**]을 예측합니다''')
                     
                     
                 elif pred_idx_5 == 1 and pred_idx_20 ==0:
@@ -152,12 +161,12 @@ def cnn_model_inference(company, ticker, period, interval):
                     p_col2.markdown(f'''
                                     \n
                                     \n
-                                    **인공지능 모델이 {company} 주가를 분석한 결과**  \n
+                                    **알려주가 AI가 {company} 주가를 분석한 결과**  \n
                                     오늘인 {today} 기준으로  \n
-                                    **5일** 이후인 {next_5d}에 \n
-                                    {percent_5} 확률로 :blue[**상승**]을  \n
-                                    **20일** 이후인 {next_20d}에 \n
-                                    {percent_20} 확률로 :red[**하락**]을 예측합니다''')
+                                    **5일** 뒤인 {next_5d}에 \n
+                                    **{percent_5}%** 확신으로 :blue[**상승**]을  \n
+                                    **20일** 뒤인 {next_20d}에 \n
+                                    **{percent_20}%** 확신으로 :red[**하락**]을 예측합니다''')
                     
                 
                 else:
@@ -166,10 +175,12 @@ def cnn_model_inference(company, ticker, period, interval):
                     p_col2.markdown(f'''
                                     \n
                                     \n
-                                    **인공지능 모델이 {company} 주가를 분석한 결과**  \n
-                                    오늘인 {today} 기준으로  \n
-                                    **5일** 이후인 {next_5d}에 {percent_5} 확률로 :blue[**상승**]을  \n
-                                    **20일** 이후인 {next_20d}에 {percent_20} 확률로 :blue[**상승**]을 예측합니다''')
+                                    **알려주가 AI가 {company} 주가를 분석한 결과**  \n
+                                    오늘인 **{today}** 기준으로  \n
+                                    **5일** 이후인 **{next_5d}**에 \n
+                                    **{percent_5}%** 확신으로 :blue[**상승**]을  \n
+                                    **20일** 이후인 **{next_20d}**에 \n
+                                    **{percent_20}%** 확신으로 :blue[**상승**]을 예측합니다''')
 
             elif i == 1:
                 pass
