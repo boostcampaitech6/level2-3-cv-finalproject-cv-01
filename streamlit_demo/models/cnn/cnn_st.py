@@ -29,18 +29,7 @@ def cnn_model_inference(company, ticker, period, interval):
     
     # st.header('Stock Predict by CNN Model', divider='grey')
     
-    st.markdown(f'''
-                과연 {company} 주가는 어떻게 변할까요?  \n
-                알려주가AI와 함께 확인해볼까요?
-                ''')
-                    
-
-    st.text('')
-    st.text('')
-    st.text('')
-    st.text('')
-    st.text('')
-    st.text('')
+   
     
     # st.markdown('''이미지 기반 CNN 인공지능 모델로 주가를 예측합니다.
     #             위의 주가 그래프의 마지막 5일 및 20일의 주식 정보를 통해 향후 주가를 예측합니다.  
@@ -48,11 +37,12 @@ def cnn_model_inference(company, ticker, period, interval):
     #             ''')
     st.markdown(
     """
-    ### 2. 주가 예측하기
-    아래의 주가예측하기 버튼을 클릭해서 \n
-    알려주가 AI가 알려주는 주가예측 결과를
-    확인 해보세요!
-    """
+    ### 2. 주가를 예측해봐요!
+
+    과연 {company} 주가는 어떻게 변할까요?  \n
+    아래의 주가예측하기 버튼을 클릭해서 
+    알려주가AI와 함께 확인해볼까요?
+    """.format(company=company)
     )
     # st.text('')
     # st.text('')
@@ -61,10 +51,33 @@ def cnn_model_inference(company, ticker, period, interval):
     
     # st.caption(f"최근 :blue[**{5}**]일 및 :blue[**{20}**]일 동안의 데이터를 통해 :blue[**{5}**]일 및 :blue[**{20}**]일 이후의 :blue[**{company}**] 주가 상승/하락을 예측합니다")
     # cp.caption(f"최근 :blue[**{5}**]일 및 :blue[**{20}**]일 동안의 데이터를 통해 :blue[**{5}**]일 및 :blue[**{20}**]일 이후의 :blue[**{company}**] 주가 상승/하락을 예측합니다")
-    col1, col2, col3 = st.columns([1,1,1])
+    # col1, col2, col3 = st.columns([1,1,1])
 
-    if col2.button('주가 예측하기'):
+    # st.markdown(f'''
+    #             과연 {company} 주가는 어떻게 변할까요?  \n
+    #             알려주가AI와 함께 확인해볼까요?
+    #             ''')
+                    
 
+
+    
+    button_style = """
+                        <style>
+                        div.stButton > button:first-child {
+                            height: 3em;     /* Increase button height */
+                            width: 100%;     /* Set button width to 100% of the column */
+                            font-size: 1.5em; /* Increase font size */
+                        }
+                        </style>
+                    """
+    st.markdown(button_style, unsafe_allow_html=True)
+
+    predict_button = st.button(f'{company} 주가 예측하기')
+
+
+    if predict_button:
+    # if st.button('주가 예측하기', key='predict', help='Click to predict stock prices', **{'class': 'big-button'}):
+        
         # Case-1: 5d_5d
         i_p, o_p =5, 5
         input_period, output_period = time_calc(interval,5), time_calc(interval,5)
@@ -138,10 +151,10 @@ def cnn_model_inference(company, ticker, period, interval):
                                     \n  
                                     **알려주가 AI가 {company} 주가를 분석한 결과**  \n
                                     오늘인 **{today}** 기준으로  \n
-                                    **5일** 뒤인 **{next_5d}**에 \n
+                                    **5일** 뒤인 **{next_5d}**에는 \n
                                     **{percent_5}%** 확신으로 :red[**하락**]을  \n
-                                    **20일** 뒤인 **{next_20d}**에 \n
-                                    **{percent_20}%** 확신으로 :red[**하락**]을 예측합니다''')
+                                    **20일** 뒤인 **{next_20d}**에는 \n
+                                    **{percent_20}%** 확신으로 :red[**하락**]을 예측했어요!''')
                 
                 elif pred_idx_5 == 0 and pred_idx_20 ==1:
                     p_col1.image(img, use_column_width=True)
@@ -150,10 +163,10 @@ def cnn_model_inference(company, ticker, period, interval):
                                     \n
                                     **알려주가 AI가 {company} 주가를 분석한 결과**  \n
                                     오늘인 **{today}** 기준으로  \n
-                                    **5일** 뒤인 **{next_5d}**에 \n
+                                    **5일** 뒤인 **{next_5d}**에는 \n
                                     **{percent_5}%** 확신으로 :red[**하락**]을  \n
-                                    **20일** 뒤인 **{next_20d}**에 \n
-                                    **{percent_20}%** 확신으로 :blue[**상승**]을 예측합니다''')
+                                    **20일** 뒤인 **{next_20d}**에는 \n
+                                    **{percent_20}%** 확신으로 :blue[**상승**]을 예측했어요!''')
                     
                     
                 elif pred_idx_5 == 1 and pred_idx_20 ==0:
@@ -163,10 +176,10 @@ def cnn_model_inference(company, ticker, period, interval):
                                     \n
                                     **알려주가 AI가 {company} 주가를 분석한 결과**  \n
                                     오늘인 {today} 기준으로  \n
-                                    **5일** 뒤인 {next_5d}에 \n
+                                    **5일** 뒤인 {next_5d}에는 \n
                                     **{percent_5}%** 확신으로 :blue[**상승**]을  \n
-                                    **20일** 뒤인 {next_20d}에 \n
-                                    **{percent_20}%** 확신으로 :red[**하락**]을 예측합니다''')
+                                    **20일** 뒤인 {next_20d}에는 \n
+                                    **{percent_20}%** 확신으로 :red[**하락**]을 예측했어요!''')
                     
                 
                 else:
@@ -177,10 +190,10 @@ def cnn_model_inference(company, ticker, period, interval):
                                     \n
                                     **알려주가 AI가 {company} 주가를 분석한 결과**  \n
                                     오늘인 **{today}** 기준으로  \n
-                                    **5일** 이후인 **{next_5d}**에 \n
+                                    **5일** 이후인 **{next_5d}**에는 \n
                                     **{percent_5}%** 확신으로 :blue[**상승**]을  \n
-                                    **20일** 이후인 **{next_20d}**에 \n
-                                    **{percent_20}%** 확신으로 :blue[**상승**]을 예측합니다''')
+                                    **20일** 이후인 **{next_20d}**에는 \n
+                                    **{percent_20}%** 확신으로 :blue[**상승**]을 예측했어요!''')
 
             elif i == 1:
                 pass

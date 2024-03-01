@@ -39,19 +39,31 @@ def app():
     st.text('')
 
     st.markdown(
-    """
-    #### 🤖 자, 이제 알려주가AI와 함께 
-    #### 주식 투자의 달인이 되어볼까요?! 
-    """
-    )
+                """
+                <style>
+                .markdown-text-container {
+                    text-align: center;
+                }
+                </style>
+
+                <div class="markdown-text-container">
+                <h3> 준비되셨나요? </h3>
+                <h3>이제 🤖알려주가AI와 함께</h3>
+                <h3>주식 투자의 달인이 되어볼까요?!</h3>
+                </div>
+                """,
+                    unsafe_allow_html=True
+                )
+
+
+
+
     st.text('')
     st.text('')
     st.text('')
 
 
     # st.caption(f"주식 시장의 미래를 예측합니다. CNN 모델을 활용하여 주가의 움직임을 예측합니다.  ")
-
-
 
 
     # 회사 선택
@@ -150,7 +162,6 @@ def app():
 
 
     # CNN 모델 예측 결과
-    
     cnn_model_inference(company, ticker, period, interval)
 
     st.text('')
@@ -168,6 +179,7 @@ def app():
      아래의 설문을 통해 의견을 남겨주세요! \n
      단 1분의 시간만 투자해주신다면 \n
      알려주가AI를 더 나은 서비스로 발전시키는데 큰 힘이 됩니다! \n
+     추첨을 통해 스타벅스 기프티콘을 드립니다!
     """
     )
     # 설문
@@ -179,25 +191,52 @@ def app():
             </div>
             <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'standard', {'width':'90vw','height':'600px','opacity':0.15000000000000002});">
             </script>
-                        """
-
-    # 버튼형    
-    # html_content = """
-    #                 <button formsappId="65dee1274bfcc0164b71b039"></button>
-    #                 <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'popup', {'overlay':'rgba(45,45,45,0.79)','button':{'color':'#ff9e24','text':'Click here!'},'width':'800px','height':'600px','openingAnimation':{'entrance':'animate__bounceIn','exit':'animate__bounceOut'}});"></script>
-    #                 """
-    # 사이드형
-#     html_content = """
-                    
-# <script src="https://forms.app/static/embed.js" type="text/javascript" async defer onload="new formsapp('65dee1274bfcc0164b71b039', 'sidetab', {'button':{'text':'Click here!','color':'#ff9e24'},'align':{'horizontal':'right','vertical':'middle'},'width':'400px','height':'500px'});"></script>
-#     """
+                    """
 
     components.html(html_content, height=600)
 
-    st.text('')
-    st.text('')
-    st.text('')
-    st.text('')
+
+    components.html("""
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                            <!-- KakaoTalk Channel Add Button -->
+                            <div id="kakao-talk-channel-add-button" data-channel-public-id="_kWpaG" data-size="large" data-support-multiple-densities="true"></div>
+
+                            <!-- KakaoTalk Channel Chat Button -->
+                            <div id="kakao-talk-channel-chat-button" data-channel-public-id="_kWpaG" data-title="question" data-size="small" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
+
+                            <!-- Twitter Share Button -->
+                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="알려주가AI: 인공지능 기반 주가 예측 웹-앱 서비스! 🎈" data-url="https://ai-stock-prediction.streamlit.app/" data-show-count="false">Tweet</a>
+                        </div>
+
+                        <script>
+                            (function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s); js.id = id;
+                                js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.6.0/kakao.channel.min.js';
+                                js.integrity = 'sha384-ty4605mXDCz/lA+RRt4bHCRa1c9uIaIi0JrsmmWVxaNJZzu58jMhJK8wAMqDxrYv';
+                                js.crossOrigin = 'anonymous';
+                                fjs.parentNode.insertBefore(js, fjs);
+                            })(document, 'script', 'kakao-js-sdk');
+                        </script>
+                        <script>
+                            window.kakaoAsyncInit = function() {
+                                
+                                Kakao.Channel.createAddChannelButton({
+                                    container: '#kakao-talk-channel-add-button',
+                                    channelPublicId: '_kWpaG'
+                                });
+                                Kakao.Channel.createChatButton({
+                                    container: '#kakao-talk-channel-chat-button',
+                                    channelPublicId: '_kWpaG'
+                                });
+                            };
+                        </script>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        """, height=120)
+
+
+
 
 
     st.markdown("""
@@ -262,55 +301,6 @@ def app():
                 </table>
 
                 """
-
-
-
-#     html_code = """
-#     <br/>
-# <table>
-#     <tr height="160px">
-#         <td align="center" width="150px">
-#             <a href="https://github.com/minyun-e"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/6ac5b0db-2f18-4e80-a571-77c0812c0bdc"></a>
-#             <br/>
-#             <a href="https://github.com/minyun-e"><strong>김민윤</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#             <a href="https://github.com/2018007956"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/cabba669-dda2-4ead-9f73-00128c0ae175"/></a>
-#             <br/>
-#             <a href="https://github.com/2018007956"><strong>김채아</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#             <a href="https://github.com/Eddie-JUB"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2829c82d-ecc8-49fd-9cb3-ae642fbe7513"/></a>
-#             <br/>
-#             <a href="https://github.com/Eddie-JUB"><strong>배종욱</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#             <a href="https://github.com/FinalCold"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/fdeb0582-a6f1-4d70-9d08-dc2f9639d7a5"/></a>
-#             <br />
-#             <a href="https://github.com/FinalCold"><strong>박찬종</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#             <a href="https://github.com/MalMyeong"><img height="110px" src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/0583f648-d097-44d9-9f05-58102434f42d"/></a>
-#             <br />
-#             <a href="https://github.com/MalMyeong"><strong>조명현</strong></a>
-#             <br />
-#         </td>
-#         <td align="center" width="150px">
-#               <a href="https://github.com/classaen7"><img height="110px"  src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2806abc1-5913-4906-b44b-d8b92d7c5aa5"/></a>
-#               <br />
-#               <a href="https://github.com/classaen7"><strong>최시현</strong></a>
-#               <br />
-#           </td>
-#     </tr>
-# </table>  
-# <br/>
-# <br/>
-
-# """
 
 
     st.markdown(html_code, unsafe_allow_html=True)
