@@ -13,8 +13,9 @@ RUN apt-get update \
 	&& rm -rf /var/lib/apt/lists/
 
 # install poetry settings
-RUN pip install poetry \
-    poetry export -f requirements.txt --output requirements.txt --without-hashes
+RUN pip install --upgrade pip \
+    && pip install poetry \
+    && poetry export -f requirements.txt --output requirements.txt --without-hashes
 
 # Stage 2 : Runtime
 FROM python:3.10-slim as runtime
