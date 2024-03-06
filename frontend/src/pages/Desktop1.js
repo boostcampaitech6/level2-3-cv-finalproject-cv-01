@@ -1,9 +1,6 @@
-import React, { useState, useEffect, FunctionComponent, useCallback } from "react";
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Desktop1.module.css";
-import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
-import AsyncSelect from 'react-select/async';
-import Papa from 'papaparse';
 
 const Desktop1 = () => {
   const navigate = useNavigate();
@@ -44,44 +41,6 @@ const Desktop1 = () => {
     window.open("http://news.heraldcorp.com/view.php");
   }, []);
 
-  const [stocksData, setStocksData] = useState([]);
-  const [selectedSymbol, setSelectedSymbol] = useState(null);
-
-  useEffect(() => {
-    Papa.parse('/symbol_data/korea_stock_symbols.csv', {
-      download: true,
-      header: true,
-      complete: function(results) {
-        setStocksData(results.data);
-      },
-    });
-  }, []);
-
-  // 자동완성 옵션 로드 함수
-  const loadOptions = (inputValue, callback) => {
-    setTimeout(() => {
-      // 검색어가 비어 있지 않은 경우에만 필터링 수행
-      if (inputValue.trim() !== "") {
-        const filteredOptions = stocksData.filter((stock) =>
-        stock.label && stock.label.toLowerCase().includes(inputValue.toLowerCase())
-        );
-        callback(filteredOptions);
-      } else {
-        // 검색어가 비어 있는 경우 전체 목록 반환 또는 빈 배열 반환
-        callback([]);
-      }
-    }, 500); // 예시로 1초 딜레이를 줍니다 (실제 사용 시 조정 가능)
-  };
-
-  // 선택된 옵션을 처리하는 함수
-  const handleChange = (selectedOption) => {
-    if (selectedOption) {
-      setSelectedSymbol(selectedOption.value);
-    } else {
-      setSelectedSymbol(null);
-    }
-  };
-
   return (
     <div className={styles.desktop2}>
       <div className={styles.ai} onClick={onAITextClick}>
@@ -95,36 +54,6 @@ const Desktop1 = () => {
       <div className={styles.aboutUs}>About us</div>
       <div className={styles.login}>Login</div>
       <img className={styles.coinIcon} alt="" src="/coin.svg" />
-
-      <div className={styles.searchBar}>
-        <AsyncSelect
-          cacheOptions
-          placeholder='주식 종목명을 입력해주세요.'
-          loadOptions={loadOptions}
-          defaultOptions
-          onChange={handleChange}
-          getOptionLabel={(e) => e.label}
-          getOptionValue={(e) => e.value}
-          isClearable
-          className={styles.searchInput} // 이 클래스는 실제로는 적용되지 않습니다.
-          styles={{
-            container: (provided) => ({
-              ...provided,
-              width: '100%', // 컨테이너의 너비를 100%로 설정
-            }),
-            control: (provided) => ({
-              ...provided,
-              width: '100%', // 검색창 컨트롤의 너비를 100%로 설정
-            }),
-            option: (provided) => ({
-              ...provided,
-              color: 'black', // 옵션의 글씨 색깔을 검은색으로 설정
-            }),
-          }}
-        />
-        {selectedSymbol && <AdvancedRealTimeChart symbol={selectedSymbol} theme="dark"/>}
-      </div>
-
       <div className={styles.itemParent}>
         <div className={styles.item}>
           <div className={styles.divtext}>
@@ -314,7 +243,7 @@ const Desktop1 = () => {
           </div>
         </div>
       </div>
-      {/* <div className={styles.parent}>
+      <div className={styles.parent}>
         <div className={styles.div8}>관심종목</div>
         <div className={styles.rectangleParent}>
           <div className={styles.frameChild} />
@@ -326,7 +255,7 @@ const Desktop1 = () => {
         <div className={styles.div9}>네이버</div>
         <img className={styles.frameInner} alt="" src="/vector-3.svg" />
         <img className={styles.vectorIcon} alt="" src="/vector.svg" />
-      </div> */}
+      </div>
       <div className={styles.image7Parent}>
         <img className={styles.image7Icon} alt="" src="/image-7@2x.png" />
         <div className={styles.aiContainer}>
@@ -346,7 +275,7 @@ const Desktop1 = () => {
           </p>
         </div>
       </div>
-      {/* <img className={styles.image8Icon} alt="" src="/image-8@2x.png" /> */}
+      <img className={styles.image8Icon} alt="" src="/image-8@2x.png" />
     </div>
   );
 };
