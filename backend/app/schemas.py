@@ -5,4 +5,5 @@ class PredictionRequest(BaseModel):
 
 class PredictionResponse(BaseModel):
     id: int
-    result: float
+    result: int
+    percentage: float

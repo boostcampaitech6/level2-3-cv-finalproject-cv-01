@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, status
 from sqlmodel import Session, select
 from .schemas import PredictionRequest, PredictionResponse
 from .database import PredictionResult, engine
-from model import get_CNN5d_5d,get_CNN5d_20d,get_CNN20d_5d,get_CNN20d_20d, inference
+from model import get_CNN5d_5d, inference
 from utils import get_stock_data
 
 router = APIRouter()
@@ -24,13 +24,13 @@ def pred_cnn(stock_info: PredictionRequest)->PredictionResponse:
     pred = inference(model, df, src_window)
 
     # 예측 결과를 DB에 저장
-    prediction_result = PredictionResult(result=pred['percentage'])
+    prediction_result = PredictionResult(result=pred['pred_idx'], percentage=pred['percentage'])
     with Session(engine) as session:
         session.add(prediction_result)
         session.commit()
         session.refresh(prediction_result)
     
-    return PredictionResponse(id=prediction_result.id, result=pred["percentage"])
+    return PredictionResponse(id=prediction_result.id, result=prediction_result.result, percentage=prediction_result.percentage)
 
 @router.get("/pred/cnn")
 def get_predictions() -> list[PredictionResponse]:
@@ -38,7 +38,7 @@ def get_predictions() -> list[PredictionResponse]:
         statement = select(PredictionResult)
         prediction_results = session.exec(statement).all()
         return [
-            PredictionResponse(id=prediction_result.id, result=prediction_result.result)
+            PredictionResponse(id=prediction_result.id, result=prediction_result.result, percentage=prediction_result.percentage)
             for prediction_result in prediction_results
         ]
 
@@ -51,5 +51,5 @@ def get_preidction(id: int) -> PredictionResponse:
                 detail="Not found", status_code=status.HTTP_404_NOT_FOUND
             )
         return PredictionResponse(
-            id=prediction_result.id, result=prediction_result.result
+            id=prediction_result.id, result=prediction_result.result, percentage=prediction_result.percentage
         )
