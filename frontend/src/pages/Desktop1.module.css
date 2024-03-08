@@ -332,13 +332,13 @@
   color: var(--wwwtherichio-silver);
   font-family: var(--wwwtherichio-apple-sd-gothic-neo-regular-13);
 }
-.div8 {
+/* .div8 {
   position: absolute;
   top: 154px;
   left: 30px;
   letter-spacing: -0.08em;
-}
-.frameChild {
+} */
+/* .frameChild {
   position: absolute;
   top: 0;
   left: calc(50% - 160px);
@@ -346,28 +346,28 @@
   background-color: var(--color-gray-200);
   width: 320px;
   height: 53px;
-}
-.arrowDownIcon {
+} */
+/* .arrowDownIcon {
   position: absolute;
   top: 15px;
   right: 17px;
   width: 24px;
   height: 24px;
   overflow: hidden;
-}
-.rectangleParent {
+} */
+/* .rectangleParent {
   position: absolute;
   top: 32px;
   left: 30px;
   width: 320px;
   height: 53px;
-}
-.frameItem,
-.rectangleWrapper {
+} */
+/* .frameItem, */
+/* .rectangleWrapper {
   position: absolute;
   width: 320px;
   height: 227px;
-}
+} */
 .frameItem {
   top: 0;
   left: calc(50% - 160px);
@@ -378,13 +378,13 @@
   top: 195px;
   left: 30px;
 }
-.div9 {
+/* .div9 {
   position: absolute;
   top: 44px;
   left: 55px;
   letter-spacing: -0.08em;
-}
-.frameInner,
+} */
+/* .frameInner,
 .vectorIcon {
   position: absolute;
   width: 18px;
@@ -398,8 +398,8 @@
   top: 160px;
   right: 64px;
   height: 18px;
-}
-.parent {
+} */
+/* .parent {
   position: absolute;
   top: 270px;
   left: 172px;
@@ -409,7 +409,7 @@
   height: 454px;
   overflow: hidden;
   color: var(--color-lightgray);
-}
+} */
 .image7Icon {
   position: absolute;
   top: 0;
@@ -442,14 +442,14 @@
   font-size: 32px;
   color: var(--color-lightgray);
 }
-.image8Icon {
+/* .image8Icon {
   position: absolute;
   top: 258px;
   left: 598px;
   width: 724px;
   height: 515px;
   object-fit: cover;
-}
+} */
 .desktop2 {
   width: 100%;
   position: relative;
@@ -460,4 +460,14 @@
   font-size: var(--font-size-xl);
   color: var(--color-gray-100);
   font-family: var(--font-noto-sans-kr);
+}
+
+.searchBar {
+  margin: 20px auto;
+  padding-top: 120px;
+  width: 80%; /* 검색창 너비 조정 */
+  max-width: 600px; /* 최대 너비 설정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
