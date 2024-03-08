@@ -1,0 +1,28 @@
+# docker-compose.yaml
+version: "3.10"
+
+services:
+
+  frontend:
+    image: kchaea/stock-frontend:v0.1
+    build:
+      context: frontend/.
+      dockerfile: Dockerfile
+    container_name: front
+    tty: true
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/workspace
+
+  backend:
+    image: kchaea/stock-backend:v0.1
+    build:
+      context: backend/.
+      dockerfile: Dockerfile
+    container_name: back
+    tty: true
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend:/workspace
