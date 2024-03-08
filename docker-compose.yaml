@@ -4,7 +4,7 @@ version: "3.10"
 services:
 
   frontend:
-    image: kchaea/stock-frontend:v0.0
+    image: kchaea/stock-frontend:v0.1
     build:
       context: frontend/.
       dockerfile: Dockerfile
@@ -14,10 +14,9 @@ services:
       - 3000:3000
     volumes:
       - ./frontend:/workspace
-      - ./assets:/assets
 
   backend:
-    image: kchaea/stock-backend:v0.0
+    image: kchaea/stock-backend:v0.1
     build:
       context: backend/.
       dockerfile: Dockerfile
@@ -27,4 +26,3 @@ services:
       - 8000:8000
     volumes:
       - ./backend:/workspace
-      - ./assets:/assets
