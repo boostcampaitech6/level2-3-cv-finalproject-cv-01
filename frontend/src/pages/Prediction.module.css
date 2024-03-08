@@ -1,0 +1,131 @@
+.home1 {
+  position: relative;
+  font-weight: 700;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+  cursor: pointer;
+}
+.stockPrediction {
+  position: relative;
+  font-weight: 700;
+}
+.frameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) 0 0;
+}
+.aboutUs1 {
+  position: relative;
+  font-weight: 700;
+}
+.aboutUs,
+.prediction {
+  display: flex;
+  flex-direction: column;
+}
+.aboutUs {
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--padding-3xs) var(--padding-9xs) var(--padding-3xs)
+    var(--padding-3xs);
+  cursor: pointer;
+}
+.prediction {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--padding-42xl) 186px 914px 187px;
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  letter-spacing: normal;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 825px) {
+  .prediction {
+    flex-wrap: wrap;
+    padding-left: var(--padding-74xl);
+    padding-right: var(--padding-74xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .aboutUs1,
+  .home1,
+  .stockPrediction {
+    font-size: var(--font-size-lgi);
+  }
+  .prediction {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+
+.menuBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 메뉴 항목 간의 공간을 균등하게 분배 */
+  align-items: center; /* 세로 방향에서 중앙 정렬 */
+  width: 70%; /* 메뉴바의 너비를 부모 컨테이너(여기서는 .prediction)의 너비와 동일하게 설정 */
+  padding: 20px auto; /* 메뉴바 내부의 여백 */
+  margin: 0px auto;
+  /* 필요한 경우 추가 스타일 */
+}
+
+/* .chart {
+  width: 80%; 
+  height: 500px; 
+  margin: 20px auto; 
+} */
+
+.selectContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 메뉴 항목 간의 공간을 균등하게 분배 */
+  align-items: center; /* 세로 방향에서 중앙 정렬 */
+  width: 50%; /* 메뉴바의 너비를 부모 컨테이너(여기서는 .prediction)의 너비와 동일하게 설정 */
+  padding: 20px auto; /* 메뉴바 내부의 여백 */
+  margin: 0px auto;
+}
+
+.selectContainer {
+  overflow: visible;
+}
+
+.predictBtn {
+  width: 150px; /* 버튼의 너비 */
+  height: 50px; /* 버튼의 높이 */
+  background-color: white; /* 버튼의 배경 색상 */
+  color: black; /* 버튼의 텍스트 색상 */
+  border: 2px solid black; /* 버튼의 테두리 */
+  font-size: 16px; /* 텍스트 크기 */
+  cursor: pointer; /* 마우스 오버시 커서 변경 */
+  display: block; /* 블록 레벨 요소로 설정 */
+  margin: auto; /* 상하 좌우 마진 자동으로 설정하여 가운데 정렬 */
+  /* 추가 스타일링 옵션 */
+  border-radius: 5px; /* 버튼의 모서리를 둥글게 */
+  transition: background-color 0.3s; /* 배경 색상 변경시 트랜지션 효과 */
+}
+
+.predictBtn:hover {
+  background-color: #f0f0f0; /* 마우스 오버시 배경 색상 변경 */
+}
+
+.chart {
+  width: 100%; 
+  height: 500px; 
+  min-height: 500px;
+}

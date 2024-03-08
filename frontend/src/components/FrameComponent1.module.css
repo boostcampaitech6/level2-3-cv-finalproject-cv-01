@@ -1,0 +1,61 @@
+.aboutUs {
+  margin: 0;
+  font-size: inherit;
+  font-style: italic;
+  font-family: inherit;
+}
+.aboutUs,
+.aiTech6,
+.cv01Team {
+  position: relative;
+  font-weight: 700;
+}
+.cv01Team {
+  display: inline-block;
+  max-width: 100%;
+}
+.aiTech6Parent {
+  flex-direction: column;
+  gap: 11px 0;
+  font-size: var(--font-size-13xl);
+}
+.aboutUsInner,
+.aboutUsParent,
+.aiTech6Parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.aboutUsParent {
+  flex-direction: column;
+  gap: 25px 0;
+}
+.aboutUsInner {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 var(--padding-36xl) 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1000px) {
+  .aboutUs {
+    font-size: var(--font-size-19xl);
+  }
+  .aiTech6,
+  .cv01Team {
+    font-size: var(--font-size-7xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .aboutUs {
+    font-size: var(--font-size-10xl);
+  }
+  .aiTech6,
+  .cv01Team {
+    font-size: var(--font-size-lgi);
+  }
+}
