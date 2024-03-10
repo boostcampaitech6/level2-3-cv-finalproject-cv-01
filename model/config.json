@@ -1,16 +1,20 @@
 {
-    "name": "Mnist_LeNet",
+    "name": "Stock_20_5",
     "n_gpu": 1,
 
     "arch": {
-        "type": "MnistModel",
+        "type": "CNN20d",
         "args": {}
     },
     "data_loader": {
-        "type": "MnistDataLoader",
+        "type": "StockDataLoader",
         "args":{
-            "data_dir": "data/",
-            "batch_size": 128,
+            "window_size" : 20,
+            "target_day" : 1,
+            "transform_type" : "rasterize",
+            "pickle_dir" : "./pickle_data",
+            "csv_dir" : null,
+            "batch_size": 32,
             "shuffle": true,
             "validation_split": 0.1,
             "num_workers": 2
@@ -43,8 +47,8 @@
         "verbosity": 2,
         
         "monitor": "min val_loss",
-        "early_stop": 10,
+        "early_stop": 30,
 
-        "tensorboard": true
+        "tensorboard": false
     }
 }
