@@ -16,7 +16,7 @@ RUN mkdir -p -m 0600 /root/.ssh \
 # COPY local SSH Key into Docker container
 COPY id_rsa /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa \
-    && git clone git@github.com:boostcampaitech6/level2-3-cv-finalproject-cv-01.git
+    && git clone -b develop git@github.com:boostcampaitech6/level2-3-cv-finalproject-cv-01.git
 
 # Stage 2 : Runtime
 FROM node:lts-slim as runtime

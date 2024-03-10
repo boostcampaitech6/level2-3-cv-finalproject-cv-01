@@ -22,7 +22,7 @@ COPY pyproject.toml .
 RUN pip install --upgrade pip \
     && pip install poetry \
 	&& poetry export -f requirements.txt --output requirements.txt --without-hashes \
-	&& git clone git@github.com:boostcampaitech6/level2-3-cv-finalproject-cv-01.git
+	&& git clone -b develop git@github.com:boostcampaitech6/level2-3-cv-finalproject-cv-01.git
 
 # Stage 2 : Runtime
 FROM python:3.10-slim as runtime
@@ -37,4 +37,4 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends git
 
-# CMD ["python", "/backend/main.py"]
+CMD ["python", "backend/main.py"]
