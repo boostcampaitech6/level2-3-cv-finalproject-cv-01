@@ -53,7 +53,7 @@ stock_codes = [
     "006260.KS",  # LS
 ]
 
-csv_dir = './stock_csv'
+csv_dir = '../stock_csv'
 os.makedirs(csv_dir, exist_ok=True)
 
 for code in stock_codes:
