@@ -13,7 +13,7 @@ RUN apt-get update \
 RUN mkdir -p -m 0600 /root/.ssh \
 	&& ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
 
-# ADD local SSH Key into Docker container
+# COPY local SSH Key into Docker container
 COPY id_rsa /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa
 
@@ -32,6 +32,9 @@ WORKDIR /workspace
 # 필요한 파일들을 빌드 스테이지에서 복사
 COPY --from=build /workspace/level2-3-cv-finalproject-cv-01 /workspace
 COPY --from=build /workspace/requirements.txt .
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
+RUN pip install --no-cache-dir --upgrade -r requirements.txt \
+	&& rm requirements.txt \
+	&& apt-get update \
+	&& apt-get install -y --no-install-recommends git
 
-CMD ["python", "/backend/main.py"]
+# CMD ["python", "/backend/main.py"]
