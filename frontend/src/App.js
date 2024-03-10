@@ -5,9 +5,8 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Home from "./pages/Home";
-import Prediction from "./pages/Prediction";
-import AboutUs from "./pages/AboutUs";
+import Desktop from "./pages/Desktop";
+import Desktop1 from "./pages/Desktop1";
 
 function App() {
   const action = useNavigationType();
@@ -29,11 +28,7 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/prediction":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/about-us":
+      case "/desktop-2":
         title = "";
         metaDescription = "";
         break;
@@ -44,7 +39,7 @@ function App() {
     }
 
     if (metaDescription) {
-      const metaDescriptionTag: HTMLMetaElement | null = document.querySelector(
+      const metaDescriptionTag = document.querySelector(
         'head > meta[name="description"]'
       );
       if (metaDescriptionTag) {
@@ -55,9 +50,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/prediction" element={<Prediction />} />
-      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/" element={<Desktop />} />
+      <Route path="/desktop-2" element={<Desktop1 />} />
     </Routes>
   );
 }
