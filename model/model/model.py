@@ -1,15 +1,15 @@
 import torch
 import torch.nn as nn
+from base import BaseModel
 from collections import OrderedDict
-# from base import BaseModel
 
-class CNN5d(nn.Module):
+class CNN5d(BaseModel):
     # Input: [N, (1), 32, 15]; Output: [N, 2]
     # Two Convolution Blocks
     
     def init_weights(self, m):
         if isinstance(m, nn.Linear) or isinstance(m, nn.Conv2d):
-            torch.nn.init.xavier_uniform_(m.weight)
+            nn.init.xavier_uniform_(m.weight)
             m.bias.data.fill_(0.01)
     
     def __init__(self, window_size):
@@ -49,7 +49,7 @@ class CNN5d(nn.Module):
         return x
 
 
-class CNN20d(nn.Module):
+class CNN20d(BaseModel):
     # Input: [N, (1), 64, 60]; Output: [N, 2]
     # Three Convolution Blocks
     
