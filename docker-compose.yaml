@@ -4,7 +4,7 @@ version: "3.10"
 services:
 
   frontend:
-    image: kchaea/stock-frontend:v0.1
+    image: kchaea/stock-frontend:v1.0
     build:
       context: frontend/.
       dockerfile: Dockerfile
@@ -12,11 +12,9 @@ services:
     tty: true
     ports:
       - 3000:3000
-    volumes:
-      - ./frontend:/workspace
 
   backend:
-    image: kchaea/stock-backend:v0.1
+    image: kchaea/stock-backend:v1.0
     build:
       context: backend/.
       dockerfile: Dockerfile
@@ -24,5 +22,3 @@ services:
     tty: true
     ports:
       - 8000:8000
-    volumes:
-      - ./backend:/workspace
