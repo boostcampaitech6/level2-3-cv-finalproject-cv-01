@@ -2,7 +2,6 @@ import torch
 from abc import abstractmethod
 from numpy import inf
 import mlflow
-import mlflow.sklearn
 
 class BaseTrainer:
     """
@@ -63,9 +62,7 @@ class BaseTrainer:
                   "optimizer":self.config['optimizer']['type'],
                   "lr":self.config['optimizer']['args']['lr'],
                   "scheduler":self.config['lr_scheduler']['type']}
-        with mlflow.start_run():
-            mlflow.log_params(params)
-            mlflow.sklearn.log_model(self.model, "model")
+        mlflow.log_params(params)
 
         not_improved_count = 0
         for epoch in range(self.start_epoch, self.epochs + 1):

@@ -3,7 +3,7 @@ import torch
 from torchvision.utils import make_grid
 from base import BaseTrainer
 from utils import inf_loop, MetricTracker
-
+import mlflow.pytorch
 
 class Trainer(BaseTrainer):
     """
@@ -61,6 +61,9 @@ class Trainer(BaseTrainer):
             if batch_idx == self.len_epoch:
                 break
         log = self.train_metrics.result()
+
+        # MLflow - model logging
+        mlflow.pytorch.log_model(self.model, "CNN")
 
         if self.do_validation:
             val_log = self._valid_epoch(epoch)
