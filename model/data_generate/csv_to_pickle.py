@@ -17,7 +17,7 @@ def csv_to_pickle(csv_path,save_dir, windows, transform_type):
         os.makedirs(save_dir, exist_ok=True)
         with open(f'{save_dir}/window_{window}.pkl', 'wb') as pickle_file:
             pickle.dump(data, pickle_file)
-
+        print(f"Pickle file Created.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
