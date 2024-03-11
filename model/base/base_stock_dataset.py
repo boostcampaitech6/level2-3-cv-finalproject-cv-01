@@ -30,7 +30,6 @@ class StockDataset(Dataset):
             module_path = 'data_generate.transform_func.'+ transform_type
             module = importlib.import_module(module_path)
             generate_image = getattr(module, transform_type)
-            print(csv_dir, self.window_size)
             temp_data = generate_image(csv_dir, self.window_size)
 
 

@@ -8,7 +8,7 @@ def rasterize(csv_path, window_size):
 
     data = []
 
-    for file_name in tqdm(os.listdir(csv_path), desc= f"Creating a pickle file for the window_size size_{window_size}"):
+    for file_name in tqdm(os.listdir(csv_path), desc= f"Converting stock CSV to image [window_size : {window_size}]"):
         file_path = osp.join(csv_path, file_name)
         df = pd.read_csv(file_path)
         
