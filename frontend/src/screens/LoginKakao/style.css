@@ -1,0 +1,39 @@
+.login-kakao {
+  background-color: #bebebecc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-kakao .login-kakao-wrapper {
+  background-color: #bebebecc;
+  height: 390px;
+  width: 274px;
+}
+
+.login-kakao .overlap-group-wrapper-2 {
+  background-color: #626363;
+  border-radius: 14px;
+  height: 390px;
+  overflow: hidden;
+}
+
+.login-kakao .check-wrapper {
+  background-image: url(../../../static/img/image-119.png);
+  background-size: 100% 100%;
+  height: 390px;
+  width: 274px;
+}
+
+.login-kakao .check-instance {
+  border-radius: 0px 0px 9px 9px !important;
+  display: flex !important;
+  height: 42px !important;
+  top: 348px !important;
+  width: 274px !important;
+}
+
+.login-kakao .check-2 {
+  margin-top: unset !important;
+}
