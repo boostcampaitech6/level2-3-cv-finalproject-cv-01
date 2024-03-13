@@ -193,3 +193,77 @@
   left: 328px !important;
   top: 23px !important;
 }
+
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.news-item {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 10px 0;
+}
+
+.news-content {
+  margin-left: 15px;
+}
+
+.news-link {
+  text-decoration: none;
+  color: black;
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.news-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Add other styles from your original CSS that are necessary for layout */
+
+
+.result {
+  /* Ensure full width and centered content */
+  max-width: 1200px; /* Adjust based on your design */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.div-11 {
+  /* If you need internal padding */
+  padding: 20px;
+}
+
+.head-4 {
+  /* Styles for the header with title */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjust as needed */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.content {
+  /* Styles for the content section below the header */
+}
+
+.market-data {
+  /* Styles for market data section */
+  margin-bottom: 20px; /* Space below the market data */
+}
+
+.news-container {
+  /* Styles for the news items container */
+  margin-bottom: 20px; /* Space below the news container */
+}
+
+.news-item {
+  /* Styles for individual news items */
+  margin-bottom: 10px; /* Space between news items */
+}

@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.home .div-5 {
+.home .div-2 {
   background-color: #ffffff;
   height: 640px;
   overflow: hidden;
@@ -14,7 +14,7 @@
   width: 360px;
 }
 
-.home .div-6 {
+.home .div-3 {
   background-color: #ffffff;
   height: 685px;
   left: 0;
@@ -23,7 +23,7 @@
   width: 360px;
 }
 
-.home .overlap-group-3 {
+.home .overlap-group-2 {
   height: 54px;
   left: 108px;
   position: absolute;
@@ -31,7 +31,7 @@
   width: 144px;
 }
 
-.home .text-5 {
+.home .text {
   align-items: center;
   display: inline-flex;
   gap: 10px;
@@ -42,7 +42,7 @@
   top: 24px;
 }
 
-.home .text-wrapper-18 {
+.home .text-wrapper-6 {
   color: #808080;
   font-family: "Noto Sans KR", Helvetica;
   font-size: 10px;
@@ -55,7 +55,7 @@
   width: fit-content;
 }
 
-.home .text-6 {
+.home .text-2 {
   align-items: center;
   display: inline-flex;
   gap: 10px;
@@ -66,7 +66,7 @@
   top: 0;
 }
 
-.home .text-wrapper-19 {
+.home .text-wrapper-7 {
   color: #000000;
   font-family: "Noto Sans KR", Helvetica;
   font-size: 16px;
@@ -80,7 +80,7 @@
   width: fit-content;
 }
 
-.home .serch-2 {
+.home .serch {
   background-color: #f1f0f0;
   border-radius: 5px;
   display: block;
@@ -92,7 +92,7 @@
   width: 330px;
 }
 
-.home .text-7 {
+.home .text-3 {
   align-items: center;
   display: inline-flex;
   justify-content: center;
@@ -101,7 +101,7 @@
   top: 18px;
 }
 
-.home .text-wrapper-20 {
+.home .text-wrapper-8 {
   color: #000000;
   font-family: var(--general-font-family);
   font-size: var(--general-font-size);
@@ -115,69 +115,60 @@
   width: fit-content;
 }
 
-.home .search-instance {
+.home .icon-search {
   left: 297px !important;
   position: absolute !important;
   top: 16px !important;
 }
 
 .home .overlap {
-  height: 377px;
-  left: 0;
-  position: absolute;
-  top: 266px;
-  width: 360px;
-}
-
-.home .view-wrapper {
   background-color: #d9d9d933;
   border-radius: 5px;
   height: 348px;
   left: 15px;
-  overflow: hidden;
   position: absolute;
-  top: 0;
+  top: 244px;
   width: 330px;
 }
 
-.home .view-4 {
+.home .view {
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
-  gap: 9px 13px;
+  gap: 6px 6px;
   left: 12px;
   position: relative;
-  top: 8px;
+  top: 15px;
   width: 306px;
 }
 
-.home .component-1009-instance {
+.home .component-993 {
   left: unset !important;
   top: unset !important;
 }
 
-.home .view-5 {
+.home .component-993-instance {
   left: 22px !important;
 }
 
-.home .view-6 {
-  background-image: url(../../../static/img/ellipse-15-5.png) !important;
+.home .design-component-instance-node {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-5@2x.png) !important;
 }
 
-.home .view-7 {
-  background-image: url(../../../static/img/ellipse-15-1.png) !important;
+.home .view-2 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f06d961e0f8111128711d2/img/ellipse-15-2@2x.png) !important;
 }
 
-.home .view-8 {
-  background-image: url(../../../static/img/ellipse-15-2.png) !important;
+.home .view-3 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f06d961e0f8111128711d2/img/ellipse-15-3@2x.png) !important;
 }
 
-.home .view-9 {
-  background-image: url(../../../static/img/ellipse-15-6.png) !important;
+.home .view-4 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-6@2x.png) !important;
 }
 
-.home .view-10 {
-  background-image: url(../../../static/img/ellipse-15-7.png) !important;
+.home .view-5 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-7@2x.png) !important;
 }
 
 .home .LG {
@@ -190,7 +181,7 @@
   width: 96px;
 }
 
-.home .view-11 {
+.home .view-6 {
   align-items: center;
   display: inline-flex;
   justify-content: center;
@@ -199,7 +190,7 @@
   top: 85px;
 }
 
-.home .text-wrapper-21 {
+.home .text-wrapper-9 {
   color: #2961ff;
   font-family: "Inter", Helvetica;
   font-size: 10px;
@@ -213,7 +204,7 @@
   width: fit-content;
 }
 
-.home .view-12 {
+.home .view-7 {
   align-items: center;
   display: inline-flex;
   justify-content: center;
@@ -222,7 +213,7 @@
   top: 69px;
 }
 
-.home .div-7 {
+.home .div-4 {
   color: #000000;
   font-family: "Inter", Helvetica;
   font-size: 12px;
@@ -235,17 +226,17 @@
   width: fit-content;
 }
 
-.home .text-wrapper-22 {
+.home .text-wrapper-10 {
   font-weight: 500;
   letter-spacing: -0.04px;
 }
 
-.home .text-wrapper-23 {
+.home .text-wrapper-11 {
   font-size: 10px;
   letter-spacing: -0.03px;
 }
 
-.home .view-13 {
+.home .view-8 {
   align-items: center;
   display: inline-flex;
   justify-content: center;
@@ -254,7 +245,7 @@
   top: 49px;
 }
 
-.home .div-8 {
+.home .div-5 {
   color: #000000;
   font-family: "Inter", Helvetica;
   font-size: 14px;
@@ -266,16 +257,16 @@
   width: fit-content;
 }
 
-.home .text-wrapper-24 {
+.home .text-wrapper-12 {
   letter-spacing: -0.06px;
 }
 
-.home .text-wrapper-25 {
+.home .text-wrapper-13 {
   letter-spacing: -0.16px;
 }
 
-.home .logo-5 {
-  background-image: url(../../../static/img/ellipse-15-8.png);
+.home .logo-3 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-8@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   height: 37px;
@@ -290,20 +281,20 @@
 }
 
 .home .SK-2 {
-  background-image: url(../../../static/img/ellipse-15-9.png) !important;
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-9@2x.png) !important;
 }
 
-.home .view-14 {
-  background-image: url(../../../static/img/ellipse-15-10.png) !important;
+.home .view-9 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-10@2x.png) !important;
 }
 
-.home .menu-2 {
+.home .menu-instance {
   left: 0 !important;
   position: absolute !important;
-  top: 333px !important;
+  top: 599px !important;
 }
 
-.home .head-2 {
+.home .head {
   height: 74px;
   left: 0;
   position: fixed;
@@ -311,13 +302,13 @@
   width: 360px;
 }
 
-.home .text-wrapper-26 {
+.home .text-wrapper-14 {
   color: #000000;
   font-family: "Inter", Helvetica;
   font-size: 36px;
   font-weight: 700;
   height: 44px;
-  left: 22px;
+  left: 23px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;

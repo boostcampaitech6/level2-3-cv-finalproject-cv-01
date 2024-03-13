@@ -136,3 +136,7 @@ cython_debug/
 
 
 node_modules/
+
+# frontend
+frontend/node_modules/
+frontend/.parcel-cache/

@@ -5,14 +5,16 @@
   "source": "./index.html",
   "scripts": {
     "build": "parcel build --public-url ./ --no-scope-hoist",
-    "dev": "parcel",
+    "dev": "parcel --port 3000",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-overlays": "^5.2.1",
     "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
