@@ -137,4 +137,7 @@ cython_debug/
 # model
 model/saved
 
+# MLflow
+mlruns
+
 frontend/node_modules/

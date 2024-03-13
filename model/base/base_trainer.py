@@ -1,7 +1,7 @@
 import torch
 from abc import abstractmethod
 from numpy import inf
-
+import mlflow
 
 class BaseTrainer:
     """
@@ -53,6 +53,17 @@ class BaseTrainer:
         """
         Full training logic
         """
+        # MLflow - parameters logging
+        params = {"window_size":self.config['data_loader']['args']['window_size'],
+                  "target_day":self.config['data_loader']['args']['target_day'],
+                  "transform_type":self.config['data_loader']['args']['transform_type'],
+                  "batch_size":self.config['data_loader']['args']['batch_size'],
+                  "epoch":self.config['trainer']['epochs'],
+                  "optimizer":self.config['optimizer']['type'],
+                  "lr":self.config['optimizer']['args']['lr'],
+                  "scheduler":self.config['lr_scheduler']['type']}
+        mlflow.log_params(params)
+
         not_improved_count = 0
         for epoch in range(self.start_epoch, self.epochs + 1):
             result = self._train_epoch(epoch)
@@ -61,6 +72,14 @@ class BaseTrainer:
             log = {'epoch': epoch}
             log.update(result)
 
+            # MLflow - metrics logging
+            mlflow.log_metric("loss", result['loss'])
+            mlflow.log_metric("accuracy", result['accuracy'])
+            mlflow.log_metric("top_k_acc", result['top_k_acc'])
+            mlflow.log_metric("val_loss", result['val_loss'])
+            mlflow.log_metric("val_accuracy", result['val_accuracy'])
+            mlflow.log_metric("val_top_k_acc", result['val_top_k_acc'])
+            
             # print logged informations to the screen
             for key, value in log.items():
                 self.logger.info('    {:15s}: {}'.format(str(key), value))
