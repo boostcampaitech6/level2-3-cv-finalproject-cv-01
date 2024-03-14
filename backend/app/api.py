@@ -162,7 +162,7 @@ def get_user_saved(user_id: int) -> list[SavePredResultsResponse]:
         
 
 @router.post("/stockinfo", tags=["stock"])
-def stock_info(): 
+def save_stock_info(): 
     file = open(config.stock_symbol,'r')
     file.readline() # drop first row
     for line in file.readlines():
@@ -187,7 +187,7 @@ def get_stock_info() -> list[KRXResponse]:
 
 
 @router.post("/pred/cnn", tags=["predict"])
-def pred_cnn()->CNNPredResponse: 
+def save_cnn_pred()->CNNPredResponse: 
     file = open(config.model_pred,'r')
     file.readline() # drop first row
     for line in file.readlines():
