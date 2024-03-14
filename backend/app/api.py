@@ -11,7 +11,7 @@ router = APIRouter()
 @router.post("/user", tags=["user"])
 def save_user_info(user_id: int): 
     '''
-    kakao 인증키가 있는 경우 UserInfo.id에 저장, 비로그인일 경우 id 자동 할당
+    kakao 인증키가 있는 경우 UserInfo.id에 저장, 비로그인일 경우 id 부여X
     '''
     user = UserInfo(id=user_id)  
     with Session(engine) as session:
@@ -91,30 +91,36 @@ def get_user_favorite(user_id: int) -> list[FavoriteStocksResponse]:
 
 
 @router.post("/user/saved/{user_id}", tags=["user"])
-def save_user_saved(user_id: int, stock_code: int, date= str, 
-                    pred_1day_result=int, pred_1day_percent=float,
-                    pred_2day_result=int, pred_2day_percent=float,
-                    pred_3day_result=int, pred_3day_percent=float,
-                    pred_4day_result=int, pred_4day_percent=float,
-                    pred_5day_result=int, pred_5day_percent=float,
-                    pred_6day_result=int, pred_6day_percent=float,
-                    pred_7day_result=int, pred_7day_percent=float): # if press saved button
+def save_user_saved(user_id: int, stock_code: str): # if press saved button
     with Session(engine) as session:
-        # UserInfo에 저장되어 있는 값인지 확인
+        # user_id가 UserInfo에 저장되어 있는 값인지 확인
         user_info = session.query(UserInfo).filter(UserInfo.id == user_id).first()
         if not user_info:
             # `UserInfo`에 `user_id`가 없으면 404 에러를 반환
-            raise HTTPException(status_code=404, detail="User not found")
+            raise HTTPException(detail="User not found", status_code=status.HTTP_404_NOT_FOUND)
 
+        # stock_code가 CNNPredResponse 저장되어 있는 값인지 확인
+        pred_info = session.query(CNNPredHistory).filter(CNNPredHistory.stock_code == stock_code).first()
+        if not pred_info:
+            # `UserInfo`에 `user_id`가 없으면 404 에러를 반환
+            raise HTTPException(detail="Prediction result not found", status_code=status.HTTP_404_NOT_FOUND)
+        
+        date = session.query(CNNPredHistory.date).order_by(CNNPredHistory.date.desc()).first()
+        # CNNPredHistory table 조회
+        search = session.query(CNNPredHistory).filter(
+            CNNPredHistory.stock_code == stock_code,
+            CNNPredHistory.date == date.date
+            ).first()
         # 사용자가 존재하면 AI 분석 결과 저장
-        result = SavePredResults(user_id=user_id, stock_code=stock_code, date=date,
-                    pred_1day_result=pred_1day_result,pred_1day_percent=pred_1day_percent,
-                    pred_2day_result=pred_2day_result,pred_2day_percent=pred_2day_percent,
-                    pred_3day_result=pred_3day_result,pred_3day_percent=pred_3day_percent,
-                    pred_4day_result=pred_4day_result,pred_4day_percent=pred_4day_percent,
-                    pred_5day_result=pred_5day_result,pred_5day_percent=pred_5day_percent,
-                    pred_6day_result=pred_6day_result,pred_6day_percent=pred_6day_percent,
-                    pred_7day_result=pred_7day_result,pred_7day_percent=pred_7day_percent)
+        result = SavePredResults(user_id=user_id, stock_code=stock_code, 
+                    date=date.date,
+                    pred_1day_result=search.pred_1day_result,pred_1day_percent=search.pred_1day_percent,
+                    pred_2day_result=search.pred_2day_result,pred_2day_percent=search.pred_2day_percent,
+                    pred_3day_result=search.pred_3day_result,pred_3day_percent=search.pred_3day_percent,
+                    pred_4day_result=search.pred_4day_result,pred_4day_percent=search.pred_4day_percent,
+                    pred_5day_result=search.pred_5day_result,pred_5day_percent=search.pred_5day_percent,
+                    pred_6day_result=search.pred_6day_result,pred_6day_percent=search.pred_6day_percent,
+                    pred_7day_result=search.pred_7day_result,pred_7day_percent=search.pred_7day_percent)
         try:
             session.add(result)
             session.commit()
@@ -123,13 +129,13 @@ def save_user_saved(user_id: int, stock_code: int, date= str,
             session.rollback()
             print('Existed')
     return SavePredResultsResponse(user_id=result.user_id, stock_code=result.stock_code, date=result.date,
-                            pred_1day_result=pred_1day_result,pred_1day_percent=pred_1day_percent,
-                            pred_2day_result=pred_2day_result,pred_2day_percent=pred_2day_percent,
-                            pred_3day_result=pred_3day_result,pred_3day_percent=pred_3day_percent,
-                            pred_4day_result=pred_4day_result,pred_4day_percent=pred_4day_percent,
-                            pred_5day_result=pred_5day_result,pred_5day_percent=pred_5day_percent,
-                            pred_6day_result=pred_6day_result,pred_6day_percent=pred_6day_percent,
-                            pred_7day_result=pred_7day_result,pred_7day_percent=pred_7day_percent)
+                            pred_1day_result=result.pred_1day_result,pred_1day_percent=result.pred_1day_percent,
+                            pred_2day_result=result.pred_2day_result,pred_2day_percent=result.pred_2day_percent,
+                            pred_3day_result=result.pred_3day_result,pred_3day_percent=result.pred_3day_percent,
+                            pred_4day_result=result.pred_4day_result,pred_4day_percent=result.pred_4day_percent,
+                            pred_5day_result=result.pred_5day_result,pred_5day_percent=result.pred_5day_percent,
+                            pred_6day_result=result.pred_6day_result,pred_6day_percent=result.pred_6day_percent,
+                            pred_7day_result=result.pred_7day_result,pred_7day_percent=result.pred_7day_percent)
 
 @router.get("/user/saved/{user_id}", tags=["user"])
 def get_user_saved(user_id: int) -> list[SavePredResultsResponse]:
