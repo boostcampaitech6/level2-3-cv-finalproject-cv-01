@@ -1,0 +1,86 @@
+.favorite {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.favorite .div-12 {
+  background-color: #ffffff;
+  height: 640px;
+  position: relative;
+  width: 360px;
+}
+
+.favorite .head-5 {
+  height: 74px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 360px;
+}
+
+.favorite .text-wrapper-38 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 36px;
+  font-weight: 700;
+  height: 44px;
+  left: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+}
+
+.favorite .div-13 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  top: 119px;
+}
+
+.favorite .view-21 {
+  left: unset !important;
+  margin-left: -0.5px !important;
+  margin-right: -0.5px !important;
+  margin-top: -0.5px !important;
+  top: unset !important;
+}
+
+.favorite .view-22 {
+  left: unset !important;
+  margin-left: -0.5px !important;
+  margin-right: -0.5px !important;
+  top: unset !important;
+}
+
+.favorite .view-23 {
+  background-image: url(../../../static/img/ellipse-15-1.png) !important;
+}
+
+.favorite .view-24 {
+  background-image: url(../../../static/img/ellipse-15-2.png) !important;
+}
+
+.favorite .view-25 {
+  left: unset !important;
+  margin-bottom: -0.5px !important;
+  margin-left: -0.5px !important;
+  margin-right: -0.5px !important;
+  top: unset !important;
+}
+
+.favorite .view-26 {
+  background-image: url(../../../static/img/ellipse-15-3.png) !important;
+}
+
+.favorite .menu-6 {
+  left: 0 !important;
+  position: absolute !important;
+  top: 596px !important;
+}

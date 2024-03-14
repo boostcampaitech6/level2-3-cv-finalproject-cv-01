@@ -1,0 +1,1 @@
+export { IconVariants } from "./IconVariants";
