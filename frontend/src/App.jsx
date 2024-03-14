@@ -58,6 +58,10 @@ const router = createBrowserRouter([
     element: <Result />,
   },
   {
+    path: "/result-1/:symbol",
+    element: <Result />,
+  },
+  {
     path: "/favorite",
     element: <Favorite />,
   },

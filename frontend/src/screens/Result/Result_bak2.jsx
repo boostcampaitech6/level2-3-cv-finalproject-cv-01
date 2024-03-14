@@ -5,21 +5,14 @@ import { Menu } from "../../components/Menu";
 import { PropertyOffWrapper } from "../../components/PropertyOffWrapper";
 import axios from 'axios';
 import "./style.css";
-import { useParams, useLocation } from "react-router-dom";
-import { AdvancedRealTimeChart} from 'react-ts-tradingview-widgets';
 
 export const Result = () => {
-  const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
-  const location = useLocation();
-  const { stockLabel } = location.state || {};
-
   const [newsData, setNewsData] = useState([]);
 
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        console.log(stockLabel)
-        const response = await axios.get(`http://localhost:8001/news/?query=${encodeURIComponent(stockLabel)}`);
+        const response = await axios.get('http://localhost:8001/news/?query=삼성전자');
         setNewsData(response.data);
       } catch (error) {
         console.error("Error fetching news data:", error);
@@ -34,17 +27,15 @@ export const Result = () => {
       <div className="div-11">
         {/* Header section including the title "삼성전자" */}
         <div className="head-4">
-          <div className="text-wrapper-37">{stockLabel}</div>
+          <div className="text-wrapper-37">삼성전자</div>
           <Heart className="heart-2" stateProp="off" />
-        </div>
-        <div className="chart-container">
-          <AdvancedRealTimeChart 
-            theme="light" 
-            symbol={symbol}
-            autosize={true}
-            interval="D"
+          <PropertyOffWrapper
+            property1="off"
+            propertyOffClassName="component-1011"
+            to="/u35u4352u4455u4527u4352u4458-u4364u4453u4364u4449u4540u4370u4449u4352u4469u401u41"
           />
         </div>
+        
         {/* Content below the header */}
         <div className="content">
           <div className="market-data">
