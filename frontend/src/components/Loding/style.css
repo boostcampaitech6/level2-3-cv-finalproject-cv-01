@@ -1,0 +1,55 @@
+.loding {
+  height: 94px;
+  position: relative;
+  top: 20px;
+  width: 94px;
+}
+
+.loding .group {
+  background-image: url(../../../static/img/ellipse-1.png);
+  background-size: 100% 100%;
+  height: 94px;
+  position: relative;
+}
+
+.loding .ellipse {
+  height: 47px;
+  position: absolute;
+  width: 47px;
+}
+
+.loding.four {
+  left: 409px;
+}
+
+.loding.two {
+  left: 150px;
+}
+
+.loding.one {
+  left: 20px;
+}
+
+.loding.three {
+  left: 280px;
+}
+
+.loding.four .ellipse {
+  left: 0;
+  top: 0;
+}
+
+.loding.two .ellipse {
+  left: 47px;
+  top: 47px;
+}
+
+.loding.one .ellipse {
+  left: 47px;
+  top: 0;
+}
+
+.loding.three .ellipse {
+  left: 0;
+  top: 47px;
+}
