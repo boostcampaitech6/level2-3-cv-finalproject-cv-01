@@ -1,0 +1,134 @@
+.profile {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile .div-10 {
+  background-color: #ffffff;
+  height: 640px;
+  position: relative;
+  width: 360px;
+}
+
+.profile .text-wrapper-29 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 22px;
+  left: 38px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 241px;
+}
+
+.profile .text-wrapper-30 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 22px;
+  left: 34px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 163px;
+}
+
+.profile .text-wrapper-31 {
+  color: #7d49f5;
+  font-family: "Inter", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  height: 22px;
+  left: 34px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 83px;
+}
+
+.profile .text-wrapper-32 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 22px;
+  left: 38px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 297px;
+}
+
+.profile .overlap-group-4 {
+  height: 172px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 360px;
+}
+
+.profile .head-3 {
+  height: 74px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 360px;
+}
+
+.profile .text-wrapper-33 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 36px;
+  font-weight: 700;
+  height: 44px;
+  left: 34px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+}
+
+.profile .ellipse-2 {
+  background-color: #d9d9d9;
+  border-radius: 58px;
+  height: 116px;
+  left: 224px;
+  position: absolute;
+  top: 56px;
+  width: 116px;
+}
+
+.profile .image {
+  height: 93px;
+  left: 236px;
+  object-fit: cover;
+  position: absolute;
+  top: 68px;
+  width: 93px;
+}
+
+.profile .line {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 199px;
+  width: 360px;
+}
+
+.profile .menu-4 {
+  left: 0 !important;
+  position: absolute !important;
+  top: 596px !important;
+}

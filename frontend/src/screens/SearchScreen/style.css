@@ -1,0 +1,240 @@
+.search-screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-screen .search-2 {
+  background-color: #ffffff;
+  height: 640px;
+  position: relative;
+  width: 360px;
+}
+
+.search-screen .view {
+  background-color: #ffffff;
+  height: 640px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 360px;
+}
+
+.search-screen .text-3 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 15px;
+  position: absolute;
+  top: 84px;
+}
+
+.search-screen .text-wrapper-14 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.search-screen .div-4 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  top: 112px;
+}
+
+.search-screen .overlap-group-wrapper {
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  border-color: #ccc6c680;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  height: 53px;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
+  margin-top: -0.5px;
+  position: relative;
+  width: 361px;
+}
+
+.search-screen .overlap-group-2 {
+  background-color: #f1f0f0;
+  height: 52px;
+  position: relative;
+  width: 360px;
+}
+
+.search-screen .info-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  left: 84px;
+  position: absolute;
+  top: 4px;
+}
+
+.search-screen .NAVER-2 {
+  color: transparent;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.search-screen .text-wrapper-15 {
+  color: #2962ff;
+  letter-spacing: -0.06px;
+}
+
+.search-screen .text-wrapper-16 {
+  color: #000000;
+  letter-spacing: -0.06px;
+}
+
+.search-screen .element-2 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.26px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.search-screen .logo-3 {
+  background-image: url(../../../static/img/ellipse-15-4.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 37px;
+  left: 34px;
+  position: absolute;
+  top: 7px;
+  width: 37px;
+}
+
+.search-screen .design-component-instance-node {
+  left: 302px !important;
+  position: absolute !important;
+  top: 14px !important;
+}
+
+.search-screen .overlap-wrapper {
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  border-color: #ccc6c680;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  display: block;
+  height: 53px;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
+  position: relative;
+  width: 361px;
+}
+
+.search-screen .logo-4 {
+  background-image: url(../../../static/img/ellipse-15-1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 37px;
+  left: 34px;
+  position: absolute;
+  top: 7px;
+  width: 37px;
+}
+
+.search-screen .view-2 {
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  border-color: #ccc6c680;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  height: 53px;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
+  position: relative;
+  width: 361px;
+}
+
+.search-screen .view-3 {
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  border-color: #ccc6c680;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  height: 53px;
+  margin-bottom: -0.5px;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
+  position: relative;
+  width: 361px;
+}
+
+.search-screen .menu-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 596px !important;
+}
+
+.search-screen .head {
+  height: 74px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 360px;
+}
+
+.search-screen .serch {
+  background-color: #f1f0f0;
+  border-radius: 5px;
+  height: 39px;
+  left: 15px;
+  overflow: hidden;
+  position: relative;
+  top: 17px;
+  width: 330px;
+}
+
+.search-screen .text-4 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 19px;
+  position: absolute;
+  top: 10px;
+}
+
+.search-screen .text-wrapper-17 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.search-screen .icon-search {
+  left: 297px !important;
+  position: absolute !important;
+  top: 8px !important;
+}
