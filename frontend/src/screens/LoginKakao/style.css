@@ -1,94 +1,18 @@
 .login-kakao {
-  align-items: center;
-  background-color: #151B24;
+  background-color: #bebebecc;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-  overflow: auto;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 .login-kakao .login-kakao-wrapper {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 0px 15px;
-  position: relative;
-  width: 420px;
-  min-height: 100vh;
+  background-color: #bebebecc;
+  height: 390px;
+  width: 274px;
 }
 
-.login-kakao .loading-container {
-  top: 244px;
-  align-items: center;
-  position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-
-}
-
-
-.login-kakao .loading-text {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  justify-content: center;
-  padding: 10px;
-  position: relative;
-  width: 100%;
-  padding-bottom: 45px;
-}
-
-.login-kakao .loading-text-style {
-  color: #ffffff;
-  font-family: "Bungee", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  width: fit-content;
-}
-
-.login-kakao .loading-p {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  justify-content: center;
-  margin-top: -5px;
-  padding: 10px;
-  position: relative;
-  width: 100%;
-}
-
-
-.login-kakao .content {
-  align-items: center;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  gap: 72px;
-  height: 460px;
-  padding: 48px 0px 0px;
-  position: relative;
-  width: 100%;
-}
-
-.login-kakao .txt {
-  display: flex;
-  flex-direction: row; /* 가로 정렬을 위해 row 방향을 사용합니다. */
-  justify-content: center; /* 가로축에서 중앙 정렬 */
-  align-items: center; /* 세로축에서 중앙 정렬 */
-  flex-wrap: wrap; /* 내용이 넘치면 다음 줄로 넘깁니다. */
-  width: 100%;
-  padding: 0; 
-}
-
-.login-kakao .overlap-group-wrapper {
+.login-kakao .overlap-group-wrapper-2 {
   background-color: #626363;
   border-radius: 14px;
   height: 390px;
@@ -110,6 +34,6 @@
   width: 274px !important;
 }
 
-.login-kakao .design-component-instance-node {
+.login-kakao .check-2 {
   margin-top: unset !important;
 }

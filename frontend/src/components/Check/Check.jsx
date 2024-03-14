@@ -10,7 +10,7 @@ import "./style.css";
 export const Check = ({ login = true, className, divClassName }) => {
   return (
     <div className={`check ${className}`}>
-      <div className={`text-wrapper ${divClassName}`}>동의하고 계속하기</div>
+      <div className={`text-wrapper-3 ${divClassName}`}>동의하고 계속하기</div>
     </div>
   );
 };

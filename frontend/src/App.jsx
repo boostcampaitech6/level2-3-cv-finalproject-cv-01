@@ -1,26 +1,20 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ReactGA from 'react-ga4'; // GA4 버전을 사용한다고 가정
 import { Loading } from "./screens/Loading";
+import { Element } from "./screens/Element";
 import { Login } from "./screens/Login";
-import { LoginKakao } from "./screens/LoginKakao";
 import { SearchScreen } from "./screens/SearchScreen";
+import { LoginKakao } from "./screens/LoginKakao";
 import { Home } from "./screens/Home";
+import { DivWrapper } from "./screens/DivWrapper";
 import { Profile } from "./screens/Profile";
-import { FavoriteScreen } from "./screens/FavoriteScreen";
+import { Result } from "./screens/Result";
+import { Favorite } from "./screens/Favorite";
+import { Share } from "./screens/Share";
+import { DivWrapperScreen } from "./screens/DivWrapperScreen";
+import { LoginRequest } from "./screens/LoginRequest";
 import { ResultScreen } from "./screens/ResultScreen";
-import { UserProvider } from "./components/UserContext";
-
-// Google Analytics의 추적 ID
-const TRACKING_ID = "G-8QXBPGZNVR";
-ReactGA.initialize(TRACKING_ID);
-
-// 사용자 정의 미들웨어를 통해 라우트 변경을 추적
-const trackPageView = async (args) => {
-  const location = args.location || args.router.location;
-  const page = location.pathname + location.search;
-  ReactGA.send({ hitType: "pageview", page: page });
-};
+import { Screen14 } from "./screens/Screen14";
 
 const router = createBrowserRouter([
   {
@@ -31,51 +25,68 @@ const router = createBrowserRouter([
     path: "/loading",
     element: <Loading />,
   },
-  
   {
-     // 라우터에 미들웨어 추가
-    enhancers: [trackPageView],
+    path: "/u35u4352u4455u4527u4352u4458-u4364u4453u4364u4449u4540u4370u4449u4352u4469u401u41",
+    element: <Element />,
   },
   {
     path: "/login",
     element: <Login />,
   },
   {
-    path: "/login-kakao",
-    element: <LoginKakao />,
+    path: "/search-2",
+    element: <SearchScreen />,
   },
   {
-    path: "/search",
-    element: <SearchScreen />,
+    path: "/login-kakao",
+    element: <LoginKakao />,
   },
   {
     path: "/home",
     element: <Home />,
   },
   {
+    path: "/search-1",
+    element: <DivWrapper />,
+  },
+  {
     path: "/profile",
     element: <Profile />,
   },
   {
+    path: "/result-1",
+    element: <Result />,
+  },
+  {
+    path: "/result-1/:symbol",
+    element: <Result />,
+  },
+  {
     path: "/favorite",
-    element: <FavoriteScreen />,
+    element: <Favorite />,
   },
-
   {
-    path: "/result",
+    path: "/share",
+    element: <Share />,
+  },
+  {
+    path: "/u35u4367u4467u4527u4357u4469u4536u4359u4457u4355u4467",
+    element: <DivWrapperScreen />,
+  },
+  {
+    path: "/login-request",
+    element: <LoginRequest />,
+  },
+  {
+    path: "/result-2",
     element: <ResultScreen />,
   },
-
   {
-    path: "/result/:symbol",
-    element: <ResultScreen />,
+    path: "/result-3",
+    element: <Screen14 />,
   },
 ]);
 
 export const App = () => {
-  return (
-    <UserProvider>
-      <RouterProvider router={router} />;
-    </UserProvider>
-  )
+  return <RouterProvider router={router} />;
 };

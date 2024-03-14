@@ -2,11 +2,13 @@
   align-items: flex-start;
   display: inline-flex;
   gap: 10px;
+  left: -213px;
   padding: 2px;
   position: relative;
+  top: 9130px;
 }
 
-.search .union {
+.search .union-3 {
   height: 18.71px;
   position: relative;
   width: 18.71px;

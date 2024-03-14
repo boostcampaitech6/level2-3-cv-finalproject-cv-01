@@ -1,123 +1,54 @@
 .login {
-  align-items: center;
-  background-color: #151B24;
+  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.login .div-3 {
+  background-color: #ffffff;
+  height: 640px;
   position: relative;
-  overflow: auto;
+  width: 360px;
 }
 
-.login .frame-6 {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 0px 15px;
-  position: relative;
-  width: 420px;
-  min-height: 100vh;
-}
-
-.login .demo-container {
-  top: 100px;
-  align-items: center;
-  position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-  height: 350px;
-}
-
-.login .demo-txt-container {
-  top: 200px;
-  align-items: center;
-  position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-  height: 100px;
-}
-
-.login .demo {
-  margin: auto; /* 자동 마진을 설정하여 중앙에 배치 */
-  background-image: url(../../../static/img/demo.gif);
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 292px;
-  overflow: hidden;
-  position: relative;
-  width: 292px;
-}
-
-.login .login-button-container {
-  display: flex;
-  flex-direction: column; /* 요소들을 수직으로 정렬 */
-  justify-content: center; /* 수직 방향 중앙 정렬 */
-  align-items: center; /* 수평 방향 중앙 정렬 */
-  top: 450px;
-  align-items: center;
-  position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-  height: 100px;
-}
-
-.login .content-2 {
+.login .text {
   align-items: center;
   display: inline-flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  gap: 89px;
+  gap: 10px;
   justify-content: center;
-  position: relative;
+  left: 113px;
+  padding: 10px;
+  position: absolute;
+  top: 507px;
 }
 
-
-.login .text-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* 수직 정렬도 추가하려면 이것도 사용합니다. */
-  background-color: #13172280;
-  border-radius: 15px;
-  height: 74px;
-  overflow: hidden;
-}
-
-.login .text-wrapper-16 {
-  color: #ffffff;
-  font-family: "Bungee", sans-serif;
+.login .text-wrapper-12 {
+  color: #808080;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 13px;
   font-weight: 400;
-  font-style: italic;
-  font-size: 40px;
   letter-spacing: 0;
   line-height: normal;
   margin-top: -1px;
   position: relative;
+  text-align: center;
   width: fit-content;
 }
 
-.login .container {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-}
-
-.login .button-2 {
-  all: unset;
+.login .button-kakao-login {
   align-items: center;
   background-color: var(--variable-collection-kakao-bg-duplicate);
   border-radius: 6px;
-  box-sizing: border-box;
   display: flex;
   height: 45px;
   justify-content: center;
+  left: 34px;
   overflow: hidden;
   padding: 0px 14px;
-  margin-bottom: 10px;
-  position: relative;
+  position: absolute;
+  top: 442px;
   width: 292px;
 }
 
@@ -127,7 +58,7 @@
   width: 18px;
 }
 
-.login .label-wrapper {
+.login .container {
   align-items: center;
   display: inline-flex;
   flex: 0 0 auto;
@@ -139,8 +70,9 @@
 
 .login .label {
   color: var(--variable-collection-kakao-text);
-  font-family: "Noto Sans KR", Helvetica;
+  font-family: "ABeeZee", Helvetica;
   font-size: 15px;
+  font-style: italic;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 22.5px;
@@ -150,25 +82,37 @@
   width: fit-content;
 }
 
-.login .text-3 {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 10px;
-  justify-content: center;
-  padding: 10px;
-  position: relative;
+.login .frame-demo {
+  background-image: url(../../../static/img/frame-demo.gif);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 292px;
+  left: 34px;
+  overflow: hidden;
+  position: absolute;
+  top: 61px;
+  width: 292px;
 }
 
-.login .text-wrapper-17 {
-  color: #808080;
+.login .text-2 {
+  background-color: #13172280;
+  border-radius: 15px;
+  height: 74px;
+  left: -2px;
+  overflow: hidden;
+  position: relative;
+  top: 105px;
+}
+
+.login .text-wrapper-13 {
+  color: #fafafa;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 700;
+  height: 46px;
+  left: 84px;
   letter-spacing: 0;
   line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  width: fit-content;
+  position: absolute;
+  top: 13px;
 }

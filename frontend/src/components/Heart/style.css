@@ -1,13 +1,17 @@
 .heart {
   background-size: 100% 100%;
   height: 24px;
+  position: relative;
+  top: 20px;
   width: 24px;
 }
 
 .heart.off {
-  background-image: url(../../../static/img/heart-off.svg);
+  background-image: url(../../../static/img/heart-off.png);
+  left: 20px;
 }
 
 .heart.on {
-  background-image: url(../../../static/img/heart-on.svg);
+  background-image: url(../../../static/img/heart-on.png);
+  left: 75px;
 }

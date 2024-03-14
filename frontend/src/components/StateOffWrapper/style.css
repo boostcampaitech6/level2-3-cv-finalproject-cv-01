@@ -1,23 +1,27 @@
 .state-off-wrapper {
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
   border-color: #ccc6c680;
+  border-top-style: solid;
+  border-top-width: 0.5px;
   display: block;
   height: 53px;
-  width: 370px;
-  margin-bottom: 3px;
+  left: 20px;
+  position: relative;
+  width: 361px;
 }
 
 .state-off-wrapper .overlap-group {
   height: 52px;
   position: relative;
-  width: 370px;
-  border-radius: 4px;
+  width: 360px;
 }
 
 .state-off-wrapper .info {
   align-items: flex-start;
   display: inline-flex;
   flex-direction: column;
-  left: 90px;
+  left: 84px;
   position: absolute;
   top: 4px;
 }
@@ -34,7 +38,7 @@
   width: fit-content;
 }
 
-.state-off-wrapper .element {
+.state-off-wrapper .text-wrapper {
   color: #000000;
   font-family: "Noto Sans KR", Helvetica;
   font-size: 13px;
@@ -58,15 +62,23 @@
 }
 
 .state-off-wrapper .heart-instance {
-  left: 342px !important;
+  left: 302px !important;
   position: absolute !important;
   top: 14px !important;
 }
 
-.state-off-wrapper .state-off {
+.state-off-wrapper.state-off {
+  top: 20px;
+}
+
+.state-off-wrapper.state-on {
+  top: 110px;
+}
+
+.state-off-wrapper.state-off .overlap-group {
   background-color: #f1f0f0;
 }
 
-.state-off-wrapper .state-on {
+.state-off-wrapper.state-on .overlap-group {
   background-color: #f1edff;
 }

@@ -1,37 +1,21 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import introVideoDesktop from "../../../dist/video/intro_desktop.mp4";
-// import introVideoMobile from "../../../dist/video/intro_mobile.mp4";
-import introImageMobile from "../../../dist/video/intro_mobile.webp";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Loding } from "../../components/Loding";
 import "./style.css";
 
 export const Loading = () => {
-  const navigate = useNavigate();
-
-  const handleVideoEnd = () => {
-    setTimeout(() => {
-      navigate('/login');
-    }, 800);
-  };
-
-  const handleImageLoad = () => {
-    setTimeout(() => {
-      navigate('/login');
-    }, 5010);
-  };
-
-
   return (
-    <div className="video-container">
-      <video autoPlay muted className="video desktop-video" onEnded={handleVideoEnd}>
-        <source src={introVideoDesktop} type="video/mp4" />
-      </video>
-      <img
-        src={introImageMobile}
-        alt="Intro"
-        className="video mobile-image" 
-        onLoad={handleImageLoad}
-      />
+    <div className="loading">
+      <Link className="div-2" to="/login">
+        <Loding className="loding-2" frame="one" />
+        <div className="AI">
+          <div className="AI-2">
+            <div className="text-wrapper-9">알려주가</div>
+            <div className="text-wrapper-10">AI</div>
+          </div>
+          <p className="text-wrapper-11">- 쉽고 간편한 AI 주가 예측 서비스</p>
+        </div>
+      </Link>
     </div>
   );
 };

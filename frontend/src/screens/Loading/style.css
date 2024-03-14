@@ -1,34 +1,75 @@
-.video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.loading {
+  background-color: #ffffff;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  width: 100%;
 }
 
-.video {
-  object-fit: cover; 
-  max-height: 118%;
-}
-
-.desktop-video {
+.loading .div-2 {
+  background-color: #ffffff;
   display: block;
+  height: 640px;
+  position: relative;
+  width: 360px;
 }
 
-.mobile-image {
-  display: none;
+.loading .loding-2 {
+  left: 133px !important;
+  position: absolute !important;
+  top: 320px !important;
 }
 
-/* 모바일 화면 크기에 따른 스타일 */
-@media screen and (max-width: 430px) {
-  .desktop-video {
-    display: none;
-  }
-  .mobile-image {
-    display: block;
-  }
+.loading .AI {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  left: 59px;
+  position: absolute;
+  top: 143px;
+}
+
+.loading .AI-2 {
+  height: 70px;
+  position: relative;
+  width: 241px;
+}
+
+.loading .text-wrapper-9 {
+  color: #000000;
+  font-family: "Cafe24 Moyamoya OTF-Regular", Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  height: 59px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 59px;
+  position: absolute;
+  top: 4px;
+  white-space: nowrap;
+}
+
+.loading .text-wrapper-10 {
+  color: #000000;
+  font-family: "Sokcho Bada Dotum-Regular", Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  height: 70px;
+  left: 187px;
+  letter-spacing: 0;
+  line-height: 70px;
+  position: absolute;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.loading .text-wrapper-11 {
+  color: #262626;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 15.8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
 }

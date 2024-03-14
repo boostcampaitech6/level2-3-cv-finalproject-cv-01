@@ -1,263 +1,51 @@
-.home {   /* 전체 프레임 영역*/
-  align-items: center;
-  background-color: #151B24;
+.home {
+  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-  overflow: auto;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
-.home .frame-8 {   /* 디자인 영역 */
-  align-items: center;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 0px 15px;
-  position: relative;
-  width: 420px;
-  min-height: 100vh;
-}
-
-.home .stock-container {
-  top: 350px;
-  align-items: center;
-  position: absolute;
-  width: 390px; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-  height: 420px;
-}
-
-.home .stock-frame {
-  display: flex; /* Flexbox를 사용합니다 */
-  align-items: center; /* 세로축에서 중앙에 배치합니다 */
-  justify-content: center; /* 가로축에서 중앙에 배치합니다 */
-  background-color: #d9d9d933;
-  border-radius: 8px;
-  height: 351px; /* 필요에 따라 조정하세요 */
+.home .div-2 {
+  background-color: #ffffff;
+  height: 640px;
   overflow: hidden;
-  position: relative; /* 상대적 위치 지정 */
+  position: relative;
+  width: 360px;
 }
 
-.home .stocks {
-  display: flex;
+.home .div-3 {
+  background-color: #ffffff;
+  height: 685px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 360px;
+}
+
+.home .overlap-group-2 {
+  height: 54px;
+  left: 108px;
+  position: absolute;
+  top: 189px;
+  width: 144px;
+}
+
+.home .text {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
   justify-content: center;
-  align-items: center; 
-  flex-wrap: wrap;
-  gap: 6px 6px;
-  position: relative;
-  width: 100%;
+  left: 1px;
   padding: 10px;
-  height: auto; 
-}
-
-
-.home .component-1174-instance {
-  left: 25px !important;
-}
-
-.component-1174:hover {
-  background-color: #71985e; 
-  cursor: pointer; 
-}
-
-.home .stock-5 {
-  font-size: 10px !important;
-  letter-spacing: -0.3px !important;
-}
-
-.home .stock-6 {
-  letter-spacing: -0.03px !important;
-}
-
-
-
-.home .stock-8 {
-  font-size: 12px !important;
-  letter-spacing: -0.36px !important;
-}
-
-.home .stock-9 {
-  background-image: url(../../../static/img/ellipse-15-3.png) !important;
-}
-
-
-.home .stock-11 {
-  background-image: url(../../../static/img/ellipse-15-1.png) !important;
-}
-
-.home .stock-12 {
-  background-image: url(../../../static/img/ellipse-15-9.png) !important;
-}
-
-.home .stock-13 {
-  background-image: url(../../../static/img/ellipse-15-4.png) !important;
-}
-
-.home .stock-14 {
-  background-image: url(../../../static/img/ellipse-15-5.png) !important;
-}
-
-.home .stock-15 {
-  background-image: url(../../../static/img/ellipse-15-6.png) !important;
-}
-
-.home .range {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  left: 31px;
   position: absolute;
-  top: 85px;
+  top: 24px;
 }
 
-.home .text-wrapper-21 {
-  color: #2961ff;
-  font-family: "Inter", Helvetica;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: -0.3px;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.home .price {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  left: 25px;
-  position: absolute;
-  top: 69px;
-}
-
-.home .element-2 {
-  color: #000000;
-  font-family: "Inter", Helvetica;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: -0.3px;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.home .text-wrapper-22 {
-  font-weight: 500;
-  letter-spacing: -0.03px;
-}
-
-.home .text-wrapper-23 {
-  font-size: 9px;
-  letter-spacing: -0.02px;
-}
-
-.home .name {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  left: 8px;
-  position: absolute;
-  top: 49px;
-}
-
-.home .LG {
-  color: #000000;
-  font-family: "Inter", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  width: fit-content;
-}
-
-.home .text-wrapper-24 {
-  letter-spacing: -0.04px;
-}
-
-.home .text-wrapper-25 {
-  letter-spacing: -0.12px;
-}
-
-.home .logo-5 {
-  background-image: url(../../../static/img/ellipse-15-6.png);
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 37px;
-  left: 29px;
-  position: absolute;
-  top: 7px;
-  width: 37px;
-}
-
-
-
-.home .stock-17 {
-  background-image: url(../../../static/img/ellipse-15-7.png) !important;
-}
-
-.home .stock-18 {
-  background-image: url(../../../static/img/ellipse-15-8.png) !important;
-}
-
-.home .text-container {
-  top: 244px;
-  align-items: center;
-  position: absolute;
-  width: 390px; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-
-}
-
-.home .text-6 {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  justify-content: center;
-  padding: 10px;
-  position: relative;
-  width: 100%;
-  padding-bottom: 30px;
-}
-
-.home .text-wrapper-26 {
-  color: #ffffff;
-  font-family: "Noto Sans KR", Helvetica;
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: -0.96px;
-  line-height: 10px;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.home .text-7 {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  justify-content: center;
-  margin-top: -5px;
-  padding: 10px;
-  position: relative;
-  width: 100%;
-}
-
-.home .text-wrapper-27 {
+.home .text-wrapper-6 {
   color: #808080;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 400;
   letter-spacing: -0.6px;
   line-height: 10px;
@@ -267,32 +55,53 @@
   width: fit-content;
 }
 
-.home .search-box-container {
-  top: 136px;
+.home .text-2 {
   align-items: center;
-  position: absolute;
-  width: 390px; /* 부모의 폭에 맞추기 */
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  left: 0;
   padding: 10px;
+  position: absolute;
+  top: 0;
 }
 
-.home .container-3 {
-  border-radius: 5px;
-  height: 45px;
-  overflow: hidden;
+.home .text-wrapper-7 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.96px;
+  line-height: 10px;
+  margin-top: -1px;
   position: relative;
-  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
 }
 
-.home .text-8 {
+.home .serch {
+  background-color: #f1f0f0;
+  border-radius: 5px;
+  display: block;
+  height: 55px;
+  left: 15px;
+  overflow: hidden;
+  position: absolute;
+  top: 110px;
+  width: 330px;
+}
+
+.home .text-3 {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  left: 30px;
+  left: 19px;
   position: absolute;
   top: 18px;
 }
 
-.home .text-wrapper-28 {
+.home .text-wrapper-8 {
   color: #000000;
   font-family: var(--general-font-family);
   font-size: var(--general-font-size);
@@ -306,50 +115,203 @@
   width: fit-content;
 }
 
-.home .icon-2 {
-  left: 338px !important;
+.home .icon-search {
+  left: 297px !important;
   position: absolute !important;
   top: 16px !important;
 }
 
-.home .menu-wrapper {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  left: 50%; 
-  transform: translateX(-50%); 
-  justify-content: center; 
-  bottom: 0px;
-  width: 100%;
-  min-height: 44px;
+.home .overlap {
+  background-color: #d9d9d933;
+  border-radius: 5px;
+  height: 348px;
+  left: 15px;
+  position: absolute;
+  top: 244px;
+  width: 330px;
 }
 
-.home .menu-2 {
-  box-shadow: 0px -2px 3.2px #2B344E !important;
-  flex: 0 0 auto !important;
-}
-
-.home .head-2 {
+.home .view {
   align-items: flex-start;
   display: flex;
-  gap: 8px;
-  height: 86px;
-  left: 0;
-  padding: 40px 24px 0px;
-  position: absolute;
-  top: 0;
-  width: 390px;
+  flex-wrap: wrap;
+  gap: 6px 6px;
+  left: 12px;
+  position: relative;
+  top: 15px;
+  width: 306px;
 }
 
-.home .text-wrapper-29 {
-  color: #ffffff;
-  font-family: "Bungee", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 40px;
-  letter-spacing: 0;
+.home .component-993 {
+  left: unset !important;
+  top: unset !important;
+}
+
+.home .component-993-instance {
+  left: 22px !important;
+}
+
+.home .design-component-instance-node {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-5@2x.png) !important;
+}
+
+.home .view-2 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f06d961e0f8111128711d2/img/ellipse-15-2@2x.png) !important;
+}
+
+.home .view-3 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f06d961e0f8111128711d2/img/ellipse-15-3@2x.png) !important;
+}
+
+.home .view-4 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-6@2x.png) !important;
+}
+
+.home .view-5 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-7@2x.png) !important;
+}
+
+.home .LG {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px #00000033;
+  height: 102px;
+  overflow: hidden;
+  position: relative;
+  width: 96px;
+}
+
+.home .view-6 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 31px;
+  position: absolute;
+  top: 85px;
+}
+
+.home .text-wrapper-9 {
+  color: #2961ff;
+  font-family: "Inter", Helvetica;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
   line-height: normal;
   margin-top: -1px;
   position: relative;
+  text-align: center;
+  white-space: nowrap;
   width: fit-content;
+}
+
+.home .view-7 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 21px;
+  position: absolute;
+  top: 69px;
+}
+
+.home .div-4 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.home .text-wrapper-10 {
+  font-weight: 500;
+  letter-spacing: -0.04px;
+}
+
+.home .text-wrapper-11 {
+  font-size: 10px;
+  letter-spacing: -0.03px;
+}
+
+.home .view-8 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 2px;
+  position: absolute;
+  top: 49px;
+}
+
+.home .div-5 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.home .text-wrapper-12 {
+  letter-spacing: -0.06px;
+}
+
+.home .text-wrapper-13 {
+  letter-spacing: -0.16px;
+}
+
+.home .logo-3 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-8@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 37px;
+  left: 29px;
+  position: absolute;
+  top: 7px;
+  width: 37px;
+}
+
+.home .SK {
+  left: 14px !important;
+}
+
+.home .SK-2 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-9@2x.png) !important;
+}
+
+.home .view-9 {
+  background-image: url(https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f0746c43a36b70663d5a0f/img/ellipse-15-10@2x.png) !important;
+}
+
+.home .menu-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 599px !important;
+}
+
+.home .head {
+  height: 74px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 360px;
+}
+
+.home .text-wrapper-14 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 36px;
+  font-weight: 700;
+  height: 44px;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 14px;
 }

@@ -9,23 +9,11 @@ import { Link } from "react-router-dom";
 import { Icon } from "../Icon";
 import "./style.css";
 
-export const IconVariants = ({
-  icon,
-  state,
-  className,
-  iconHome = "/img/home-1.svg",
-  iconUnion = "/img/union-1.svg",
-  iconUser = "/img/user-1.svg",
-  to,
-}) => {
-
-  const isFavoriteOn = icon === "FAVORITE" && state === "on";
-
+export const IconVariants = ({ icon, state, className, iconUnion = "/img/union-1.png", to }) => {
   return (
-    <Link className={`icon-variants ${className}`} to={to}>
+    <Link className={`icon-variants icon-1-${icon} state-1-${state} ${className}`} to={to}>
       <Icon
         className="icon-instance"
-        isFavoriteOn={isFavoriteOn}
         divClassName={`${state === "on" && icon === "SEARCH" && "class"}`}
         frameClassName={`${
           ((icon === "FAVORITE" && state === "on") ||
@@ -34,7 +22,20 @@ export const IconVariants = ({
             (icon === "SAVED" && state === "on")) &&
           "class"
         }`}
-        home={iconHome}
+        heart={
+          state === "off" && icon === "FAVORITE"
+            ? "/img/heart.png"
+            : state === "on" && icon === "FAVORITE"
+            ? "/img/heart-2.png"
+            : undefined
+        }
+        home={
+          state === "off" && icon === "HOME"
+            ? "/img/home.png"
+            : state === "on" && icon === "HOME"
+            ? "/img/home-2.png"
+            : undefined
+        }
         icon={
           icon === "FAVORITE"
             ? "FAVORITE"
@@ -49,12 +50,18 @@ export const IconVariants = ({
         img={iconUnion}
         union={
           state === "off" && icon === "SEARCH"
-            ? "/img/union.svg"
+            ? "/img/union.png"
             : state === "on" && icon === "SEARCH"
-            ? "/img/union-3.svg"
+            ? "/img/union-3.png"
             : undefined
         }
-        user={iconUser}
+        user={
+          state === "off" && icon === "MY"
+            ? "/img/user.png"
+            : state === "on" && icon === "MY"
+            ? "/img/user-2.png"
+            : undefined
+        }
       />
     </Link>
   );
@@ -63,8 +70,6 @@ export const IconVariants = ({
 IconVariants.propTypes = {
   icon: PropTypes.oneOf(["MY", "HOME", "FAVORITE", "SEARCH", "SAVED"]),
   state: PropTypes.oneOf(["off", "on"]),
-  iconHome: PropTypes.string,
   iconUnion: PropTypes.string,
-  iconUser: PropTypes.string,
   to: PropTypes.string,
 };

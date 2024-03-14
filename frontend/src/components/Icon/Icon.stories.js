@@ -15,11 +15,12 @@ export const Default = {
   args: {
     icon: "MY",
     className: {},
-    home: "/img/home-4.svg",
-    union: "/img/union-6.svg",
-    divClassName: {},
-    img: "/img/union-10.svg",
-    user: "/img/user-4.svg",
+    home: "/img/home-3.png",
+    heart: "/img/heart-3.png",
+    union: "/img/union-7.png",
+    img: "/img/union-6.png",
+    user: "/img/user-3.png",
     frameClassName: {},
+    divClassName: {},
   },
 };
