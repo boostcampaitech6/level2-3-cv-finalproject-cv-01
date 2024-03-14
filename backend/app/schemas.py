@@ -11,7 +11,7 @@ class FavoriteStocksResponse(BaseModel):
 
 class SavePredResultsResponse(BaseModel):
     user_id: int
-    stock_code: int
+    stock_code: str
     date: str
     pred_1day_result: int
     pred_1day_percent: float
@@ -33,7 +33,7 @@ class KRXResponse(BaseModel):
     name: str
 
 class CNNPredResponse(BaseModel):
-    stock_code: int 
+    stock_code: str 
     date: str 
     pred_1day_result: int
     pred_1day_percent: float

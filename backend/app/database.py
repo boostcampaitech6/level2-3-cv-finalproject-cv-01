@@ -8,11 +8,11 @@ class UserInfo(SQLModel,table=True):
 
 class FavoriteStocks(SQLModel,table=True):
     user_id: int 
-    stock_code: int = Field(primary_key=True)
+    stock_code: str = Field(primary_key=True)
 
 class SavePredResults(SQLModel,table=True):
     user_id: int 
-    stock_code: int = Field(primary_key=True)
+    stock_code: str = Field(primary_key=True)
     date: str
     pred_1day_result: int
     pred_1day_percent: float
@@ -34,7 +34,7 @@ class KRX(SQLModel,table=True):
     stock_name: str
 
 class CNNPredHistory(SQLModel,table=True):
-    stock_code: int = Field(primary_key=True)
+    stock_code: str = Field(primary_key=True)
     date: str = Field(primary_key=True)
     close: str
     pred_1day_result: int
