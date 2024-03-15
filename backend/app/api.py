@@ -48,7 +48,7 @@ def get_user_info(id: int) -> UserInfoResponse:
 
 
 @router.post("/user/favorite/{user_id}", tags=["user"])
-def save_user_favorite(user_id: int, stock_code: int): # if press favorite button
+def save_user_favorite(user_id: int, stock_code: str): # if press favorite button
     with Session(engine) as session:
         # UserInfo 에 저장되어 있는 값인지 확인
         user_info = session.query(UserInfo).filter(UserInfo.id == user_id).first()
