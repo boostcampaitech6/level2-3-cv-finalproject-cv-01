@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 class Config(BaseSettings):
     db_url: str = Field(default="sqlite:///./db.sqlite3", env="DB_URL")
-    model_path: str = Field(default="model.joblib", env="MODEL_PATH")
-    app_env: str = Field(default="local", env="APP_ENV")
-
+    stock_symbol: str = Field(default="airflow_result/korea_stock_symbols_2024-03-08.csv")
+    model_pred: str = Field(default="airflow_result/predict_2024-03-08.csv")
+    
 config = Config()
