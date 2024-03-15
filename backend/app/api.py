@@ -1,10 +1,12 @@
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Body
 from sqlalchemy.exc import IntegrityError
 from sqlmodel import Session, select
 from .schemas import UserInfoResponse, FavoriteStocksResponse, SavePredResultsResponse, KRXResponse, CNNPredResponse
 from .database import UserInfo, FavoriteStocks, SavePredResults, KRX, CNNPredHistory, engine
 from .config import config
 from datetime import datetime
+import os
+import httpx
 
 router = APIRouter()
 
@@ -245,3 +247,34 @@ def save_cnn_pred()->CNNPredResponse:
         pred_7day_result=result.pred_7day_result,
         pred_7day_percent=result.pred_7day_percent,
     )
+
+
+
+@router.post("/auth/kakao", tags=["login"])
+async def kakao_login(code: str = Body(..., embed=True)):
+    KAKAO_TOKEN_URL = "https://kauth.kakao.com/oauth/token"
+    KAKAO_USER_INFO_URL = "https://kapi.kakao.com/v2/user/me"
+
+    payload = {
+        "grant_type": "authorization_code",
+        "client_id": '9e848430d64c21d951929df1b19f8617',  # 카카오 REST API 키
+        "redirect_uri": 'http://localhost:3001/login-kakao',  # 카카오 개발자 설정에 등록한 리다이렉트 URI
+        "code": code,  # 카카오 로그인 인증 과정에서 받은 인증 코드
+    }
+    print(payload)
+    async with httpx.AsyncClient() as client:
+        token_response = await client.post(KAKAO_TOKEN_URL, data=payload)
+        if token_response.status_code != 200:
+            raise HTTPException(status_code=400, detail="Could not retrieve access token from Kakao")
+
+        token_data = token_response.json()
+        access_token = token_data.get("access_token")
+
+        headers = {"Authorization": f"Bearer {access_token}"}
+        user_info_response = await client.get(KAKAO_USER_INFO_URL, headers=headers)
+        if user_info_response.status_code != 200:
+            raise HTTPException(status_code=400, detail="Could not retrieve user info from Kakao")
+
+        user_info = user_info_response.json()
+
+        return {"user_info": user_info}
