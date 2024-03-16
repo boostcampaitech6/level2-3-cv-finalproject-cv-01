@@ -1,0 +1,136 @@
+.component-1180 {
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  border-color: #cdc7c7;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  height: 53px;
+  width: 391px;
+}
+
+.component-1180 .overlap-group-3 {
+  height: 52px;
+  position: relative;
+  width: 390px;
+}
+
+.component-1180 .div-3 {
+  background-color: #ffffff;
+  height: 52px;
+  left: 29px;
+  position: absolute;
+  top: 0;
+  width: 361px;
+}
+
+.component-1180 .frame-4 {
+  height: 52px;
+  left: 155px;
+  position: absolute;
+  top: 0;
+  width: 96px;
+}
+
+.component-1180 .frame-5 {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 6px;
+  left: 273px;
+  position: absolute;
+  top: 12px;
+  width: 66px;
+}
+
+.component-1180 .text-wrapper-11 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: right;
+  width: fit-content;
+}
+
+.component-1180 .text-wrapper-12 {
+  color: #2962ff;
+  font-family: "Inter", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.component-1180 .text-wrapper-13 {
+  color: #4078ff;
+  font-family: "Inter", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.component-1180 .info-3 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  left: 72px;
+  position: absolute;
+  top: 4px;
+}
+
+.component-1180 .text-wrapper-14 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.component-1180 .text-wrapper-15 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.26px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.component-1180 .logo-4 {
+  background-image: url(../../../static/img/ellipse-15.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 37px;
+  left: 22px;
+  position: absolute;
+  top: 7px;
+  width: 37px;
+}
+
+.component-1180 .component-1179-wrapper {
+  background-color: #ffffff;
+  height: 52px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+}
+
+.component-1180 .component-1179 {
+  left: 13px !important;
+  top: 14px !important;
+}

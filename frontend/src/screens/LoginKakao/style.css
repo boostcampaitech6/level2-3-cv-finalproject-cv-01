@@ -12,7 +12,7 @@
   width: 274px;
 }
 
-.login-kakao .overlap-group-wrapper-2 {
+.login-kakao .overlap-group-wrapper {
   background-color: #626363;
   border-radius: 14px;
   height: 390px;
@@ -34,6 +34,6 @@
   width: 274px !important;
 }
 
-.login-kakao .check-2 {
+.login-kakao .design-component-instance-node {
   margin-top: unset !important;
 }

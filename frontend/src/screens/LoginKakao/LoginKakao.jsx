@@ -29,6 +29,13 @@ export const LoginKakao = () => {
   return (
     <div className="login-kakao">
       <div className="loading-text">로그인 중...</div>
+      <div className="login-kakao-wrapper">
+        <div className="overlap-group-wrapper">
+          <div className="check-wrapper">
+            <Check className="check-instance" divClassName="design-component-instance-node" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
