@@ -6,9 +6,9 @@ export const LoginKakao = () => {
   return (
     <div className="login-kakao">
       <div className="login-kakao-wrapper">
-        <div className="overlap-group-wrapper-2">
+        <div className="overlap-group-wrapper">
           <div className="check-wrapper">
-            <Check className="check-instance" divClassName="check-2" />
+            <Check className="check-instance" divClassName="design-component-instance-node" />
           </div>
         </div>
       </div>

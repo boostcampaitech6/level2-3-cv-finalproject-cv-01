@@ -20,6 +20,8 @@ export const Default = {
     icon: "MY",
     state: "off",
     className: {},
-    iconUnion: "/img/union-1.png",
+    iconHome: "/img/home-1.svg",
+    iconUnion: "/img/union-1.svg",
+    iconUser: "/img/user-1.svg",
   },
 };

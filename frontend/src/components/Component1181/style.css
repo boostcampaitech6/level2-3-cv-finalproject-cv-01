@@ -1,0 +1,41 @@
+.component-1181 {
+  align-items: center;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+}
+
+.component-1181 .icon-wrapper {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  height: 22px;
+  justify-content: center;
+  position: relative;
+  width: 22px;
+}
+
+.component-1181 .class-4 {
+  height: 2px !important;
+  opacity: 0 !important;
+  width: 2px !important;
+}
+
+.component-1181 .class-5 {
+  margin-bottom: -1px !important;
+  margin-left: -1px !important;
+  margin-right: -1px !important;
+  margin-top: -1px !important;
+}
+
+.component-1181 .property-1-0-one {
+  background-color: var(--variable-collection-color);
+}
+
+.component-1181 .property-1-0-two {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--variable-collection-color);
+}

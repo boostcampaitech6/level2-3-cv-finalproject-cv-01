@@ -1,0 +1,13 @@
+.bases-icon-wrapper {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.bases-icon-wrapper .color {
+  height: 19px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  width: 20px;
+}
