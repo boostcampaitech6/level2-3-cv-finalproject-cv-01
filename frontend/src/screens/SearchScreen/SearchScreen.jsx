@@ -131,7 +131,13 @@ export const SearchScreen = () => {
         <div className="content-3">
           <div className="stock-list">
           <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
-            <StateOffWrapper className="stock" state="off" text="네이버" />
+            <StateOffWrapper 
+              className="component-1169-instance" 
+              logoClassName="logo-img"
+              state="off" 
+              text="네이버"
+              text1="035420" 
+            />
           </div>
 
           <div onClick={() => handleStockClick('KRX:005930', '삼성전자')}>
@@ -156,7 +162,7 @@ export const SearchScreen = () => {
             
           <div onClick={() => handleStockClick('KRX:068270', '셀트리온')}>
             <StateOffWrapper 
-              className="stock-3" 
+              className="component-1169-instance" 
               logoClassName="stock-4" 
               state="off" 
               text="셀트리온" 
