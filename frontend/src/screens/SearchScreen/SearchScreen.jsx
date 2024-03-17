@@ -119,30 +119,51 @@ export const SearchScreen = () => {
       };
     },
   };
-  
+
+  const handleStockClick = (symbol, label) => {
+    navigate(`/result/${symbol}`, { state: { stockLabel: label } });
+  };
+
 
   return (
     <div className="search-screen">
       <div className="frame-7">
         <div className="content-3">
           <div className="stock-list">
+          <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
             <StateOffWrapper className="stock" state="off" text="네이버" />
+          </div>
+
+          <div onClick={() => handleStockClick('KRX:005930', '삼성전자')}>
             <StateOffWrapper
-              className="component-1169-instance"
-              logoClassName="component-1169"
-              state="off"
-              text="삼성전자"
-              text1="005930"
-              to="/result"
-            />
+                className="component-1169-instance"
+                logoClassName="component-1169"
+                state="off"
+                text="삼성전자"
+                text1="005930"
+              />
+          </div>
+
+          <div onClick={() => handleStockClick('KRX:035720', '카카오')}>
             <StateOffWrapper
-              className="component-1169-instance"
-              logoClassName="stock-2"
-              state="off"
-              text="카카오"
-              text1="035720"
+                className="component-1169-instance"
+                logoClassName="stock-2"
+                state="off"
+                text="카카오"
+                text1="035720"
+              />
+          </div>
+            
+          <div onClick={() => handleStockClick('KRX:068270', '셀트리온')}>
+            <StateOffWrapper 
+              className="stock-3" 
+              logoClassName="stock-4" 
+              state="off" 
+              text="셀트리온" 
+              text1="068270" 
             />
-            <StateOffWrapper className="stock-3" logoClassName="stock-4" state="off" text="셀트리온" text1="068270" />
+          </div>
+
           </div>
           <div className="text-4">
             <div className="text-wrapper-18">인기 검색어</div>

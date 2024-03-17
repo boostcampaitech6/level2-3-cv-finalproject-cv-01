@@ -36091,6 +36091,13 @@ const SearchScreen = ()=>{
             };
         }
     };
+    const handleStockClick = (symbol, label)=>{
+        navigate(`/result/${symbol}`, {
+            state: {
+                stockLabel: label
+            }
+        });
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "search-screen",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36101,53 +36108,81 @@ const SearchScreen = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "stock-list",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "stock",
-                                state: "off",
-                                text: "\uB124\uC774\uBC84"
+                                onClick: ()=>handleStockClick("KRX:035420", "\uB124\uC774\uBC84"),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                                    state: "off",
+                                    text: "\uB124\uC774\uBC84"
+                                }, void 0, false, {
+                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                                    lineNumber: 136,
+                                    columnNumber: 15
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 129,
-                                columnNumber: 13
+                                lineNumber: 132,
+                                columnNumber: 11
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "component-1169-instance",
-                                logoClassName: "component-1169",
-                                state: "off",
-                                text: "\uC0BC\uC131\uC804\uC790",
-                                text1: "005930",
-                                to: "/result"
-                            }, void 0, false, {
-                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 130,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                className: "component-1169-instance",
-                                logoClassName: "stock-2",
-                                state: "off",
-                                text: "\uCE74\uCE74\uC624",
-                                text1: "035720"
+                                onClick: ()=>handleStockClick("KRX:005930", "\uC0BC\uC131\uC804\uC790"),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                                    className: "component-1169-instance",
+                                    logoClassName: "component-1169",
+                                    state: "off",
+                                    text: "\uC0BC\uC131\uC804\uC790",
+                                    text1: "005930"
+                                }, void 0, false, {
+                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                                    lineNumber: 142,
+                                    columnNumber: 15
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
                                 lineNumber: 138,
                                 columnNumber: 13
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                className: "stock-3",
-                                logoClassName: "stock-4",
-                                state: "off",
-                                text: "\uC140\uD2B8\uB9AC\uC628",
-                                text1: "068270"
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "component-1169-instance",
+                                onClick: ()=>handleStockClick("KRX:035720", "\uCE74\uCE74\uC624"),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                                    className: "stock-2",
+                                    state: "off",
+                                    text: "\uCE74\uCE74\uC624",
+                                    text1: "035720"
+                                }, void 0, false, {
+                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                                    lineNumber: 154,
+                                    columnNumber: 15
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 145,
+                                lineNumber: 150,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "stock-3",
+                                onClick: ()=>handleStockClick("KRX:068270", "\uC140\uD2B8\uB9AC\uC628"),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                                    className: "stock-4",
+                                    state: "off",
+                                    text: "\uC140\uD2B8\uB9AC\uC628",
+                                    text1: "068270"
+                                }, void 0, false, {
+                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                                    lineNumber: 165,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                                lineNumber: 161,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                        lineNumber: 128,
+                        lineNumber: 131,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36157,12 +36192,12 @@ const SearchScreen = ()=>{
                             children: "\uC778\uAE30 \uAC80\uC0C9\uC5B4"
                         }, void 0, false, {
                             fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                            lineNumber: 148,
+                            lineNumber: 174,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                        lineNumber: 147,
+                        lineNumber: 173,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36183,17 +36218,17 @@ const SearchScreen = ()=>{
                                 formatOptionLabel: formatOptionLabel
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 152,
+                                lineNumber: 178,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                            lineNumber: 151,
+                            lineNumber: 177,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                        lineNumber: 150,
+                        lineNumber: 176,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36208,12 +36243,12 @@ const SearchScreen = ()=>{
                             to2: "/profile"
                         }, void 0, false, {
                             fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                            lineNumber: 168,
+                            lineNumber: 194,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                        lineNumber: 167,
+                        lineNumber: 193,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36223,28 +36258,28 @@ const SearchScreen = ()=>{
                             children: "Search"
                         }, void 0, false, {
                             fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                            lineNumber: 179,
+                            lineNumber: 205,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                        lineNumber: 178,
+                        lineNumber: 204,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                lineNumber: 127,
+                lineNumber: 130,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-            lineNumber: 126,
+            lineNumber: 129,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-        lineNumber: 125,
+        lineNumber: 128,
         columnNumber: 5
     }, undefined);
 };
@@ -46377,6 +46412,13 @@ const Home = ()=>{
             };
         }
     };
+    const handleStockClick = (symbol, label)=>{
+        navigate(`/result/${symbol}`, {
+            state: {
+                stockLabel: label
+            }
+        });
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "home",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46389,229 +46431,202 @@ const Home = ()=>{
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "stocks",
                             children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
-                                    divClassName: "component-1174-instance",
-                                    divClassName1: "stock-7",
-                                    divClassName2: "stock-8",
-                                    divClassNameOverride: "stock-5",
-                                    spanClassName: "stock-6",
-                                    state: "off"
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>handleStockClick("KRX:035420", "\uB124\uC774\uBC84"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-7",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        spanClassName: "stock-6",
+                                        state: "off"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 137,
+                                        columnNumber: 15
+                                    }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 132,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
-                                    divClassName: "component-1174-instance",
-                                    divClassName1: "stock-10",
-                                    divClassName2: "stock-8",
-                                    divClassNameOverride: "stock-5",
-                                    logoClassName: "stock-9",
-                                    spanClassName: "stock-6",
-                                    state: "off",
-                                    text: "\uC140\uD2B8\uB9AC\uC628"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 140,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
-                                    divClassName: "component-1174-instance",
-                                    divClassName1: "stock-10",
-                                    divClassName2: "stock-8",
-                                    divClassNameOverride: "stock-5",
-                                    logoClassName: "stock-11",
-                                    spanClassName: "stock-6",
-                                    state: "off",
-                                    text: "\uC0BC\uC131\uC804\uC790",
-                                    to: "/result"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 150,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
-                                    divClassName: "component-1174-instance",
-                                    divClassName1: "stock-7",
-                                    divClassName2: "stock-8",
-                                    divClassNameOverride: "stock-5",
-                                    logoClassName: "stock-12",
-                                    spanClassName: "stock-6",
-                                    state: "off",
-                                    text: "\uCE74\uCE74\uC624"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 161,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
-                                    divClassName: "component-1174-instance",
-                                    divClassName1: "stock-10",
-                                    divClassName2: "stock-8",
-                                    divClassNameOverride: "stock-5",
-                                    logoClassName: "stock-13",
-                                    spanClassName: "stock-6",
-                                    state: "off",
-                                    text: "\uC5D0\uCF54\uD504\uB85C"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 171,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
-                                    divClassName: "component-1174-instance",
-                                    divClassName1: "stock-7",
-                                    divClassName2: "stock-8",
-                                    divClassNameOverride: "stock-5",
-                                    logoClassName: "stock-14",
-                                    spanClassName: "stock-6",
-                                    state: "off",
-                                    text: "\uD604\uB300\uCC28"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 181,
-                                    columnNumber: 15
+                                    lineNumber: 136,
+                                    columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "stock-15",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "range",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "text-wrapper-21",
-                                                children: "-0.53%"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/Home/Home.jsx",
-                                                lineNumber: 193,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/screens/Home/Home.jsx",
-                                            lineNumber: 192,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "price",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "element-2",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        className: "text-wrapper-22",
-                                                        children: "188,000"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/Home/Home.jsx",
-                                                        lineNumber: 197,
-                                                        columnNumber: 21
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        className: "text-wrapper-23",
-                                                        children: "\uC6D0"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/Home/Home.jsx",
-                                                        lineNumber: 198,
-                                                        columnNumber: 21
-                                                    }, undefined)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/screens/Home/Home.jsx",
-                                                lineNumber: 196,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/screens/Home/Home.jsx",
-                                            lineNumber: 195,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "name",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "LG",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        className: "text-wrapper-24",
-                                                        children: "LG\uC5D0\uB108"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/Home/Home.jsx",
-                                                        lineNumber: 203,
-                                                        columnNumber: 21
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        className: "text-wrapper-25",
-                                                        children: "\uC9C0"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/Home/Home.jsx",
-                                                        lineNumber: 204,
-                                                        columnNumber: 21
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        className: "text-wrapper-24",
-                                                        children: "\uC194\uB8E8\uC158"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/Home/Home.jsx",
-                                                        lineNumber: 205,
-                                                        columnNumber: 21
-                                                    }, undefined)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/screens/Home/Home.jsx",
-                                                lineNumber: 202,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/screens/Home/Home.jsx",
-                                            lineNumber: 201,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "logo-5"
-                                        }, void 0, false, {
-                                            fileName: "src/screens/Home/Home.jsx",
-                                            lineNumber: 208,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 191,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
-                                    divClassName: "component-1174-instance",
-                                    divClassName1: "stock-16",
-                                    divClassName2: "stock-8",
-                                    divClassNameOverride: "stock-5",
-                                    logoClassName: "stock-17",
-                                    spanClassName: "stock-6",
-                                    state: "off",
-                                    text: "SK\uD558\uC774\uB2C9\uC2A4"
+                                    onClick: ()=>handleStockClick("KRX:068270", "\uC140\uD2B8\uB9AC\uC628"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-10",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        logoClassName: "stock-9",
+                                        spanClassName: "stock-6",
+                                        state: "off",
+                                        text: "\uC140\uD2B8\uB9AC\uC628"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 147,
+                                        columnNumber: 15
+                                    }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 210,
-                                    columnNumber: 15
+                                    lineNumber: 146,
+                                    columnNumber: 13
                                 }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
-                                    divClassName: "component-1174-instance",
-                                    divClassName1: "stock-10",
-                                    divClassName2: "stock-8",
-                                    divClassNameOverride: "stock-5",
-                                    logoClassName: "stock-18",
-                                    spanClassName: "stock-6",
-                                    state: "off",
-                                    text: "\uAE30\uC5C5\uC740\uD589"
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>handleStockClick("KRX:005930", "\uC0BC\uC131\uC804\uC790"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-10",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        logoClassName: "stock-11",
+                                        spanClassName: "stock-6",
+                                        state: "off",
+                                        text: "\uC0BC\uC131\uC804\uC790"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 159,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 158,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>handleStockClick("KRX:035720", "\uCE74\uCE74\uC624"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-7",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        logoClassName: "stock-12",
+                                        spanClassName: "stock-6",
+                                        state: "off",
+                                        text: "\uCE74\uCE74\uC624"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 171,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 170,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>handleStockClick("KRX:086520", "\uC5D0\uCF54\uD504\uB85C"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-10",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        logoClassName: "stock-13",
+                                        spanClassName: "stock-6",
+                                        state: "off",
+                                        text: "\uC5D0\uCF54\uD504\uB85C"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 183,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 182,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>handleStockClick("KRX:005380", "\uD604\uB300\uCC28"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-7",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        logoClassName: "stock-14",
+                                        spanClassName: "stock-6",
+                                        state: "off",
+                                        text: "\uD604\uB300\uCC28"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 195,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 194,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>handleStockClick("KRX:373220", "LG\uC5D0\uB108\uC9C0\uC194\uB8E8\uC158"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-30",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        logoClassName: "stock-15",
+                                        spanClassName: "stock-6",
+                                        state: "off",
+                                        text: "LG\uC5D0\uB108\uC9C0\uC194\uB8E8\uC158"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 208,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 207,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>handleStockClick("KRX:000660", "SK\uD558\uC774\uB2C9\uC2A4"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-16",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        logoClassName: "stock-17",
+                                        spanClassName: "stock-6",
+                                        state: "off",
+                                        text: "SK\uD558\uC774\uB2C9\uC2A4"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 221,
+                                        columnNumber: 15
+                                    }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
                                     lineNumber: 220,
-                                    columnNumber: 15
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>handleStockClick("KRX:024110", "\uAE30\uC5C5\uC740\uD589"),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                        divClassName: "component-1174-instance",
+                                        divClassName1: "stock-10",
+                                        divClassName2: "stock-8",
+                                        divClassNameOverride: "stock-5",
+                                        logoClassName: "stock-18",
+                                        spanClassName: "stock-6",
+                                        state: "off",
+                                        text: "\uAE30\uC5C5\uC740\uD589"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Home/Home.jsx",
+                                        lineNumber: 233,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 232,
+                                    columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 131,
+                            lineNumber: 135,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 130,
+                        lineNumber: 134,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46624,12 +46639,12 @@ const Home = ()=>{
                                     children: "\uC774\uB7F0 \uC885\uBAA9\uC740 \uC5B4\uB54C\uC694?"
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 234,
+                                    lineNumber: 248,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 233,
+                                lineNumber: 247,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46639,18 +46654,18 @@ const Home = ()=>{
                                     children: "\uAD00\uC2EC \uC788\uB294 \uC8FC\uC2DD\uC744 \uD074\uB9AD\uD574 \uBCF4\uC138\uC694."
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 237,
+                                    lineNumber: 251,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 236,
+                                lineNumber: 250,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 232,
+                        lineNumber: 246,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -46671,17 +46686,17 @@ const Home = ()=>{
                                 formatOptionLabel: formatOptionLabel
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 242,
+                                lineNumber: 256,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 241,
+                            lineNumber: 255,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 240,
+                        lineNumber: 254,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46697,12 +46712,12 @@ const Home = ()=>{
                             to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 257,
+                            lineNumber: 271,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 256,
+                        lineNumber: 270,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46712,28 +46727,28 @@ const Home = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 269,
+                            lineNumber: 283,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 268,
+                        lineNumber: 282,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/screens/Home/Home.jsx",
-                lineNumber: 129,
+                lineNumber: 133,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/screens/Home/Home.jsx",
-            lineNumber: 128,
+            lineNumber: 132,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/Home/Home.jsx",
-        lineNumber: 127,
+        lineNumber: 131,
         columnNumber: 5
     }, undefined);
 };

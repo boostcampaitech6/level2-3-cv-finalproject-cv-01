@@ -122,6 +122,10 @@ export const Home = () => {
     },
   };
 
+  const handleStockClick = (symbol, label) => {
+    navigate(`/result/${symbol}`, { state: { stockLabel: label } });
+  };
+
 
   return (
     <div className="home">
@@ -129,6 +133,7 @@ export const Home = () => {
         <div className="content-4">
           <div className="stock-frame">
             <div className="stocks">
+            <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-7"
@@ -137,6 +142,8 @@ export const Home = () => {
                 spanClassName="stock-6"
                 state="off"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:068270', '셀트리온')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-10"
@@ -147,6 +154,8 @@ export const Home = () => {
                 state="off"
                 text="셀트리온"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:005930', '삼성전자')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-10"
@@ -156,8 +165,9 @@ export const Home = () => {
                 spanClassName="stock-6"
                 state="off"
                 text="삼성전자"
-                to="/result"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:035720', '카카오')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-7"
@@ -168,6 +178,8 @@ export const Home = () => {
                 state="off"
                 text="카카오"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:086520', '에코프로')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-10"
@@ -178,6 +190,8 @@ export const Home = () => {
                 state="off"
                 text="에코프로"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:005380', '현대차')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-7"
@@ -188,25 +202,22 @@ export const Home = () => {
                 state="off"
                 text="현대차"
               />
-              <div className="stock-15">
-                <div className="range">
-                  <div className="text-wrapper-21">-0.53%</div>
-                </div>
-                <div className="price">
-                  <p className="element-2">
-                    <span className="text-wrapper-22">188,000</span>
-                    <span className="text-wrapper-23">원</span>
-                  </p>
-                </div>
-                <div className="name">
-                  <p className="LG">
-                    <span className="text-wrapper-24">LG에너</span>
-                    <span className="text-wrapper-25">지</span>
-                    <span className="text-wrapper-24">솔루션</span>
-                  </p>
-                </div>
-                <div className="logo-5" />
-              </div>
+            </div>
+            
+            <div onClick={() => handleStockClick('KRX:373220', 'LG에너지솔루션')}>
+              <Component1174
+                divClassName="component-1174-instance"
+                divClassName1="stock-30"
+                divClassName2="stock-8"
+                divClassNameOverride="stock-5"
+                logoClassName="stock-15"
+                spanClassName="stock-6"
+                state="off"
+                text="LG에너지솔루션"
+              />
+            </div>
+
+            <div onClick={() => handleStockClick('KRX:000660', 'SK하이닉스')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-16"
@@ -217,6 +228,8 @@ export const Home = () => {
                 state="off"
                 text="SK하이닉스"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:024110', '기업은행')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-10"
@@ -227,6 +240,7 @@ export const Home = () => {
                 state="off"
                 text="기업은행"
               />
+            </div>
             </div>
           </div>
           <div className="text-container">
