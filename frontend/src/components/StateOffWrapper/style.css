@@ -6,15 +6,13 @@
   border-top-width: 0.5px;
   display: block;
   height: 53px;
-  left: 20px;
-  position: relative;
-  width: 361px;
+  width: 391px;
 }
 
 .state-off-wrapper .overlap-group {
   height: 52px;
   position: relative;
-  width: 360px;
+  width: 390px;
 }
 
 .state-off-wrapper .info {
@@ -38,7 +36,7 @@
   width: fit-content;
 }
 
-.state-off-wrapper .text-wrapper {
+.state-off-wrapper .element {
   color: #000000;
   font-family: "Noto Sans KR", Helvetica;
   font-size: 13px;
@@ -62,23 +60,15 @@
 }
 
 .state-off-wrapper .heart-instance {
-  left: 302px !important;
+  left: 342px !important;
   position: absolute !important;
   top: 14px !important;
 }
 
-.state-off-wrapper.state-off {
-  top: 20px;
-}
-
-.state-off-wrapper.state-on {
-  top: 110px;
-}
-
-.state-off-wrapper.state-off .overlap-group {
+.state-off-wrapper .state-off {
   background-color: #f1f0f0;
 }
 
-.state-off-wrapper.state-on .overlap-group {
+.state-off-wrapper .state-on {
   background-color: #f1edff;
 }

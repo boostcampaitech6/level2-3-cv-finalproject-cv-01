@@ -9,7 +9,7 @@ import "./style.css";
 export const Search = ({ className }) => {
   return (
     <div className={`search ${className}`}>
-      <img className="union-3" alt="Union" src="/img/union-7.png" />
+      <img className="union" alt="Union" src="/img/union-6.svg" />
     </div>
   );
 };

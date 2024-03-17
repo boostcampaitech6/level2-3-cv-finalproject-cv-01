@@ -1,75 +1,111 @@
+@font-face {
+  font-family: 'Cafe24Moyamoya-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/Cafe24Moyamoya-Regular-v1.0.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SokchoBadaDotum';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SokchoBadaDotum.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .loading {
+  align-items: center;
   background-color: #ffffff;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.loading .content-wrapper {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
   justify-content: center;
+  padding: 0px 15px;
+  position: relative;
+  width: 420px;
+  min-height: 100vh;
+}
+
+.loading .content {
+  align-items: center;
+  align-self: stretch;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  height: 460px;
+  padding: 48px 0px 0px;
+  position: relative;
   width: 100%;
 }
 
-.loading .div-2 {
-  background-color: #ffffff;
-  display: block;
-  height: 640px;
+.loading .title {
+  display: flex;
+  flex-direction: row; /* 가로 정렬을 위해 row 방향을 사용합니다. */
+  justify-content: center; /* 가로축에서 중앙 정렬 */
+  align-items: center; /* 세로축에서 중앙 정렬 */
+  flex-wrap: wrap; /* 내용이 넘치면 다음 줄로 넘깁니다. */
+  width: 100%;
+  padding: 0; 
+}
+
+.loading .service-name {
+  align-self: stretch;
+  height: 59px;
   position: relative;
-  width: 360px;
+  width: 100%;
 }
 
-.loading .loding-2 {
-  left: 133px !important;
-  position: absolute !important;
-  top: 320px !important;
-}
 
-.loading .AI {
-  align-items: center;
-  display: inline-flex;
-  flex-direction: column;
-  left: 59px;
-  position: absolute;
-  top: 143px;
-}
 
-.loading .AI-2 {
-  height: 70px;
-  position: relative;
-  width: 241px;
-}
-
-.loading .text-wrapper-9 {
+.loading .t {
   color: #000000;
-  font-family: "Cafe24 Moyamoya OTF-Regular", Helvetica;
+  font-family: 'Cafe24Moyamoya-Regular', Helvetica;
   font-size: 48px;
   font-weight: 400;
   height: 59px;
-  left: 0;
+  left: 90px;
   letter-spacing: 0;
-  line-height: 59px;
-  position: absolute;
-  top: 4px;
-  white-space: nowrap;
-}
-
-.loading .text-wrapper-10 {
-  color: #000000;
-  font-family: "Sokcho Bada Dotum-Regular", Helvetica;
-  font-size: 48px;
-  font-weight: 400;
-  height: 70px;
-  left: 187px;
-  letter-spacing: 0;
-  line-height: 70px;
+  line-height: normal;
   position: absolute;
   top: -1px;
+}
+
+.loading .t-2 {
+  color: #000000;
+  font-family: "SokchoBadaDotum", Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  height: 53px;
+  left: 276px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2px;
   white-space: nowrap;
 }
 
-.loading .text-wrapper-11 {
+.loading .text {
   color: #262626;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 15.8px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
   position: relative;
   width: fit-content;
+}
+
+.loading .loading-GIF {
+  position: relative !important;
 }

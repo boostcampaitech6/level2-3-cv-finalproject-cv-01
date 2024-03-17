@@ -15,36 +15,6 @@
 
 .icon-variants .icon-instance {
   flex: 0 0 auto !important;
-  left: unset !important;
   margin-bottom: -3.5px !important;
   margin-top: -3.5px !important;
-  top: unset !important;
-}
-
-.icon-variants.icon-1-FAVORITE {
-  top: 79px;
-}
-
-.icon-variants.state-1-on {
-  left: 109px;
-}
-
-.icon-variants.icon-1-SAVED {
-  top: 197px;
-}
-
-.icon-variants.icon-1-SEARCH {
-  top: 138px;
-}
-
-.icon-variants.icon-1-MY {
-  top: 256px;
-}
-
-.icon-variants.icon-1-HOME {
-  top: 20px;
-}
-
-.icon-variants.state-1-off {
-  left: 20px;
 }

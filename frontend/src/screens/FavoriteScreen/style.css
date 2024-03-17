@@ -1,95 +1,42 @@
 .favorite-screen {
   align-items: center;
-  background-color: #151B24;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  overflow: auto;
 }
 
 .favorite-screen .frame-10 {
   align-items: center;
+  background-color: #ffffff;
   display: flex;
   flex: 1;
   flex-direction: column;
   flex-grow: 1;
+  justify-content: center;
   padding: 0px 15px;
   position: relative;
   width: 420px;
   min-height: 100vh;
 }
 
-.favorite-screen .text-container {
-  top: 150px;
-  align-items: center;
-  position: absolute;
-  width: 365px; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-
-}
-
-.favorite-screen .text-container-2 {
-  top: 250px;
-  align-items: center;
-  position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-
-}
-
-
-.favorite-screen .text {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  justify-content: center;
-  padding: 10px;
+.favorite-screen .content-6 {
+  align-self: stretch;
+  display: flex;
+  background-color: #ffffff;
+  width: 100%; 
   position: relative;
-  width: 100%;
-  padding-bottom: 30px;
+  min-height: 100vh;
 }
-
-.favorite-screen .text-style {
-  color: #ffffff;
-  font-family: "Noto Sans KR", Helvetica;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.96px;
-  line-height: 10px;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.favorite-screen .line {
-  align-items: flex-start;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 380px;
-  position: absolute;
-  top: 160px;
-}
-
-.favorite-screen .line-2 {
-  height: 1px;
-  margin-top: -1px;
-  object-fit: cover;
-  position: relative;
-  width: 380px;
-}
-
 
 .favorite-screen .button-3 {
   align-items: flex-start;
   display: inline-flex;
   gap: 1px;
-  right: 30px;
+  left: 324px;
   position: absolute;
-  top: 120px;
+  top: 136px;
 }
 
 .favorite-screen .img-2 {
@@ -99,40 +46,15 @@
   width: 24px;
 }
 
-.favorite-screen .favorite-list-container {
-  top: 180px;
-  align-items: center;
-  position: absolute;
-  width: 390px; /* 부모의 폭에 맞추기 */
-  padding: 10px;
-  height: 500px;
-}
-
 .favorite-screen .favorite-list {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+  left: 0;
   position: absolute;
-  width: 100%;
+  top: 172px;
+  width: 390px;
 }
-
-.favorite-screen .background:hover {
-  background-color: #71985e; 
-  cursor: pointer; 
-}
-
-.favorite-screen .background:hover .text-wrapper-5{
-  color: #ffffff !important; 
-}
-
-.favorite-screen .background:hover .text-wrapper-8{
-  color: #ffffff !important; 
-}
-
-.favorite-screen .background:hover .text-wrapper-9{
-  color: #ffffff !important; 
-}
-
 
 .favorite-screen .component-1175 {
   align-self: stretch !important;
@@ -164,21 +86,19 @@
   display: flex;
   align-items: center;
   position: fixed;
-  left: 50%; 
-  transform: translateX(-50%); 
-  justify-content: center; 
   bottom: 0px;
   width: 100%;
   min-height: 44px;
 }
 
 .favorite-screen .menu-4 {
-  box-shadow: 0px -2px 3.2px #2B344E !important;
+  box-shadow: 0px -2px 3.2px #0000000d !important;
   flex: 0 0 auto !important;
 }
 
 .favorite-screen .head-4 {
   align-items: flex-start;
+  background-color: #ffffff;
   display: flex;
   gap: 8px;
   height: 86px;
@@ -190,65 +110,13 @@
 }
 
 .favorite-screen .text-wrapper-33 {
-  color: #ffffff;
-  font-family: "Bungee", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 40px;
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 36px;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: normal;
   margin-top: -1px;
   position: relative;
-  width: fit-content;
-}
-
-
-.favorite-screen .button-2 {
-  all: unset;
-  align-items: center;
-  background-color: var(--variable-collection-kakao-bg-duplicate);
-  border-radius: 6px;
-  box-sizing: border-box;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  overflow: hidden;
-  padding: 0px 14px;
-  margin-bottom: 10px;
-  position: relative;
-  width: 220px;
-  margin: 15 auto; /* 버튼을 수평 중앙에 배치 */
-}
-
-.favorite-screen .button-2:hover {
-  cursor: pointer; 
-}
-
-.favorite-screen .kakao-logo {
-  height: 15px;
-  position: relative;
-  width: 15px;
-}
-
-.favorite-screen .label-wrapper {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 8px;
-  justify-content: center;
-  padding: 0px 18px;
-  position: relative;
-}
-
-.favorite-screen .label {
-  color: var(--variable-collection-kakao-text);
-  font-family: "Noto Sans KR", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 22.5px;
-  margin-top: -1px;
-  position: relative;
-  white-space: nowrap;
   width: fit-content;
 }

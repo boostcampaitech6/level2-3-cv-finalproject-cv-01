@@ -27173,26 +27173,23 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _loading = require("./screens/Loading");
-var _element = require("./screens/Element");
-var _login = require("./screens/Login");
-var _searchScreen = require("./screens/SearchScreen");
-var _loginKakao = require("./screens/LoginKakao");
-var _home = require("./screens/Home");
-var _divWrapper = require("./screens/DivWrapper");
-var _profile = require("./screens/Profile");
-var _result = require("./screens/Result");
-var _favorite = require("./screens/Favorite");
 var _share = require("./screens/Share");
-var _divWrapperScreen = require("./screens/DivWrapperScreen");
-var _loginRequest = require("./screens/LoginRequest");
+var _login = require("./screens/Login");
+var _loginKakao = require("./screens/LoginKakao");
+var _searchScreen = require("./screens/SearchScreen");
+var _home = require("./screens/Home");
+var _profile = require("./screens/Profile");
+var _favoriteScreen = require("./screens/FavoriteScreen");
+var _result = require("./screens/Result");
 var _resultScreen = require("./screens/ResultScreen");
-var _screen14 = require("./screens/Screen14");
+var _resultWrapper = require("./screens/ResultWrapper");
+var _favoriteWrapper = require("./screens/FavoriteWrapper");
 const router = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/*",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 22,
+            lineNumber: 19,
             columnNumber: 14
         }, undefined)
     },
@@ -27200,87 +27197,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
         path: "/loading",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 26,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/u35u4352u4455u4527u4352u4458-u4364u4453u4364u4449u4540u4370u4449u4352u4469u401u41",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _element.Element), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 30,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/login",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _login.Login), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 34,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/search-2",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchScreen.SearchScreen), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 38,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/login-kakao",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginKakao.LoginKakao), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 42,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/home",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _home.Home), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 46,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/search-1",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 50,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/profile",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profile.Profile), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 54,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/result-1",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _result.Result), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 58,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/result-1/:symbol",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _result.Result), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 62,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/favorite",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favorite.Favorite), {}, void 0, false, {
-            fileName: "src/App.jsx",
-            lineNumber: 66,
+            lineNumber: 23,
             columnNumber: 14
         }, undefined)
     },
@@ -27288,39 +27205,87 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
         path: "/share",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _share.Share), {}, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 70,
+            lineNumber: 27,
             columnNumber: 14
         }, undefined)
     },
     {
-        path: "/u35u4367u4467u4527u4357u4469u4536u4359u4457u4355u4467",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapperScreen.DivWrapperScreen), {}, void 0, false, {
+        path: "/login",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _login.Login), {}, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 74,
+            lineNumber: 31,
             columnNumber: 14
         }, undefined)
     },
     {
-        path: "/login-request",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginRequest.LoginRequest), {}, void 0, false, {
+        path: "/login-kakao",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginKakao.LoginKakao), {}, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 78,
+            lineNumber: 35,
             columnNumber: 14
         }, undefined)
     },
     {
-        path: "/result-2",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resultScreen.ResultScreen), {}, void 0, false, {
+        path: "/search",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchScreen.SearchScreen), {}, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 82,
+            lineNumber: 39,
+            columnNumber: 14
+        }, undefined)
+    },
+    {
+        path: "/home",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _home.Home), {}, void 0, false, {
+            fileName: "src/App.jsx",
+            lineNumber: 43,
+            columnNumber: 14
+        }, undefined)
+    },
+    {
+        path: "/profile",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profile.Profile), {}, void 0, false, {
+            fileName: "src/App.jsx",
+            lineNumber: 47,
+            columnNumber: 14
+        }, undefined)
+    },
+    {
+        path: "/favorite",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favoriteScreen.FavoriteScreen), {}, void 0, false, {
+            fileName: "src/App.jsx",
+            lineNumber: 51,
             columnNumber: 14
         }, undefined)
     },
     {
         path: "/result-3",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _screen14.Screen14), {}, void 0, false, {
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _result.Result), {}, void 0, false, {
             fileName: "src/App.jsx",
-            lineNumber: 86,
+            lineNumber: 55,
+            columnNumber: 14
+        }, undefined)
+    },
+    {
+        path: "/result",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resultScreen.ResultScreen), {}, void 0, false, {
+            fileName: "src/App.jsx",
+            lineNumber: 59,
+            columnNumber: 14
+        }, undefined)
+    },
+    {
+        path: "/result-2",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resultWrapper.ResultWrapper), {}, void 0, false, {
+            fileName: "src/App.jsx",
+            lineNumber: 63,
+            columnNumber: 14
+        }, undefined)
+    },
+    {
+        path: "/favorite-2",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favoriteWrapper.FavoriteWrapper), {}, void 0, false, {
+            fileName: "src/App.jsx",
+            lineNumber: 67,
             columnNumber: 14
         }, undefined)
     }
@@ -27330,7 +27295,7 @@ const App = ()=>{
         router: router
     }, void 0, false, {
         fileName: "src/App.jsx",
-        lineNumber: 91,
+        lineNumber: 72,
         columnNumber: 10
     }, undefined);
 };
@@ -27343,7 +27308,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./screens/Loading":"18bP0","./screens/Element":"igX3A","./screens/Login":"vxSHc","./screens/SearchScreen":"j7nHv","./screens/LoginKakao":"bX67M","./screens/Home":"7eUR9","./screens/DivWrapper":"3cPy6","./screens/Profile":"3uncc","./screens/Result":"h0WTf","./screens/Favorite":"1up3A","./screens/Share":"hZPr9","./screens/DivWrapperScreen":"dM1ko","./screens/LoginRequest":"k7oc8","./screens/ResultScreen":"he1kN","./screens/Screen14":"dGhr7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./screens/Loading":"18bP0","./screens/Share":"hZPr9","./screens/Login":"vxSHc","./screens/LoginKakao":"bX67M","./screens/SearchScreen":"j7nHv","./screens/Home":"7eUR9","./screens/Profile":"3uncc","./screens/FavoriteScreen":"3iOyV","./screens/Result":"h0WTf","./screens/ResultScreen":"he1kN","./screens/ResultWrapper":"jenj6","./screens/FavoriteWrapper":"7NPJ5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.22.3
  *
@@ -33924,75 +33889,89 @@ parcelHelpers.export(exports, "Loading", ()=>Loading);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactSpinners = require("react-spinners");
 var _reactRouterDom = require("react-router-dom");
 var _loding = require("../../components/Loding");
 var _styleCss = require("./style.css");
 const Loading = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
         className: "loading",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-            className: "div-2",
-            to: "/login",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loding.Loding), {
-                    className: "loding-2",
-                    frame: "one"
-                }, void 0, false, {
-                    fileName: "src/screens/Loading/Loading.jsx",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "AI",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "AI-2",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "text-wrapper-9",
-                                    children: "\uC54C\uB824\uC8FC\uAC00"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Loading/Loading.jsx",
-                                    lineNumber: 13,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "text-wrapper-10",
-                                    children: "AI"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Loading/Loading.jsx",
-                                    lineNumber: 14,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/screens/Loading/Loading.jsx",
-                            lineNumber: 12,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            className: "text-wrapper-11",
-                            children: "- \uC27D\uACE0 \uAC04\uD3B8\uD55C AI \uC8FC\uAC00 \uC608\uCE21 \uC11C\uBE44\uC2A4"
+        to: "/login",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "content-wrapper",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "title",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "service-name",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "t",
+                                        children: "\uC54C\uB824\uC8FC\uAC00"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Loading/Loading.jsx",
+                                        lineNumber: 14,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "t-2",
+                                        children: "AI"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Loading/Loading.jsx",
+                                        lineNumber: 15,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/screens/Loading/Loading.jsx",
+                                lineNumber: 13,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text",
+                                children: "- \uC27D\uACE0 \uAC04\uD3B8\uD55C AI \uC8FC\uAC00 \uC608\uCE21 \uC11C\uBE44\uC2A4"
+                            }, void 0, false, {
+                                fileName: "src/screens/Loading/Loading.jsx",
+                                lineNumber: 17,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/Loading/Loading.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "loading-GIF",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactSpinners.SyncLoader), {
+                            color: "#7d49f5"
                         }, void 0, false, {
                             fileName: "src/screens/Loading/Loading.jsx",
-                            lineNumber: 16,
-                            columnNumber: 11
+                            lineNumber: 20,
+                            columnNumber: 13
                         }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Loading/Loading.jsx",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                    }, void 0, false, {
+                        fileName: "src/screens/Loading/Loading.jsx",
+                        lineNumber: 19,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/Loading/Loading.jsx",
+                lineNumber: 11,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/screens/Loading/Loading.jsx",
-            lineNumber: 9,
+            lineNumber: 10,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/Loading/Loading.jsx",
-        lineNumber: 8,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined);
 };
@@ -34005,7 +33984,217 @@ $RefreshReg$(_c, "Loading");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Loding":"ffXJx","./style.css":"ixXEC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ffXJx":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-spinners":"Q9MKS","react-router-dom":"9xmpe","../../components/Loding":"ffXJx","./style.css":"ixXEC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"Q9MKS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BarLoader", ()=>(0, _barLoaderDefault.default));
+parcelHelpers.export(exports, "BeatLoader", ()=>(0, _beatLoaderDefault.default));
+parcelHelpers.export(exports, "BounceLoader", ()=>(0, _bounceLoaderDefault.default));
+parcelHelpers.export(exports, "CircleLoader", ()=>(0, _circleLoaderDefault.default));
+parcelHelpers.export(exports, "ClimbingBoxLoader", ()=>(0, _climbingBoxLoaderDefault.default));
+parcelHelpers.export(exports, "ClipLoader", ()=>(0, _clipLoaderDefault.default));
+parcelHelpers.export(exports, "ClockLoader", ()=>(0, _clockLoaderDefault.default));
+parcelHelpers.export(exports, "DotLoader", ()=>(0, _dotLoaderDefault.default));
+parcelHelpers.export(exports, "FadeLoader", ()=>(0, _fadeLoaderDefault.default));
+parcelHelpers.export(exports, "GridLoader", ()=>(0, _gridLoaderDefault.default));
+parcelHelpers.export(exports, "HashLoader", ()=>(0, _hashLoaderDefault.default));
+parcelHelpers.export(exports, "MoonLoader", ()=>(0, _moonLoaderDefault.default));
+parcelHelpers.export(exports, "PacmanLoader", ()=>(0, _pacmanLoaderDefault.default));
+parcelHelpers.export(exports, "PropagateLoader", ()=>(0, _propagateLoaderDefault.default));
+parcelHelpers.export(exports, "PulseLoader", ()=>(0, _pulseLoaderDefault.default));
+parcelHelpers.export(exports, "PuffLoader", ()=>(0, _puffLoaderDefault.default));
+parcelHelpers.export(exports, "RingLoader", ()=>(0, _ringLoaderDefault.default));
+parcelHelpers.export(exports, "RiseLoader", ()=>(0, _riseLoaderDefault.default));
+parcelHelpers.export(exports, "RotateLoader", ()=>(0, _rotateLoaderDefault.default));
+parcelHelpers.export(exports, "ScaleLoader", ()=>(0, _scaleLoaderDefault.default));
+parcelHelpers.export(exports, "SkewLoader", ()=>(0, _skewLoaderDefault.default));
+parcelHelpers.export(exports, "SquareLoader", ()=>(0, _squareLoaderDefault.default));
+parcelHelpers.export(exports, "SyncLoader", ()=>(0, _syncLoaderDefault.default));
+var _barLoader = require("./BarLoader");
+var _barLoaderDefault = parcelHelpers.interopDefault(_barLoader);
+var _beatLoader = require("./BeatLoader");
+var _beatLoaderDefault = parcelHelpers.interopDefault(_beatLoader);
+var _bounceLoader = require("./BounceLoader");
+var _bounceLoaderDefault = parcelHelpers.interopDefault(_bounceLoader);
+var _circleLoader = require("./CircleLoader");
+var _circleLoaderDefault = parcelHelpers.interopDefault(_circleLoader);
+var _climbingBoxLoader = require("./ClimbingBoxLoader");
+var _climbingBoxLoaderDefault = parcelHelpers.interopDefault(_climbingBoxLoader);
+var _clipLoader = require("./ClipLoader");
+var _clipLoaderDefault = parcelHelpers.interopDefault(_clipLoader);
+var _clockLoader = require("./ClockLoader");
+var _clockLoaderDefault = parcelHelpers.interopDefault(_clockLoader);
+var _dotLoader = require("./DotLoader");
+var _dotLoaderDefault = parcelHelpers.interopDefault(_dotLoader);
+var _fadeLoader = require("./FadeLoader");
+var _fadeLoaderDefault = parcelHelpers.interopDefault(_fadeLoader);
+var _gridLoader = require("./GridLoader");
+var _gridLoaderDefault = parcelHelpers.interopDefault(_gridLoader);
+var _hashLoader = require("./HashLoader");
+var _hashLoaderDefault = parcelHelpers.interopDefault(_hashLoader);
+var _moonLoader = require("./MoonLoader");
+var _moonLoaderDefault = parcelHelpers.interopDefault(_moonLoader);
+var _pacmanLoader = require("./PacmanLoader");
+var _pacmanLoaderDefault = parcelHelpers.interopDefault(_pacmanLoader);
+var _propagateLoader = require("./PropagateLoader");
+var _propagateLoaderDefault = parcelHelpers.interopDefault(_propagateLoader);
+var _pulseLoader = require("./PulseLoader");
+var _pulseLoaderDefault = parcelHelpers.interopDefault(_pulseLoader);
+var _puffLoader = require("./PuffLoader");
+var _puffLoaderDefault = parcelHelpers.interopDefault(_puffLoader);
+var _ringLoader = require("./RingLoader");
+var _ringLoaderDefault = parcelHelpers.interopDefault(_ringLoader);
+var _riseLoader = require("./RiseLoader");
+var _riseLoaderDefault = parcelHelpers.interopDefault(_riseLoader);
+var _rotateLoader = require("./RotateLoader");
+var _rotateLoaderDefault = parcelHelpers.interopDefault(_rotateLoader);
+var _scaleLoader = require("./ScaleLoader");
+var _scaleLoaderDefault = parcelHelpers.interopDefault(_scaleLoader);
+var _skewLoader = require("./SkewLoader");
+var _skewLoaderDefault = parcelHelpers.interopDefault(_skewLoader);
+var _squareLoader = require("./SquareLoader");
+var _squareLoaderDefault = parcelHelpers.interopDefault(_squareLoader);
+var _syncLoader = require("./SyncLoader");
+var _syncLoaderDefault = parcelHelpers.interopDefault(_syncLoader);
+
+},{"./BarLoader":false,"./BeatLoader":false,"./BounceLoader":false,"./CircleLoader":false,"./ClimbingBoxLoader":false,"./ClipLoader":false,"./ClockLoader":false,"./DotLoader":false,"./FadeLoader":false,"./GridLoader":false,"./HashLoader":false,"./MoonLoader":false,"./PacmanLoader":false,"./PropagateLoader":false,"./PulseLoader":false,"./PuffLoader":false,"./RingLoader":false,"./RiseLoader":false,"./RotateLoader":false,"./ScaleLoader":false,"./SkewLoader":false,"./SquareLoader":false,"./SyncLoader":"3ygu5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3ygu5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _animation = require("./helpers/animation");
+var _unitConverter = require("./helpers/unitConverter");
+var __assign = undefined && undefined.__assign || function() {
+    __assign = Object.assign || function(t) {
+        for(var s, i = 1, n = arguments.length; i < n; i++){
+            s = arguments[i];
+            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __rest = undefined && undefined.__rest || function(s, e) {
+    var t = {};
+    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
+        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+    }
+    return t;
+};
+var sync = (0, _animation.createAnimation)("SyncLoader", "33% {transform: translateY(10px)}\n  66% {transform: translateY(-10px)}\n  100% {transform: translateY(0)}", "sync");
+function SyncLoader(_a) {
+    var _b = _a.loading, loading = _b === void 0 ? true : _b, _c = _a.color, color = _c === void 0 ? "#000000" : _c, _d = _a.speedMultiplier, speedMultiplier = _d === void 0 ? 1 : _d, _e = _a.cssOverride, cssOverride = _e === void 0 ? {} : _e, _f = _a.size, size = _f === void 0 ? 15 : _f, _g = _a.margin, margin = _g === void 0 ? 2 : _g, additionalprops = __rest(_a, [
+        "loading",
+        "color",
+        "speedMultiplier",
+        "cssOverride",
+        "size",
+        "margin"
+    ]);
+    var wrapper = __assign({
+        display: "inherit"
+    }, cssOverride);
+    var style = function(i) {
+        return {
+            backgroundColor: color,
+            width: (0, _unitConverter.cssValue)(size),
+            height: (0, _unitConverter.cssValue)(size),
+            margin: (0, _unitConverter.cssValue)(margin),
+            borderRadius: "100%",
+            display: "inline-block",
+            animation: "".concat(sync, " ").concat(0.6 / speedMultiplier, "s ").concat(i * 0.07, "s infinite ease-in-out"),
+            animationFillMode: "both"
+        };
+    };
+    if (!loading) return null;
+    return _react.createElement("span", __assign({
+        style: wrapper
+    }, additionalprops), _react.createElement("span", {
+        style: style(1)
+    }), _react.createElement("span", {
+        style: style(2)
+    }), _react.createElement("span", {
+        style: style(3)
+    }));
+}
+exports.default = SyncLoader;
+
+},{"react":"21dqq","./helpers/animation":"1xoFU","./helpers/unitConverter":"2l6zv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1xoFU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createAnimation", ()=>createAnimation);
+var createAnimation = function(loaderName, frames, suffix) {
+    var animationName = "react-spinners-".concat(loaderName, "-").concat(suffix);
+    if (typeof window == "undefined" || !window.document) return animationName;
+    var styleEl = document.createElement("style");
+    document.head.appendChild(styleEl);
+    var styleSheet = styleEl.sheet;
+    var keyFrames = "\n    @keyframes ".concat(animationName, " {\n      ").concat(frames, "\n    }\n  ");
+    if (styleSheet) styleSheet.insertRule(keyFrames, 0);
+    return animationName;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2l6zv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * If size is a number, append px to the value as default unit.
+ * If size is a string, validate against list of valid units.
+ * If unit is valid, return size as is.
+ * If unit is invalid, console warn issue, replace with px as the unit.
+ *
+ * @param {(number | string)} size
+ * @return {LengthObject} LengthObject
+ */ parcelHelpers.export(exports, "parseLengthAndUnit", ()=>parseLengthAndUnit);
+/**
+ * Take value as an input and return valid css value
+ *
+ * @param {(number | string)} value
+ * @return {string} valid css value
+ */ parcelHelpers.export(exports, "cssValue", ()=>cssValue);
+var cssUnit = {
+    cm: true,
+    mm: true,
+    in: true,
+    px: true,
+    pt: true,
+    pc: true,
+    em: true,
+    ex: true,
+    ch: true,
+    rem: true,
+    vw: true,
+    vh: true,
+    vmin: true,
+    vmax: true,
+    "%": true
+};
+function parseLengthAndUnit(size) {
+    if (typeof size === "number") return {
+        value: size,
+        unit: "px"
+    };
+    var value;
+    var valueString = (size.match(/^[0-9.]*/) || "").toString();
+    if (valueString.includes(".")) value = parseFloat(valueString);
+    else value = parseInt(valueString, 10);
+    var unit = (size.match(/[^0-9]*$/) || "").toString();
+    if (cssUnit[unit]) return {
+        value: value,
+        unit: unit
+    };
+    console.warn("React Spinners: ".concat(size, " is not a valid css value. Defaulting to ").concat(value, "px."));
+    return {
+        value: value,
+        unit: "px"
+    };
+}
+function cssValue(value) {
+    var lengthWithunit = parseLengthAndUnit(value);
+    return "".concat(lengthWithunit.value).concat(lengthWithunit.unit);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ffXJx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Loding", ()=>(0, _loding.Loding));
@@ -34030,15 +34219,15 @@ var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _styleCss = require("./style.css");
-const Loding = ({ frame, className, ellipseClassName, ellipse = "/img/ellipse-2-3.png" })=>{
+const Loding = ({ frame, className, ellipse = "/img/ellipse-2-3.svg" })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `loding ${frame} ${className}`,
+        className: `loding ${className}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "group",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: `ellipse ${ellipseClassName}`,
+                className: `ellipse frame-${frame}`,
                 alt: "Ellipse",
-                src: frame === "three" ? "/img/ellipse-2-1.png" : frame === "two" ? "/img/ellipse-2-2.png" : frame === "one" ? ellipse : "/img/ellipse-2.png"
+                src: frame === "three" ? "/img/ellipse-2-1.svg" : frame === "two" ? "/img/ellipse-2-2.svg" : frame === "one" ? ellipse : "/img/ellipse-2.svg"
             }, void 0, false, {
                 fileName: "src/components/Loding/Loding.jsx",
                 lineNumber: 14,
@@ -35422,60 +35611,68 @@ module.exports = require("9e039173d01172ab");
     exports.setSignature = setSignature;
 })();
 
-},{}],"ixXEC":[function() {},{}],"igX3A":[function(require,module,exports) {
+},{}],"ixXEC":[function() {},{}],"hZPr9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Element", ()=>(0, _element.Element));
-var _element = require("./Element");
+parcelHelpers.export(exports, "Share", ()=>(0, _share.Share));
+var _share = require("./Share");
 
-},{"./Element":"2LCZI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2LCZI":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6bb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./Share":"6NdUW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6NdUW":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c3c7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6bb5.prelude(module);
+$parcel$ReactRefreshHelpers$c3c7.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Element", ()=>Element);
+parcelHelpers.export(exports, "Share", ()=>Share);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _styleCss = require("./style.css");
-const Element = ()=>{
+const Share = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "element",
+        className: "share",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-wrapper-5",
+            className: "share-wrapper",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-wrapper-8",
-                children: "\uBD84\uC11D\uD558\uAE30 \uBC84\uD2BC\uC744 \uBA3C\uC800 \uD074\uB9AD\uD558\uC138\uC694."
+                className: "image-wrapper",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "image",
+                    alt: "Image",
+                    src: "/img/image-111.png"
+                }, void 0, false, {
+                    fileName: "src/screens/Share/Share.jsx",
+                    lineNumber: 9,
+                    columnNumber: 11
+                }, undefined)
             }, void 0, false, {
-                fileName: "src/screens/Element/Element.jsx",
+                fileName: "src/screens/Share/Share.jsx",
                 lineNumber: 8,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
-            fileName: "src/screens/Element/Element.jsx",
+            fileName: "src/screens/Share/Share.jsx",
             lineNumber: 7,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
-        fileName: "src/screens/Element/Element.jsx",
+        fileName: "src/screens/Share/Share.jsx",
         lineNumber: 6,
         columnNumber: 5
     }, undefined);
 };
-_c = Element;
+_c = Share;
 var _c;
-$RefreshReg$(_c, "Element");
+$RefreshReg$(_c, "Share");
 
-  $parcel$ReactRefreshHelpers$6bb5.postlude(module);
+  $parcel$ReactRefreshHelpers$c3c7.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"liMEo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"liMEo":[function() {},{}],"vxSHc":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"3yKyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3yKyW":[function() {},{}],"vxSHc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Login", ()=>(0, _login.Login));
@@ -35500,82 +35697,104 @@ const Login = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "login",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-3",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                    className: "text",
-                    to: "/home",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "text-wrapper-12",
-                        children: "\uB85C\uADF8\uC778 \uC5C6\uC774 \uCCB4\uD5D8\uD558\uAE30"
-                    }, void 0, false, {
-                        fileName: "src/screens/Login/Login.jsx",
-                        lineNumber: 10,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/screens/Login/Login.jsx",
-                    lineNumber: 9,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                    className: "button-kakao-login",
-                    to: "/login-kakao",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "kakao-logo",
-                            alt: "Kakao logo",
-                            src: "/img/2x.png"
-                        }, void 0, false, {
-                            fileName: "src/screens/Login/Login.jsx",
-                            lineNumber: 13,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "container",
+            className: "frame-6",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-2",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "demo",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-2",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "label",
-                                children: "\uCE74\uCE74\uC624 \uB85C\uADF8\uC778"
+                                className: "text-wrapper-16",
+                                children: "\uB370\uBAA8 \uC601\uC0C1"
                             }, void 0, false, {
                                 fileName: "src/screens/Login/Login.jsx",
-                                lineNumber: 15,
-                                columnNumber: 13
+                                lineNumber: 12,
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/screens/Login/Login.jsx",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Login/Login.jsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "frame-demo",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "text-2",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper-13",
-                            children: "\uB370\uBAA8 \uC601\uC0C1"
-                        }, void 0, false, {
-                            fileName: "src/screens/Login/Login.jsx",
-                            lineNumber: 20,
+                            lineNumber: 11,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Login/Login.jsx",
-                        lineNumber: 19,
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "container",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/login-kakao",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "button-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            className: "kakao-logo",
+                                            alt: "Kakao logo",
+                                            src: "/img/kakao-logo.svg"
+                                        }, void 0, false, {
+                                            fileName: "src/screens/Login/Login.jsx",
+                                            lineNumber: 18,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "label-wrapper",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "label",
+                                                children: "\uCE74\uCE74\uC624 \uB85C\uADF8\uC778"
+                                            }, void 0, false, {
+                                                fileName: "src/screens/Login/Login.jsx",
+                                                lineNumber: 20,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/screens/Login/Login.jsx",
+                                            lineNumber: 19,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/screens/Login/Login.jsx",
+                                    lineNumber: 17,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Login/Login.jsx",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                className: "text-3",
+                                to: "/home",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-17",
+                                    children: "\uB85C\uADF8\uC778 \uC5C6\uC774 \uCCB4\uD5D8\uD558\uAE30"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Login/Login.jsx",
+                                    lineNumber: 25,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Login/Login.jsx",
+                                lineNumber: 24,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/Login/Login.jsx",
+                        lineNumber: 15,
                         columnNumber: 11
                     }, undefined)
-                }, void 0, false, {
-                    fileName: "src/screens/Login/Login.jsx",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/Login/Login.jsx",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/screens/Login/Login.jsx",
             lineNumber: 8,
             columnNumber: 7
@@ -35595,7 +35814,129 @@ $RefreshReg$(_c, "Login");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./style.css":"lP779","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lP779":[function() {},{}],"j7nHv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./style.css":"lP779","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lP779":[function() {},{}],"bX67M":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LoginKakao", ()=>(0, _loginKakao.LoginKakao));
+var _loginKakao = require("./LoginKakao");
+
+},{"./LoginKakao":"jHc39","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jHc39":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c945 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c945.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LoginKakao", ()=>LoginKakao);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _check = require("../../components/Check");
+var _styleCss = require("./style.css");
+const LoginKakao = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "login-kakao",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "login-kakao-wrapper",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "overlap-group-wrapper",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "check-wrapper",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _check.Check), {
+                        className: "check-instance",
+                        divClassName: "design-component-instance-node"
+                    }, void 0, false, {
+                        fileName: "src/screens/LoginKakao/LoginKakao.jsx",
+                        lineNumber: 11,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/screens/LoginKakao/LoginKakao.jsx",
+                    lineNumber: 10,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/screens/LoginKakao/LoginKakao.jsx",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/screens/LoginKakao/LoginKakao.jsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/screens/LoginKakao/LoginKakao.jsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
+};
+_c = LoginKakao;
+var _c;
+$RefreshReg$(_c, "LoginKakao");
+
+  $parcel$ReactRefreshHelpers$c945.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Check":"eGBKr","./style.css":"dFu9P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eGBKr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Check", ()=>(0, _check.Check));
+var _check = require("./Check");
+
+},{"./Check":"kvhnx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kvhnx":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8398 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8398.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Check", ()=>Check);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styleCss = require("./style.css");
+const Check = ({ login = true, className, divClassName })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `check ${className}`,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: `text-wrapper ${divClassName}`,
+            children: "\uB3D9\uC758\uD558\uACE0 \uACC4\uC18D\uD558\uAE30"
+        }, void 0, false, {
+            fileName: "src/components/Check/Check.jsx",
+            lineNumber: 13,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Check/Check.jsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Check;
+Check.propTypes = {
+    login: (0, _propTypesDefault.default).bool
+};
+var _c;
+$RefreshReg$(_c, "Check");
+
+  $parcel$ReactRefreshHelpers$8398.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"bAL9f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bAL9f":[function() {},{}],"dFu9P":[function() {},{}],"j7nHv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SearchScreen", ()=>(0, _searchScreen.SearchScreen));
@@ -35615,404 +35956,267 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-var _heart = require("../../components/Heart");
 var _menu = require("../../components/Menu");
-var _search = require("../../components/Search");
+var _stateOffWrapper = require("../../components/StateOffWrapper");
 var _styleCss = require("./style.css");
+var _async = require("react-select/async");
+var _asyncDefault = parcelHelpers.interopDefault(_async);
+var _papaparse = require("papaparse");
+var _papaparseDefault = parcelHelpers.interopDefault(_papaparse);
+var _s = $RefreshSig$();
 const SearchScreen = ()=>{
+    _s();
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const [stocksData, setStocksData] = (0, _react.useState)([]);
+    const [inputValue, setInputValue] = (0, _react.useState)("");
+    (0, _react.useEffect)(()=>{
+        (0, _papaparseDefault.default).parse("/symbol_data/korea_stock_symbols.csv", {
+            download: true,
+            header: true,
+            delimiter: ",",
+            skipEmptyLines: true,
+            complete: function(results) {
+                if (results.errors.length > 0) // console.error("CSV 파일 로드 에러:", results.errors);
+                return;
+                // console.log("CSV 파일 로딩 완료:", results.data); // 로드된 데이터 확인
+                const validData = results.data.filter((row)=>row.label && row.value);
+                // console.log("필터링된 데이터:", validData); // 필터링된 데이터 확인
+                const formattedData = validData.map((row)=>({
+                        label: row.label,
+                        value: row.value
+                    }));
+                setStocksData(formattedData);
+            }
+        });
+    }, []);
+    const filterOptions = (inputValue)=>{
+        return stocksData.filter((i)=>i.label && i.label.toLowerCase().includes(inputValue.toLowerCase()));
+    };
+    const handleChange = (selectedOption)=>{
+        if (selectedOption) navigate(`/result-1/${selectedOption.value}`, {
+            state: {
+                stockLabel: selectedOption.label
+            }
+        });
+    };
+    const loadOptions = (inputValue, callback)=>{
+        setTimeout(()=>{
+            callback(filterOptions(inputValue));
+        }, 500);
+    };
+    const formatOptionLabel = ({ label }, { inputValue })=>{
+        const parts = label.split(new RegExp(`(${inputValue})`, "i"));
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: parts.map((part, index)=>part.toLowerCase() === inputValue.toLowerCase() ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    style: {
+                        color: "#7d49f5"
+                    },
+                    children: part
+                }, index, false, {
+                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                    lineNumber: 65,
+                    columnNumber: 13
+                }, undefined) : part)
+        }, void 0, false, {
+            fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+            lineNumber: 62,
+            columnNumber: 7
+        }, undefined);
+    };
+    const customStyles = {
+        placeholder: (provided)=>({
+                ...provided,
+                paddingLeft: "10px"
+            }),
+        input: (provided)=>({
+                ...provided,
+                paddingLeft: "10px"
+            }),
+        control: (provided, { isFocused })=>({
+                ...provided,
+                minHeight: "45px",
+                borderColor: isFocused ? "#7d49f5" : provided.borderColor,
+                boxShadow: isFocused ? "0 0 0 1px #7d49f5" : "none",
+                // 포커스 되었을 때 보라색 그림자 효과를 줌
+                "&:hover": {
+                    borderColor: "#7d49f5"
+                }
+            }),
+        dropdownIndicator: (provided, { isFocused })=>({
+                ...provided,
+                color: isFocused ? "#7d49f5" : provided.color
+            }),
+        option: (provided, { isFocused, isSelected })=>{
+            return {
+                ...provided,
+                backgroundColor: isSelected ? "#F2ECFF" : isFocused ? "#F2ECFF" : undefined,
+                // 선택된 옵션의 배경색과 포커스 시 배경색
+                paddingLeft: "20px"
+            };
+        }
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "search-screen",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "search-2",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "view",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-3",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-14",
-                                children: "\uAC80\uC0C9 \uACB0\uACFC"
-                            }, void 0, false, {
-                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 14,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                            lineNumber: 13,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "div-4",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "overlap-group-wrapper",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "overlap-group-2",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "info-2",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "NAVER-2",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                                className: "text-wrapper-15",
-                                                                children: "\uC0BC\uC131"
-                                                            }, void 0, false, {
-                                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                                lineNumber: 21,
-                                                                columnNumber: 21
-                                                            }, undefined),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                                className: "text-wrapper-16",
-                                                                children: "\uC81C\uC57D"
-                                                            }, void 0, false, {
-                                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                                lineNumber: 22,
-                                                                columnNumber: 21
-                                                            }, undefined)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                        lineNumber: 20,
-                                                        columnNumber: 19
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                        className: "element-2",
-                                                        children: "001360"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                        lineNumber: 24,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 19,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "logo-3"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 26,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
-                                                className: "design-component-instance-node",
-                                                stateProp: "off"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 27,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                        lineNumber: 18,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 17,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                    className: "overlap-wrapper",
-                                    to: "/result-1",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "overlap-group-2",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "info-2",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "NAVER-2",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                                className: "text-wrapper-15",
-                                                                children: "\uC0BC\uC131"
-                                                            }, void 0, false, {
-                                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                                lineNumber: 34,
-                                                                columnNumber: 21
-                                                            }, undefined),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                                className: "text-wrapper-16",
-                                                                children: "\uC804\uC790"
-                                                            }, void 0, false, {
-                                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                                lineNumber: 35,
-                                                                columnNumber: 21
-                                                            }, undefined)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                        lineNumber: 33,
-                                                        columnNumber: 19
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                        className: "element-2",
-                                                        children: "005930"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                        lineNumber: 37,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 32,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "logo-4"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 39,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
-                                                className: "design-component-instance-node",
-                                                stateProp: "off"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 40,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                        lineNumber: 31,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 30,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "view-2",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "overlap-group-2",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "info-2",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "NAVER-2",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                                className: "text-wrapper-15",
-                                                                children: "\uC0BC\uC131"
-                                                            }, void 0, false, {
-                                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                                lineNumber: 47,
-                                                                columnNumber: 21
-                                                            }, undefined),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                                className: "text-wrapper-16",
-                                                                children: "\uC804\uAE30"
-                                                            }, void 0, false, {
-                                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                                lineNumber: 48,
-                                                                columnNumber: 21
-                                                            }, undefined)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                        lineNumber: 46,
-                                                        columnNumber: 19
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                        className: "element-2",
-                                                        children: "009105"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                        lineNumber: 50,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 45,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "logo-4"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 52,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
-                                                className: "design-component-instance-node",
-                                                stateProp: "off"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 53,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                        lineNumber: 44,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 43,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "view-3",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "overlap-group-2",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "info-2",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "NAVER-2",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                                className: "text-wrapper-15",
-                                                                children: "\uC0BC\uC131"
-                                                            }, void 0, false, {
-                                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                                lineNumber: 60,
-                                                                columnNumber: 21
-                                                            }, undefined),
-                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                                className: "text-wrapper-16",
-                                                                children: "\uC99D\uAD8C"
-                                                            }, void 0, false, {
-                                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                                lineNumber: 61,
-                                                                columnNumber: 21
-                                                            }, undefined)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                        lineNumber: 59,
-                                                        columnNumber: 19
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                        className: "element-2",
-                                                        children: "016360"
-                                                    }, void 0, false, {
-                                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                        lineNumber: 63,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 58,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "logo-4"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 65,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
-                                                className: "design-component-instance-node",
-                                                stateProp: "off"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                                lineNumber: 66,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                        lineNumber: 57,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 56,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                            lineNumber: 16,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
-                            className: "menu-instance",
-                            iconVariantsIconUnion: "/img/union-9.png",
-                            to: "/home",
-                            to1: "/favorite",
-                            to2: "/search-1",
-                            to3: "/profile"
-                        }, void 0, false, {
-                            fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                            lineNumber: 70,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "head",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "serch",
+            className: "frame-7",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-3",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "stock-list",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-4",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "text-wrapper-17",
-                                    children: "\uC0BC\uC131"
-                                }, void 0, false, {
-                                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 82,
-                                    columnNumber: 15
-                                }, undefined)
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                                className: "stock",
+                                state: "off",
+                                text: "\uB124\uC774\uBC84"
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 81,
+                                lineNumber: 115,
                                 columnNumber: 13
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _search.Search), {
-                                className: "icon-search"
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                                className: "component-1169-instance",
+                                logoClassName: "component-1169",
+                                state: "off",
+                                text: "\uC0BC\uC131\uC804\uC790",
+                                text1: "005930",
+                                to: "/result"
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 84,
+                                lineNumber: 116,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                                className: "component-1169-instance",
+                                logoClassName: "stock-2",
+                                state: "off",
+                                text: "\uCE74\uCE74\uC624",
+                                text1: "035720"
+                            }, void 0, false, {
+                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                                lineNumber: 124,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
+                                className: "stock-3",
+                                logoClassName: "stock-4",
+                                state: "off",
+                                text: "\uC140\uD2B8\uB9AC\uC628",
+                                text1: "068270"
+                            }, void 0, false, {
+                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                                lineNumber: 131,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                        lineNumber: 80,
+                        lineNumber: 114,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "text-4",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-18",
+                            children: "\uC778\uAE30 \uAC80\uC0C9\uC5B4"
+                        }, void 0, false, {
+                            fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                            lineNumber: 134,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                        lineNumber: 133,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "search-bar",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "container-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _asyncDefault.default), {
+                                autoFocus: true,
+                                styles: customStyles,
+                                cacheOptions: true,
+                                loadOptions: loadOptions,
+                                onInputChange: (value)=>{
+                                    setInputValue(value);
+                                    return value;
+                                },
+                                onChange: handleChange,
+                                placeholder: "\uC8FC\uC2DD \uC885\uBAA9\uC744 \uC785\uB825\uD558\uC138\uC694",
+                                formatOptionLabel: formatOptionLabel
+                            }, void 0, false, {
+                                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                                lineNumber: 138,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                            lineNumber: 137,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                        lineNumber: 136,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-bar",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
+                            className: "menu-instance",
+                            iconVariantsIconHome: "/img/home-3.svg",
+                            iconVariantsIconUnion: "/img/union-9.svg",
+                            iconVariantsState: "on",
+                            to: "/home",
+                            to1: "/favorite",
+                            to2: "/profile"
+                        }, void 0, false, {
+                            fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                            lineNumber: 154,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                        lineNumber: 153,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "head",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-20",
+                            children: "Search"
+                        }, void 0, false, {
+                            fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                            lineNumber: 165,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                        lineNumber: 164,
                         columnNumber: 11
                     }, undefined)
-                }, void 0, false, {
-                    fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                    lineNumber: 79,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/SearchScreen/SearchScreen.jsx",
+                lineNumber: 113,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-            lineNumber: 11,
+            lineNumber: 112,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-        lineNumber: 10,
+        lineNumber: 111,
         columnNumber: 5
     }, undefined);
 };
+_s(SearchScreen, "n5tHza7dh1LHBDCnRjqKgjZXsFo=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
 _c = SearchScreen;
 var _c;
 $RefreshReg$(_c, "SearchScreen");
@@ -36022,7 +36226,529 @@ $RefreshReg$(_c, "SearchScreen");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Heart":"5O8bA","../../components/Menu":"cAuPj","../../components/Search":"5E9MW","./style.css":"7EuOT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5O8bA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Menu":"cAuPj","../../components/StateOffWrapper":"iBSFI","./style.css":"7EuOT","react-select/async":"6qsCb","papaparse":"5w3wE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cAuPj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Menu", ()=>(0, _menu.Menu));
+var _menu = require("./Menu");
+
+},{"./Menu":"lGhFC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lGhFC":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5a12 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5a12.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Menu", ()=>Menu);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _iconVariants = require("../IconVariants");
+var _styleCss = require("./style.css");
+const Menu = ({ className, iconVariantsIconHome = "/img/home.svg", iconVariantsState = "off", iconVariantsIconUnion = "/img/union-1.svg", iconVariantsState1 = "off", iconVariantsState2 = "off", iconVariantsIconUser = "/img/user.svg", iconVariantsState3 = "off", to, to1, to2, to3 })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `menu ${className}`,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
+                className: "icon-variants-instance",
+                icon: "HOME",
+                iconHome: iconVariantsIconHome,
+                state: iconVariantsState1,
+                to: to
+            }, void 0, false, {
+                fileName: "src/components/Menu/Menu.jsx",
+                lineNumber: 27,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
+                className: "icon-variants-instance",
+                icon: "FAVORITE",
+                state: iconVariantsState3,
+                to: to1
+            }, void 0, false, {
+                fileName: "src/components/Menu/Menu.jsx",
+                lineNumber: 34,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
+                className: "icon-variants-instance",
+                icon: "SEARCH",
+                state: iconVariantsState,
+                to: to3
+            }, void 0, false, {
+                fileName: "src/components/Menu/Menu.jsx",
+                lineNumber: 35,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
+                className: "icon-variants-instance",
+                icon: "SAVED",
+                iconUnion: iconVariantsIconUnion,
+                state: "off"
+            }, void 0, false, {
+                fileName: "src/components/Menu/Menu.jsx",
+                lineNumber: 36,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
+                className: "icon-variants-instance",
+                icon: "MY",
+                iconUser: iconVariantsIconUser,
+                state: iconVariantsState2,
+                to: to2
+            }, void 0, false, {
+                fileName: "src/components/Menu/Menu.jsx",
+                lineNumber: 37,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Menu/Menu.jsx",
+        lineNumber: 26,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Menu;
+Menu.propTypes = {
+    iconVariantsIconHome: (0, _propTypesDefault.default).string,
+    iconVariantsState: (0, _propTypesDefault.default).string,
+    iconVariantsIconUnion: (0, _propTypesDefault.default).string,
+    iconVariantsState1: (0, _propTypesDefault.default).string,
+    iconVariantsState2: (0, _propTypesDefault.default).string,
+    iconVariantsIconUser: (0, _propTypesDefault.default).string,
+    iconVariantsState3: (0, _propTypesDefault.default).string,
+    to: (0, _propTypesDefault.default).string,
+    to1: (0, _propTypesDefault.default).string,
+    to2: (0, _propTypesDefault.default).string,
+    to3: (0, _propTypesDefault.default).string
+};
+var _c;
+$RefreshReg$(_c, "Menu");
+
+  $parcel$ReactRefreshHelpers$5a12.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","../IconVariants":"62qVk","./style.css":"xdMvJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"62qVk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IconVariants", ()=>(0, _iconVariants.IconVariants));
+var _iconVariants = require("./IconVariants");
+
+},{"./IconVariants":"jdzkO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jdzkO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$22f5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$22f5.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IconVariants", ()=>IconVariants);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _icon = require("../Icon");
+var _styleCss = require("./style.css");
+const IconVariants = ({ icon, state, className, iconHome = "/img/home-1.svg", iconUnion = "/img/union-1.svg", iconUser = "/img/user-1.svg", to })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: `icon-variants ${className}`,
+        to: to,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _icon.Icon), {
+            className: "icon-instance",
+            divClassName: `${state === "on" && icon === "SEARCH" && "class"}`,
+            frameClassName: `${(icon === "FAVORITE" && state === "on" || icon === "HOME" && state === "on" || icon === "MY" && state === "on" || icon === "SAVED" && state === "on") && "class"}`,
+            home: iconHome,
+            icon: icon === "FAVORITE" ? "FAVORITE" : icon === "SEARCH" ? "SEARCH" : icon === "SAVED" ? "SAVED" : icon === "MY" ? "MY" : "HOME",
+            img: iconUnion,
+            union: state === "off" && icon === "SEARCH" ? "/img/union.svg" : state === "on" && icon === "SEARCH" ? "/img/union-3.svg" : undefined,
+            user: iconUser
+        }, void 0, false, {
+            fileName: "src/components/IconVariants/IconVariants.jsx",
+            lineNumber: 23,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/IconVariants/IconVariants.jsx",
+        lineNumber: 22,
+        columnNumber: 5
+    }, undefined);
+};
+_c = IconVariants;
+IconVariants.propTypes = {
+    icon: (0, _propTypesDefault.default).oneOf([
+        "MY",
+        "HOME",
+        "FAVORITE",
+        "SEARCH",
+        "SAVED"
+    ]),
+    state: (0, _propTypesDefault.default).oneOf([
+        "off",
+        "on"
+    ]),
+    iconHome: (0, _propTypesDefault.default).string,
+    iconUnion: (0, _propTypesDefault.default).string,
+    iconUser: (0, _propTypesDefault.default).string,
+    to: (0, _propTypesDefault.default).string
+};
+var _c;
+$RefreshReg$(_c, "IconVariants");
+
+  $parcel$ReactRefreshHelpers$22f5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","react-router-dom":"9xmpe","../Icon":"JmJkt","./style.css":"hPzhx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"JmJkt":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Icon", ()=>(0, _icon.Icon));
+var _icon = require("./Icon");
+
+},{"./Icon":"jfJGq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jfJGq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8bdf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8bdf.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Icon", ()=>Icon);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _heart3 = require("../../icons/Heart3");
+var _styleCss = require("./style.css");
+const Icon = ({ icon, className, home = "/img/home-4.svg", union = "/img/union-6.svg", divClassName, img = "/img/union-10.svg", user = "/img/user-4.svg", frameClassName })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `icon ${className}`,
+        children: [
+            [
+                "HOME",
+                "MY"
+            ].includes(icon) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "img",
+                alt: "Home",
+                src: icon === "MY" ? user : home
+            }, void 0, false, {
+                fileName: "src/components/Icon/Icon.jsx",
+                lineNumber: 23,
+                columnNumber: 41
+            }, undefined),
+            icon === "FAVORITE" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart3.Heart3), {
+                className: "heart-3"
+            }, void 0, false, {
+                fileName: "src/components/Icon/Icon.jsx",
+                lineNumber: 25,
+                columnNumber: 31
+            }, undefined),
+            [
+                "FAVORITE",
+                "HOME",
+                "MY"
+            ].includes(icon) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "div",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: `HOME-2 ${icon} ${frameClassName}`,
+                    children: [
+                        icon === "HOME" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                            children: "HOME"
+                        }, void 0, false),
+                        icon === "MY" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                            children: "MY"
+                        }, void 0, false),
+                        icon === "FAVORITE" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                            children: "FAVORITE"
+                        }, void 0, false)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Icon/Icon.jsx",
+                    lineNumber: 29,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Icon/Icon.jsx",
+                lineNumber: 28,
+                columnNumber: 9
+            }, undefined),
+            [
+                "SAVED",
+                "SEARCH"
+            ].includes(icon) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: `flag icon-${icon}`,
+                        children: [
+                            icon === "SAVED" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "union-2",
+                                alt: "Union",
+                                src: img
+                            }, void 0, false, {
+                                fileName: "src/components/Icon/Icon.jsx",
+                                lineNumber: 42,
+                                columnNumber: 34
+                            }, undefined),
+                            icon === "SEARCH" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "union-3",
+                                    alt: "Union",
+                                    src: union
+                                }, void 0, false, {
+                                    fileName: "src/components/Icon/Icon.jsx",
+                                    lineNumber: 46,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Icon/Icon.jsx",
+                                lineNumber: 45,
+                                columnNumber: 15
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Icon/Icon.jsx",
+                        lineNumber: 41,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "div",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: `SAVED-2 icon-0-${icon} ${frameClassName}`,
+                            children: [
+                                icon === "SAVED" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                    children: "SAVED"
+                                }, void 0, false),
+                                icon === "SEARCH" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: `text-wrapper-2 ${divClassName}`,
+                                    children: "SEARCH"
+                                }, void 0, false, {
+                                    fileName: "src/components/Icon/Icon.jsx",
+                                    lineNumber: 54,
+                                    columnNumber: 37
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Icon/Icon.jsx",
+                            lineNumber: 51,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Icon/Icon.jsx",
+                        lineNumber: 50,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Icon/Icon.jsx",
+        lineNumber: 22,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Icon;
+Icon.propTypes = {
+    icon: (0, _propTypesDefault.default).oneOf([
+        "MY",
+        "HOME",
+        "FAVORITE",
+        "SEARCH",
+        "SAVED"
+    ]),
+    home: (0, _propTypesDefault.default).string,
+    union: (0, _propTypesDefault.default).string,
+    img: (0, _propTypesDefault.default).string,
+    user: (0, _propTypesDefault.default).string
+};
+var _c;
+$RefreshReg$(_c, "Icon");
+
+  $parcel$ReactRefreshHelpers$8bdf.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","../../icons/Heart3":"5eonn","./style.css":"kFW1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5eonn":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Heart3", ()=>(0, _heart3.Heart3));
+var _heart3 = require("./Heart3");
+
+},{"./Heart3":"kILRQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kILRQ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$651d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$651d.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Heart3", ()=>Heart3);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Heart3 = ({ className })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        className: `heart-3 ${className}`,
+        fill: "none",
+        height: "24",
+        viewBox: "0 0 24 24",
+        width: "24",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+            className: "path",
+            d: "M11.2773 6.36458L12 7.12034L12.7227 6.36458L13.7377 5.30318C15.3994 3.56561 18.0741 3.56561 19.7357 5.30318C21.4214 7.06597 21.4214 9.94173 19.7357 11.7045L12 19.7938L4.26431 11.7045C2.57857 9.94173 2.57856 7.06596 4.26431 5.30318C5.92593 3.56561 8.60064 3.56561 10.2623 5.30318L11.2773 6.36458Z",
+            stroke: "black",
+            strokeWidth: "2"
+        }, void 0, false, {
+            fileName: "src/icons/Heart3/Heart3.jsx",
+            lineNumber: 18,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/icons/Heart3/Heart3.jsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Heart3;
+var _c;
+$RefreshReg$(_c, "Heart3");
+
+  $parcel$ReactRefreshHelpers$651d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kFW1E":[function() {},{}],"hPzhx":[function() {},{}],"xdMvJ":[function() {},{}],"iBSFI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "StateOffWrapper", ()=>(0, _stateOffWrapper.StateOffWrapper));
+var _stateOffWrapper = require("./StateOffWrapper");
+
+},{"./StateOffWrapper":"55iRt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"55iRt":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6064 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6064.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "StateOffWrapper", ()=>StateOffWrapper);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _heart = require("../Heart");
+var _styleCss = require("./style.css");
+const StateOffWrapper = ({ state, className, text = "NAVER", text1 = "035420", logoClassName, to })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: `state-off-wrapper ${className}`,
+        to: to,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: `overlap-group state-${state}`,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "info",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "NAVER",
+                            children: text
+                        }, void 0, false, {
+                            fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
+                            lineNumber: 17,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "element",
+                            children: text1
+                        }, void 0, false, {
+                            fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: `logo ${logoClassName}`
+                }, void 0, false, {
+                    fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
+                    lineNumber: 20,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
+                    className: "heart-instance",
+                    stateProp: "off"
+                }, void 0, false, {
+                    fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
+                    lineNumber: 21,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
+            lineNumber: 15,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
+        lineNumber: 14,
+        columnNumber: 5
+    }, undefined);
+};
+_c = StateOffWrapper;
+StateOffWrapper.propTypes = {
+    state: (0, _propTypesDefault.default).oneOf([
+        "off",
+        "on"
+    ]),
+    text: (0, _propTypesDefault.default).string,
+    text1: (0, _propTypesDefault.default).string,
+    to: (0, _propTypesDefault.default).string
+};
+var _c;
+$RefreshReg$(_c, "StateOffWrapper");
+
+  $parcel$ReactRefreshHelpers$6064.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","react-router-dom":"9xmpe","../Heart":"5O8bA","./style.css":"4RDBI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5O8bA":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Heart", ()=>(0, _heart.Heart));
@@ -36090,1197 +36816,7 @@ $RefreshReg$(_c, "Heart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"3ciS4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3ciS4":[function() {},{}],"cAuPj":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Menu", ()=>(0, _menu.Menu));
-var _menu = require("./Menu");
-
-},{"./Menu":"lGhFC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lGhFC":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5a12 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5a12.prelude(module);
-
-try {
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Menu", ()=>Menu);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _iconVariants = require("../IconVariants");
-var _styleCss = require("./style.css");
-const Menu = ({ className, iconVariantsIconUnion = "/img/union-1.png", to, to1, to2, to3 })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `menu ${className}`,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
-                className: "icon-variants-instance",
-                icon: "HOME",
-                state: "off",
-                to: to
-            }, void 0, false, {
-                fileName: "src/components/Menu/Menu.jsx",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
-                className: "icon-variants-instance",
-                icon: "FAVORITE",
-                state: "off",
-                to: to1
-            }, void 0, false, {
-                fileName: "src/components/Menu/Menu.jsx",
-                lineNumber: 15,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
-                className: "icon-variants-instance",
-                icon: "SEARCH",
-                state: "off",
-                to: to2
-            }, void 0, false, {
-                fileName: "src/components/Menu/Menu.jsx",
-                lineNumber: 16,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
-                className: "icon-variants-instance",
-                icon: "SAVED",
-                iconUnion: iconVariantsIconUnion,
-                state: "off"
-            }, void 0, false, {
-                fileName: "src/components/Menu/Menu.jsx",
-                lineNumber: 17,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iconVariants.IconVariants), {
-                className: "icon-variants-instance",
-                icon: "MY",
-                state: "off",
-                to: to3
-            }, void 0, false, {
-                fileName: "src/components/Menu/Menu.jsx",
-                lineNumber: 18,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Menu/Menu.jsx",
-        lineNumber: 13,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Menu;
-Menu.propTypes = {
-    iconVariantsIconUnion: (0, _propTypesDefault.default).string,
-    to: (0, _propTypesDefault.default).string,
-    to1: (0, _propTypesDefault.default).string,
-    to2: (0, _propTypesDefault.default).string,
-    to3: (0, _propTypesDefault.default).string
-};
-var _c;
-$RefreshReg$(_c, "Menu");
-
-  $parcel$ReactRefreshHelpers$5a12.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","../IconVariants":"62qVk","./style.css":"xdMvJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"62qVk":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IconVariants", ()=>(0, _iconVariants.IconVariants));
-var _iconVariants = require("./IconVariants");
-
-},{"./IconVariants":"jdzkO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jdzkO":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$22f5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$22f5.prelude(module);
-
-try {
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IconVariants", ()=>IconVariants);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _icon = require("../Icon");
-var _styleCss = require("./style.css");
-const IconVariants = ({ icon, state, className, iconUnion = "/img/union-1.png", to })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-        className: `icon-variants icon-1-${icon} state-1-${state} ${className}`,
-        to: to,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _icon.Icon), {
-            className: "icon-instance",
-            divClassName: `${state === "on" && icon === "SEARCH" && "class"}`,
-            frameClassName: `${(icon === "FAVORITE" && state === "on" || icon === "HOME" && state === "on" || icon === "MY" && state === "on" || icon === "SAVED" && state === "on") && "class"}`,
-            heart: state === "off" && icon === "FAVORITE" ? "/img/heart.png" : state === "on" && icon === "FAVORITE" ? "/img/heart-2.png" : undefined,
-            home: state === "off" && icon === "HOME" ? "/img/home.png" : state === "on" && icon === "HOME" ? "/img/home-2.png" : undefined,
-            icon: icon === "FAVORITE" ? "FAVORITE" : icon === "SEARCH" ? "SEARCH" : icon === "SAVED" ? "SAVED" : icon === "MY" ? "MY" : "HOME",
-            img: iconUnion,
-            union: state === "off" && icon === "SEARCH" ? "/img/union.png" : state === "on" && icon === "SEARCH" ? "/img/union-3.png" : undefined,
-            user: state === "off" && icon === "MY" ? "/img/user.png" : state === "on" && icon === "MY" ? "/img/user-2.png" : undefined
-        }, void 0, false, {
-            fileName: "src/components/IconVariants/IconVariants.jsx",
-            lineNumber: 15,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/IconVariants/IconVariants.jsx",
-        lineNumber: 14,
-        columnNumber: 5
-    }, undefined);
-};
-_c = IconVariants;
-IconVariants.propTypes = {
-    icon: (0, _propTypesDefault.default).oneOf([
-        "MY",
-        "HOME",
-        "FAVORITE",
-        "SEARCH",
-        "SAVED"
-    ]),
-    state: (0, _propTypesDefault.default).oneOf([
-        "off",
-        "on"
-    ]),
-    iconUnion: (0, _propTypesDefault.default).string,
-    to: (0, _propTypesDefault.default).string
-};
-var _c;
-$RefreshReg$(_c, "IconVariants");
-
-  $parcel$ReactRefreshHelpers$22f5.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","react-router-dom":"9xmpe","../Icon":"JmJkt","./style.css":"hPzhx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"JmJkt":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Icon", ()=>(0, _icon.Icon));
-var _icon = require("./Icon");
-
-},{"./Icon":"jfJGq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jfJGq":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8bdf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8bdf.prelude(module);
-
-try {
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Icon", ()=>Icon);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styleCss = require("./style.css");
-const Icon = ({ icon, className, home = "/img/home-3.png", heart = "/img/heart-3.png", union = "/img/union-7.png", img = "/img/union-6.png", user = "/img/user-3.png", frameClassName, divClassName })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `icon ${icon} ${className}`,
-        children: [
-            [
-                "FAVORITE",
-                "HOME",
-                "MY"
-            ].includes(icon) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "img",
-                alt: "Home",
-                src: icon === "FAVORITE" ? heart : icon === "MY" ? user : home
-            }, void 0, false, {
-                fileName: "src/components/Icon/Icon.jsx",
-                lineNumber: 24,
-                columnNumber: 9
-            }, undefined),
-            [
-                "SAVED",
-                "SEARCH"
-            ].includes(icon) && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flag",
-                children: [
-                    icon === "SAVED" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "union",
-                        alt: "Union",
-                        src: img
-                    }, void 0, false, {
-                        fileName: "src/components/Icon/Icon.jsx",
-                        lineNumber: 29,
-                        columnNumber: 32
-                    }, undefined),
-                    icon === "SEARCH" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "frame",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "union-2",
-                            alt: "Union",
-                            src: union
-                        }, void 0, false, {
-                            fileName: "src/components/Icon/Icon.jsx",
-                            lineNumber: 33,
-                            columnNumber: 15
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/Icon/Icon.jsx",
-                        lineNumber: 32,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Icon/Icon.jsx",
-                lineNumber: 28,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-HOME",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: `div ${frameClassName}`,
-                    children: [
-                        icon === "HOME" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                            children: "HOME"
-                        }, void 0, false),
-                        icon === "FAVORITE" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                            children: "FAVORITE"
-                        }, void 0, false),
-                        icon === "MY" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                            children: "MY"
-                        }, void 0, false),
-                        icon === "SAVED" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                            children: "SAVED"
-                        }, void 0, false),
-                        icon === "SEARCH" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: `text-wrapper-2 ${divClassName}`,
-                            children: "SEARCH"
-                        }, void 0, false, {
-                            fileName: "src/components/Icon/Icon.jsx",
-                            lineNumber: 49,
-                            columnNumber: 33
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Icon/Icon.jsx",
-                    lineNumber: 40,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Icon/Icon.jsx",
-                lineNumber: 39,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Icon/Icon.jsx",
-        lineNumber: 22,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Icon;
-Icon.propTypes = {
-    icon: (0, _propTypesDefault.default).oneOf([
-        "MY",
-        "HOME",
-        "FAVORITE",
-        "SEARCH",
-        "SAVED"
-    ]),
-    home: (0, _propTypesDefault.default).string,
-    heart: (0, _propTypesDefault.default).string,
-    union: (0, _propTypesDefault.default).string,
-    img: (0, _propTypesDefault.default).string,
-    user: (0, _propTypesDefault.default).string
-};
-var _c;
-$RefreshReg$(_c, "Icon");
-
-  $parcel$ReactRefreshHelpers$8bdf.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"kFW1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kFW1E":[function() {},{}],"hPzhx":[function() {},{}],"xdMvJ":[function() {},{}],"5E9MW":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Search", ()=>(0, _search.Search));
-var _search = require("./Search");
-
-},{"./Search":"jYYDn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jYYDn":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8251 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8251.prelude(module);
-
-try {
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Search", ()=>Search);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styleCss = require("./style.css");
-const Search = ({ className })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `search ${className}`,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: "union-3",
-            alt: "Union",
-            src: "/img/union-7.png"
-        }, void 0, false, {
-            fileName: "src/components/Search/Search.jsx",
-            lineNumber: 12,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Search/Search.jsx",
-        lineNumber: 11,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Search;
-var _c;
-$RefreshReg$(_c, "Search");
-
-  $parcel$ReactRefreshHelpers$8251.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"bLUSy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bLUSy":[function() {},{}],"7EuOT":[function() {},{}],"bX67M":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LoginKakao", ()=>(0, _loginKakao.LoginKakao));
-var _loginKakao = require("./LoginKakao");
-
-},{"./LoginKakao":"jHc39","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jHc39":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c945 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c945.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LoginKakao", ()=>LoginKakao);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _check = require("../../components/Check");
-var _styleCss = require("./style.css");
-const LoginKakao = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "login-kakao",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "login-kakao-wrapper",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "overlap-group-wrapper-2",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "check-wrapper",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _check.Check), {
-                        className: "check-instance",
-                        divClassName: "check-2"
-                    }, void 0, false, {
-                        fileName: "src/screens/LoginKakao/LoginKakao.jsx",
-                        lineNumber: 11,
-                        columnNumber: 13
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/screens/LoginKakao/LoginKakao.jsx",
-                    lineNumber: 10,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/screens/LoginKakao/LoginKakao.jsx",
-                lineNumber: 9,
-                columnNumber: 9
-            }, undefined)
-        }, void 0, false, {
-            fileName: "src/screens/LoginKakao/LoginKakao.jsx",
-            lineNumber: 8,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/screens/LoginKakao/LoginKakao.jsx",
-        lineNumber: 7,
-        columnNumber: 5
-    }, undefined);
-};
-_c = LoginKakao;
-var _c;
-$RefreshReg$(_c, "LoginKakao");
-
-  $parcel$ReactRefreshHelpers$c945.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Check":"eGBKr","./style.css":"dFu9P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eGBKr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Check", ()=>(0, _check.Check));
-var _check = require("./Check");
-
-},{"./Check":"kvhnx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kvhnx":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8398 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8398.prelude(module);
-
-try {
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Check", ()=>Check);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styleCss = require("./style.css");
-const Check = ({ login = true, className, divClassName })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `check ${className}`,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: `text-wrapper-3 ${divClassName}`,
-            children: "\uB3D9\uC758\uD558\uACE0 \uACC4\uC18D\uD558\uAE30"
-        }, void 0, false, {
-            fileName: "src/components/Check/Check.jsx",
-            lineNumber: 13,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Check/Check.jsx",
-        lineNumber: 12,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Check;
-Check.propTypes = {
-    login: (0, _propTypesDefault.default).bool
-};
-var _c;
-$RefreshReg$(_c, "Check");
-
-  $parcel$ReactRefreshHelpers$8398.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"bAL9f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bAL9f":[function() {},{}],"dFu9P":[function() {},{}],"7eUR9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Home", ()=>(0, _home.Home));
-var _home = require("./Home");
-
-},{"./Home":"jTmkr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jTmkr":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4c88 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4c88.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Home", ()=>Home);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _menu = require("../../components/Menu");
-var _search = require("../../components/Search");
-var _stateOffWrapper = require("../../components/StateOffWrapper");
-var _styleCss = require("./style.css");
-const Home = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "home",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-2",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "div-3",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "overlap-group-2",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "text",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "text-wrapper-6",
-                                        children: "\uAD00\uC2EC \uC788\uB294 \uC8FC\uC2DD\uC744 \uD074\uB9AD\uD574 \uBCF4\uC138\uC694."
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 15,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 14,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "text-2",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-7",
-                                        children: "\uC774\uB7F0 \uC885\uBAA9\uC740 \uC5B4\uB54C\uC694?"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 18,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 17,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 13,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            className: "serch",
-                            to: "/search-1",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "text-3",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-8",
-                                        children: "\uC8FC\uC2DD \uC885\uBAA9\uC744 \uC785\uB825\uD558\uC138\uC694"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 23,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 22,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _search.Search), {
-                                    className: "icon-search"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 25,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 21,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "overlap",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "view",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                        className: "component-993",
-                                        state: "off"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 29,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                        className: "component-993",
-                                        divClassName: "component-993-instance",
-                                        logoClassName: "design-component-instance-node",
-                                        state: "off",
-                                        text: "\uC140\uD2B8\uB9AC\uC628"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 30,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                        className: "component-993",
-                                        divClassName: "component-993-instance",
-                                        logoClassName: "view-2",
-                                        state: "off",
-                                        text: "\uC0BC\uC131\uC804\uC790"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 37,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                        className: "component-993",
-                                        logoClassName: "view-3",
-                                        state: "off",
-                                        text: "\uCE74\uCE74\uC624"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 44,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                        className: "component-993",
-                                        divClassName: "component-993-instance",
-                                        logoClassName: "view-4",
-                                        state: "off",
-                                        text: "\uC5D0\uCF54\uD504\uB85C"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 45,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                        className: "component-993",
-                                        logoClassName: "view-5",
-                                        state: "off",
-                                        text: "\uD604\uB300\uCC28"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 52,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "LG",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "view-6",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "text-wrapper-9",
-                                                    children: "-0.53%"
-                                                }, void 0, false, {
-                                                    fileName: "src/screens/Home/Home.jsx",
-                                                    lineNumber: 55,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/screens/Home/Home.jsx",
-                                                lineNumber: 54,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "view-7",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                    className: "div-4",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                            className: "text-wrapper-10",
-                                                            children: "188,000"
-                                                        }, void 0, false, {
-                                                            fileName: "src/screens/Home/Home.jsx",
-                                                            lineNumber: 59,
-                                                            columnNumber: 21
-                                                        }, undefined),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                            className: "text-wrapper-11",
-                                                            children: "\uC6D0"
-                                                        }, void 0, false, {
-                                                            fileName: "src/screens/Home/Home.jsx",
-                                                            lineNumber: 60,
-                                                            columnNumber: 21
-                                                        }, undefined)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "src/screens/Home/Home.jsx",
-                                                    lineNumber: 58,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/screens/Home/Home.jsx",
-                                                lineNumber: 57,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "view-8",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                    className: "div-5",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                            className: "text-wrapper-12",
-                                                            children: "LG\uC5D0\uB108"
-                                                        }, void 0, false, {
-                                                            fileName: "src/screens/Home/Home.jsx",
-                                                            lineNumber: 65,
-                                                            columnNumber: 21
-                                                        }, undefined),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                            className: "text-wrapper-13",
-                                                            children: "\uC9C0"
-                                                        }, void 0, false, {
-                                                            fileName: "src/screens/Home/Home.jsx",
-                                                            lineNumber: 66,
-                                                            columnNumber: 21
-                                                        }, undefined),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                            className: "text-wrapper-12",
-                                                            children: "\uC194\uB8E8\uC158"
-                                                        }, void 0, false, {
-                                                            fileName: "src/screens/Home/Home.jsx",
-                                                            lineNumber: 67,
-                                                            columnNumber: 21
-                                                        }, undefined)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "src/screens/Home/Home.jsx",
-                                                    lineNumber: 64,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/screens/Home/Home.jsx",
-                                                lineNumber: 63,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "logo-3"
-                                            }, void 0, false, {
-                                                fileName: "src/screens/Home/Home.jsx",
-                                                lineNumber: 70,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 53,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                        className: "component-993",
-                                        divClassName: "SK",
-                                        logoClassName: "SK-2",
-                                        state: "off",
-                                        text: "SK\uD558\uC774\uB2C9\uC2A4"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 72,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                        className: "component-993",
-                                        divClassName: "component-993-instance",
-                                        logoClassName: "view-9",
-                                        state: "off",
-                                        text: "\uAE30\uC5C5\uC740\uD589"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 79,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 28,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 27,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
-                            className: "menu-instance",
-                            iconVariantsIconUnion: "https://cdn.animaapp.com/projects/65f06d8881d354160ac5ff06/releases/65f06d961e0f8111128711d2/img/union-9@2x.png",
-                            to: "/home",
-                            to1: "/favorite",
-                            to2: "/search-1",
-                            to3: "/saved",
-                            to4: "/profile"
-                        }, void 0, false, {
-                            fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 88,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Home/Home.jsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "head",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "text-wrapper-14",
-                        children: "Home"
-                    }, void 0, false, {
-                        fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 99,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/screens/Home/Home.jsx",
-                    lineNumber: 98,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/screens/Home/Home.jsx",
-            lineNumber: 11,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/screens/Home/Home.jsx",
-        lineNumber: 10,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Home;
-var _c;
-$RefreshReg$(_c, "Home");
-
-  $parcel$ReactRefreshHelpers$4c88.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Menu":"cAuPj","../../components/Search":"5E9MW","../../components/StateOffWrapper":"iBSFI","./style.css":"8msK4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iBSFI":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "StateOffWrapper", ()=>(0, _stateOffWrapper.StateOffWrapper));
-var _stateOffWrapper = require("./StateOffWrapper");
-
-},{"./StateOffWrapper":"55iRt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"55iRt":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6064 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6064.prelude(module);
-
-try {
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "StateOffWrapper", ()=>StateOffWrapper);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _heart = require("../Heart");
-var _styleCss = require("./style.css");
-const StateOffWrapper = ({ state, className, text = "NAVER", text1 = "035420", logoClassName, to })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-        className: `state-off-wrapper state-${state} ${className}`,
-        to: to,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "overlap-group",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "info",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "NAVER",
-                            children: text
-                        }, void 0, false, {
-                            fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper",
-                            children: text1
-                        }, void 0, false, {
-                            fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
-                            lineNumber: 18,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: `logo ${logoClassName}`
-                }, void 0, false, {
-                    fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
-                    className: "heart-instance",
-                    stateProp: "off"
-                }, void 0, false, {
-                    fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
-                    lineNumber: 21,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
-            lineNumber: 15,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
-        lineNumber: 14,
-        columnNumber: 5
-    }, undefined);
-};
-_c = StateOffWrapper;
-StateOffWrapper.propTypes = {
-    state: (0, _propTypesDefault.default).oneOf([
-        "off",
-        "on"
-    ]),
-    text: (0, _propTypesDefault.default).string,
-    text1: (0, _propTypesDefault.default).string,
-    to: (0, _propTypesDefault.default).string
-};
-var _c;
-$RefreshReg$(_c, "StateOffWrapper");
-
-  $parcel$ReactRefreshHelpers$6064.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","react-router-dom":"9xmpe","../Heart":"5O8bA","./style.css":"4RDBI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4RDBI":[function() {},{}],"8msK4":[function() {},{}],"3cPy6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DivWrapper", ()=>(0, _divWrapper.DivWrapper));
-var _divWrapper = require("./DivWrapper");
-
-},{"./DivWrapper":"4gBWj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4gBWj":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6885 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6885.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DivWrapper", ()=>DivWrapper);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _menu = require("../../components/Menu");
-var _search = require("../../components/Search");
-var _stateOffWrapper = require("../../components/StateOffWrapper");
-var _styleCss = require("./style.css");
-var _async = require("react-select/async");
-var _asyncDefault = parcelHelpers.interopDefault(_async);
-var _papaparse = require("papaparse");
-var _papaparseDefault = parcelHelpers.interopDefault(_papaparse);
-var _s = $RefreshSig$();
-const DivWrapper = ()=>{
-    _s();
-    const navigate = (0, _reactRouterDom.useNavigate)();
-    const [stocksData, setStocksData] = (0, _react.useState)([]);
-    const [inputValue, setInputValue] = (0, _react.useState)("");
-    (0, _react.useEffect)(()=>{
-        (0, _papaparseDefault.default).parse("/symbol_data/korea_stock_symbols.csv", {
-            download: true,
-            header: true,
-            delimiter: ",",
-            skipEmptyLines: true,
-            complete: function(results) {
-                if (results.errors.length > 0) // console.error("CSV 파일 로드 에러:", results.errors);
-                return;
-                // console.log("CSV 파일 로딩 완료:", results.data); // 로드된 데이터 확인
-                const validData = results.data.filter((row)=>row.label && row.value);
-                // console.log("필터링된 데이터:", validData); // 필터링된 데이터 확인
-                const formattedData = validData.map((row)=>({
-                        label: row.label,
-                        value: row.value
-                    }));
-                setStocksData(formattedData);
-            }
-        });
-    }, []);
-    const filterOptions = (inputValue)=>{
-        return stocksData.filter((i)=>i.label && i.label.toLowerCase().includes(inputValue.toLowerCase()));
-    };
-    const handleChange = (selectedOption)=>{
-        if (selectedOption) navigate(`/result-1/${selectedOption.value}`, {
-            state: {
-                stockLabel: selectedOption.label
-            }
-        });
-    };
-    const loadOptions = (inputValue, callback)=>{
-        setTimeout(()=>{
-            callback(filterOptions(inputValue));
-        }, 500);
-    };
-    const formatOptionLabel = ({ label }, { inputValue })=>{
-        const parts = label.split(new RegExp(`(${inputValue})`, "i"));
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: parts.map((part, index)=>part.toLowerCase() === inputValue.toLowerCase() ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                    style: {
-                        color: "blue"
-                    },
-                    children: part
-                }, index, false, {
-                    fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                    lineNumber: 67,
-                    columnNumber: 13
-                }, undefined) : part)
-        }, void 0, false, {
-            fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-            lineNumber: 64,
-            columnNumber: 7
-        }, undefined);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "div-wrapper",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "search-3",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "view-15",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-8",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-27",
-                                children: "\uC778\uAE30 \uAC80\uC0C9\uC5B4"
-                            }, void 0, false, {
-                                fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                                lineNumber: 80,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                            lineNumber: 79,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "div-9",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                    className: "component-1003",
-                                    state: "off",
-                                    text: "\uB124\uC774\uBC84"
-                                }, void 0, false, {
-                                    fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                                    lineNumber: 83,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                    className: "view-16",
-                                    logoClassName: "component-1003-instance",
-                                    state: "off",
-                                    text: "\uC0BC\uC131\uC804\uC790",
-                                    text1: "005930",
-                                    to: "/result-1"
-                                }, void 0, false, {
-                                    fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                                    lineNumber: 84,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                    className: "view-16",
-                                    logoClassName: "view-17",
-                                    state: "off",
-                                    text: "\uCE74\uCE74\uC624",
-                                    text1: "035720"
-                                }, void 0, false, {
-                                    fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                                    lineNumber: 92,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                                    className: "view-18",
-                                    logoClassName: "view-19",
-                                    state: "off",
-                                    text: "\uC140\uD2B8\uB9AC\uC628",
-                                    text1: "068270"
-                                }, void 0, false, {
-                                    fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                                    lineNumber: 93,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                            lineNumber: 82,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
-                            className: "menu-3",
-                            iconVariantsIconUnion: "/img/union-9.png",
-                            to: "/home",
-                            to1: "/favorite",
-                            to2: "/search-1",
-                            to3: "/profile"
-                        }, void 0, false, {
-                            fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                            lineNumber: 95,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                    lineNumber: 78,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "serch-wrapper",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _asyncDefault.default), {
-                        cacheOptions: true,
-                        loadOptions: loadOptions,
-                        onInputChange: (value)=>{
-                            setInputValue(value);
-                            return value;
-                        },
-                        onChange: handleChange,
-                        placeholder: "\uC8FC\uC2DD \uC885\uBAA9\uC744 \uC785\uB825\uD558\uC138\uC694",
-                        formatOptionLabel: formatOptionLabel
-                    }, void 0, false, {
-                        fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                        lineNumber: 105,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-                    lineNumber: 104,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-            lineNumber: 77,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/screens/DivWrapper/DivWrapper.jsx",
-        lineNumber: 76,
-        columnNumber: 5
-    }, undefined);
-};
-_s(DivWrapper, "n5tHza7dh1LHBDCnRjqKgjZXsFo=", false, function() {
-    return [
-        (0, _reactRouterDom.useNavigate)
-    ];
-});
-_c = DivWrapper;
-var _c;
-$RefreshReg$(_c, "DivWrapper");
-
-  $parcel$ReactRefreshHelpers$6885.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Menu":"cAuPj","../../components/Search":"5E9MW","../../components/StateOffWrapper":"iBSFI","./style.css":"cQ1WN","react-select/async":"6qsCb","papaparse":"5w3wE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cQ1WN":[function() {},{}],"6qsCb":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"3ciS4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3ciS4":[function() {},{}],"4RDBI":[function() {},{}],"7EuOT":[function() {},{}],"6qsCb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useAsync", ()=>(0, _useAsyncBa7C6B77EsmJs.u));
@@ -46672,7 +46208,676 @@ License: MIT
     }), (l.prototype = Object.create(h.prototype)).constructor = l, (c.prototype = Object.create(h.prototype)).constructor = c, (p.prototype = Object.create(p.prototype)).constructor = p, (g.prototype = Object.create(h.prototype)).constructor = g, b;
 });
 
-},{}],"3uncc":[function(require,module,exports) {
+},{}],"7eUR9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Home", ()=>(0, _home.Home));
+var _home = require("./Home");
+
+},{"./Home":"jTmkr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jTmkr":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4c88 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4c88.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Home", ()=>Home);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _component1174 = require("../../components/Component1174");
+var _menu = require("../../components/Menu");
+var _stateOffWrapper = require("../../components/StateOffWrapper");
+var _search = require("../../components/Search");
+var _styleCss = require("./style.css");
+var _async = require("react-select/async");
+var _asyncDefault = parcelHelpers.interopDefault(_async);
+var _papaparse = require("papaparse");
+var _papaparseDefault = parcelHelpers.interopDefault(_papaparse);
+var _s = $RefreshSig$();
+const Home = ()=>{
+    _s();
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const [stocksData, setStocksData] = (0, _react.useState)([]);
+    const [inputValue, setInputValue] = (0, _react.useState)("");
+    (0, _react.useEffect)(()=>{
+        (0, _papaparseDefault.default).parse("/symbol_data/korea_stock_symbols.csv", {
+            download: true,
+            header: true,
+            delimiter: ",",
+            skipEmptyLines: true,
+            complete: function(results) {
+                if (results.errors.length > 0) // console.error("CSV 파일 로드 에러:", results.errors);
+                return;
+                // console.log("CSV 파일 로딩 완료:", results.data); // 로드된 데이터 확인
+                const validData = results.data.filter((row)=>row.label && row.value);
+                // console.log("필터링된 데이터:", validData); // 필터링된 데이터 확인
+                const formattedData = validData.map((row)=>({
+                        label: row.label,
+                        value: row.value
+                    }));
+                setStocksData(formattedData);
+            }
+        });
+    }, []);
+    const filterOptions = (inputValue)=>{
+        return stocksData.filter((i)=>i.label && i.label.toLowerCase().includes(inputValue.toLowerCase()));
+    };
+    const handleChange = (selectedOption)=>{
+        if (selectedOption) navigate(`/result-1/${selectedOption.value}`, {
+            state: {
+                stockLabel: selectedOption.label
+            }
+        });
+    };
+    const loadOptions = (inputValue, callback)=>{
+        setTimeout(()=>{
+            callback(filterOptions(inputValue));
+        }, 500);
+    };
+    const formatOptionLabel = ({ label }, { inputValue })=>{
+        const parts = label.split(new RegExp(`(${inputValue})`, "i"));
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: parts.map((part, index)=>part.toLowerCase() === inputValue.toLowerCase() ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    style: {
+                        color: "#7d49f5"
+                    },
+                    children: part
+                }, index, false, {
+                    fileName: "src/screens/Home/Home.jsx",
+                    lineNumber: 67,
+                    columnNumber: 13
+                }, undefined) : part)
+        }, void 0, false, {
+            fileName: "src/screens/Home/Home.jsx",
+            lineNumber: 64,
+            columnNumber: 7
+        }, undefined);
+    };
+    const customStyles = {
+        placeholder: (provided)=>({
+                ...provided,
+                paddingLeft: "10px"
+            }),
+        input: (provided)=>({
+                ...provided,
+                paddingLeft: "10px"
+            }),
+        control: (provided, { isFocused })=>({
+                ...provided,
+                minHeight: "45px",
+                borderColor: isFocused ? "#7d49f5" : provided.borderColor,
+                boxShadow: isFocused ? "0 0 0 1px #7d49f5" : "none",
+                // 포커스 되었을 때 보라색 그림자 효과를 줌
+                "&:hover": {
+                    borderColor: "#7d49f5"
+                }
+            }),
+        dropdownIndicator: (provided, { isFocused })=>({
+                ...provided,
+                color: isFocused ? "#7d49f5" : provided.color
+            }),
+        option: (provided, { isFocused, isSelected })=>{
+            return {
+                ...provided,
+                backgroundColor: isSelected ? "#F2ECFF" : isFocused ? "#F2ECFF" : undefined,
+                // 선택된 옵션의 배경색과 포커스 시 배경색
+                paddingLeft: "20px"
+            };
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "home",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "frame-8",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "stock-frame",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "stocks",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                    divClassName: "component-1174-instance",
+                                    divClassName1: "stock-7",
+                                    divClassName2: "stock-8",
+                                    divClassNameOverride: "stock-5",
+                                    spanClassName: "stock-6",
+                                    state: "off"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 118,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                    divClassName: "component-1174-instance",
+                                    divClassName1: "stock-10",
+                                    divClassName2: "stock-8",
+                                    divClassNameOverride: "stock-5",
+                                    logoClassName: "stock-9",
+                                    spanClassName: "stock-6",
+                                    state: "off",
+                                    text: "\uC140\uD2B8\uB9AC\uC628"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 126,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                    divClassName: "component-1174-instance",
+                                    divClassName1: "stock-10",
+                                    divClassName2: "stock-8",
+                                    divClassNameOverride: "stock-5",
+                                    logoClassName: "stock-11",
+                                    spanClassName: "stock-6",
+                                    state: "off",
+                                    text: "\uC0BC\uC131\uC804\uC790",
+                                    to: "/result"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 136,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                    divClassName: "component-1174-instance",
+                                    divClassName1: "stock-7",
+                                    divClassName2: "stock-8",
+                                    divClassNameOverride: "stock-5",
+                                    logoClassName: "stock-12",
+                                    spanClassName: "stock-6",
+                                    state: "off",
+                                    text: "\uCE74\uCE74\uC624"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 147,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                    divClassName: "component-1174-instance",
+                                    divClassName1: "stock-10",
+                                    divClassName2: "stock-8",
+                                    divClassNameOverride: "stock-5",
+                                    logoClassName: "stock-13",
+                                    spanClassName: "stock-6",
+                                    state: "off",
+                                    text: "\uC5D0\uCF54\uD504\uB85C"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 157,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                    divClassName: "component-1174-instance",
+                                    divClassName1: "stock-7",
+                                    divClassName2: "stock-8",
+                                    divClassNameOverride: "stock-5",
+                                    logoClassName: "stock-14",
+                                    spanClassName: "stock-6",
+                                    state: "off",
+                                    text: "\uD604\uB300\uCC28"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 167,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "stock-15",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "range",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "text-wrapper-21",
+                                                children: "-0.53%"
+                                            }, void 0, false, {
+                                                fileName: "src/screens/Home/Home.jsx",
+                                                lineNumber: 179,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/screens/Home/Home.jsx",
+                                            lineNumber: 178,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "price",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "element-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "text-wrapper-22",
+                                                        children: "188,000"
+                                                    }, void 0, false, {
+                                                        fileName: "src/screens/Home/Home.jsx",
+                                                        lineNumber: 183,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "text-wrapper-23",
+                                                        children: "\uC6D0"
+                                                    }, void 0, false, {
+                                                        fileName: "src/screens/Home/Home.jsx",
+                                                        lineNumber: 184,
+                                                        columnNumber: 21
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/screens/Home/Home.jsx",
+                                                lineNumber: 182,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/screens/Home/Home.jsx",
+                                            lineNumber: 181,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "name",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "LG",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "text-wrapper-24",
+                                                        children: "LG\uC5D0\uB108"
+                                                    }, void 0, false, {
+                                                        fileName: "src/screens/Home/Home.jsx",
+                                                        lineNumber: 189,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "text-wrapper-25",
+                                                        children: "\uC9C0"
+                                                    }, void 0, false, {
+                                                        fileName: "src/screens/Home/Home.jsx",
+                                                        lineNumber: 190,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "text-wrapper-24",
+                                                        children: "\uC194\uB8E8\uC158"
+                                                    }, void 0, false, {
+                                                        fileName: "src/screens/Home/Home.jsx",
+                                                        lineNumber: 191,
+                                                        columnNumber: 21
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/screens/Home/Home.jsx",
+                                                lineNumber: 188,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/screens/Home/Home.jsx",
+                                            lineNumber: 187,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "logo-5"
+                                        }, void 0, false, {
+                                            fileName: "src/screens/Home/Home.jsx",
+                                            lineNumber: 194,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 177,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                    divClassName: "component-1174-instance",
+                                    divClassName1: "stock-16",
+                                    divClassName2: "stock-8",
+                                    divClassNameOverride: "stock-5",
+                                    logoClassName: "stock-17",
+                                    spanClassName: "stock-6",
+                                    state: "off",
+                                    text: "SK\uD558\uC774\uB2C9\uC2A4"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 196,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1174.Component1174), {
+                                    divClassName: "component-1174-instance",
+                                    divClassName1: "stock-10",
+                                    divClassName2: "stock-8",
+                                    divClassNameOverride: "stock-5",
+                                    logoClassName: "stock-18",
+                                    spanClassName: "stock-6",
+                                    state: "off",
+                                    text: "\uAE30\uC5C5\uC740\uD589"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 206,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/screens/Home/Home.jsx",
+                            lineNumber: 117,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/Home/Home.jsx",
+                        lineNumber: 116,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "text-container",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "text-6",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-26",
+                                    children: "\uC774\uB7F0 \uC885\uBAA9\uC740 \uC5B4\uB54C\uC694?"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 220,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Home/Home.jsx",
+                                lineNumber: 219,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "text-7",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "text-wrapper-27",
+                                    children: "\uAD00\uC2EC \uC788\uB294 \uC8FC\uC2DD\uC744 \uD074\uB9AD\uD574 \uBCF4\uC138\uC694."
+                                }, void 0, false, {
+                                    fileName: "src/screens/Home/Home.jsx",
+                                    lineNumber: 223,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Home/Home.jsx",
+                                lineNumber: 222,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/Home/Home.jsx",
+                        lineNumber: 218,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        className: "container-wrapper",
+                        to: "/search",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "container-3",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _asyncDefault.default), {
+                                styles: customStyles,
+                                cacheOptions: true,
+                                loadOptions: loadOptions,
+                                onInputChange: (value)=>{
+                                    setInputValue(value);
+                                    return value;
+                                },
+                                onChange: handleChange,
+                                placeholder: "\uC8FC\uC2DD \uC885\uBAA9\uC744 \uC785\uB825\uD558\uC138\uC694",
+                                formatOptionLabel: formatOptionLabel
+                            }, void 0, false, {
+                                fileName: "src/screens/Home/Home.jsx",
+                                lineNumber: 228,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/screens/Home/Home.jsx",
+                            lineNumber: 227,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/Home/Home.jsx",
+                        lineNumber: 226,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-wrapper",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
+                            className: "menu-2",
+                            iconVariantsIconHome: "/img/home-5.svg",
+                            iconVariantsIconUnion: "/img/union-9.svg",
+                            iconVariantsState: "off",
+                            iconVariantsState1: "on",
+                            to1: "/favorite",
+                            to2: "/profile",
+                            to3: "/search"
+                        }, void 0, false, {
+                            fileName: "src/screens/Home/Home.jsx",
+                            lineNumber: 243,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/Home/Home.jsx",
+                        lineNumber: 242,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "head-2",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-29",
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "src/screens/Home/Home.jsx",
+                            lineNumber: 255,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/Home/Home.jsx",
+                        lineNumber: 254,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/Home/Home.jsx",
+                lineNumber: 115,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/screens/Home/Home.jsx",
+            lineNumber: 114,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/screens/Home/Home.jsx",
+        lineNumber: 113,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Home, "n5tHza7dh1LHBDCnRjqKgjZXsFo=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
+_c = Home;
+var _c;
+$RefreshReg$(_c, "Home");
+
+  $parcel$ReactRefreshHelpers$4c88.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Component1174":"74Xj5","../../components/Menu":"cAuPj","../../components/StateOffWrapper":"iBSFI","../../components/Search":"5E9MW","./style.css":"8msK4","react-select/async":"6qsCb","papaparse":"5w3wE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"74Xj5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Component1174", ()=>(0, _component1174.Component1174));
+var _component1174 = require("./Component1174");
+
+},{"./Component1174":"7xX9F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7xX9F":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$010d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$010d.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Component1174", ()=>Component1174);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _styleCss = require("./style.css");
+const Component1174 = ({ state, divClassName, divClassNameOverride, spanClassName, divClassName1, divClassName2, text = "\uB124\uC774\uBC84", logoClassName, to })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: `component-1174 state-0-${state}`,
+        to: to,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "div-wrapper-2",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "text-wrapper-3",
+                    children: "-0.53%"
+                }, void 0, false, {
+                    fileName: "src/components/Component1174/Component1174.jsx",
+                    lineNumber: 25,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Component1174/Component1174.jsx",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `div-wrapper-3 ${divClassName}`,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: `p ${divClassNameOverride}`,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: `span ${spanClassName}`,
+                            children: "188,000"
+                        }, void 0, false, {
+                            fileName: "src/components/Component1174/Component1174.jsx",
+                            lineNumber: 29,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "text-wrapper-45",
+                            children: "\uC6D0"
+                        }, void 0, false, {
+                            fileName: "src/components/Component1174/Component1174.jsx",
+                            lineNumber: 30,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Component1174/Component1174.jsx",
+                    lineNumber: 28,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Component1174/Component1174.jsx",
+                lineNumber: 27,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `div-wrapper-4 ${divClassName1}`,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: `text-wrapper-4 ${divClassName2}`,
+                    children: text
+                }, void 0, false, {
+                    fileName: "src/components/Component1174/Component1174.jsx",
+                    lineNumber: 34,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Component1174/Component1174.jsx",
+                lineNumber: 33,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `logo-2 ${logoClassName}`
+            }, void 0, false, {
+                fileName: "src/components/Component1174/Component1174.jsx",
+                lineNumber: 36,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Component1174/Component1174.jsx",
+        lineNumber: 23,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Component1174;
+Component1174.propTypes = {
+    state: (0, _propTypesDefault.default).oneOf([
+        "off",
+        "on"
+    ]),
+    text: (0, _propTypesDefault.default).string,
+    to: (0, _propTypesDefault.default).string
+};
+var _c;
+$RefreshReg$(_c, "Component1174");
+
+  $parcel$ReactRefreshHelpers$010d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","react-router-dom":"9xmpe","./style.css":"aPWLb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aPWLb":[function() {},{}],"5E9MW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Search", ()=>(0, _search.Search));
+var _search = require("./Search");
+
+},{"./Search":"jYYDn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jYYDn":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8251 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8251.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Search", ()=>Search);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styleCss = require("./style.css");
+const Search = ({ className })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `search ${className}`,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            className: "union",
+            alt: "Union",
+            src: "/img/union-6.svg"
+        }, void 0, false, {
+            fileName: "src/components/Search/Search.jsx",
+            lineNumber: 12,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Search/Search.jsx",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Search;
+var _c;
+$RefreshReg$(_c, "Search");
+
+  $parcel$ReactRefreshHelpers$8251.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"bLUSy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bLUSy":[function() {},{}],"8msK4":[function() {},{}],"3uncc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Profile", ()=>(0, _profile.Profile));
@@ -46697,103 +46902,183 @@ const Profile = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "profile",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-10",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "text-wrapper-29",
-                    children: "\uAC8C\uC2A4\uD2B8 \uC0AC\uC6A9\uC790"
-                }, void 0, false, {
-                    fileName: "src/screens/Profile/Profile.jsx",
-                    lineNumber: 9,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "text-wrapper-30",
-                    children: "\uC0AC\uC6A9\uC790 \uC815\uBCF4"
-                }, void 0, false, {
-                    fileName: "src/screens/Profile/Profile.jsx",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "text-wrapper-31",
-                    children: "\uD504\uB85C\uD544 \uD3B8\uC9D1"
-                }, void 0, false, {
-                    fileName: "src/screens/Profile/Profile.jsx",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "text-wrapper-32",
-                    children: "\uC8FC\uB9B0\uC7741230124"
-                }, void 0, false, {
-                    fileName: "src/screens/Profile/Profile.jsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "overlap-group-4",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "head-3",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-33",
-                                children: "Profile"
-                            }, void 0, false, {
-                                fileName: "src/screens/Profile/Profile.jsx",
-                                lineNumber: 15,
-                                columnNumber: 13
-                            }, undefined)
+            className: "frame-9",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-5",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "label-2",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-30",
+                            children: "\uC8FC\uB9B0\uC7741230124"
+                        }, void 0, false, {
+                            fileName: "src/screens/Profile/Profile.jsx",
+                            lineNumber: 11,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/Profile/Profile.jsx",
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "label-3",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-30",
+                            children: "\uAC8C\uC2A4\uD2B8 \uC0AC\uC6A9\uC790"
                         }, void 0, false, {
                             fileName: "src/screens/Profile/Profile.jsx",
                             lineNumber: 14,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "ellipse-2"
-                        }, void 0, false, {
-                            fileName: "src/screens/Profile/Profile.jsx",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "image",
-                            alt: "Image",
-                            src: "/img/image-120.png"
-                        }, void 0, false, {
-                            fileName: "src/screens/Profile/Profile.jsx",
-                            lineNumber: 18,
-                            columnNumber: 11
+                            columnNumber: 13
                         }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Profile/Profile.jsx",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "line",
-                    alt: "Line",
-                    src: "/img/line-2.png"
-                }, void 0, false, {
-                    fileName: "src/screens/Profile/Profile.jsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
-                    className: "menu-4",
-                    iconVariantsIconUnion: "/img/union-9.png",
-                    to: "/home",
-                    to1: "/favorite",
-                    to2: "/search-1",
-                    to3: "/profile"
-                }, void 0, false, {
-                    fileName: "src/screens/Profile/Profile.jsx",
-                    lineNumber: 21,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                    }, void 0, false, {
+                        fileName: "src/screens/Profile/Profile.jsx",
+                        lineNumber: 13,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "overlap",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "overlap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "overlap-group-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "label-4",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "text-wrapper-30",
+                                                    children: "\uC0AC\uC6A9\uC790 \uC815\uBCF4"
+                                                }, void 0, false, {
+                                                    fileName: "src/screens/Profile/Profile.jsx",
+                                                    lineNumber: 20,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/screens/Profile/Profile.jsx",
+                                                lineNumber: 19,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "line",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                    className: "line-2",
+                                                    alt: "Line",
+                                                    src: "/img/line-2.svg"
+                                                }, void 0, false, {
+                                                    fileName: "src/screens/Profile/Profile.jsx",
+                                                    lineNumber: 23,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/screens/Profile/Profile.jsx",
+                                                lineNumber: 22,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/screens/Profile/Profile.jsx",
+                                        lineNumber: 18,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "img-frame",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "ellipse-2"
+                                            }, void 0, false, {
+                                                fileName: "src/screens/Profile/Profile.jsx",
+                                                lineNumber: 27,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                className: "image-2",
+                                                alt: "Image",
+                                                src: "/img/image-120.png"
+                                            }, void 0, false, {
+                                                fileName: "src/screens/Profile/Profile.jsx",
+                                                lineNumber: 28,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/screens/Profile/Profile.jsx",
+                                        lineNumber: 26,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/screens/Profile/Profile.jsx",
+                                lineNumber: 17,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "label-5",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-31",
+                                    children: "\uD504\uB85C\uD544 \uD3B8\uC9D1"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Profile/Profile.jsx",
+                                    lineNumber: 32,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Profile/Profile.jsx",
+                                lineNumber: 31,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/Profile/Profile.jsx",
+                        lineNumber: 16,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-instance-wrapper",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
+                            className: "menu-3",
+                            iconVariantsIconHome: "/img/home-3.svg",
+                            iconVariantsIconUnion: "/img/union-9.svg",
+                            iconVariantsIconUser: "/img/user-6.svg",
+                            iconVariantsState: "off",
+                            iconVariantsState1: "off",
+                            iconVariantsState2: "on",
+                            to: "/home",
+                            to1: "/favorite",
+                            to3: "/search"
+                        }, void 0, false, {
+                            fileName: "src/screens/Profile/Profile.jsx",
+                            lineNumber: 36,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/Profile/Profile.jsx",
+                        lineNumber: 35,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "head-3",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-32",
+                            children: "Profile"
+                        }, void 0, false, {
+                            fileName: "src/screens/Profile/Profile.jsx",
+                            lineNumber: 50,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/Profile/Profile.jsx",
+                        lineNumber: 49,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/Profile/Profile.jsx",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/screens/Profile/Profile.jsx",
             lineNumber: 8,
             columnNumber: 7
@@ -46813,7 +47098,314 @@ $RefreshReg$(_c, "Profile");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Menu":"cAuPj","./style.css":"3DD5n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3DD5n":[function() {},{}],"h0WTf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Menu":"cAuPj","./style.css":"3DD5n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3DD5n":[function() {},{}],"3iOyV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FavoriteScreen", ()=>(0, _favoriteScreen.FavoriteScreen));
+var _favoriteScreen = require("./FavoriteScreen");
+
+},{"./FavoriteScreen":"6dPtl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6dPtl":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$57c3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$57c3.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FavoriteScreen", ()=>FavoriteScreen);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _divWrapper = require("../../components/DivWrapper");
+var _menu = require("../../components/Menu");
+var _styleCss = require("./style.css");
+const FavoriteScreen = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "favorite-screen",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "frame-10",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-6",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "button-3",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/search",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "img-2",
+                                    alt: "Plus",
+                                    src: "/img/plus.svg"
+                                }, void 0, false, {
+                                    fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                                    lineNumber: 14,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                                lineNumber: 13,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/favorite-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "img-2",
+                                    alt: "Minus",
+                                    src: "/img/minus.svg"
+                                }, void 0, false, {
+                                    fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                                    lineNumber: 17,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "favorite-list",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
+                                className: "component-1175"
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                                lineNumber: 21,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
+                                className: "component-1175-instance"
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                                lineNumber: 22,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
+                                className: "component-1175-instance"
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                                lineNumber: 23,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
+                                className: "stock-19"
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                                lineNumber: 24,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                        lineNumber: 20,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-bar-2",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
+                            className: "menu-4",
+                            iconVariantsIconHome: "/img/home-7.svg",
+                            iconVariantsIconUnion: "/img/union-9.svg",
+                            iconVariantsIconUser: "/img/user.svg",
+                            iconVariantsState: "off",
+                            iconVariantsState1: "off",
+                            iconVariantsState2: "off",
+                            iconVariantsState3: "on",
+                            to: "/home",
+                            to2: "/profile",
+                            to3: "/search"
+                        }, void 0, false, {
+                            fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                            lineNumber: 27,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                        lineNumber: 26,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "head-4",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-33",
+                            children: "Favorite"
+                        }, void 0, false, {
+                            fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                            lineNumber: 42,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                        lineNumber: 41,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+                lineNumber: 11,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+            lineNumber: 10,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
+        lineNumber: 9,
+        columnNumber: 5
+    }, undefined);
+};
+_c = FavoriteScreen;
+var _c;
+$RefreshReg$(_c, "FavoriteScreen");
+
+  $parcel$ReactRefreshHelpers$57c3.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/DivWrapper":"RBSoy","../../components/Menu":"cAuPj","./style.css":"eGchp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"RBSoy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DivWrapper", ()=>(0, _divWrapper.DivWrapper));
+var _divWrapper = require("./DivWrapper");
+
+},{"./DivWrapper":"b7yQi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"b7yQi":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a766 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a766.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DivWrapper", ()=>DivWrapper);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styleCss = require("./style.css");
+const DivWrapper = ({ className })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `div-wrapper ${className}`,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "overlap-group-2",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "background",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "frame-2",
+                            alt: "Frame",
+                            src: "/img/frame-40.svg"
+                        }, void 0, false, {
+                            fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "frame-3",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-5",
+                                    children: "188,000 \uC6D0"
+                                }, void 0, false, {
+                                    fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                                    lineNumber: 16,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-6",
+                                    children: "- 1,000"
+                                }, void 0, false, {
+                                    fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                                    lineNumber: 17,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-7",
+                                    children: "- 0.53%"
+                                }, void 0, false, {
+                                    fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                                    lineNumber: 18,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "info-2",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-8",
+                            children: "NAVER"
+                        }, void 0, false, {
+                            fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                            lineNumber: 22,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-9",
+                            children: "035420"
+                        }, void 0, false, {
+                            fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                            lineNumber: 23,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                    lineNumber: 21,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "logo-3"
+                }, void 0, false, {
+                    fileName: "src/components/DivWrapper/DivWrapper.jsx",
+                    lineNumber: 25,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/DivWrapper/DivWrapper.jsx",
+            lineNumber: 12,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/DivWrapper/DivWrapper.jsx",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_c = DivWrapper;
+var _c;
+$RefreshReg$(_c, "DivWrapper");
+
+  $parcel$ReactRefreshHelpers$a766.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"fuiHb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fuiHb":[function() {},{}],"eGchp":[function() {},{}],"h0WTf":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Result", ()=>(0, _result.Result));
@@ -46832,14 +47424,14 @@ parcelHelpers.export(exports, "Result", ()=>Result);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _buttonAi = require("../../components/ButtonAi");
+var _reactRouterDom = require("react-router-dom");
+var _button = require("../../components/Button");
 var _heart = require("../../components/Heart");
 var _menu = require("../../components/Menu");
-var _propertyOffWrapper = require("../../components/PropertyOffWrapper");
+var _two = require("../../icons/Two");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _styleCss = require("./style.css");
-var _reactRouterDom = require("react-router-dom");
 var _reactTsTradingviewWidgets = require("react-ts-tradingview-widgets");
 var _s = $RefreshSig$();
 const Result = ()=>{
@@ -46863,220 +47455,260 @@ const Result = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "result",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-11",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "head-4",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper-37",
-                            children: stockLabel
+            className: "frame-11",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-7",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "info-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-12",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-34",
+                                    children: "73,300"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Result/Result.jsx",
+                                    lineNumber: 40,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 39,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-13",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-34",
+                                    children: "+1,100\xa0(1.52%)"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Result/Result.jsx",
+                                    lineNumber: 43,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 42,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-14",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-35",
+                                    children: "KOSPI\xa0005930"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Result/Result.jsx",
+                                    lineNumber: 46,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 45,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-15",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-35",
+                                    children: "\uC2DC\uAC00\uCD1D\uC561 489.80\uC870"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Result/Result.jsx",
+                                    lineNumber: 49,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 48,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-16",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-35",
+                                    children: "\uC2DC\uAC00\uCD1D\uC561 \u3147\uC704"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Result/Result.jsx",
+                                    lineNumber: 52,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 51,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/Result/Result.jsx",
+                        lineNumber: 38,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "chart-container",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactTsTradingviewWidgets.AdvancedRealTimeChart), {
+                            theme: "light",
+                            // symbol={symbol}
+                            symbol: "005930",
+                            autosize: true,
+                            interval: "D"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 37,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
-                            className: "heart-2",
-                            stateProp: "off"
-                        }, void 0, false, {
-                            fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 38,
-                            columnNumber: 11
+                            lineNumber: 56,
+                            columnNumber: 13
                         }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Result/Result.jsx",
-                    lineNumber: 36,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "chart-container",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactTsTradingviewWidgets.AdvancedRealTimeChart), {
-                        theme: "light",
-                        symbol: symbol,
-                        autosize: true,
-                        interval: "D"
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 41,
+                        lineNumber: 55,
                         columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/screens/Result/Result.jsx",
-                    lineNumber: 40,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "content",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "market-data"
-                        }, void 0, false, {
-                            fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 50,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "news-container",
-                            children: newsData.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "news-item",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                        href: item.link,
-                                        target: "_blank",
-                                        rel: "noopener noreferrer",
-                                        className: "news-link",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                                className: "news-title",
-                                                children: item.title.replace(/<b>|<\/b>/g, "")
-                                            }, void 0, false, {
-                                                fileName: "src/screens/Result/Result.jsx",
-                                                lineNumber: 58,
-                                                columnNumber: 19
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "news-description",
-                                                children: item.description.replace(/<b>|<\/b>/g, "")
-                                            }, void 0, false, {
-                                                fileName: "src/screens/Result/Result.jsx",
-                                                lineNumber: 59,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/screens/Result/Result.jsx",
-                                        lineNumber: 57,
-                                        columnNumber: 17
-                                    }, undefined)
-                                }, index, false, {
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "news-container",
+                        children: newsData.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "news-item",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: item.link,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    className: "news-link",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            className: "news-title",
+                                            children: item.title.replace(/<b>|<\/b>/g, "")
+                                        }, void 0, false, {
+                                            fileName: "src/screens/Result/Result.jsx",
+                                            lineNumber: 69,
+                                            columnNumber: 19
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "news-description",
+                                            children: item.description.replace(/<b>|<\/b>/g, "")
+                                        }, void 0, false, {
+                                            fileName: "src/screens/Result/Result.jsx",
+                                            lineNumber: 70,
+                                            columnNumber: 19
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 56,
-                                    columnNumber: 15
-                                }, undefined))
+                                    lineNumber: 68,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, index, false, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 67,
+                                columnNumber: 15
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/screens/Result/Result.jsx",
+                        lineNumber: 65,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "button-wrapper",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _button.Button), {
+                            className: "button-instance",
+                            state: "on"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 54,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonAi.ButtonAi), {
-                            className: "button-AI-instance",
-                            stateProp: "off"
-                        }, void 0, false, {
-                            fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 65,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
+                            lineNumber: 77,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/Result/Result.jsx",
+                        lineNumber: 76,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-bar-3",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
                             className: "menu-5",
-                            iconVariantsIconUnion: "/img/union-9.png",
+                            iconVariantsIconHome: "/img/home-8.svg",
+                            iconVariantsIconUnion: "/img/union-9.svg",
+                            iconVariantsIconUser: "/img/user.svg",
+                            iconVariantsState: "off",
+                            iconVariantsState1: "off",
+                            iconVariantsState2: "off",
+                            iconVariantsState3: "off",
                             to: "/home",
                             to1: "/favorite",
-                            to2: "/search-1",
-                            to3: "/profile"
+                            to2: "/profile",
+                            to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 66,
-                            columnNumber: 11
+                            lineNumber: 80,
+                            columnNumber: 13
                         }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Result/Result.jsx",
-                    lineNumber: 49,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                    }, void 0, false, {
+                        fileName: "src/screens/Result/Result.jsx",
+                        lineNumber: 79,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "head-5",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "stock-20",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-36",
+                                    children: "\uC0BC\uC131\uC804\uC790"
+                                }, void 0, false, {
+                                    fileName: "src/screens/Result/Result.jsx",
+                                    lineNumber: 97,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 96,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "button-4",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
+                                        className: "heart-2",
+                                        stateProp: "off"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Result/Result.jsx",
+                                        lineNumber: 100,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _two.Two), {
+                                        className: "instance-2",
+                                        color: "#7D49F5"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/Result/Result.jsx",
+                                        lineNumber: 101,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 99,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/Result/Result.jsx",
+                        lineNumber: 95,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/Result/Result.jsx",
+                lineNumber: 37,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/screens/Result/Result.jsx",
-            lineNumber: 34,
+            lineNumber: 36,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/Result/Result.jsx",
-        lineNumber: 33,
+        lineNumber: 35,
         columnNumber: 5
     }, undefined);
-}; // import React, { useState, useEffect } from "react";
- // import { ButtonAi } from "../../components/ButtonAi";
- // import { Heart } from "../../components/Heart";
- // import { Menu } from "../../components/Menu";
- // import { PropertyOffWrapper } from "../../components/PropertyOffWrapper";
- // import axios from 'axios';
- // import "./style.css";
- // export const Result = () => {
- //   const [newsData, setNewsData] = useState([]);
- //   useEffect(() => {
- //     const fetchNewsData = async () => {
- //       try {
- //         const response = await axios.get('http://localhost:8000/news/?query=삼성전자');
- //         setNewsData(response.data);
- //       } catch (error) {
- //         console.error("Error fetching news data:", error);
- //       }
- //     };
- //     fetchNewsData();
- //   }, []);
- //   return (
- //     <div className="result">
- //       <div className="div-11">
- //         <div className="view-20">
- //           <div className="frame-2">
- //             <div className="text-wrapper-34">73,300</div>
- //           </div>
- //           <div className="frame-3">
- //             <div className="text-wrapper-34">+1,100 (1.52%)</div>
- //           </div>
- //           <div className="frame-4">
- //             <div className="text-wrapper-35">KOSPI 005930</div>
- //           </div>
- //           <div className="frame-5">
- //             <div className="text-wrapper-35">시가총액 489.80조</div>
- //           </div>
- //           <div className="frame-6">
- //             <div className="text-wrapper-35">시가총액 ㅇ위</div>
- //           </div>
- //           <img className="image-2" alt="Image" src="/img/image-99.png" />
- //           <div className="overlap-group-5">
- //             <div className="news-container">
- //               {newsData.map((item, index) => (
- //                 <div key={index} className="news-item">
- //                   <div className="news-content">
- //                     <a href={item.link} target="_blank" rel="noopener noreferrer" className="news-link">
- //                       <h2 className="news-title">{item.title.replace(/<b>|<\/b>/g, '')}</h2>
- //                       <p className="news-description">{item.description.replace(/<b>|<\/b>/g, '')}</p>
- //                     </a>
- //                   </div>
- //                 </div>
- //               ))}
- //             </div>
- //             {/* <img className="mask-group" alt="Mask group" src="/img/mask-group.png" /> */}
- //             <div className="frame-7">
- //               <div className="text-wrapper-36">관련 뉴스 더보기</div>
- //             </div>
- //             <Menu
- //               className="menu-5"
- //               iconVariantsIconUnion="/img/union-9.png"
- //               to="/home"
- //               to1="/favorite"
- //               to2="/search-1"
- //               to3="/profile"
- //             />
- //           </div>
- //         </div>
- //         <ButtonAi className="button-AI-instance" stateProp="off" />
- //         <div className="head-4">
- //           <div className="text-wrapper-37">삼성전자</div>
- //           <Heart className="heart-2" stateProp="off" />
- //           <PropertyOffWrapper
- //             property1="off"
- //             propertyOffClassName="component-1011"
- //             to="/u35u4352u4455u4527u4352u4458-u4364u4453u4364u4449u4540u4370u4449u4352u4469u401u41"
- //           />
- //         </div>
- //       </div>
- //     </div>
- //   );
- // };
+};
 _s(Result, "ZSXLjm+Cmbc5VTLnDCKgqbkfCVo=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
@@ -47092,17 +47724,17 @@ $RefreshReg$(_c, "Result");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/ButtonAi":"1Dqba","../../components/Heart":"5O8bA","../../components/Menu":"cAuPj","../../components/PropertyOffWrapper":"gRxgH","axios":"jo6P5","./style.css":"4Puca","react-router-dom":"9xmpe","react-ts-tradingview-widgets":"4t3Cr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1Dqba":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Button":"bNbfl","../../components/Heart":"5O8bA","../../components/Menu":"cAuPj","../../icons/Two":"lKl4Q","axios":"jo6P5","./style.css":"4Puca","react-ts-tradingview-widgets":"4t3Cr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bNbfl":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ButtonAi", ()=>(0, _buttonAi.ButtonAi));
-var _buttonAi = require("./ButtonAi");
+parcelHelpers.export(exports, "Button", ()=>(0, _button.Button));
+var _button = require("./Button");
 
-},{"./ButtonAi":"7VGaU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7VGaU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$dfba = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./Button":"6PHRv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6PHRv":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8b80 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$dfba.prelude(module);
+$parcel$ReactRefreshHelpers$8b80.prelude(module);
 
 try {
 /*
@@ -47110,85 +47742,63 @@ We're constantly improving the code you see.
 Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
 */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ButtonAi", ()=>ButtonAi);
+parcelHelpers.export(exports, "Button", ()=>Button);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
 var _styleCss = require("./style.css");
-var _s = $RefreshSig$();
-const ButtonAi = ({ stateProp, className })=>{
-    _s();
-    const [state, dispatch] = (0, _react.useReducer)(reducer, {
-        state: stateProp || "off"
-    });
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-        className: `button-AI state-3-${state.state} ${className}`,
-        to: "/result-2",
-        onMouseLeave: ()=>{
-            dispatch("mouse_leave");
-        },
-        onMouseEnter: ()=>{
-            dispatch("mouse_enter");
-        },
+const Button = ({ state, className })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `button state-6-${state} ${className}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "text-wrapper-7",
-            children: "AI \uBD84\uC11D\uD558\uAE30"
-        }, void 0, false, {
-            fileName: "src/components/ButtonAi/ButtonAi.jsx",
-            lineNumber: 28,
+            className: "div-2",
+            children: [
+                state === "off" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    children: "\uBD84\uC11D \uACB0\uACFC \uC800\uC7A5\uC644\uB8CC"
+                }, void 0, false),
+                state === "on" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    children: "\uBD84\uC11D \uACB0\uACFC \uC800\uC7A5\uD558\uAE30"
+                }, void 0, false)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Button/Button.jsx",
+            lineNumber: 13,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
-        fileName: "src/components/ButtonAi/ButtonAi.jsx",
-        lineNumber: 18,
+        fileName: "src/components/Button/Button.jsx",
+        lineNumber: 12,
         columnNumber: 5
     }, undefined);
 };
-_s(ButtonAi, "tvuMfAcvtbxE7OGqkV15XYmP+R8=");
-_c = ButtonAi;
-function reducer(state, action) {
-    switch(action){
-        case "mouse_enter":
-            return {
-                ...state,
-                state: "on"
-            };
-        case "mouse_leave":
-            return {
-                ...state,
-                state: "off"
-            };
-    }
-    return state;
-}
-ButtonAi.propTypes = {
-    stateProp: (0, _propTypesDefault.default).oneOf([
+_c = Button;
+Button.propTypes = {
+    state: (0, _propTypesDefault.default).oneOf([
         "off",
         "on"
     ])
 };
 var _c;
-$RefreshReg$(_c, "ButtonAi");
+$RefreshReg$(_c, "Button");
 
-  $parcel$ReactRefreshHelpers$dfba.postlude(module);
+  $parcel$ReactRefreshHelpers$8b80.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","react-router-dom":"9xmpe","./style.css":"30mgP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"30mgP":[function() {},{}],"gRxgH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"82QeZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"82QeZ":[function() {},{}],"lKl4Q":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "PropertyOffWrapper", ()=>(0, _propertyOffWrapper.PropertyOffWrapper));
-var _propertyOffWrapper = require("./PropertyOffWrapper");
+parcelHelpers.export(exports, "Two", ()=>(0, _two.Two));
+var _two = require("./Two");
 
-},{"./PropertyOffWrapper":"s1jvT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"s1jvT":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fc73 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./Two":"4AWYa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4AWYa":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$90db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fc73.prelude(module);
+$parcel$ReactRefreshHelpers$90db.prelude(module);
 
 try {
 /*
@@ -47196,49 +47806,95 @@ We're constantly improving the code you see.
 Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
 */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "PropertyOffWrapper", ()=>PropertyOffWrapper);
+parcelHelpers.export(exports, "Two", ()=>Two);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _styleCss = require("./style.css");
-const PropertyOffWrapper = ({ property1, propertyOffClassName, to })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-        to: to,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: `property-off-wrapper ${propertyOffClassName}`,
-            alt: "Property off",
-            src: property1 === "on" ? "/img/property-1-on.png" : "/img/property-1-off.png"
-        }, void 0, false, {
-            fileName: "src/components/PropertyOffWrapper/PropertyOffWrapper.jsx",
-            lineNumber: 14,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/PropertyOffWrapper/PropertyOffWrapper.jsx",
-        lineNumber: 13,
+const Two = ({ color = "#7D49F5", className })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+        className: `two ${className}`,
+        fill: "none",
+        height: "24",
+        viewBox: "0 0 18 24",
+        width: "18",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                className: "g",
+                clipPath: "url(#clip0_1041_5771)",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                        className: "path",
+                        d: "M17.4487 22.6007C17.4239 22.6538 17.3967 22.7056 17.3751 22.7596C17.195 23.2079 16.8557 23.4487 16.3695 23.4941C16.2784 23.5027 16.1858 23.4986 16.0942 23.4986C11.1807 23.4986 6.2676 23.4986 1.35407 23.4986C0.436011 23.4986 0 23.0756 0 22.1839C0 17.8641 0 13.5447 0 9.22479C0 8.35028 0.445219 7.9155 1.33934 7.91505C2.25787 7.91505 3.17593 7.91145 4.09445 7.9164C4.74962 7.92 5.2128 8.30392 5.29429 8.89578C5.37394 9.47638 4.96556 10.0466 4.3707 10.1128C3.92456 10.1623 3.46967 10.1407 3.01893 10.1475C2.7832 10.1511 2.54747 10.1479 2.29654 10.1479V21.2491H15.1499V10.1479C15.0735 10.1479 14.9934 10.1479 14.9128 10.1479C14.3847 10.1479 13.8566 10.1547 13.3285 10.1457C12.7645 10.1357 12.3492 9.84185 12.194 9.36251C12.0486 8.91288 12.1931 8.40969 12.602 8.1518C12.8036 8.02442 13.0661 7.93171 13.3036 7.92586C14.2903 7.9011 15.2779 7.9074 16.265 7.9182C16.9008 7.92496 17.2756 8.27377 17.4478 8.85437V22.5998L17.4487 22.6007Z",
+                        fill: color
+                    }, void 0, false, {
+                        fileName: "src/icons/Two/Two.jsx",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                        className: "path",
+                        d: "M8.95288 0.5C9.29589 0.61207 9.55096 0.840261 9.80004 1.0869C10.8176 2.09193 11.8443 3.08841 12.8646 4.09119C13.33 4.54847 13.4014 5.12412 13.0602 5.59266C12.6611 6.14131 11.8899 6.23132 11.371 5.76324C10.9211 5.35772 10.4999 4.92204 10.0657 4.49986C10.0137 4.449 9.95796 4.40175 9.8645 4.31713C9.8645 4.449 9.8645 4.53497 9.8645 4.62048C9.8645 8.26568 9.8645 11.9109 9.8645 15.5561C9.8645 16.1988 9.5726 16.6214 9.02793 16.7745C8.39947 16.9513 7.74154 16.5625 7.61676 15.9342C7.5896 15.796 7.58269 15.6515 7.58269 15.5102C7.58085 11.8875 7.58131 8.26478 7.58131 4.64209V4.32658C7.50488 4.39049 7.45562 4.4265 7.41234 4.46881C6.98416 4.88603 6.56518 5.31316 6.12733 5.72048C5.45559 6.34564 4.43071 6.06704 4.20833 5.20604C4.12269 4.87388 4.19405 4.56737 4.40124 4.29373C4.47352 4.19831 4.56008 4.11144 4.64618 4.02728C5.65126 3.0416 6.66095 2.06043 7.66188 1.0707C7.9059 0.829459 8.15775 0.609369 8.49293 0.5H8.95196L8.95288 0.5Z",
+                        fill: color
+                    }, void 0, false, {
+                        fileName: "src/icons/Two/Two.jsx",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/icons/Two/Two.jsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("defs", {
+                className: "defs",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("clipPath", {
+                    className: "clip-path",
+                    id: "clip0_1041_5771",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("rect", {
+                        className: "rect",
+                        fill: "white",
+                        height: "23",
+                        transform: "translate(0 0.5)",
+                        width: "17.4483"
+                    }, void 0, false, {
+                        fileName: "src/icons/Two/Two.jsx",
+                        lineNumber: 33,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/icons/Two/Two.jsx",
+                    lineNumber: 32,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/icons/Two/Two.jsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/icons/Two/Two.jsx",
+        lineNumber: 11,
         columnNumber: 5
     }, undefined);
 };
-_c = PropertyOffWrapper;
-PropertyOffWrapper.propTypes = {
-    property1: (0, _propTypesDefault.default).oneOf([
-        "off",
-        "on"
-    ]),
-    to: (0, _propTypesDefault.default).string
+_c = Two;
+Two.propTypes = {
+    color: (0, _propTypesDefault.default).string
 };
 var _c;
-$RefreshReg$(_c, "PropertyOffWrapper");
+$RefreshReg$(_c, "Two");
 
-  $parcel$ReactRefreshHelpers$fc73.postlude(module);
+  $parcel$ReactRefreshHelpers$90db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","react-router-dom":"9xmpe","./style.css":"hjRK5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hjRK5":[function() {},{}],"jo6P5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jo6P5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>(0, _axiosJsDefault.default));
@@ -51084,7 +51740,9 @@ var _utilsJsDefault = parcelHelpers.interopDefault(_utilsJs);
 var _axiosHeadersJs = require("./AxiosHeaders.js");
 var _axiosHeadersJsDefault = parcelHelpers.interopDefault(_axiosHeadersJs);
 "use strict";
-const headersToObject = (thing)=>thing instanceof (0, _axiosHeadersJsDefault.default) ? thing.toJSON() : thing;
+const headersToObject = (thing)=>thing instanceof (0, _axiosHeadersJsDefault.default) ? {
+        ...thing
+    } : thing;
 function mergeConfig(config1, config2) {
     // eslint-disable-next-line no-param-reassign
     config2 = config2 || {};
@@ -51233,7 +51891,7 @@ exports.default = {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "VERSION", ()=>VERSION);
-const VERSION = "1.6.7";
+const VERSION = "1.6.8";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"45wzn":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -52923,348 +53581,7 @@ var CryptoCoinsHeatmap = function(_a) {
 };
 var CryptoCoinsHeatmap$1 = (0, _react.memo)(CryptoCoinsHeatmap);
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1up3A":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Favorite", ()=>(0, _favorite.Favorite));
-var _favorite = require("./Favorite");
-
-},{"./Favorite":"7cutA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7cutA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$459a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$459a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Favorite", ()=>Favorite);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _menu = require("../../components/Menu");
-var _stateOffWrapper = require("../../components/StateOffWrapper");
-var _styleCss = require("./style.css");
-const Favorite = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "favorite",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-12",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "head-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "text-wrapper-38",
-                        children: "FAVORITE"
-                    }, void 0, false, {
-                        fileName: "src/screens/Favorite/Favorite.jsx",
-                        lineNumber: 11,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/screens/Favorite/Favorite.jsx",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "div-13",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                            className: "view-21",
-                            state: "off",
-                            text: "\uB124\uC774\uBC84",
-                            text1: "035420"
-                        }, void 0, false, {
-                            fileName: "src/screens/Favorite/Favorite.jsx",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                            className: "view-22",
-                            logoClassName: "view-23",
-                            state: "off",
-                            text: "\uC0BC\uC131\uC804\uC790",
-                            text1: "005930",
-                            to: "/result-1"
-                        }, void 0, false, {
-                            fileName: "src/screens/Favorite/Favorite.jsx",
-                            lineNumber: 15,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                            className: "view-22",
-                            logoClassName: "view-24",
-                            state: "off",
-                            text: "\uCE74\uCE74\uC624",
-                            text1: "035720"
-                        }, void 0, false, {
-                            fileName: "src/screens/Favorite/Favorite.jsx",
-                            lineNumber: 23,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
-                            className: "view-25",
-                            logoClassName: "view-26",
-                            state: "off",
-                            text: "\uC140\uD2B8\uB9AC\uC628",
-                            text1: "068270"
-                        }, void 0, false, {
-                            fileName: "src/screens/Favorite/Favorite.jsx",
-                            lineNumber: 24,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Favorite/Favorite.jsx",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
-                    className: "menu-6",
-                    iconVariantsIconUnion: "/img/union-9.png",
-                    to: "/home",
-                    to1: "/favorite",
-                    to2: "/search-1",
-                    to3: "/profile"
-                }, void 0, false, {
-                    fileName: "src/screens/Favorite/Favorite.jsx",
-                    lineNumber: 26,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/screens/Favorite/Favorite.jsx",
-            lineNumber: 9,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/screens/Favorite/Favorite.jsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Favorite;
-var _c;
-$RefreshReg$(_c, "Favorite");
-
-  $parcel$ReactRefreshHelpers$459a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Menu":"cAuPj","../../components/StateOffWrapper":"iBSFI","./style.css":"bY7in","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bY7in":[function() {},{}],"hZPr9":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Share", ()=>(0, _share.Share));
-var _share = require("./Share");
-
-},{"./Share":"6NdUW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6NdUW":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c3c7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c3c7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Share", ()=>Share);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styleCss = require("./style.css");
-const Share = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "share",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "share-wrapper",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "image-wrapper",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "image-3",
-                    alt: "Image",
-                    src: "/img/image-111.png"
-                }, void 0, false, {
-                    fileName: "src/screens/Share/Share.jsx",
-                    lineNumber: 9,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/screens/Share/Share.jsx",
-                lineNumber: 8,
-                columnNumber: 9
-            }, undefined)
-        }, void 0, false, {
-            fileName: "src/screens/Share/Share.jsx",
-            lineNumber: 7,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/screens/Share/Share.jsx",
-        lineNumber: 6,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Share;
-var _c;
-$RefreshReg$(_c, "Share");
-
-  $parcel$ReactRefreshHelpers$c3c7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"3yKyW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3yKyW":[function() {},{}],"dM1ko":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DivWrapperScreen", ()=>(0, _divWrapperScreen.DivWrapperScreen));
-var _divWrapperScreen = require("./DivWrapperScreen");
-
-},{"./DivWrapperScreen":"aAPSH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aAPSH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$e0f5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$e0f5.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DivWrapperScreen", ()=>DivWrapperScreen);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styleCss = require("./style.css");
-const DivWrapperScreen = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "div-wrapper-screen",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-wrapper-6",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-wrapper-39",
-                children: "\uD074\uB9BD\uBCF4\uB4DC\uC5D0 \uBCF5\uC0AC\uB418\uC5C8\uC5B4\uC694."
-            }, void 0, false, {
-                fileName: "src/screens/DivWrapperScreen/DivWrapperScreen.jsx",
-                lineNumber: 8,
-                columnNumber: 9
-            }, undefined)
-        }, void 0, false, {
-            fileName: "src/screens/DivWrapperScreen/DivWrapperScreen.jsx",
-            lineNumber: 7,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/screens/DivWrapperScreen/DivWrapperScreen.jsx",
-        lineNumber: 6,
-        columnNumber: 5
-    }, undefined);
-};
-_c = DivWrapperScreen;
-var _c;
-$RefreshReg$(_c, "DivWrapperScreen");
-
-  $parcel$ReactRefreshHelpers$e0f5.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"euIcN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"euIcN":[function() {},{}],"k7oc8":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LoginRequest", ()=>(0, _loginRequest.LoginRequest));
-var _loginRequest = require("./LoginRequest");
-
-},{"./LoginRequest":"a6M70","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a6M70":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$12a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$12a8.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LoginRequest", ()=>LoginRequest);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _styleCss = require("./style.css");
-const LoginRequest = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "login-request",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-14",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                    className: "view-27",
-                    to: "/login-kakao",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "image-4",
-                            alt: "Image",
-                            src: "/img/2x.png"
-                        }, void 0, false, {
-                            fileName: "src/screens/LoginRequest/LoginRequest.jsx",
-                            lineNumber: 10,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "label-wrapper",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "label-2",
-                                children: "\uCE74\uCE74\uC624 \uB85C\uADF8\uC778"
-                            }, void 0, false, {
-                                fileName: "src/screens/LoginRequest/LoginRequest.jsx",
-                                lineNumber: 12,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/LoginRequest/LoginRequest.jsx",
-                            lineNumber: 11,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/LoginRequest/LoginRequest.jsx",
-                    lineNumber: 9,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "text-wrapper-40",
-                    children: [
-                        "\uB85C\uADF8\uC778 \uC2DC \uC0AC\uC6A9\uD560 \uC218 \uC788\uB294 \uAE30\uB2A5,",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/screens/LoginRequest/LoginRequest.jsx",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, undefined),
-                        "\uD61C\uD0DD \uC815\uBCF4"
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/LoginRequest/LoginRequest.jsx",
-                    lineNumber: 15,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/screens/LoginRequest/LoginRequest.jsx",
-            lineNumber: 8,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/screens/LoginRequest/LoginRequest.jsx",
-        lineNumber: 7,
-        columnNumber: 5
-    }, undefined);
-};
-_c = LoginRequest;
-var _c;
-$RefreshReg$(_c, "LoginRequest");
-
-  $parcel$ReactRefreshHelpers$12a8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./style.css":"3ose4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3ose4":[function() {},{}],"he1kN":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"he1kN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ResultScreen", ()=>(0, _resultScreen.ResultScreen));
@@ -53284,211 +53601,296 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
+var _buttonAi = require("../../components/ButtonAi");
 var _heart = require("../../components/Heart");
-var _loding = require("../../components/Loding");
 var _menu = require("../../components/Menu");
-var _propertyOffWrapper = require("../../components/PropertyOffWrapper");
+var _two = require("../../icons/Two");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _styleCss = require("./style.css");
+var _reactTsTradingviewWidgets = require("react-ts-tradingview-widgets");
+var _s = $RefreshSig$();
 const ResultScreen = ()=>{
+    _s();
+    const { symbol } = (0, _reactRouterDom.useParams)(); // URL 파라미터에서 symbol 값을 가져옵니다.
+    const location = (0, _reactRouterDom.useLocation)();
+    const { stockLabel } = location.state || {};
+    const [newsData, setNewsData] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        const fetchNewsData = async ()=>{
+            try {
+                console.log(stockLabel);
+                const response = await (0, _axiosDefault.default).get(`http://localhost:8001/news/?query=${encodeURIComponent(stockLabel)}`);
+                setNewsData(response.data);
+            } catch (error) {
+                console.error("Error fetching news data:", error);
+            }
+        };
+        fetchNewsData();
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "result-screen",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-            className: "result-2",
-            to: "/result-3",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "view-28",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "frame-8",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-41",
-                                children: "73,300"
-                            }, void 0, false, {
-                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                lineNumber: 15,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "frame-9",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-41",
-                                children: "+1,100\xa0(1.52%)"
-                            }, void 0, false, {
-                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                lineNumber: 18,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "frame-10",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-42",
-                                children: "KOSPI\xa0005930"
-                            }, void 0, false, {
-                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                lineNumber: 21,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 20,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "frame-11",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-42",
-                                children: "\uC2DC\uAC00\uCD1D\uC561 489.80\uC870"
-                            }, void 0, false, {
-                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                lineNumber: 24,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 23,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "frame-12",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-42",
-                                children: "\uC2DC\uAC00\uCD1D\uC561 \u3147\uC704"
-                            }, void 0, false, {
-                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                lineNumber: 27,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 26,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "image-5",
-                            alt: "Image",
-                            src: "/img/image-99.png"
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 29,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "overlap-group-6",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "mask-group-2",
-                                    alt: "Mask group",
-                                    src: "/img/mask-group.png"
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "frame-17",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-8",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "info-5",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-18",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-37",
+                                    children: "73,300"
                                 }, void 0, false, {
                                     fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                    lineNumber: 31,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "frame-13",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-43",
-                                        children: "\uAD00\uB828 \uB274\uC2A4 \uB354\uBCF4\uAE30"
+                                    lineNumber: 40,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                lineNumber: 39,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-19",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-37",
+                                    children: "+1,100\xa0(1.52%)"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                    lineNumber: 43,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                lineNumber: 42,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-20",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-38",
+                                    children: "KOSPI\xa0005930"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                    lineNumber: 46,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                lineNumber: 45,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-21",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-38",
+                                    children: "\uC2DC\uAC00\uCD1D\uC561 489.80\uC870"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                    lineNumber: 49,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                lineNumber: 48,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-22",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-38",
+                                    children: "\uC2DC\uAC00\uCD1D\uC561 \u3147\uC704"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                    lineNumber: 52,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                lineNumber: 51,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                        lineNumber: 38,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "chart-container",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactTsTradingviewWidgets.AdvancedRealTimeChart), {
+                            theme: "light",
+                            // symbol={symbol}
+                            symbol: "005930",
+                            autosize: true,
+                            interval: "D"
+                        }, void 0, false, {
+                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                            lineNumber: 56,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                        lineNumber: 55,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "news-container",
+                        children: newsData.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "news-item",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: item.link,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    className: "news-link",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            className: "news-title",
+                                            children: item.title.replace(/<b>|<\/b>/g, "")
+                                        }, void 0, false, {
+                                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                            lineNumber: 69,
+                                            columnNumber: 19
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "news-description",
+                                            children: item.description.replace(/<b>|<\/b>/g, "")
+                                        }, void 0, false, {
+                                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                            lineNumber: 70,
+                                            columnNumber: 19
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                    lineNumber: 68,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, index, false, {
+                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                lineNumber: 67,
+                                columnNumber: 15
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                        lineNumber: 65,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        className: "button-AI-wrapper",
+                        to: "/result-2",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonAi.ButtonAi), {
+                            className: "button-AI-instance"
+                        }, void 0, false, {
+                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                            lineNumber: 77,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                        lineNumber: 76,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-bar-4",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
+                            className: "menu-6",
+                            iconVariantsIconHome: "/img/home-7.svg",
+                            iconVariantsIconUnion: "/img/union-9.svg",
+                            iconVariantsIconUser: "/img/user.svg",
+                            iconVariantsState: "off",
+                            iconVariantsState1: "off",
+                            iconVariantsState2: "off",
+                            iconVariantsState3: "off",
+                            to: "/home",
+                            to1: "/favorite",
+                            to2: "/profile",
+                            to3: "/search"
+                        }, void 0, false, {
+                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                            lineNumber: 80,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                        lineNumber: 79,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "head-6",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "stock-21",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-39",
+                                    children: "\uC0BC\uC131\uC804\uC790"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                    lineNumber: 97,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                lineNumber: 96,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "button-5",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
+                                        className: "heart-4",
+                                        stateProp: "off"
                                     }, void 0, false, {
                                         fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                        lineNumber: 33,
+                                        lineNumber: 100,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _two.Two), {
+                                        className: "instance-1",
+                                        color: "#BEBEBE"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                        lineNumber: 101,
                                         columnNumber: 15
                                     }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                    lineNumber: 32,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loding.Loding), {
-                                    className: "loding-2-instance",
-                                    ellipse: "/img/ellipse-2-4.png",
-                                    ellipseClassName: "loding-instance",
-                                    frame: "one"
-                                }, void 0, false, {
-                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                    lineNumber: 35,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
-                                    className: "menu-7",
-                                    iconVariantsIconUnion: "/img/union-9.png",
-                                    to: "/home",
-                                    to1: "/favorite",
-                                    to2: "/search-1",
-                                    to3: "/profile"
-                                }, void 0, false, {
-                                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                                    lineNumber: 41,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 30,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "head-6",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper-44",
-                            children: "\uC0BC\uC131\uC804\uC790"
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 52,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
-                            className: "heart-3",
-                            stateProp: "off"
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 53,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _propertyOffWrapper.PropertyOffWrapper), {
-                            property1: "off",
-                            propertyOffClassName: "component-1011-instance"
-                        }, void 0, false, {
-                            fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                            lineNumber: 54,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-                    lineNumber: 51,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                                lineNumber: 99,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                        lineNumber: 95,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/ResultScreen/ResultScreen.jsx",
+                lineNumber: 37,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-            lineNumber: 12,
+            lineNumber: 36,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/ResultScreen/ResultScreen.jsx",
-        lineNumber: 11,
+        lineNumber: 35,
         columnNumber: 5
     }, undefined);
 };
+_s(ResultScreen, "ZSXLjm+Cmbc5VTLnDCKgqbkfCVo=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams),
+        (0, _reactRouterDom.useLocation)
+    ];
+});
 _c = ResultScreen;
 var _c;
 $RefreshReg$(_c, "ResultScreen");
@@ -53498,347 +53900,938 @@ $RefreshReg$(_c, "ResultScreen");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Heart":"5O8bA","../../components/Loding":"ffXJx","../../components/Menu":"cAuPj","../../components/PropertyOffWrapper":"gRxgH","./style.css":"fVH0O","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fVH0O":[function() {},{}],"dGhr7":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/ButtonAi":"1Dqba","../../components/Heart":"5O8bA","../../components/Menu":"cAuPj","../../icons/Two":"lKl4Q","axios":"jo6P5","./style.css":"fVH0O","react-ts-tradingview-widgets":"4t3Cr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1Dqba":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Screen14", ()=>(0, _screen14.Screen14));
-var _screen14 = require("./Screen14");
+parcelHelpers.export(exports, "ButtonAi", ()=>(0, _buttonAi.ButtonAi));
+var _buttonAi = require("./ButtonAi");
 
-},{"./Screen14":"4aNqa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4aNqa":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4339 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./ButtonAi":"7VGaU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7VGaU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$dfba = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4339.prelude(module);
+$parcel$ReactRefreshHelpers$dfba.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Screen14", ()=>Screen14);
+parcelHelpers.export(exports, "ButtonAi", ()=>ButtonAi);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _heart = require("../../components/Heart");
-var _menu = require("../../components/Menu");
-var _propertyOffWrapper = require("../../components/PropertyOffWrapper");
 var _styleCss = require("./style.css");
-const Screen14 = ()=>{
+const ButtonAi = ({ className })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "screen-14",
+        className: `button-AI ${className}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "result-3",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "overlap-group-7",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "view-29",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "frame-14",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-45",
-                                        children: "73,300"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 14,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 13,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "frame-15",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-45",
-                                        children: "+1,100\xa0(1.52%)"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 17,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 16,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "frame-16",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-46",
-                                        children: "KOSPI\xa0005930"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 20,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 19,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "frame-17",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-46",
-                                        children: "\uC2DC\uAC00\uCD1D\uC561 489.80\uC870"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 23,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 22,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "frame-18",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-46",
-                                        children: "\uC2DC\uAC00\uCD1D\uC561 \u3147\uC704"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 26,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 25,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "image-6",
-                                    alt: "Image",
-                                    src: "/img/image-99.png"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 28,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "mask-group-3",
-                                    alt: "Mask group",
-                                    src: "/img/mask-group.png"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 29,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "frame-19",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-47",
-                                        children: "\uAD00\uB828 \uB274\uC2A4 \uB354\uBCF4\uAE30"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 31,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 30,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
-                                    className: "menu-8",
-                                    iconVariantsIconUnion: "/img/union-9.png",
-                                    to: "/home",
-                                    to1: "/favorite",
-                                    to2: "/search-1",
-                                    to3: "/profile"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 33,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: "button",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-48",
-                                        children: "\uBD84\uC11D \uACB0\uACFC \uC800\uC7A5\uD558\uAE30"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 42,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 41,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/screens/Screen14/Screen14.jsx",
-                            lineNumber: 12,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "view-30",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "AI-wrapper",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "AI-3",
-                                        children: "AI\uAC00\xa0\xa0\uBD84\uC11D\uD55C \uACB0\uACFC\uC5D0\uC694"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 47,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 46,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "image-7",
-                                    alt: "Image",
-                                    src: "/img/image-106.png"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 49,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "image-8",
-                                    alt: "Image",
-                                    src: "/img/image-18.png"
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 50,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "frame-20",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "text-wrapper-49",
-                                        children: "\uC0BC\uC131\uC804\uC790 \uBD84\uC11D \uCD1D\uD3C9"
-                                    }, void 0, false, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 52,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 51,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "element-THIS-IS-wrapper",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "element-THIS-IS",
-                                        children: [
-                                            "2024\uB144 3\uC6D4 10\uC77C .....",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                                fileName: "src/screens/Screen14/Screen14.jsx",
-                                                lineNumber: 57,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            "\uB0B4\uC6A9\uB0B4\uC6A9 THIS IS \uB0B4\uC6A9",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                                fileName: "src/screens/Screen14/Screen14.jsx",
-                                                lineNumber: 59,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            "\uB0B4\uC6A9\uB0B4\uC6A9 THIS IS \uB0B4\uC6A9",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                                fileName: "src/screens/Screen14/Screen14.jsx",
-                                                lineNumber: 61,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            "\uB0B4\uC6A9\uB0B4\uC6A9 THIS IS \uB0B4\uC6A9",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                                fileName: "src/screens/Screen14/Screen14.jsx",
-                                                lineNumber: 63,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            "\uB0B4\uC6A9\uB0B4\uC6A9 THIS IS \uB0B4\uC6A9",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                                fileName: "src/screens/Screen14/Screen14.jsx",
-                                                lineNumber: 65,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            "\uB0B4\uC6A9\uB0B4\uC6A9 THIS IS \uB0B4\uC6A9"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/screens/Screen14/Screen14.jsx",
-                                        lineNumber: 55,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/screens/Screen14/Screen14.jsx",
-                                    lineNumber: 54,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/screens/Screen14/Screen14.jsx",
-                            lineNumber: 45,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Screen14/Screen14.jsx",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "head-7",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper-50",
-                            children: "\uC0BC\uC131\uC804\uC790"
-                        }, void 0, false, {
-                            fileName: "src/screens/Screen14/Screen14.jsx",
-                            lineNumber: 72,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
-                            className: "heart-4",
-                            stateProp: "off"
-                        }, void 0, false, {
-                            fileName: "src/screens/Screen14/Screen14.jsx",
-                            lineNumber: 73,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _propertyOffWrapper.PropertyOffWrapper), {
-                            property1: "on",
-                            propertyOffClassName: "image-9",
-                            to: "/share"
-                        }, void 0, false, {
-                            fileName: "src/screens/Screen14/Screen14.jsx",
-                            lineNumber: 74,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/screens/Screen14/Screen14.jsx",
-                    lineNumber: 71,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/screens/Screen14/Screen14.jsx",
-            lineNumber: 10,
+            className: "text-wrapper-10",
+            children: "AI \uBD84\uC11D\uD558\uAE30"
+        }, void 0, false, {
+            fileName: "src/components/ButtonAi/ButtonAi.jsx",
+            lineNumber: 12,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
-        fileName: "src/screens/Screen14/Screen14.jsx",
-        lineNumber: 9,
+        fileName: "src/components/ButtonAi/ButtonAi.jsx",
+        lineNumber: 11,
         columnNumber: 5
     }, undefined);
 };
-_c = Screen14;
+_c = ButtonAi;
 var _c;
-$RefreshReg$(_c, "Screen14");
+$RefreshReg$(_c, "ButtonAi");
 
-  $parcel$ReactRefreshHelpers$4339.postlude(module);
+  $parcel$ReactRefreshHelpers$dfba.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Heart":"5O8bA","../../components/Menu":"cAuPj","../../components/PropertyOffWrapper":"gRxgH","./style.css":"j3Wpz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j3Wpz":[function() {},{}]},["gjUm6","1xC6H","d8Dch"], "d8Dch", "parcelRequireb8e7")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"30mgP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"30mgP":[function() {},{}],"fVH0O":[function() {},{}],"jenj6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ResultWrapper", ()=>(0, _resultWrapper.ResultWrapper));
+var _resultWrapper = require("./ResultWrapper");
+
+},{"./ResultWrapper":"4pUOX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4pUOX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$916a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$916a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ResultWrapper", ()=>ResultWrapper);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _heart = require("../../components/Heart");
+var _loding = require("../../components/Loding");
+var _menu = require("../../components/Menu");
+var _two = require("../../icons/Two");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _styleCss = require("./style.css");
+var _reactTsTradingviewWidgets = require("react-ts-tradingview-widgets");
+var _s = $RefreshSig$();
+const ResultWrapper = ()=>{
+    _s();
+    const { symbol } = (0, _reactRouterDom.useParams)(); // URL 파라미터에서 symbol 값을 가져옵니다.
+    const location = (0, _reactRouterDom.useLocation)();
+    const { stockLabel } = location.state || {};
+    const [newsData, setNewsData] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        const fetchNewsData = async ()=>{
+            try {
+                console.log(stockLabel);
+                const response = await (0, _axiosDefault.default).get(`http://localhost:8001/news/?query=${encodeURIComponent(stockLabel)}`);
+                setNewsData(response.data);
+            } catch (error) {
+                console.error("Error fetching news data:", error);
+            }
+        };
+        fetchNewsData();
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "result-wrapper",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+            className: "frame-23",
+            to: "/result-3",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-9",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "info-6",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-24",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-40",
+                                    children: "73,300"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                    lineNumber: 40,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                lineNumber: 39,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-25",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-40",
+                                    children: "+1,100\xa0(1.52%)"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                    lineNumber: 43,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                lineNumber: 42,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-26",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-41",
+                                    children: "KOSPI\xa0005930"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                    lineNumber: 46,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                lineNumber: 45,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-27",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-41",
+                                    children: "\uC2DC\uAC00\uCD1D\uC561 489.80\uC870"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                    lineNumber: 49,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                lineNumber: 48,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "frame-28",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-41",
+                                    children: "\uC2DC\uAC00\uCD1D\uC561 \u3147\uC704"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                    lineNumber: 52,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                lineNumber: 51,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                        lineNumber: 38,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "chart-container",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactTsTradingviewWidgets.AdvancedRealTimeChart), {
+                            theme: "light",
+                            // symbol={symbol}
+                            symbol: "005930",
+                            autosize: true,
+                            interval: "D"
+                        }, void 0, false, {
+                            fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                            lineNumber: 56,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                        lineNumber: 55,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "news-container",
+                        children: newsData.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "news-item",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: item.link,
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    className: "news-link",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            className: "news-title",
+                                            children: item.title.replace(/<b>|<\/b>/g, "")
+                                        }, void 0, false, {
+                                            fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                            lineNumber: 69,
+                                            columnNumber: 19
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "news-description",
+                                            children: item.description.replace(/<b>|<\/b>/g, "")
+                                        }, void 0, false, {
+                                            fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                            lineNumber: 70,
+                                            columnNumber: 19
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                    lineNumber: 68,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, index, false, {
+                                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                lineNumber: 67,
+                                columnNumber: 15
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                        lineNumber: 65,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "loding-wrapper",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loding.Loding), {
+                            className: "loding-2",
+                            ellipse: "/img/ellipse-2-4.svg",
+                            frame: "one"
+                        }, void 0, false, {
+                            fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                            lineNumber: 77,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                        lineNumber: 76,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-bar-5",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
+                            className: "menu-7",
+                            iconVariantsIconHome: "/img/home-7.svg",
+                            iconVariantsIconUnion: "/img/union-9.svg",
+                            iconVariantsIconUser: "/img/user.svg",
+                            iconVariantsState: "off",
+                            iconVariantsState1: "off",
+                            iconVariantsState2: "off",
+                            iconVariantsState3: "off"
+                        }, void 0, false, {
+                            fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                            lineNumber: 80,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                        lineNumber: 79,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "head-7",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "stock-22",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-42",
+                                    children: "\uC0BC\uC131\uC804\uC790"
+                                }, void 0, false, {
+                                    fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                    lineNumber: 93,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                lineNumber: 92,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "button-6",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
+                                        className: "heart-5",
+                                        stateProp: "off"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                        lineNumber: 96,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _two.Two), {
+                                        className: "instance-2-instance",
+                                        color: "#BEBEBE"
+                                    }, void 0, false, {
+                                        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                        lineNumber: 97,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                                lineNumber: 95,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                        lineNumber: 91,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+                lineNumber: 37,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+            lineNumber: 36,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/screens/ResultWrapper/ResultWrapper.jsx",
+        lineNumber: 35,
+        columnNumber: 5
+    }, undefined);
+};
+_s(ResultWrapper, "ZSXLjm+Cmbc5VTLnDCKgqbkfCVo=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams),
+        (0, _reactRouterDom.useLocation)
+    ];
+});
+_c = ResultWrapper;
+var _c;
+$RefreshReg$(_c, "ResultWrapper");
+
+  $parcel$ReactRefreshHelpers$916a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Heart":"5O8bA","../../components/Loding":"ffXJx","../../components/Menu":"cAuPj","../../icons/Two":"lKl4Q","axios":"jo6P5","./style.css":"fwUtv","react-ts-tradingview-widgets":"4t3Cr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fwUtv":[function() {},{}],"7NPJ5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FavoriteWrapper", ()=>(0, _favoriteWrapper.FavoriteWrapper));
+var _favoriteWrapper = require("./FavoriteWrapper");
+
+},{"./FavoriteWrapper":"5lrG7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5lrG7":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b673 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b673.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FavoriteWrapper", ()=>FavoriteWrapper);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _component1180 = require("../../components/Component1180");
+var _component1181 = require("../../components/Component1181");
+var _menu = require("../../components/Menu");
+var _styleCss = require("./style.css");
+const FavoriteWrapper = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "favorite-wrapper",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "frame-29",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content-10",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "favorite-list-2",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1180.Component1180), {
+                                className: "component-1180-instance",
+                                propertyWrapperBasesIconWrapperColorClassName: "container-4"
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                                lineNumber: 13,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1180.Component1180), {
+                                className: "container-5",
+                                propertyWrapperBasesIconWrapperColorClassName: "container-6"
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                                lineNumber: 17,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1180.Component1180), {
+                                className: "container-5",
+                                propertyWrapperBasesIconWrapperColorClassName: "container-7"
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                                lineNumber: 18,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1180.Component1180), {
+                                className: "container-8",
+                                propertyWrapperBasesIconWrapperColorClassName: "container-9"
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "check-box",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _component1181.Component1181), {
+                            basesIconWrapperColorClassName: "component-1181-instance",
+                            property1: "two"
+                        }, void 0, false, {
+                            fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                            lineNumber: 22,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                        lineNumber: 21,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "thumb-wrapper",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "thumb-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "label-6",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-43",
+                                    children: "\uC0AD\uC81C\uD558\uAE30"
+                                }, void 0, false, {
+                                    fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                                    lineNumber: 27,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                                lineNumber: 26,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                            lineNumber: 25,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                        lineNumber: 24,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "menu-bar-6",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menu.Menu), {
+                            className: "menu-8",
+                            iconVariantsIconHome: "/img/home-3.svg",
+                            iconVariantsIconUnion: "/img/union-9.svg",
+                            iconVariantsIconUser: "/img/user.svg",
+                            iconVariantsState: "off",
+                            iconVariantsState1: "off",
+                            iconVariantsState2: "off",
+                            iconVariantsState3: "on",
+                            to: "/home",
+                            to2: "/profile",
+                            to3: "/search"
+                        }, void 0, false, {
+                            fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                            lineNumber: 32,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                        lineNumber: 31,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "head-8",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "text-wrapper-44",
+                            children: "Favorite"
+                        }, void 0, false, {
+                            fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                            lineNumber: 47,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                        lineNumber: 46,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+                lineNumber: 11,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+            lineNumber: 10,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/screens/FavoriteWrapper/FavoriteWrapper.jsx",
+        lineNumber: 9,
+        columnNumber: 5
+    }, undefined);
+};
+_c = FavoriteWrapper;
+var _c;
+$RefreshReg$(_c, "FavoriteWrapper");
+
+  $parcel$ReactRefreshHelpers$b673.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Component1180":"04cIF","../../components/Component1181":"jZzJz","../../components/Menu":"cAuPj","./style.css":"4Hl9x","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"04cIF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Component1180", ()=>(0, _component1180.Component1180));
+var _component1180 = require("./Component1180");
+
+},{"./Component1180":"1YdFp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1YdFp":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$744c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$744c.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Component1180", ()=>Component1180);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propertyWrapper = require("../PropertyWrapper");
+var _styleCss = require("./style.css");
+const Component1180 = ({ className, propertyWrapperBasesIconWrapperColorClassName })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `component-1180 ${className}`,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "overlap-group-3",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "div-3",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "frame-4",
+                            alt: "Frame",
+                            src: "/img/frame-40.svg"
+                        }, void 0, false, {
+                            fileName: "src/components/Component1180/Component1180.jsx",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "frame-5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-11",
+                                    children: "188,000 \uC6D0"
+                                }, void 0, false, {
+                                    fileName: "src/components/Component1180/Component1180.jsx",
+                                    lineNumber: 17,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-12",
+                                    children: "- 1,000"
+                                }, void 0, false, {
+                                    fileName: "src/components/Component1180/Component1180.jsx",
+                                    lineNumber: 18,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-13",
+                                    children: "- 0.53%"
+                                }, void 0, false, {
+                                    fileName: "src/components/Component1180/Component1180.jsx",
+                                    lineNumber: 19,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Component1180/Component1180.jsx",
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "info-3",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-14",
+                                    children: "NAVER"
+                                }, void 0, false, {
+                                    fileName: "src/components/Component1180/Component1180.jsx",
+                                    lineNumber: 22,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "text-wrapper-15",
+                                    children: "035420"
+                                }, void 0, false, {
+                                    fileName: "src/components/Component1180/Component1180.jsx",
+                                    lineNumber: 23,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Component1180/Component1180.jsx",
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "logo-4"
+                        }, void 0, false, {
+                            fileName: "src/components/Component1180/Component1180.jsx",
+                            lineNumber: 25,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Component1180/Component1180.jsx",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "component-1179-wrapper",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _propertyWrapper.PropertyWrapper), {
+                        basesIconWrapperColorClassName: propertyWrapperBasesIconWrapperColorClassName,
+                        className: "component-1179",
+                        property1: "two"
+                    }, void 0, false, {
+                        fileName: "src/components/Component1180/Component1180.jsx",
+                        lineNumber: 28,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Component1180/Component1180.jsx",
+                    lineNumber: 27,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Component1180/Component1180.jsx",
+            lineNumber: 13,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Component1180/Component1180.jsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Component1180;
+var _c;
+$RefreshReg$(_c, "Component1180");
+
+  $parcel$ReactRefreshHelpers$744c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../PropertyWrapper":"alZ3d","./style.css":"2O5ve","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"alZ3d":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PropertyWrapper", ()=>(0, _propertyWrapper.PropertyWrapper));
+var _propertyWrapper = require("./PropertyWrapper");
+
+},{"./PropertyWrapper":"kPzGh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kPzGh":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f7da = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f7da.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PropertyWrapper", ()=>PropertyWrapper);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _basesIconWrapper = require("../BasesIconWrapper");
+var _styleCss = require("./style.css");
+var _s = $RefreshSig$();
+const PropertyWrapper = ({ property1, className, basesIconWrapperColorClassName })=>{
+    _s();
+    const [state, dispatch] = (0, _react.useReducer)(reducer, {
+        property1: property1 || "two"
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `property-wrapper ${className}`,
+        onClick: ()=>{
+            dispatch("click");
+        },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: `thumb property-1-${state.property1}`,
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _basesIconWrapper.BasesIconWrapper), {
+                className: `${state.property1 === "two" ? "class-2" : "class-3"}`,
+                color: state.property1 === "two" ? "/img/color-1.png" : "/img/color.svg",
+                colorClassName: basesIconWrapperColorClassName
+            }, void 0, false, {
+                fileName: "src/components/PropertyWrapper/PropertyWrapper.jsx",
+                lineNumber: 25,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/components/PropertyWrapper/PropertyWrapper.jsx",
+            lineNumber: 24,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/PropertyWrapper/PropertyWrapper.jsx",
+        lineNumber: 18,
+        columnNumber: 5
+    }, undefined);
+};
+_s(PropertyWrapper, "iZeSmhLoEDV6PXcnWA4tRsMq0gM=");
+_c = PropertyWrapper;
+function reducer(state, action) {
+    if (state.property1 === "one") switch(action){
+        case "click":
+            return {
+                property1: "two"
+            };
+    }
+    if (state.property1 === "two") switch(action){
+        case "click":
+            return {
+                property1: "one"
+            };
+    }
+    return state;
+}
+PropertyWrapper.propTypes = {
+    property1: (0, _propTypesDefault.default).oneOf([
+        "two",
+        "one"
+    ])
+};
+var _c;
+$RefreshReg$(_c, "PropertyWrapper");
+
+  $parcel$ReactRefreshHelpers$f7da.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","../BasesIconWrapper":"9Uxrx","./style.css":"6rdIQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9Uxrx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BasesIconWrapper", ()=>(0, _basesIconWrapper.BasesIconWrapper));
+var _basesIconWrapper = require("./BasesIconWrapper");
+
+},{"./BasesIconWrapper":"56DOy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"56DOy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c9f1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c9f1.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BasesIconWrapper", ()=>BasesIconWrapper);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styleCss = require("./style.css");
+const BasesIconWrapper = ({ className, colorClassName, color = "/img/color-2.svg" })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `bases-icon-wrapper ${className}`,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            className: `color ${colorClassName}`,
+            alt: "Color",
+            src: color
+        }, void 0, false, {
+            fileName: "src/components/BasesIconWrapper/BasesIconWrapper.jsx",
+            lineNumber: 13,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/BasesIconWrapper/BasesIconWrapper.jsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
+};
+_c = BasesIconWrapper;
+BasesIconWrapper.propTypes = {
+    color: (0, _propTypesDefault.default).string
+};
+var _c;
+$RefreshReg$(_c, "BasesIconWrapper");
+
+  $parcel$ReactRefreshHelpers$c9f1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"8W9Ab","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8W9Ab":[function() {},{}],"6rdIQ":[function() {},{}],"2O5ve":[function() {},{}],"jZzJz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Component1181", ()=>(0, _component1181.Component1181));
+var _component1181 = require("./Component1181");
+
+},{"./Component1181":"3GBtL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3GBtL":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ad67 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ad67.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Component1181", ()=>Component1181);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _basesIconWrapper = require("../BasesIconWrapper");
+var _styleCss = require("./style.css");
+var _s = $RefreshSig$();
+const Component1181 = ({ property1, basesIconWrapperColorClassName })=>{
+    _s();
+    const [state, dispatch] = (0, _react.useReducer)(reducer, {
+        property1: property1 || "two"
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "component-1181",
+        onClick: ()=>{
+            dispatch("click");
+        },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: `icon-wrapper property-1-0-${state.property1}`,
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _basesIconWrapper.BasesIconWrapper), {
+                className: `${state.property1 === "two" ? "class-4" : "class-5"}`,
+                color: state.property1 === "two" ? "/img/color-1.png" : "/img/color.svg",
+                colorClassName: basesIconWrapperColorClassName
+            }, void 0, false, {
+                fileName: "src/components/Component1181/Component1181.jsx",
+                lineNumber: 25,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/components/Component1181/Component1181.jsx",
+            lineNumber: 24,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Component1181/Component1181.jsx",
+        lineNumber: 18,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Component1181, "iZeSmhLoEDV6PXcnWA4tRsMq0gM=");
+_c = Component1181;
+function reducer(state, action) {
+    if (state.property1 === "one") switch(action){
+        case "click":
+            return {
+                property1: "two"
+            };
+    }
+    if (state.property1 === "two") switch(action){
+        case "click":
+            return {
+                property1: "one"
+            };
+    }
+    return state;
+}
+Component1181.propTypes = {
+    property1: (0, _propTypesDefault.default).oneOf([
+        "two",
+        "one"
+    ])
+};
+var _c;
+$RefreshReg$(_c, "Component1181");
+
+  $parcel$ReactRefreshHelpers$ad67.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","../BasesIconWrapper":"9Uxrx","./style.css":"4LiJR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4LiJR":[function() {},{}],"4Hl9x":[function() {},{}]},["gjUm6","1xC6H","d8Dch"], "d8Dch", "parcelRequireb8e7")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
