@@ -1,30 +1,43 @@
 .profile {
+  align-items: center;
   background-color: #ffffff;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.profile .div-10 {
-  background-color: #ffffff;
-  height: 640px;
+  flex-direction: column;
+  min-height: 100vh;
   position: relative;
-  width: 360px;
 }
 
-.profile .text-wrapper-29 {
-  color: #000000;
-  font-family: "Inter", Helvetica;
-  font-size: 18px;
-  font-weight: 400;
-  height: 22px;
-  left: 38px;
-  letter-spacing: 0;
-  line-height: normal;
+.profile .frame-9 {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0px 15px;
+  position: relative;
+  width: 420px;
+  min-height: 100vh;
+}
+
+.profile .content-5 {
+  align-self: stretch;
+  display: flex;
+  background-color: #ffffff;
+  width: 100%; 
+  position: relative;
+  min-height: 100vh;
+}
+
+.profile .label-2 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  left: 0;
+  padding: 8px 24px;
   position: absolute;
-  text-align: center;
-  top: 241px;
+  top: 360px;
+  width: 213px;
 }
 
 .profile .text-wrapper-30 {
@@ -32,13 +45,114 @@
   font-family: "Inter", Helvetica;
   font-size: 18px;
   font-weight: 400;
-  height: 22px;
-  left: 34px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
+  margin-top: -1px;
+  position: relative;
   text-align: center;
-  top: 163px;
+  width: fit-content;
+}
+
+.profile .label-3 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  left: 0;
+  padding: 8px 24px;
+  position: absolute;
+  top: 304px;
+  width: 205px;
+}
+
+.profile .overlap {
+  height: 154px;
+  left: -10px;
+  position: absolute;
+  top: 128px;
+  width: 410px;
+}
+
+.profile .overlap-2 {
+  height: 154px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 410px;
+}
+
+.profile .overlap-group-4 {
+  height: 56px;
+  left: 0;
+  position: absolute;
+  top: 98px;
+  width: 410px;
+}
+
+.profile .label-4 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  left: 10px;
+  padding: 8px 24px;
+  position: absolute;
+  top: 0;
+  width: 205px;
+}
+
+.profile .line {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 36px;
+}
+
+.profile .line-2 {
+  height: 1px;
+  margin-top: -1px;
+  object-fit: cover;
+  position: relative;
+  width: 390px;
+}
+
+.profile .img-frame {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 10px;
+  left: 248px;
+  position: absolute;
+  top: 0;
+}
+
+.profile .ellipse-2 {
+  background-color: #d9d9d9;
+  border-radius: 58px;
+  height: 116px;
+  position: relative;
+  width: 116px;
+}
+
+.profile .image-2 {
+  height: 93px;
+  left: 12px;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  width: 93px;
+}
+
+.profile .label-5 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  left: 10px;
+  padding: 8px 24px;
+  position: absolute;
+  top: 12px;
+  width: 205px;
 }
 
 .profile .text-wrapper-31 {
@@ -46,89 +160,49 @@
   font-family: "Inter", Helvetica;
   font-size: 18px;
   font-weight: 700;
-  height: 22px;
-  left: 34px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
+  margin-top: -1px;
+  position: relative;
   text-align: center;
-  top: 83px;
+  width: fit-content;
+}
+
+.profile .menu-instance-wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  min-height: 44px;
+}
+
+.profile .menu-3 {
+  box-shadow: 0px -2px 3.2px #0000000d !important;
+  flex: 0 0 auto !important;
+}
+
+.profile .head-3 {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  gap: 8px;
+  height: 86px;
+  left: 0;
+  padding: 40px 24px 0px;
+  position: absolute;
+  top: 0;
+  width: 390px;
 }
 
 .profile .text-wrapper-32 {
   color: #000000;
   font-family: "Inter", Helvetica;
-  font-size: 18px;
-  font-weight: 400;
-  height: 22px;
-  left: 38px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 297px;
-}
-
-.profile .overlap-group-4 {
-  height: 172px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 360px;
-}
-
-.profile .head-3 {
-  height: 74px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 360px;
-}
-
-.profile .text-wrapper-33 {
-  color: #000000;
-  font-family: "Inter", Helvetica;
   font-size: 36px;
   font-weight: 700;
-  height: 44px;
-  left: 34px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 14px;
-}
-
-.profile .ellipse-2 {
-  background-color: #d9d9d9;
-  border-radius: 58px;
-  height: 116px;
-  left: 224px;
-  position: absolute;
-  top: 56px;
-  width: 116px;
-}
-
-.profile .image {
-  height: 93px;
-  left: 236px;
-  object-fit: cover;
-  position: absolute;
-  top: 68px;
-  width: 93px;
-}
-
-.profile .line {
-  height: 1px;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 199px;
-  width: 360px;
-}
-
-.profile .menu-4 {
-  left: 0 !important;
-  position: absolute !important;
-  top: 596px !important;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
 }

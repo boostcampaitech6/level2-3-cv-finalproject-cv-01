@@ -11,11 +11,11 @@ import "./style.css";
 
 export const StateOffWrapper = ({ state, className, text = "NAVER", text1 = "035420", logoClassName, to }) => {
   return (
-    <Link className={`state-off-wrapper state-${state} ${className}`} to={to}>
-      <div className="overlap-group">
+    <Link className={`state-off-wrapper ${className}`} to={to}>
+      <div className={`overlap-group state-${state}`}>
         <div className="info">
           <div className="NAVER">{text}</div>
-          <div className="text-wrapper">{text1}</div>
+          <div className="element">{text1}</div>
         </div>
         <div className={`logo ${logoClassName}`} />
         <Heart className="heart-instance" stateProp="off" />

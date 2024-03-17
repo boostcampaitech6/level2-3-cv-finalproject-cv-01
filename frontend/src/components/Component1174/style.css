@@ -1,0 +1,141 @@
+.component-1174 {
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px #00000033;
+  display: block;
+  height: 102px;
+  overflow: hidden;
+  position: relative;
+  width: 96px;
+}
+
+.component-1174 .div-wrapper-2 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 31px;
+  position: absolute;
+  top: 85px;
+}
+
+.component-1174 .text-wrapper-3 {
+  color: #2961ff;
+  font-family: "Inter", Helvetica;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.component-1174 .div-wrapper-3 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  top: 69px;
+}
+
+.component-1174 .p {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.component-1174 .span {
+  font-weight: 500;
+  letter-spacing: -0.04px;
+}
+
+.component-1174 .div-wrapper-4 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  top: 49px;
+}
+
+.component-1174 .text-wrapper-4 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.component-1174 .logo-2 {
+  background-image: url(../../../static/img/ellipse-15.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 37px;
+  left: 29px;
+  position: absolute;
+  top: 7px;
+  width: 37px;
+}
+
+.component-1174.state-0-off {
+  background-color: #ffffff;
+}
+
+.component-1174.state-0-on {
+  background-color: #f1edff;
+}
+
+.component-1174.state-0-off .div-wrapper-3 {
+  left: 23px;
+}
+
+.component-1174.state-0-on .div-wrapper-3 {
+  left: 21px;
+}
+
+.component-1174.state-0-off .p {
+  font-size: 11px;
+  letter-spacing: -0.33px;
+  white-space: nowrap;
+}
+
+.component-1174.state-0-on .p {
+  font-size: 12px;
+  letter-spacing: -0.36px;
+}
+
+.component-1174.state-0-off .text-wrapper-45 {
+  font-size: 9px;
+  letter-spacing: -0.02px;
+}
+
+.component-1174.state-0-on .text-wrapper-45 {
+  font-size: 10px;
+  letter-spacing: -0.03px;
+}
+
+.component-1174.state-0-off .div-wrapper-4 {
+  left: 30px;
+}
+
+.component-1174.state-0-on .div-wrapper-4 {
+  left: 29px;
+}
+
+.component-1174.state-0-off .text-wrapper-4 {
+  font-size: 13px;
+  letter-spacing: -0.39px;
+}
+
+.component-1174.state-0-on .text-wrapper-4 {
+  font-size: 14px;
+  letter-spacing: -0.42px;
+}

@@ -9,9 +9,17 @@ import { Link } from "react-router-dom";
 import { Icon } from "../Icon";
 import "./style.css";
 
-export const IconVariants = ({ icon, state, className, iconUnion = "/img/union-1.png", to }) => {
+export const IconVariants = ({
+  icon,
+  state,
+  className,
+  iconHome = "/img/home-1.svg",
+  iconUnion = "/img/union-1.svg",
+  iconUser = "/img/user-1.svg",
+  to,
+}) => {
   return (
-    <Link className={`icon-variants icon-1-${icon} state-1-${state} ${className}`} to={to}>
+    <Link className={`icon-variants ${className}`} to={to}>
       <Icon
         className="icon-instance"
         divClassName={`${state === "on" && icon === "SEARCH" && "class"}`}
@@ -22,20 +30,7 @@ export const IconVariants = ({ icon, state, className, iconUnion = "/img/union-1
             (icon === "SAVED" && state === "on")) &&
           "class"
         }`}
-        heart={
-          state === "off" && icon === "FAVORITE"
-            ? "/img/heart.png"
-            : state === "on" && icon === "FAVORITE"
-            ? "/img/heart-2.png"
-            : undefined
-        }
-        home={
-          state === "off" && icon === "HOME"
-            ? "/img/home.png"
-            : state === "on" && icon === "HOME"
-            ? "/img/home-2.png"
-            : undefined
-        }
+        home={iconHome}
         icon={
           icon === "FAVORITE"
             ? "FAVORITE"
@@ -50,18 +45,12 @@ export const IconVariants = ({ icon, state, className, iconUnion = "/img/union-1
         img={iconUnion}
         union={
           state === "off" && icon === "SEARCH"
-            ? "/img/union.png"
+            ? "/img/union.svg"
             : state === "on" && icon === "SEARCH"
-            ? "/img/union-3.png"
+            ? "/img/union-3.svg"
             : undefined
         }
-        user={
-          state === "off" && icon === "MY"
-            ? "/img/user.png"
-            : state === "on" && icon === "MY"
-            ? "/img/user-2.png"
-            : undefined
-        }
+        user={iconUser}
       />
     </Link>
   );
@@ -70,6 +59,8 @@ export const IconVariants = ({ icon, state, className, iconUnion = "/img/union-1
 IconVariants.propTypes = {
   icon: PropTypes.oneOf(["MY", "HOME", "FAVORITE", "SEARCH", "SAVED"]),
   state: PropTypes.oneOf(["off", "on"]),
+  iconHome: PropTypes.string,
   iconUnion: PropTypes.string,
+  iconUser: PropTypes.string,
   to: PropTypes.string,
 };
