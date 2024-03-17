@@ -76,14 +76,17 @@ export const Home = () => {
   const customStyles = {
     placeholder: (provided) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
       paddingLeft: '10px', // 원하는 들여쓰기 값으로 조정하세요
     }),
     input: (provided) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
       paddingLeft: '10px', // 입력 텍스트에 대한 들여쓰기
     }),
     control: (provided, { isFocused }) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
       minHeight: '45px', // 최소 높이 설정
       borderColor: isFocused ? '#7d49f5' : provided.borderColor, // 포커스 되었을 때 보라색으로 변경
       boxShadow: isFocused ? '0 0 0 1px #7d49f5' : 'none',
@@ -98,11 +101,22 @@ export const Home = () => {
       color: isFocused ? '#7d49f5':provided.color,  // 화살표 색상을 보라색으로 설정
     }),
 
+    noOptionsMessage: (provided) => ({
+      ...provided,
+      fontFamily: "Noto Sans KR, Helvetica"
+    }),
+
+    loadingMessage: (provided) => ({
+      ...provided,
+      fontFamily: "Noto Sans KR, Helvetica"
+    }),
+
     option: (provided, { isFocused, isSelected }) => {
       return {
         ...provided,
         backgroundColor: isSelected ? '#F2ECFF' : isFocused ? '#F2ECFF' : undefined,
         // 선택된 옵션의 배경색과 포커스 시 배경색
+        fontFamily: "Noto Sans KR, Helvetica",
         paddingLeft: '20px',
       };
     },

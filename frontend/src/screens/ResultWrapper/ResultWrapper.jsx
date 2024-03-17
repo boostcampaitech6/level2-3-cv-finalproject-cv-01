@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Heart } from "../../components/Heart";
 import { Loding } from "../../components/Loding";
@@ -6,11 +6,14 @@ import { Menu } from "../../components/Menu";
 import { Two } from "../../icons/Two";
 import axios from 'axios';
 import "./style.css";
-import { useParams, useLocation } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { AdvancedRealTimeChart} from 'react-ts-tradingview-widgets';
-import React, { useState, useEffect } from 'react';
+import { SyncLoader } from "react-spinners";
+
 
 export const ResultWrapper = () => {
+  const navigate = useNavigate();
+  
   const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
   const location = useLocation();
   const { stockLabel } = location.state || {};
@@ -31,9 +34,15 @@ export const ResultWrapper = () => {
     fetchNewsData();
   }, []);
 
+  const handleButtonClick = () => {
+    navigate(`/result-3/${symbol}`, {
+      state: { stockLabel: stockLabel, symbol: symbol}
+    });
+  }
+
   return (
     <div className="result-wrapper">
-      <Link className="frame-23" to="/result-3">
+      <div className="frame-23" to="/result-3">
         <div className="content-9">
           <div className="info-6">
             <div className="frame-24">
@@ -55,8 +64,7 @@ export const ResultWrapper = () => {
           <div className="chart-container">
             <AdvancedRealTimeChart 
               theme="light" 
-              // symbol={symbol}
-              symbol="005930"
+              symbol={symbol}
               autosize={true}
               interval="D"
           />
@@ -73,8 +81,8 @@ export const ResultWrapper = () => {
             ))}
           </div>
 
-          <div className="loding-wrapper">
-            <Loding className="loding-2" ellipse="/img/ellipse-2-4.svg" frame="one" />
+          <div className="loding-wrapper" onClick={handleButtonClick}>
+            <SyncLoader color="#7d49f5" />
           </div>
           <div className="menu-bar-5">
             <Menu
@@ -90,7 +98,7 @@ export const ResultWrapper = () => {
           </div>
           <div className="head-7">
             <div className="stock-22">
-              <div className="text-wrapper-42">삼성전자</div>
+              <div className="text-wrapper-42">{stockLabel}</div>
             </div>
             <div className="button-6">
               <Heart className="heart-5" stateProp="off" />
@@ -98,7 +106,7 @@ export const ResultWrapper = () => {
             </div>
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { ButtonAi } from "../../components/ButtonAi";
 import { Heart } from "../../components/Heart";
@@ -6,11 +6,13 @@ import { Menu } from "../../components/Menu";
 import { Two } from "../../icons/Two";
 import axios from 'axios';
 import "./style.css";
-import { useParams, useLocation } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { AdvancedRealTimeChart} from 'react-ts-tradingview-widgets';
-import React, { useState, useEffect } from 'react';
+
 
 export const ResultScreen = () => {
+  const navigate = useNavigate();
+
   const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
   const location = useLocation();
   const { stockLabel } = location.state || {};
@@ -30,6 +32,13 @@ export const ResultScreen = () => {
 
     fetchNewsData();
   }, []);
+
+  const handleButtonClick = () => {
+      navigate(`/result-2/${symbol}`, {
+        state: { stockLabel: stockLabel, symbol: symbol}
+      });
+    }
+
 
   return (
     <div className="result-screen">
@@ -55,8 +64,7 @@ export const ResultScreen = () => {
           <div className="chart-container">
             <AdvancedRealTimeChart 
               theme="light" 
-              // symbol={symbol}
-              symbol="005930"
+              symbol={symbol}
               autosize={true}
               interval="D"
           />
@@ -73,9 +81,9 @@ export const ResultScreen = () => {
             ))}
           </div>
           
-          <Link className="button-AI-wrapper" to="/result-2">
+          <div className="button-AI-wrapper" onClick={handleButtonClick}>
             <ButtonAi className="button-AI-instance" />
-          </Link>
+          </div>
           <div className="menu-bar-4">
             <Menu
               className="menu-6"
@@ -94,7 +102,7 @@ export const ResultScreen = () => {
           </div>
           <div className="head-6">
             <div className="stock-21">
-              <div className="text-wrapper-39">삼성전자</div>
+              <div className="text-wrapper-39">{stockLabel}</div>
             </div>
             <div className="button-5">
               <Heart className="heart-4" stateProp="off" />

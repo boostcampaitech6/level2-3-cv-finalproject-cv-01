@@ -54,14 +54,33 @@ const router = createBrowserRouter([
     path: "/result-3",
     element: <Result />,
   },
+
+  {
+    path: "/result-3/:symbol",
+    element: <Result />,
+  },
+
   {
     path: "/result",
     element: <ResultScreen />,
   },
+
+  {
+    path: "/result/:symbol",
+    element: <ResultScreen />,
+  },
+
+
   {
     path: "/result-2",
     element: <ResultWrapper />,
   },
+
+  {
+    path: "/result-2/:symbol",
+    element: <ResultWrapper />,
+  },
+
   {
     path: "/favorite-2",
     element: <FavoriteWrapper />,
