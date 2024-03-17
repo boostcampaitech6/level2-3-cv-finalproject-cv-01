@@ -15,7 +15,6 @@ export const Default = {
   args: {
     frame: "two",
     className: {},
-    ellipseClassName: {},
-    ellipse: "/img/ellipse-2-3.png",
+    ellipse: "/img/ellipse-2-3.svg",
   },
 };

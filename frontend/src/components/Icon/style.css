@@ -3,7 +3,6 @@
   display: inline-flex;
   flex-direction: column;
   position: relative;
-  top: 20px;
 }
 
 .icon .img {
@@ -12,13 +11,40 @@
   width: 24px;
 }
 
+.icon .heart-3 {
+  height: 24px !important;
+  position: relative !important;
+  width: 24px !important;
+}
+
+.icon .div {
+  align-items: center;
+  display: flex;
+  height: 9px;
+  justify-content: center;
+  margin-top: -2px;
+  position: relative;
+  width: 24px;
+}
+
+.icon .HOME-2 {
+  color: #4a3b3b;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 5px;
+  font-weight: 300;
+  letter-spacing: -0.25px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+}
+
 .icon .flag {
   height: 24px;
   position: relative;
   width: 24px;
 }
 
-.icon .union {
+.icon .union-2 {
   height: 16px;
   left: 6px;
   position: absolute;
@@ -36,23 +62,13 @@
   top: -7px;
 }
 
-.icon .union-2 {
+.icon .union-3 {
   height: 18.71px;
   position: relative;
   width: 18.71px;
 }
 
-.icon .text-HOME {
-  align-items: center;
-  display: flex;
-  height: 9px;
-  justify-content: center;
-  margin-top: -2px;
-  position: relative;
-  width: 24px;
-}
-
-.icon .div {
+.icon .SAVED-2 {
   position: relative;
 }
 
@@ -69,31 +85,33 @@
   width: 24px;
 }
 
-.icon.FAVORITE {
-  left: 55px;
+.icon .FAVORITE {
+  width: 24px;
 }
 
-.icon.SAVED {
-  left: 127px;
+.icon .SAVED {
+  width: 24px;
 }
 
-.icon.SEARCH {
-  left: 91px;
+.icon .SEARCH {
+  width: 24px;
 }
 
-.icon.MY {
-  left: 163px;
+.icon .MY {
+  width: 24px;
 }
 
-.icon.HOME {
-  left: 20px;
+.icon .HOME {
+  height: 9px;
+  margin-top: -1px;
+  width: 16px;
 }
 
-.icon.SEARCH .flag {
+.icon .icon-SEARCH {
   overflow: hidden;
 }
 
-.icon.FAVORITE .div {
+.icon .icon-0-SAVED {
   color: #4a3b3b;
   font-family: "Noto Sans KR", Helvetica;
   font-size: 5px;
@@ -104,45 +122,10 @@
   width: 24px;
 }
 
-.icon.SAVED .div {
-  color: #4a3b3b;
-  font-family: "Noto Sans KR", Helvetica;
-  font-size: 5px;
-  font-weight: 300;
-  letter-spacing: -0.25px;
-  line-height: normal;
-  text-align: center;
-  width: 24px;
-}
-
-.icon.SEARCH .div {
+.icon .icon-0-SEARCH {
   align-items: center;
   display: inline-flex;
   flex: 0 0 auto;
   gap: 10px;
   justify-content: center;
-}
-
-.icon.MY .div {
-  color: #4a3b3b;
-  font-family: "Noto Sans KR", Helvetica;
-  font-size: 5px;
-  font-weight: 300;
-  letter-spacing: -0.25px;
-  line-height: normal;
-  text-align: center;
-  width: 24px;
-}
-
-.icon.HOME .div {
-  color: #4a3b3b;
-  font-family: "Noto Sans KR", Helvetica;
-  font-size: 5px;
-  font-weight: 300;
-  height: 9px;
-  letter-spacing: -0.25px;
-  line-height: normal;
-  margin-top: -1px;
-  text-align: center;
-  width: 16px;
 }

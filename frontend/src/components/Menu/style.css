@@ -1,14 +1,10 @@
 .menu {
   align-items: flex-start;
-  box-shadow: -2px 0px 7.1px #0000001a;
   display: inline-flex;
-  left: -3780px;
   position: relative;
-  top: -1001px;
 }
 
 .menu .icon-variants-instance {
   background-color: #ffffff !important;
-  left: unset !important;
-  top: unset !important;
+  width: 78px !important;
 }
