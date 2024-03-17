@@ -126,6 +126,10 @@ export const Home = () => {
     navigate(`/result/${symbol}`, { state: { stockLabel: label } });
   };
 
+  const handleSearchClick = ( ) => {
+    navigate(`/search`);
+  };
+
 
   return (
     <div className="home">
@@ -251,7 +255,7 @@ export const Home = () => {
               <p className="text-wrapper-27">관심 있는 주식을 클릭해 보세요.</p>
             </div>
           </div>
-          <Link className="container-wrapper" to="/search">
+          <div className="container-wrapper" onClick={() => handleSearchClick()} onTouchStart={() => handleSearchClick()}>
             <div className="container-3">
             <AsyncSelect
                 styles={customStyles}
@@ -266,7 +270,7 @@ export const Home = () => {
                 formatOptionLabel={formatOptionLabel}
             />
             </div>
-          </Link>
+          </div>
           <div className="menu-wrapper">
             <Menu
               className="menu-2"

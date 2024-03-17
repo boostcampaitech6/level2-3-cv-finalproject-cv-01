@@ -46419,6 +46419,9 @@ const Home = ()=>{
             }
         });
     };
+    const handleSearchClick = ()=>{
+        navigate(`/search`);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "home",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46442,12 +46445,12 @@ const Home = ()=>{
                                         state: "off"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 137,
+                                        lineNumber: 141,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 136,
+                                    lineNumber: 140,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46463,12 +46466,12 @@ const Home = ()=>{
                                         text: "\uC140\uD2B8\uB9AC\uC628"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 147,
+                                        lineNumber: 151,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 146,
+                                    lineNumber: 150,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46484,12 +46487,12 @@ const Home = ()=>{
                                         text: "\uC0BC\uC131\uC804\uC790"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 159,
+                                        lineNumber: 163,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 158,
+                                    lineNumber: 162,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46505,12 +46508,12 @@ const Home = ()=>{
                                         text: "\uCE74\uCE74\uC624"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 171,
+                                        lineNumber: 175,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 170,
+                                    lineNumber: 174,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46526,12 +46529,12 @@ const Home = ()=>{
                                         text: "\uC5D0\uCF54\uD504\uB85C"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 183,
+                                        lineNumber: 187,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 182,
+                                    lineNumber: 186,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46547,12 +46550,12 @@ const Home = ()=>{
                                         text: "\uD604\uB300\uCC28"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 195,
+                                        lineNumber: 199,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 194,
+                                    lineNumber: 198,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46568,12 +46571,12 @@ const Home = ()=>{
                                         text: "LG\uC5D0\uB108\uC9C0\uC194\uB8E8\uC158"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 208,
+                                        lineNumber: 212,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 207,
+                                    lineNumber: 211,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46589,12 +46592,12 @@ const Home = ()=>{
                                         text: "SK\uD558\uC774\uB2C9\uC2A4"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 221,
+                                        lineNumber: 225,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 220,
+                                    lineNumber: 224,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46610,23 +46613,23 @@ const Home = ()=>{
                                         text: "\uAE30\uC5C5\uC740\uD589"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 233,
+                                        lineNumber: 237,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 232,
+                                    lineNumber: 236,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 135,
+                            lineNumber: 139,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 134,
+                        lineNumber: 138,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46639,12 +46642,12 @@ const Home = ()=>{
                                     children: "\uC774\uB7F0 \uC885\uBAA9\uC740 \uC5B4\uB54C\uC694?"
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 248,
+                                    lineNumber: 252,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 247,
+                                lineNumber: 251,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46654,23 +46657,24 @@ const Home = ()=>{
                                     children: "\uAD00\uC2EC \uC788\uB294 \uC8FC\uC2DD\uC744 \uD074\uB9AD\uD574 \uBCF4\uC138\uC694."
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 251,
+                                    lineNumber: 255,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 250,
+                                lineNumber: 254,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 246,
+                        lineNumber: 250,
                         columnNumber: 11
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "container-wrapper",
-                        to: "/search",
+                        onClick: ()=>handleSearchClick(),
+                        onTouchStart: ()=>handleSearchClick(),
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "container-3",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _asyncDefault.default), {
@@ -46686,17 +46690,17 @@ const Home = ()=>{
                                 formatOptionLabel: formatOptionLabel
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 256,
+                                lineNumber: 260,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 255,
+                            lineNumber: 259,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 254,
+                        lineNumber: 258,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46712,12 +46716,12 @@ const Home = ()=>{
                             to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 271,
+                            lineNumber: 275,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 270,
+                        lineNumber: 274,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46727,28 +46731,28 @@ const Home = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 283,
+                            lineNumber: 287,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 282,
+                        lineNumber: 286,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/screens/Home/Home.jsx",
-                lineNumber: 133,
+                lineNumber: 137,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/screens/Home/Home.jsx",
-            lineNumber: 132,
+            lineNumber: 136,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/Home/Home.jsx",
-        lineNumber: 131,
+        lineNumber: 135,
         columnNumber: 5
     }, undefined);
 };
