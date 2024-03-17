@@ -1,0 +1,145 @@
+code,rank,name,kor_name,up,down,common_rank,efficiency_rank,discription
+CDL3LINESTRIKE_Bull,1,Bullish Three Line Strike,강세삼선반격형,35,65,j,a+,
+CDL3LINESTRIKE_Bear,2,Bearish Three Line Strike,약세삼선반격형,84,16,j,a+,
+CDL3BLACKCROWS_Bull,3,Three Black Crows,흑삼병,22,78,f-,a+,
+CDL3BLACKCROWS_Bear,3,Three Black Crows,흑삼병,22,78,f-,a+,
+CDLEVENINGSTAR_Bull,4,Evening Star Pattern,저녁별 패턴,28,72,h+,a,
+CDLEVENINGSTAR_Bear,4,Evening Star Pattern,저녁별 패턴,28,72,h+,a,
+CDLTASUKIGAP_Bull,5,Upside Tasuki Gap,상승 타스키갭 패턴,57,43,h,a,"- 상승 추세 중에 발생하며 패턴을 따르는 캔들에서 확인이 필요합니다.
+- 첫 번째 캔들은 길고 흰색입니다.
+- 두 번째 캔들은 흰색이며 첫 번째 캔들에서 갭 위로 올라갑니다.
+- 세 번째 캔들은 검은색이며 갭 업 안에 종가가 있습니다(따라서 종가가 첫 번째 캔들의 실제 몸통 위에 있습니다). 반면 두 번째 캔들은 두 번째 캔들의 실제 몸통 안에 시가가 있습니다(패턴의 추가 확인을 위해).
+- 패턴의 또 다른 확인: 다음 캔들 중 하나가 두 번째 캔들의 고점보다 높은 고점에 도달하는 경우."
+CDLTASUKIGAP_Bear,5,Downside Tasuki Gap,하락 타스키갭 패턴,54,46,g-,c+,
+CDLINVERTEDHAMMER_Bull,6,Inverted Hammer Candlestick,역망치 캔들,35,65,g+,a,
+CDLINVERTEDHAMMER_Bear,6,Inverted Hammer Candlestick,역망치 캔들,35,65,g+,a,
+CDLMATCHINGLOW_Bull,7,Matching Low Pattern,동일 저점형,39,61,f-,a-,
+CDLMATCHINGLOW_Bear,7,Matching Low Pattern,동일 저점형,39,61,f-,a-,
+CDLABANDONEDBABY_Bull,8,Bullish Abandoned Baby Pattern,상승고아형 ,70,30,j+,a-,
+CDLABANDONEDBABY_Bear,8,Bearish Abandoned Baby Pattern,하락고아형,31,69,j,g,
+CDLBREAKAWAY_Bull,10,Bullish Breakaway Pattern,상승탈출형 ,59,41,j,e,
+CDLBREAKAWAY_Bear,10,Bearish Breakaway Pattern,하락탈출형 ,37,63,j-,b+,
+CDLMORNINGSTAR_Bull,12,Morning Star Pattern,샛별형,78,22,g,b+,
+CDLMORNINGSTAR_Bear,12,Morning Star Pattern,샛별형,78,22,g,b+,
+CDLPIERCING_Bull,13,Piercing Line,관통형 패턴,64,36,d-,b+,
+CDLPIERCING_Bear,13,Piercing Line,관통형 패턴,64,36,d-,b+,
+CDLSTICKSANDWICH_Bull,14,Bullish Stick Sandwich,상승 막대샌드위치형 패턴,38,62,f-,b,
+CDLSTICKSANDWICH_Bear,14,Bearish Stick Sandwich,하락 막대샌드위치형 패턴,62,38,f-,b,
+CDLTHRUSTING_Bull,15,Thrusting Pattern,먹구름형,57,43,f,b,
+CDLTHRUSTING_Bear,15,Thrusting Pattern,먹구름형,57,43,f,b,
+CDLINNECK_Bull,17,In Neck,진입형,47,53,g+,b,
+CDLINNECK_Bear,17,In Neck,진입형,47,53,g+,b,
+CDL3INSIDE_Bull,20,Three Inside Up,상승잉태확인형,65,35,d+,b-,
+CDL3INSIDE_Bear,56,Three Inside Down,하락잉태확인형 ,40,60,d+,f,
+CDLHOMINGPIGEON_Bull,21,Homing Pigeon,전서구형,44,56,d,c+,
+CDLHOMINGPIGEON_Bear,21,Homing Pigeon,전서구형,44,56,d,c+,
+CDLDARKCLOUDCOVER_Bull,22,Dark Cloud Cover,먹구름형 패턴,40,60,e,c+,
+CDLDARKCLOUDCOVER_Bear,22,Dark Cloud Cover,먹구름형 패턴,40,60,e,c+,
+CDLIDENTICAL3CROWS_Bull,24,Identical Three Crows,동일흑삼병,21,79,i+,c,
+CDLIDENTICAL3CROWS_Bear,24,Identical Three Crows,동일흑삼병,21,79,i+,c,
+CDLMORNINGDOJISTAR_Bull,25,Morning Doji Star,십자 샛별형,60,40,,,
+CDLMORNINGDOJISTAR_Bear,25,Morning Doji Star,십자 샛별형,60,40,,,
+CDLXSIDEGAP3METHODS_Bull,27,Upside Gap Three Methods,상승갭삼법,41,59,i,c,
+CDLXSIDEGAP3METHODS_Bear,26,Downside Gap Three Methods,하락갭삼법,62,38,i,c,
+CDLTRISTAR_Bull,28,Bullish Tristar Pattern,상승 세 십자형,70,30,g,a+,"Bullish Tristar Pattern은 하락 추세에서 발생하며, 시장 전환과 상승 추세의 시작을 예고하는 강력한 신호로 해석됩니다. 이 패턴은 세 개의 도지 캔들로 구성되며, 첫 번째와 세 번째 도지 사이에 두 번째 도지가 위치합니다."
+CDLTRISTAR_Bear,76,Bearish Tristar Pattern,상승 세 십자형,30,70,g,a+,"Bearish Tristar Pattern은 상승 추세에서 나타나며, 시장 전환과 하락 추세의 시작을 알리는 신호로 해석됩니다. 이 패턴 역시 세 개의 도지 캔들로 이루어지며, 상승 추세의 끝을 예고합니다."
+CDLGAPSIDESIDEWHITE_Bull,46,Bullish Side-by-Side White Lines,상승 나란히형,66,34,h+,e,
+CDLGAPSIDESIDEWHITE_Bear,29,Bearish Side-by-Side White Lines,하락 나란히형,44,56,g,c-,
+CDLEVENINGDOJISTAR_Bull,30,Evening Doji Star,십자석별형,60,40,g,d,"Evening Doji Star는 캔들스틱 차트에서 발견할 수 있는 중요한 베어리시(bearish) 전환 패턴입니다. 이 패턴은 상승 추세 중에 나타나며, 추세의 가능한 반전을 예고하는 신호로 해석됩니다. Evening Doji Star 패턴은 세 개의 캔들로 구성되며, 각각의 캔들은 시장의 변화와 트레이더들의 감정을 반영합니다.
+
+Evening Doji Star 패턴 구성
+첫 번째 캔들: 긴 상승 캔들로, 강력한 상승 추세를 나타냅니다.
+두 번째 캔들: 도지(Doji) 캔들로, 개장 가격과 종가가 거의 동일하여 시장의 불확실성과 매수세와 매도세의 균형을 나타냅니다. 이 캔들은 첫 번째 캔들의 상승 범위 위에 위치해 있어야 합니다.
+세 번째 캔들: 첫 번째 캔들의 중간 지점 이하로 내려가는 긴 하락 캔들로, 하락 추세로의 전환 가능성을 강하게 시사합니다."
+CDLEVENINGDOJISTAR_Bear,30,Evening Doji Star,십자석별형,60,40,g,d,"Evening Doji Star는 캔들스틱 차트에서 발견할 수 있는 중요한 베어리시(bearish) 전환 패턴입니다. 이 패턴은 상승 추세 중에 나타나며, 추세의 가능한 반전을 예고하는 신호로 해석됩니다. Evening Doji Star 패턴은 세 개의 캔들로 구성되며, 각각의 캔들은 시장의 변화와 트레이더들의 감정을 반영합니다.
+
+Evening Doji Star 패턴 구성
+첫 번째 캔들: 긴 상승 캔들로, 강력한 상승 추세를 나타냅니다.
+두 번째 캔들: 도지(Doji) 캔들로, 개장 가격과 종가가 거의 동일하여 시장의 불확실성과 매수세와 매도세의 균형을 나타냅니다. 이 캔들은 첫 번째 캔들의 상승 범위 위에 위치해 있어야 합니다.
+세 번째 캔들: 첫 번째 캔들의 중간 지점 이하로 내려가는 긴 하락 캔들로, 하락 추세로의 전환 가능성을 강하게 시사합니다."
+CDL3WHITESOLDIERS_Bull,32,Three White Soldiers,적삼병 ,82,18,g,d+,
+CDL3WHITESOLDIERS_Bear,32,Three White Soldiers,적삼병 ,82,18,g,d+,
+CDLONNECK_Bull,33,On Neck ,걸침형,44,56,g-,d+,
+CDLONNECK_Bear,33,On Neck ,걸침형,44,56,g-,d+,
+CDL3OUTSIDE_Bull,34,Three Outside Up,상승장악확인형 ,75,25,c,d,
+CDL3OUTSIDE_Bear,39,Three Outside Down,하락장악확인형 ,31,69,c+,d-,
+CDLRICKSHAWMAN_Bull,35,Rickshaw Man,중심선 십자캔들,51,49,f,d,
+CDLRICKSHAWMAN_Bear,35,Rickshaw Man,중심선 십자캔들,51,49,f,d,
+CDLSEPARATINGLINES_Bull,36,Bullish Separating Lines,상승형 이별 패턴,72,28,h,d,
+CDLSEPARATINGLINES_Bear,40,Bearlish Separating Lines,하락형 이별 패턴,37,63,i+,d-,
+CDLLONGLEGGEDDOJI_Bull,37,Long Legged Doji,긴꼬리 십자캔들,51,49,e+,d,
+CDLLONGLEGGEDDOJI_Bear,37,Long Legged Doji,긴꼬리 십자캔들,51,49,e+,d,
+CDLHARAMI_Bull,38,Bullish Harami,상승 잉태형 패턴,53,47,c,d-,
+CDLHARAMI_Bear,72,Bearlish Harami,하락잉태형 ,53,47,c,h+,
+CDLLADDERBOTTOM_Bull,41,Ladder Bottom,사다리 바닥 패턴,56,44,h-,e+,
+CDLLADDERBOTTOM_Bear,41,Ladder Bottom,사다리 바닥 패턴,56,44,h-,e+,
+CDLCLOSINGMARUBOZU_Bull,70,Bullish Closing Marubozu,종가 벽돌형 캔들,60,40,c,a,"Bullish Closing Marubozu는 긴 몸통과 거의 또는 전혀 쉐도우가 없는 캔들로 구성됩니다. 이 캔들의 종가는 거의 최고가와 같으며, 개장 가격은 최저가 근처입니다. 이는 매수 세력이 시장을 지배하고 있으며, 거래 세션 내내 가격을 상승시켰음을 나타냅니다. Bullish Closing Marubozu 패턴이 나타날 때 상승 추세가 이어질 가능성이 높다고 여겨집니다. "
+CDLCLOSINGMARUBOZU_Bear,43,Bearish Closing Marubozu,종가 벽돌형 캔들,35,65,c,a,"Bearish Closing Marubozu 역시 긴 몸통으로 구성되지만, 이 경우에는 종가가 거의 최저가와 같고, 개장 가격은 최고가 근처입니다. 이는 매도 세력이 거래 세션 내내 가격을 낮추는 데 성공했음을 의미하며, 시장에서 강력한 매도 압력이 있음을 나타냅니다. 이 패턴이 나타날 때 하락 추세가 계속될 가능성이 높습니다. "
+CDLTAKURI_Bull,47,Takuri Line,호리병 캔들,66,34,c-,e,
+CDLTAKURI_Bear,47,Takuri Line,호리병 캔들,66,34,c-,e,
+CDLDOJISTAR_Bull,49,Bullish Doji Star,상승형 십자캔들 별 패턴 ,36,64,f+,e-,
+CDLDOJISTAR_Bear,51,Bearish Doji Star,하락형 십자캔들 별 패턴,69,31,e+,f+,
+CDLHARAMICROSS_Bull,50,Bullish Harami Cross,하라미 크로스,53,47,c,d-,
+CDLHARAMICROSS_Bear,80,Bearish Harami Cross,하라미 크로스,53,47,c,h+,
+CDLADVANCEBLOCK_Bull,54,Advance Block Pattern,상승블록형,64,36,g,f,
+CDLADVANCEBLOCK_Bear,54,Advance Block Pattern,상승블록형,64,36,g,f,
+CDLSHOOTINGSTAR_Bull,55,Shooting Star Candlestick,유성형 캔들,41,59,d,f,
+CDLSHOOTINGSTAR_Bear,55,Shooting Star Candlestick,유성형 캔들,41,59,d,f,
+CDLMARUBOZU_Bull,71,Bullish Marubozu,벽돌형 캔들,70,30,e,a,"Bullish Marubozu는 긴 몸통과 거의 또는 전혀 쉐도우가 없는 캔들로, 개장 가격이 최저가에서 시작하여 종가가 최고가로 마감됩니다. 이 패턴은 강한 상승 동향을 나타내며, 매수세가 거래 세션 내내 지배적임을 의미합니다. Bullish Marubozu는 상승 추세의 시작을 예고하거나 기존 추세의 강력한 지속을 나타낼 수 있습니다. Bullish Marubozu는 강한 매수 신호로 해석될 수 있으며, 시장 참여자들 사이에서 높은 신뢰를 받습니다.  강력한 시장 움직임을 나타내지만, 단독으로 사용되어서는 안 됩니다. 시장의 다른 기술적 분석 도구와 함께 사용되어야 하며, 추가적인 확인 신호를 찾는 것이 좋습니다. 또한, 이러한 패턴이 나타난 후 시장의 반응을 주의 깊게 관찰하고, 위험 관리 전략을 적용하는 것이 중요합니다. 투자 결정을 내릴 때는 항상 다양한 요소를 고려해야 하며, 어떠한 분석 방법도 100% 확실한 결과를 보장할 수 없음을 기억해야 합니다."
+CDLMARUBOZU_Bear,57,Bearish Marubozu,벽돌형 캔들,30,70,e,a,"Bearish Marubozu는 긴 몸통과 거의 또는 전혀 쉐도우가 없으며, 개장 가격이 최고가에서 시작하여 종가가 최저가로 마감됩니다. 이는 매도세가 거래 세션 내내 지배적이었음을 의미하며, 하락 추세의 시작이나 기존 하락 추세의 강력한 지속을 나타낼 수 있습니다. Bearish Marubozu는 강한 하락 동향의 신호로 해석됩니다. 강력한 시장 움직임을 나타내지만, 단독으로 사용되어서는 안 됩니다. 시장의 다른 기술적 분석 도구와 함께 사용되어야 하며, 추가적인 확인 신호를 찾는 것이 좋습니다. 또한, 이러한 패턴이 나타난 후 시장의 반응을 주의 깊게 관찰하고, 위험 관리 전략을 적용하는 것이 중요합니다. 투자 결정을 내릴 때는 항상 다양한 요소를 고려해야 하며, 어떠한 분석 방법도 100% 확실한 결과를 보장할 수 없음을 기억해야 합니다. Unique Three River Bottom 패턴은 하락 추세에서 나타나며 시장의 바닥 근처에서 발견될 때, 강력한 상승 반전 신호로 해석될 수 있습니다. 이 패턴은 매수자들이 점점 더 힘을 얻고 있으며, 매도자들의 압력이 약해지고 있음을 나타내는 것으로 간주됩니다.
+
+이 패턴은 하락 추세가 끝나가고 새로운 상승 추세가 시작될 가능성이 있음을 투자자들에게 알려주므로, 매수 기회를 찾고 있는 투자자들에게 유용할 수 있습니다. 그러나, 어떠한 기술적 분석 패턴도 완벽한 예측 도구는 아니므로, Unique Three River Bottom 패턴을 다른 기술적 지표나 분석 방법과 함께 사용하여 투자 결정을 내리는 것이 중요합니다."
+CDLUNIQUE3RIVER_Bull,60,Unique Three-River bottom,희귀 삼천 바닥형,60,40,,,"주식 시장의 기술적 분석에서 사용되는 캔들스틱 패턴 중 하나로, 하락 추세에서 발견되며 잠재적인 반전 신호, 특히 상승 추세로의 전환 가능성을 나타낼 수 있습니다. 이 패턴은 세 개의 캔들로 구성되며, 각 캔들은 시장의 바닥을 찾고 반전이 일어날 준비가 되었음을 나타냅니다. Unique Three River Bottom 패턴 구성
+첫 번째 캔들: 하락 추세의 연장선에서 큰 몸통을 가진 긴 하락 캔들입니다. 이는 시장에서 여전히 강한 매도 압력이 존재함을 나타냅니다.
+두 번째 캔들: 첫 번째 캔들의 종가 근처에서 시작하며, 소소한 하락을 보여주는 더 작은 몸통의 캔들입니다. 이 캔들은 일반적으로 첫 번째 캔들의 몸통 내부에 위치합니다.
+세 번째 캔들: 두 번째 캔들의 종가보다 낮게 시작하지만, 전일 대비 상승하여 두 번째 캔들의 몸통 아래로 떨어진 가격에서 회복하며 종가가 이루어집니다. 이는 잠재적인 시장 반전과 구매자들이 점점 더 통제력을 얻고 있음을 나타냅니다. "
+CDLUNIQUE3RIVER_Bear,60,Unique Three-River bottom,희귀 삼천 바닥형,60,40,,,"주식 시장의 기술적 분석에서 사용되는 캔들스틱 패턴 중 하나로, 하락 추세에서 발견되며 잠재적인 반전 신호, 특히 상승 추세로의 전환 가능성을 나타낼 수 있습니다. 이 패턴은 세 개의 캔들로 구성되며, 각 캔들은 시장의 바닥을 찾고 반전이 일어날 준비가 되었음을 나타냅니다. Unique Three River Bottom 패턴 구성
+첫 번째 캔들: 하락 추세의 연장선에서 큰 몸통을 가진 긴 하락 캔들입니다. 이는 시장에서 여전히 강한 매도 압력이 존재함을 나타냅니다.
+두 번째 캔들: 첫 번째 캔들의 종가 근처에서 시작하며, 소소한 하락을 보여주는 더 작은 몸통의 캔들입니다. 이 캔들은 일반적으로 첫 번째 캔들의 몸통 내부에 위치합니다.
+세 번째 캔들: 두 번째 캔들의 종가보다 낮게 시작하지만, 전일 대비 상승하여 두 번째 캔들의 몸통 아래로 떨어진 가격에서 회복하며 종가가 이루어집니다. 이는 잠재적인 시장 반전과 구매자들이 점점 더 통제력을 얻고 있음을 나타냅니다. "
+CDL2CROWS_Bull,61,Two Crows,까마귀형,46,54,g,g+,
+CDL2CROWS_Bear,61,Two Crows,까마귀형,46,54,g,g+,
+CDLBELTHOLD_Bull,62,Bullish Belt Hold Line ,상승샅바형 캔들,71,29,c+,g+,
+CDLBELTHOLD_Bear,63,Bearish Belt Hold Line ,하락샅바형 캔들,32,68,b-,g+,
+CDLHAMMER_Bull,65,Hammer Candlestick ,망치형 캔들,60,40,d,g,
+CDLHAMMER_Bear,65,Hammer Candlestick ,망치형 캔들,60,40,d,g,
+CDLHIGHWAVE_Bull,67,High Wave,하이웨이브,49,51,b,g,
+CDLHIGHWAVE_Bear,67,High Wave,하이웨이브,49,51,b,g,
+CDLSPINNINGTOP_Bull,69,Bullish Spinning Top,팽이형 캔들,50,50,a+,h+,
+CDLSPINNINGTOP_Bear,73,Bearish Spinning Top,팽이형 캔들,50,50,a+,h+,
+CDLUPSIDEGAP2CROWS_Bull,74,Upside Gap Two Crows,하락반전 까마귀형,60,60,h,h,
+CDLUPSIDEGAP2CROWS_Bear,74,Upside Gap Two Crows,하락반전 까마귀형,60,60,h,h,
+CDLGRAVESTONEDOJI_Bull,77,Gravestone Doji,비석형 캔들,49,51,e+,h,
+CDLGRAVESTONEDOJI_Bear,77,Gravestone Doji,비석형 캔들,49,51,e+,h,
+CDLHIKKAKEMOD_Bull,82,Bullish modified Hikkake,수정형 히카케,55,45,g,,"Bullish Modified Hikkake는 기존 Hikkake 패턴의 변형으로, 잠재적인 상승 추세 전환을 식별하는 데 사용됩니다. 이 패턴은 일반적으로 다음과 같은 순서로 구성됩니다: 초기 캔들이 내부 바를 형성합니다(첫 번째 캔들의 고점과 저점 내에서 다음 캔들이 형성됨).
+그 다음에는 가짜 하락 신호를 나타내는 캔들이 옵니다. 이는 초기 내부 바의 저점 아래로 이동하지만, 이후 상승 반전을 나타냅니다.
+상승 추세를 확인하는 캔들이 따라옵니다."
+CDLHIKKAKEMOD_Bear,81,Bearish modified Hikkake,수정형 히카케,45,55,g,,"Bearish Modified Hikkake는 상승 추세 후 잠재적인 하락 추세 전환을 식별하는 데 사용되는 기술적 분석 패턴입니다. 이 패턴은 다음과 같이 구성됩니다:
+
+초기 캔들이 내부 바를 형성합니다.
+가짜 상승 신호를 나타내는 캔들이 나타나며, 이는 초기 내부 바의 고점 위로 이동하지만, 이후 하락 반전을 나타냅니다.
+하락 추세를 확인하는 캔들이 따라옵니다."
+CDLHIKKAKE_Bull,85,Bullish Hikkake,히카케,,,,,
+CDLHIKKAKE_Bear,83,Bearish Hikkake,히카케,,,,,
+CDLENGULFING_Bull,84,Bullish Engulfing,상승장악형 패턴,63,37,b+,i,
+CDLENGULFING_Bear,91,Bearish Engulfing,하락장악형 패턴,21,79,b+,j+,
+CDLMATHOLD_Bull,86,Bullish Mat Hold Pattern,상승 매트형 패턴,78,22,j+,i,
+CDLMATHOLD_Bear,86,Bearish Mat Hold Pattern,하락 매트형 패턴,78,22,j+,i,
+CDLHANGINGMAN_Bull,87,Hanging Man Candlestick ,교수형 캔들,59,41,b,i,
+CDLHANGINGMAN_Bear,87,Hanging Man Candlestick ,교수형 캔들,59,41,b,i,
+CDLRISEFALL3METHODS_Bull,94,Rising Three Methods,상승 삼법형,74,26,i-,j,
+CDLRISEFALL3METHODS_Bear,89,Falling Three Methods,하락 삼법형,29,71,j+,i-,
+CDLKICKING_Bull,96,Bullish Kicking,상승박차형 패턴,53,47,j-,j,
+CDLKICKING_Bear,102,Bearish Kicking,하락박차형 패턴,46,54,j-,j-,
+CDLDRAGONFLYDOJI_Bull,98,Dragonfly Doji,잠자리형 캔들,50,50,e,j-,
+CDLDRAGONFLYDOJI_Bear,98,Dragonfly Doji,잠자리형 캔들,50,50,e,j-,
+CDLCONCEALBABYSWALL_Bull,101,Concealing Baby Swallow,애기제비감추기형,25,75,j-,j-,
+CDLCONCEALBABYSWALL_Bear,101,Concealing Baby Swallow,애기제비감추기형,25,75,j-,j-,
+CDL3STARSINSOUTH_Bull,103,Three Stars In The North,바닥 삼성형,86,14,j-,j-,
+CDL3STARSINSOUTH_Bear,103,Three Stars In The North,바닥 삼성형,86,14,j-,j-,
+CDLDOJI_Bull,104,Doji Lines,십자형 캔들 ,50,50,,,"Doji Lines 패턴은 시장에서 매우 중요하게 여겨지는 캔들스틱 패턴 중 하나로, 주로 시장의 불확실성과 잠재적인 방향 전환을 나타내는 신호로 해석됩니다. 이 패턴은 개방 가격과 종가가 거의 동일하여, 캔들스틱이 십자 형태나 역십자 형태, 혹은 더 짧은 몸통을 가진 형태로 나타납니다.
+
+Doji 패턴은 그 자체로는 방향성을 갖지 않으며, 주로 다른 캔들스틱 패턴과 함께 발생할 때 더 큰 의미를 가집니다. 예를 들어, 상승 추세나 하락 추세 끝에 나타날 경우 반전 신호로 해석될 수 있습니다."
+CDLDOJI_Bear,104,Doji Lines,십자형 캔들 ,50,50,,,"Doji Lines 패턴은 시장에서 매우 중요하게 여겨지는 캔들스틱 패턴 중 하나로, 주로 시장의 불확실성과 잠재적인 방향 전환을 나타내는 신호로 해석됩니다. 이 패턴은 개방 가격과 종가가 거의 동일하여, 캔들스틱이 십자 형태나 역십자 형태, 혹은 더 짧은 몸통을 가진 형태로 나타납니다.
+
+Doji 패턴은 그 자체로는 방향성을 갖지 않으며, 주로 다른 캔들스틱 패턴과 함께 발생할 때 더 큰 의미를 가집니다. 예를 들어, 상승 추세나 하락 추세 끝에 나타날 경우 반전 신호로 해석될 수 있습니다."

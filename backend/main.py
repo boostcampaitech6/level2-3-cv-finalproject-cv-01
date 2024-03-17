@@ -1,11 +1,13 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from contextlib import asynccontextmanager
 from loguru import logger 
 from sqlmodel import SQLModel
 
 from typing import List
 from utils.newsdata import fetch_news_data
+from utils.candle_matching import main as analyze_candle_pattern
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 # from app.config import config
 from app.database import engine
@@ -32,6 +34,9 @@ app.add_middleware(
 async def root():
     return {"message": "Hello World"}
 
+# 이미지 파일 추가
+app.mount("/static", StaticFiles(directory="utils/candle_patterns"), name="static")
+
 @app.get("/news/", response_model=List[dict])
 async def get_news(query: str = "삼성전자"):
 
@@ -41,7 +46,7 @@ async def get_news(query: str = "삼성전자"):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=True)
 
 
 # uvicorn main:app --reload

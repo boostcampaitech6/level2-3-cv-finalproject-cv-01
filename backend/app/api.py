@@ -5,6 +5,8 @@ from .schemas import UserInfoResponse, FavoriteStocksResponse, SavePredResultsRe
 from .database import UserInfo, FavoriteStocks, SavePredResults, KRX, CNNPredHistory, engine
 from .config import config
 from datetime import datetime
+from utils.candle_matching import main as analyze_candle_pattern
+import asyncio
 
 router = APIRouter()
 
@@ -245,3 +247,19 @@ def save_cnn_pred()->CNNPredResponse:
         pred_7day_result=result.pred_7day_result,
         pred_7day_percent=result.pred_7day_percent,
     )
+
+
+@router.get("/analyze-candle-patterns/{ticker}")
+async def get_candle_pattern(ticker: str):
+    try:
+        loop = asyncio.get_event_loop()
+        result = await loop.run_in_executor(None, analyze_candle_pattern, ticker)
+        if result and "message" in result:
+            # 'message'에서 패턴 코드 추출
+            pattern_code = result["message"].split(": ")[1]
+            # 이미지 URL 생성 및 추가
+            image_url = f"http://localhost:8002/static/{pattern_code}.png"
+            result["image_url"] = image_url  # 'image_url'을 'analysis' 딕셔너리가 아닌 최상위 결과 딕셔너리에 추가
+        return {"ticker": ticker, "analysis": result}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
