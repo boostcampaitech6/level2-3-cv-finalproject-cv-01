@@ -8,6 +8,7 @@ import axios from 'axios';
 import "./style.css";
 import { useParams, useLocation } from "react-router-dom";
 import { AdvancedRealTimeChart} from 'react-ts-tradingview-widgets';
+import React, { useState, useEffect } from 'react';
 
 
 export const Result = () => {

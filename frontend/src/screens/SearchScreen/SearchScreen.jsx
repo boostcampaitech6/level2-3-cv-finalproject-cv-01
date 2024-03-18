@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { Menu } from "../../components/Menu";
 import { StateOffWrapper } from "../../components/StateOffWrapper";
+import { Heart } from "../../components/Heart";
 import "./style.css";
 import AsyncSelect from 'react-select/async';
 import Papa from 'papaparse';
@@ -44,7 +45,7 @@ export const SearchScreen = () => {
 
   const handleChange = (selectedOption) => {
     if (selectedOption) {
-      navigate(`/result/${selectedOption.value}`, {
+      navigate(`/result-1/${selectedOption.value}`, {
         state: { stockLabel: selectedOption.label },
       });
     }
@@ -74,17 +75,14 @@ export const SearchScreen = () => {
   const customStyles = {
     placeholder: (provided) => ({
       ...provided,
-      fontFamily: "Noto Sans KR, Helvetica",
       paddingLeft: '10px', // 원하는 들여쓰기 값으로 조정하세요
     }),
     input: (provided) => ({
       ...provided,
-      fontFamily: "Noto Sans KR, Helvetica",
       paddingLeft: '10px', // 입력 텍스트에 대한 들여쓰기
     }),
     control: (provided, { isFocused }) => ({
       ...provided,
-      fontFamily: "Noto Sans KR, Helvetica",
       minHeight: '45px', // 최소 높이 설정
       borderColor: isFocused ? '#7d49f5' : provided.borderColor, // 포커스 되었을 때 보라색으로 변경
       boxShadow: isFocused ? '0 0 0 1px #7d49f5' : 'none',
@@ -99,22 +97,11 @@ export const SearchScreen = () => {
       color: isFocused ? '#7d49f5':provided.color,  // 화살표 색상을 보라색으로 설정
     }),
 
-    noOptionsMessage: (provided) => ({
-      ...provided,
-      fontFamily: "Noto Sans KR, Helvetica"
-    }),
-
-    loadingMessage: (provided) => ({
-      ...provided,
-      fontFamily: "Noto Sans KR, Helvetica"
-    }),
-
     option: (provided, { isFocused, isSelected }) => {
       return {
         ...provided,
         backgroundColor: isSelected ? '#F2ECFF' : isFocused ? '#F2ECFF' : undefined,
         // 선택된 옵션의 배경색과 포커스 시 배경색
-        fontFamily: "Noto Sans KR, Helvetica",
         paddingLeft: '20px',
       };
     },
@@ -122,6 +109,15 @@ export const SearchScreen = () => {
 
   const handleStockClick = (symbol, label) => {
     navigate(`/result/${symbol}`, { state: { stockLabel: label } });
+  };
+
+  const [likes, setLikes] = useState({}); // 각 주식의 '좋아요' 상태를 관리합니다.
+
+  const toggleLike = (symbol) => {
+    setLikes((currentLikes) => ({
+      ...currentLikes,
+      [symbol]: !currentLikes[symbol], // 토글된 상태를 저장합니다.
+    }));
   };
 
 
@@ -134,9 +130,10 @@ export const SearchScreen = () => {
             <StateOffWrapper 
               className="component-1169-instance" 
               logoClassName="logo-img"
-              state="off" 
+              state={likes['KRX:035420'] ? 'on' : 'off'} 
               text="네이버"
-              text1="035420" 
+              text1="035420"
+              onHeartClick={() => toggleLike('KRX:035420')} // onHeartClick prop 추가
             />
           </div>
 
@@ -144,9 +141,10 @@ export const SearchScreen = () => {
             <StateOffWrapper
                 className="component-1169-instance"
                 logoClassName="component-1169"
-                state="off"
+                state={likes['KRX:005930'] ? 'on' : 'off'}
                 text="삼성전자"
                 text1="005930"
+                onHeartClick={() => toggleLike('KRX:005930')}
               />
           </div>
 
@@ -154,9 +152,10 @@ export const SearchScreen = () => {
             <StateOffWrapper
                 className="component-1169-instance"
                 logoClassName="stock-2"
-                state="off"
+                state={likes['KRX:035720'] ? 'on' : 'off'}
                 text="카카오"
                 text1="035720"
+                onHeartClick={() => toggleLike('KRX:035720')}
               />
           </div>
             
@@ -164,9 +163,10 @@ export const SearchScreen = () => {
             <StateOffWrapper 
               className="component-1169-instance" 
               logoClassName="stock-4" 
-              state="off" 
+              state={likes['KRX:068270'] ? 'on' : 'off'} 
               text="셀트리온" 
               text1="068270" 
+              onHeartClick={() => toggleLike('KRX:068270')}
             />
           </div>
 

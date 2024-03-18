@@ -35953,7 +35953,61 @@ $RefreshReg$(_c, "LoginKakao");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"dFu9P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","axios":"jo6P5","../../components/Check":"eGBKr","../../components/UserContext":"2A0Gu"}],"dFu9P":[function() {},{}],"jo6P5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"dFu9P","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../components/Check":"eGBKr","react-router-dom":"9xmpe","axios":"jo6P5","../../components/UserContext":"2A0Gu"}],"dFu9P":[function() {},{}],"eGBKr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Check", ()=>(0, _check.Check));
+var _check = require("./Check");
+
+},{"./Check":"kvhnx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kvhnx":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8398 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8398.prelude(module);
+
+try {
+/*
+We're constantly improving the code you see. 
+Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Check", ()=>Check);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styleCss = require("./style.css");
+const Check = ({ login = true, className, divClassName })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `check ${className}`,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: `text-wrapper ${divClassName}`,
+            children: "\uB3D9\uC758\uD558\uACE0 \uACC4\uC18D\uD558\uAE30"
+        }, void 0, false, {
+            fileName: "src/components/Check/Check.jsx",
+            lineNumber: 13,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Check/Check.jsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Check;
+Check.propTypes = {
+    login: (0, _propTypesDefault.default).bool
+};
+var _c;
+$RefreshReg$(_c, "Check");
+
+  $parcel$ReactRefreshHelpers$8398.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"bAL9f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bAL9f":[function() {},{}],"jo6P5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>(0, _axiosJsDefault.default));
@@ -40134,61 +40188,7 @@ Object.entries(HttpStatusCode).forEach(([key, value])=>{
 });
 exports.default = HttpStatusCode;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eGBKr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Check", ()=>(0, _check.Check));
-var _check = require("./Check");
-
-},{"./Check":"kvhnx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kvhnx":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8398 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8398.prelude(module);
-
-try {
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Check", ()=>Check);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styleCss = require("./style.css");
-const Check = ({ login = true, className, divClassName })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `check ${className}`,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: `text-wrapper ${divClassName}`,
-            children: "\uB3D9\uC758\uD558\uACE0 \uACC4\uC18D\uD558\uAE30"
-        }, void 0, false, {
-            fileName: "src/components/Check/Check.jsx",
-            lineNumber: 13,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Check/Check.jsx",
-        lineNumber: 12,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Check;
-Check.propTypes = {
-    login: (0, _propTypesDefault.default).bool
-};
-var _c;
-$RefreshReg$(_c, "Check");
-
-  $parcel$ReactRefreshHelpers$8398.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"7wKI2","react":"21dqq","./style.css":"bAL9f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bAL9f":[function() {},{}],"2A0Gu":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2A0Gu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "UserProvider", ()=>(0, _userContext.UserProvider));
@@ -40272,6 +40272,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _menu = require("../../components/Menu");
 var _stateOffWrapper = require("../../components/StateOffWrapper");
+var _heart = require("../../components/Heart");
 var _styleCss = require("./style.css");
 var _async = require("react-select/async");
 var _asyncDefault = parcelHelpers.interopDefault(_async);
@@ -40307,7 +40308,7 @@ const SearchScreen = ()=>{
         return stocksData.filter((i)=>i.label && i.label.toLowerCase().includes(inputValue.toLowerCase()));
     };
     const handleChange = (selectedOption)=>{
-        if (selectedOption) navigate(`/result/${selectedOption.value}`, {
+        if (selectedOption) navigate(`/result-1/${selectedOption.value}`, {
             state: {
                 stockLabel: selectedOption.label
             }
@@ -40328,29 +40329,26 @@ const SearchScreen = ()=>{
                     children: part
                 }, index, false, {
                     fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                    lineNumber: 65,
+                    lineNumber: 66,
                     columnNumber: 13
                 }, undefined) : part)
         }, void 0, false, {
             fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-            lineNumber: 62,
+            lineNumber: 63,
             columnNumber: 7
         }, undefined);
     };
     const customStyles = {
         placeholder: (provided)=>({
                 ...provided,
-                fontFamily: "Noto Sans KR, Helvetica",
                 paddingLeft: "10px"
             }),
         input: (provided)=>({
                 ...provided,
-                fontFamily: "Noto Sans KR, Helvetica",
                 paddingLeft: "10px"
             }),
         control: (provided, { isFocused })=>({
                 ...provided,
-                fontFamily: "Noto Sans KR, Helvetica",
                 minHeight: "45px",
                 borderColor: isFocused ? "#7d49f5" : provided.borderColor,
                 boxShadow: isFocused ? "0 0 0 1px #7d49f5" : "none",
@@ -40363,20 +40361,11 @@ const SearchScreen = ()=>{
                 ...provided,
                 color: isFocused ? "#7d49f5" : provided.color
             }),
-        noOptionsMessage: (provided)=>({
-                ...provided,
-                fontFamily: "Noto Sans KR, Helvetica"
-            }),
-        loadingMessage: (provided)=>({
-                ...provided,
-                fontFamily: "Noto Sans KR, Helvetica"
-            }),
         option: (provided, { isFocused, isSelected })=>{
             return {
                 ...provided,
                 backgroundColor: isSelected ? "#F2ECFF" : isFocused ? "#F2ECFF" : undefined,
                 // 선택된 옵션의 배경색과 포커스 시 배경색
-                fontFamily: "Noto Sans KR, Helvetica",
                 paddingLeft: "20px"
             };
         }
@@ -40387,6 +40376,13 @@ const SearchScreen = ()=>{
                 stockLabel: label
             }
         });
+    };
+    const [likes, setLikes] = (0, _react.useState)({}); // 각 주식의 '좋아요' 상태를 관리합니다.
+    const toggleLike = (symbol)=>{
+        setLikes((currentLikes)=>({
+                ...currentLikes,
+                [symbol]: !currentLikes[symbol]
+            }));
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "search-screen",
@@ -40403,17 +40399,18 @@ const SearchScreen = ()=>{
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
                                     className: "component-1169-instance",
                                     logoClassName: "logo-img",
-                                    state: "off",
+                                    state: likes["KRX:035420"] ? "on" : "off",
                                     text: "\uB124\uC774\uBC84",
-                                    text1: "035420"
+                                    text1: "035420",
+                                    onHeartClick: ()=>toggleLike("KRX:035420")
                                 }, void 0, false, {
                                     fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 134,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 133,
+                                lineNumber: 129,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40421,17 +40418,18 @@ const SearchScreen = ()=>{
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
                                     className: "component-1169-instance",
                                     logoClassName: "component-1169",
-                                    state: "off",
+                                    state: likes["KRX:005930"] ? "on" : "off",
                                     text: "\uC0BC\uC131\uC804\uC790",
-                                    text1: "005930"
+                                    text1: "005930",
+                                    onHeartClick: ()=>toggleLike("KRX:005930")
                                 }, void 0, false, {
                                     fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 144,
+                                    lineNumber: 141,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 143,
+                                lineNumber: 140,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40439,17 +40437,18 @@ const SearchScreen = ()=>{
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
                                     className: "component-1169-instance",
                                     logoClassName: "stock-2",
-                                    state: "off",
+                                    state: likes["KRX:035720"] ? "on" : "off",
                                     text: "\uCE74\uCE74\uC624",
-                                    text1: "035720"
+                                    text1: "035720",
+                                    onHeartClick: ()=>toggleLike("KRX:035720")
                                 }, void 0, false, {
                                     fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 154,
+                                    lineNumber: 152,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 153,
+                                lineNumber: 151,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40457,23 +40456,24 @@ const SearchScreen = ()=>{
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stateOffWrapper.StateOffWrapper), {
                                     className: "component-1169-instance",
                                     logoClassName: "stock-4",
-                                    state: "off",
+                                    state: likes["KRX:068270"] ? "on" : "off",
                                     text: "\uC140\uD2B8\uB9AC\uC628",
-                                    text1: "068270"
+                                    text1: "068270",
+                                    onHeartClick: ()=>toggleLike("KRX:068270")
                                 }, void 0, false, {
                                     fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                    lineNumber: 164,
+                                    lineNumber: 163,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                                lineNumber: 163,
+                                lineNumber: 162,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                        lineNumber: 132,
+                        lineNumber: 128,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40560,21 +40560,21 @@ const SearchScreen = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-                lineNumber: 131,
+                lineNumber: 127,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-            lineNumber: 130,
+            lineNumber: 126,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/SearchScreen/SearchScreen.jsx",
-        lineNumber: 129,
+        lineNumber: 125,
         columnNumber: 5
     }, undefined);
 };
-_s(SearchScreen, "n5tHza7dh1LHBDCnRjqKgjZXsFo=", false, function() {
+_s(SearchScreen, "2CC6POZkMcLMiQx5hADYve2eTrg=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -40588,7 +40588,7 @@ $RefreshReg$(_c, "SearchScreen");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Menu":"cAuPj","./style.css":"7EuOT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","react-select/async":"6qsCb","papaparse":"5w3wE","../../components/StateOffWrapper":"iBSFI"}],"cAuPj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../components/Menu":"cAuPj","./style.css":"7EuOT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","react-select/async":"6qsCb","papaparse":"5w3wE","../../components/StateOffWrapper":"iBSFI","../../components/Heart":"5O8bA"}],"cAuPj":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Menu", ()=>(0, _menu.Menu));
@@ -50411,10 +50411,7 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$6064.prelude(module);
 
 try {
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "StateOffWrapper", ()=>StateOffWrapper);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
@@ -50425,10 +50422,14 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _heart = require("../Heart");
 var _styleCss = require("./style.css");
-const StateOffWrapper = ({ state, className, text = "NAVER", text1 = "035420", logoClassName, to })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+const StateOffWrapper = ({ state, className, text, text1, logoClassName, to, onHeartClick })=>{
+    const handleHeartClick = (event)=>{
+        event.stopPropagation(); // 이벤트 전파를 중단합니다.
+        onHeartClick(event); // onHeartClick 핸들러에 이벤트 객체를 전달합니다.
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: `state-off-wrapper ${className}`,
-        to: to,
+        onClick: ()=>navigate(to),
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: `overlap-group state-${state}`,
             children: [
@@ -50466,7 +50467,8 @@ const StateOffWrapper = ({ state, className, text = "NAVER", text1 = "035420", l
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heart.Heart), {
                     className: "heart-instance",
-                    stateProp: "off"
+                    stateProp: state,
+                    onClick: handleHeartClick
                 }, void 0, false, {
                     fileName: "src/components/StateOffWrapper/StateOffWrapper.jsx",
                     lineNumber: 21,
@@ -50485,6 +50487,7 @@ const StateOffWrapper = ({ state, className, text = "NAVER", text1 = "035420", l
     }, undefined);
 };
 _c = StateOffWrapper;
+// PropTypes 추가 및 업데이트
 StateOffWrapper.propTypes = {
     state: (0, _propTypesDefault.default).oneOf([
         "off",
@@ -50492,7 +50495,8 @@ StateOffWrapper.propTypes = {
     ]),
     text: (0, _propTypesDefault.default).string,
     text1: (0, _propTypesDefault.default).string,
-    to: (0, _propTypesDefault.default).string
+    to: (0, _propTypesDefault.default).string,
+    onHeartClick: (0, _propTypesDefault.default).func.isRequired
 };
 var _c;
 $RefreshReg$(_c, "StateOffWrapper");
@@ -50527,41 +50531,61 @@ var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _styleCss = require("./style.css");
-var _s = $RefreshSig$();
-const Heart = ({ stateProp, className })=>{
-    _s();
-    const [state, dispatch] = (0, _react.useReducer)(reducer, {
-        state: stateProp || "off"
-    });
+const Heart = ({ stateProp, className, onClick })=>{
+    const handleClick = (event)=>{
+        event.stopPropagation(); // 이벤트 전파를 중단합니다.
+        if (onClick) onClick(event); // 부모 컴포넌트에서 전달된 onClick 핸들러에 이벤트 객체를 전달합니다.
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `heart ${state.state} ${className}`,
-        onClick: ()=>{
-            dispatch("click");
-        }
+        className: `heart ${stateProp} ${className}`,
+        onClick: handleClick
     }, void 0, false, {
         fileName: "src/components/Heart/Heart.jsx",
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 5
     }, undefined);
 };
-_s(Heart, "tvuMfAcvtbxE7OGqkV15XYmP+R8=");
 _c = Heart;
-function reducer(state, action) {
-    switch(action){
-        case "click":
-            return {
-                ...state,
-                state: "off"
-            };
-    }
-    return state;
-}
 Heart.propTypes = {
     stateProp: (0, _propTypesDefault.default).oneOf([
         "off",
         "on"
     ])
-};
+}; // import PropTypes from "prop-types";
+ // import React, { useState } from 'react';
+ // import { Heart } from "./Heart"
+ // import "./style.css";
+ // export const Heart = ({ stateProp, className, onClick }) => {
+ //   const [state, dispatch] = useReducer(reducer, {
+ //     state: stateProp || "off",
+ //   });
+ //   const handleClick = (event) => {
+ //     event.stopPropagation();
+ //     dispatch({ type: 'TOGGLE_HEART' }); // 액션을 dispatch합니다.
+ //     if (onClick) onClick(event); // 추가적인 부모 컴포넌트의 핸들러가 있을 경우 호출합니다.
+ //   };
+ //   return (
+ //     <div
+ //       className={`heart ${state.state} ${className}`}
+ //       onClick={handleClick} // 수정된 핸들러를 사용합니다.
+ //     />
+ //   );
+ // };
+ // // 상태를 토글하는 reducer 함수
+ // function reducer(state, action) {
+ //   switch (action.type) {
+ //     case 'TOGGLE_HEART':
+ //       return {
+ //         ...state,
+ //         state: state.state === 'off' ? 'on' : 'off',
+ //       };
+ //     default:
+ //       return state;
+ //   }
+ // }
+ // Heart.propTypes = {
+ //   stateProp: PropTypes.oneOf(["off", "on"]),
+ // };
 var _c;
 $RefreshReg$(_c, "Heart");
 
@@ -51532,31 +51556,45 @@ const FavoriteScreen = ()=>{
                         className: "favorite-list",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
-                                className: "component-1175"
+                                className: "component-1175",
+                                companyName: "\uB124\uC774\uBC84",
+                                symbol: "035420",
+                                price: "184,100 \uC6D0",
+                                change: "-2,000",
+                                percentChange: "-1.07%",
+                                graph: "/img/frame-40.svg",
+                                logo: "/img/ellipse-15.png"
                             }, void 0, false, {
                                 fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
                                 lineNumber: 21,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
-                                className: "component-1175-instance"
+                                className: "component-1175",
+                                companyName: "\uC0BC\uC131\uC804\uC790",
+                                symbol: "005930",
+                                price: "72,800 \uC6D0",
+                                change: "+5,00",
+                                percentChange: "+0.69%",
+                                graph: "/img/frame-40.svg",
+                                logo: "/img/ellipse-15-1.png"
                             }, void 0, false, {
                                 fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                                lineNumber: 22,
+                                lineNumber: 31,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
-                                className: "component-1175-instance"
+                                className: "component-1175",
+                                companyName: "\uCE74\uCE74\uC624",
+                                symbol: "035720",
+                                price: "53,000 \uC6D0",
+                                change: "-1,100",
+                                percentChange: "-2.03%",
+                                graph: "/img/frame-40.svg",
+                                logo: "/img/ellipse-15-9.png"
                             }, void 0, false, {
                                 fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                                lineNumber: 23,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
-                                className: "stock-19"
-                            }, void 0, false, {
-                                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                                lineNumber: 24,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, undefined)
                         ]
@@ -51581,12 +51619,12 @@ const FavoriteScreen = ()=>{
                             to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                            lineNumber: 27,
+                            lineNumber: 53,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                        lineNumber: 26,
+                        lineNumber: 52,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51596,12 +51634,12 @@ const FavoriteScreen = ()=>{
                             children: "Favorite"
                         }, void 0, false, {
                             fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                            lineNumber: 42,
+                            lineNumber: 68,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                        lineNumber: 41,
+                        lineNumber: 67,
                         columnNumber: 11
                     }, undefined)
                 ]
@@ -51653,7 +51691,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _styleCss = require("./style.css");
-const DivWrapper = ({ className })=>{
+const DivWrapper = ({ className, companyName, graph, symbol, price, change, percentChange, logo })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: `div-wrapper ${className}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51665,7 +51703,7 @@ const DivWrapper = ({ className })=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                             className: "frame-2",
                             alt: "Frame",
-                            src: "/img/frame-40.svg"
+                            src: graph
                         }, void 0, false, {
                             fileName: "src/components/DivWrapper/DivWrapper.jsx",
                             lineNumber: 14,
@@ -51676,7 +51714,7 @@ const DivWrapper = ({ className })=>{
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "text-wrapper-5",
-                                    children: "188,000 \uC6D0"
+                                    children: price
                                 }, void 0, false, {
                                     fileName: "src/components/DivWrapper/DivWrapper.jsx",
                                     lineNumber: 16,
@@ -51684,7 +51722,7 @@ const DivWrapper = ({ className })=>{
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "text-wrapper-6",
-                                    children: "- 1,000"
+                                    children: change
                                 }, void 0, false, {
                                     fileName: "src/components/DivWrapper/DivWrapper.jsx",
                                     lineNumber: 17,
@@ -51692,7 +51730,7 @@ const DivWrapper = ({ className })=>{
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "text-wrapper-7",
-                                    children: "- 0.53%"
+                                    children: percentChange
                                 }, void 0, false, {
                                     fileName: "src/components/DivWrapper/DivWrapper.jsx",
                                     lineNumber: 18,
@@ -51715,7 +51753,7 @@ const DivWrapper = ({ className })=>{
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "text-wrapper-8",
-                            children: "NAVER"
+                            children: companyName
                         }, void 0, false, {
                             fileName: "src/components/DivWrapper/DivWrapper.jsx",
                             lineNumber: 22,
@@ -51723,7 +51761,7 @@ const DivWrapper = ({ className })=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "text-wrapper-9",
-                            children: "035420"
+                            children: symbol
                         }, void 0, false, {
                             fileName: "src/components/DivWrapper/DivWrapper.jsx",
                             lineNumber: 23,
@@ -51735,8 +51773,10 @@ const DivWrapper = ({ className })=>{
                     lineNumber: 21,
                     columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "logo-3"
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "logo-3",
+                    alt: `${companyName} logo`,
+                    src: logo
                 }, void 0, false, {
                     fileName: "src/components/DivWrapper/DivWrapper.jsx",
                     lineNumber: 25,
@@ -51763,7 +51803,7 @@ $RefreshReg$(_c, "DivWrapper");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"fuiHb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fuiHb":[function() {},{}],"eGchp":[function() {},{}],"h0WTf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./style.css":"fuiHb"}],"fuiHb":[function() {},{}],"eGchp":[function() {},{}],"h0WTf":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Result", ()=>(0, _result.Result));
@@ -51827,12 +51867,12 @@ const Result = ()=>{
                                     children: "73,300"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 40,
+                                    lineNumber: 41,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 39,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51842,12 +51882,12 @@ const Result = ()=>{
                                     children: "+1,100\xa0(1.52%)"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 43,
+                                    lineNumber: 44,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 42,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51857,12 +51897,12 @@ const Result = ()=>{
                                     children: "KOSPI\xa0005930"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 46,
+                                    lineNumber: 47,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 45,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51872,12 +51912,12 @@ const Result = ()=>{
                                     children: "\uC2DC\uAC00\uCD1D\uC561 489.80\uC870"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 49,
+                                    lineNumber: 50,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 48,
+                                lineNumber: 49,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51887,18 +51927,18 @@ const Result = ()=>{
                                     children: "\uC2DC\uAC00\uCD1D\uC561 \u3147\uC704"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 52,
+                                    lineNumber: 53,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 51,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 38,
+                        lineNumber: 39,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51910,12 +51950,12 @@ const Result = ()=>{
                             interval: "D"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 56,
+                            lineNumber: 57,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 55,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51933,7 +51973,7 @@ const Result = ()=>{
                                             children: item.title.replace(/<b>|<\/b>/g, "")
                                         }, void 0, false, {
                                             fileName: "src/screens/Result/Result.jsx",
-                                            lineNumber: 68,
+                                            lineNumber: 69,
                                             columnNumber: 19
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -51941,23 +51981,23 @@ const Result = ()=>{
                                             children: item.description.replace(/<b>|<\/b>/g, "")
                                         }, void 0, false, {
                                             fileName: "src/screens/Result/Result.jsx",
-                                            lineNumber: 69,
+                                            lineNumber: 70,
                                             columnNumber: 19
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 67,
+                                    lineNumber: 68,
                                     columnNumber: 17
                                 }, undefined)
                             }, index, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 66,
+                                lineNumber: 67,
                                 columnNumber: 15
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 64,
+                        lineNumber: 65,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51967,12 +52007,12 @@ const Result = ()=>{
                             state: "on"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 76,
+                            lineNumber: 77,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 75,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51992,12 +52032,12 @@ const Result = ()=>{
                             to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 79,
+                            lineNumber: 80,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 78,
+                        lineNumber: 79,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52010,12 +52050,12 @@ const Result = ()=>{
                                     children: stockLabel
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 96,
+                                    lineNumber: 97,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 95,
+                                lineNumber: 96,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52026,7 +52066,7 @@ const Result = ()=>{
                                         stateProp: "off"
                                     }, void 0, false, {
                                         fileName: "src/screens/Result/Result.jsx",
-                                        lineNumber: 99,
+                                        lineNumber: 100,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _two.Two), {
@@ -52034,35 +52074,35 @@ const Result = ()=>{
                                         color: "#7D49F5"
                                     }, void 0, false, {
                                         fileName: "src/screens/Result/Result.jsx",
-                                        lineNumber: 100,
+                                        lineNumber: 101,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 98,
+                                lineNumber: 99,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 94,
+                        lineNumber: 95,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/screens/Result/Result.jsx",
-                lineNumber: 37,
+                lineNumber: 38,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/screens/Result/Result.jsx",
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/Result/Result.jsx",
-        lineNumber: 35,
+        lineNumber: 36,
         columnNumber: 5
     }, undefined);
 };
@@ -54460,7 +54500,7 @@ $RefreshReg$(_c, "ResultWrapper");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Heart":"5O8bA","../../components/Loding":"ffXJx","../../components/Menu":"cAuPj","../../icons/Two":"lKl4Q","axios":"jo6P5","./style.css":"fwUtv","react-ts-tradingview-widgets":"4t3Cr","react-spinners":"Q9MKS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fwUtv":[function() {},{}],"7NPJ5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../components/Heart":"5O8bA","../../components/Loding":"ffXJx","../../components/Menu":"cAuPj","../../icons/Two":"lKl4Q","axios":"jo6P5","./style.css":"fwUtv","react-ts-tradingview-widgets":"4t3Cr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-spinners":"Q9MKS"}],"fwUtv":[function() {},{}],"7NPJ5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FavoriteWrapper", ()=>(0, _favoriteWrapper.FavoriteWrapper));
