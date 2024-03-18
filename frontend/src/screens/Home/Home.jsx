@@ -169,6 +169,7 @@ export const Home = () => {
                 spanClassName="stock-6"
                 state="off"
                 text="삼성전자"
+                to="/result"
               />
             </div>
             <div onClick={() => handleStockClick('KRX:035720', '카카오')}>
