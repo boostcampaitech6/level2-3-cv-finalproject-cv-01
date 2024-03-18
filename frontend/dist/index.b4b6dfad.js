@@ -50775,7 +50775,8 @@ const Home = ()=>{
                                         logoClassName: "stock-11",
                                         spanClassName: "stock-6",
                                         state: "off",
-                                        text: "\uC0BC\uC131\uC804\uC790"
+                                        text: "\uC0BC\uC131\uC804\uC790",
+                                        to: "/result"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
                                         lineNumber: 163,
@@ -50799,12 +50800,12 @@ const Home = ()=>{
                                         text: "\uCE74\uCE74\uC624"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 175,
+                                        lineNumber: 176,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 174,
+                                    lineNumber: 175,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50820,12 +50821,12 @@ const Home = ()=>{
                                         text: "\uC5D0\uCF54\uD504\uB85C"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 187,
+                                        lineNumber: 188,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 186,
+                                    lineNumber: 187,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50841,12 +50842,12 @@ const Home = ()=>{
                                         text: "\uD604\uB300\uCC28"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 199,
+                                        lineNumber: 200,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 198,
+                                    lineNumber: 199,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50862,12 +50863,12 @@ const Home = ()=>{
                                         text: "LG\uC5D0\uB108\uC9C0\uC194\uB8E8\uC158"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 212,
+                                        lineNumber: 213,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 211,
+                                    lineNumber: 212,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50883,12 +50884,12 @@ const Home = ()=>{
                                         text: "SK\uD558\uC774\uB2C9\uC2A4"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 225,
+                                        lineNumber: 226,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 224,
+                                    lineNumber: 225,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50904,12 +50905,12 @@ const Home = ()=>{
                                         text: "\uAE30\uC5C5\uC740\uD589"
                                     }, void 0, false, {
                                         fileName: "src/screens/Home/Home.jsx",
-                                        lineNumber: 237,
+                                        lineNumber: 238,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 236,
+                                    lineNumber: 237,
                                     columnNumber: 13
                                 }, undefined)
                             ]
@@ -50933,12 +50934,12 @@ const Home = ()=>{
                                     children: "\uC774\uB7F0 \uC885\uBAA9\uC740 \uC5B4\uB54C\uC694?"
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 252,
+                                    lineNumber: 253,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 251,
+                                lineNumber: 252,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50948,18 +50949,18 @@ const Home = ()=>{
                                     children: "\uAD00\uC2EC \uC788\uB294 \uC8FC\uC2DD\uC744 \uD074\uB9AD\uD574 \uBCF4\uC138\uC694."
                                 }, void 0, false, {
                                     fileName: "src/screens/Home/Home.jsx",
-                                    lineNumber: 255,
+                                    lineNumber: 256,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 254,
+                                lineNumber: 255,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 250,
+                        lineNumber: 251,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50981,17 +50982,17 @@ const Home = ()=>{
                                 formatOptionLabel: formatOptionLabel
                             }, void 0, false, {
                                 fileName: "src/screens/Home/Home.jsx",
-                                lineNumber: 260,
+                                lineNumber: 261,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 259,
+                            lineNumber: 260,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 258,
+                        lineNumber: 259,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51007,12 +51008,12 @@ const Home = ()=>{
                             to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 275,
+                            lineNumber: 276,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 274,
+                        lineNumber: 275,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51022,12 +51023,12 @@ const Home = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/screens/Home/Home.jsx",
-                            lineNumber: 287,
+                            lineNumber: 288,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Home/Home.jsx",
-                        lineNumber: 286,
+                        lineNumber: 287,
                         columnNumber: 11
                     }, undefined)
                 ]
@@ -51532,31 +51533,45 @@ const FavoriteScreen = ()=>{
                         className: "favorite-list",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
-                                className: "component-1175"
+                                className: "component-1175",
+                                companyName: "\uB124\uC774\uBC84",
+                                symbol: "035420",
+                                price: "184,100 \uC6D0",
+                                change: "-2,000",
+                                percentChange: "-1.07%",
+                                graph: "/img/frame-40.svg",
+                                logo: "/img/ellipse-15.png"
                             }, void 0, false, {
                                 fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
                                 lineNumber: 21,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
-                                className: "component-1175-instance"
+                                className: "component-1175",
+                                companyName: "\uC0BC\uC131\uC804\uC790",
+                                symbol: "005930",
+                                price: "72,800 \uC6D0",
+                                change: "+5,00",
+                                percentChange: "+0.69%",
+                                graph: "/img/frame-40.svg",
+                                logo: "/img/ellipse-15-1.png"
                             }, void 0, false, {
                                 fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                                lineNumber: 22,
+                                lineNumber: 31,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
-                                className: "component-1175-instance"
+                                className: "component-1175",
+                                companyName: "\uCE74\uCE74\uC624",
+                                symbol: "035720",
+                                price: "53,000 \uC6D0",
+                                change: "-1,100",
+                                percentChange: "-2.03%",
+                                graph: "/img/frame-40.svg",
+                                logo: "/img/ellipse-15-9.png"
                             }, void 0, false, {
                                 fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                                lineNumber: 23,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _divWrapper.DivWrapper), {
-                                className: "stock-19"
-                            }, void 0, false, {
-                                fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                                lineNumber: 24,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, undefined)
                         ]
@@ -51581,12 +51596,12 @@ const FavoriteScreen = ()=>{
                             to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                            lineNumber: 27,
+                            lineNumber: 53,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                        lineNumber: 26,
+                        lineNumber: 52,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51596,12 +51611,12 @@ const FavoriteScreen = ()=>{
                             children: "Favorite"
                         }, void 0, false, {
                             fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                            lineNumber: 42,
+                            lineNumber: 68,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/FavoriteScreen/FavoriteScreen.jsx",
-                        lineNumber: 41,
+                        lineNumber: 67,
                         columnNumber: 11
                     }, undefined)
                 ]
@@ -51653,7 +51668,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _styleCss = require("./style.css");
-const DivWrapper = ({ className })=>{
+const DivWrapper = ({ className, companyName, graph, symbol, price, change, percentChange, logo })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: `div-wrapper ${className}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51665,7 +51680,7 @@ const DivWrapper = ({ className })=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                             className: "frame-2",
                             alt: "Frame",
-                            src: "/img/frame-40.svg"
+                            src: graph
                         }, void 0, false, {
                             fileName: "src/components/DivWrapper/DivWrapper.jsx",
                             lineNumber: 14,
@@ -51676,7 +51691,7 @@ const DivWrapper = ({ className })=>{
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "text-wrapper-5",
-                                    children: "188,000 \uC6D0"
+                                    children: price
                                 }, void 0, false, {
                                     fileName: "src/components/DivWrapper/DivWrapper.jsx",
                                     lineNumber: 16,
@@ -51684,7 +51699,7 @@ const DivWrapper = ({ className })=>{
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "text-wrapper-6",
-                                    children: "- 1,000"
+                                    children: change
                                 }, void 0, false, {
                                     fileName: "src/components/DivWrapper/DivWrapper.jsx",
                                     lineNumber: 17,
@@ -51692,7 +51707,7 @@ const DivWrapper = ({ className })=>{
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "text-wrapper-7",
-                                    children: "- 0.53%"
+                                    children: percentChange
                                 }, void 0, false, {
                                     fileName: "src/components/DivWrapper/DivWrapper.jsx",
                                     lineNumber: 18,
@@ -51715,7 +51730,7 @@ const DivWrapper = ({ className })=>{
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "text-wrapper-8",
-                            children: "NAVER"
+                            children: companyName
                         }, void 0, false, {
                             fileName: "src/components/DivWrapper/DivWrapper.jsx",
                             lineNumber: 22,
@@ -51723,7 +51738,7 @@ const DivWrapper = ({ className })=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "text-wrapper-9",
-                            children: "035420"
+                            children: symbol
                         }, void 0, false, {
                             fileName: "src/components/DivWrapper/DivWrapper.jsx",
                             lineNumber: 23,
@@ -51735,8 +51750,10 @@ const DivWrapper = ({ className })=>{
                     lineNumber: 21,
                     columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "logo-3"
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "logo-3",
+                    alt: `${companyName} logo`,
+                    src: logo
                 }, void 0, false, {
                     fileName: "src/components/DivWrapper/DivWrapper.jsx",
                     lineNumber: 25,
@@ -51763,7 +51780,7 @@ $RefreshReg$(_c, "DivWrapper");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"fuiHb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fuiHb":[function() {},{}],"eGchp":[function() {},{}],"h0WTf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./style.css":"fuiHb"}],"fuiHb":[function() {},{}],"eGchp":[function() {},{}],"h0WTf":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Result", ()=>(0, _result.Result));
@@ -51827,12 +51844,12 @@ const Result = ()=>{
                                     children: "73,300"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 40,
+                                    lineNumber: 41,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 39,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51842,12 +51859,12 @@ const Result = ()=>{
                                     children: "+1,100\xa0(1.52%)"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 43,
+                                    lineNumber: 44,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 42,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51857,12 +51874,12 @@ const Result = ()=>{
                                     children: "KOSPI\xa0005930"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 46,
+                                    lineNumber: 47,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 45,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51872,12 +51889,12 @@ const Result = ()=>{
                                     children: "\uC2DC\uAC00\uCD1D\uC561 489.80\uC870"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 49,
+                                    lineNumber: 50,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 48,
+                                lineNumber: 49,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51887,18 +51904,18 @@ const Result = ()=>{
                                     children: "\uC2DC\uAC00\uCD1D\uC561 \u3147\uC704"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 52,
+                                    lineNumber: 53,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 51,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 38,
+                        lineNumber: 39,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51910,12 +51927,12 @@ const Result = ()=>{
                             interval: "D"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 56,
+                            lineNumber: 57,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 55,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51933,7 +51950,7 @@ const Result = ()=>{
                                             children: item.title.replace(/<b>|<\/b>/g, "")
                                         }, void 0, false, {
                                             fileName: "src/screens/Result/Result.jsx",
-                                            lineNumber: 68,
+                                            lineNumber: 69,
                                             columnNumber: 19
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -51941,23 +51958,23 @@ const Result = ()=>{
                                             children: item.description.replace(/<b>|<\/b>/g, "")
                                         }, void 0, false, {
                                             fileName: "src/screens/Result/Result.jsx",
-                                            lineNumber: 69,
+                                            lineNumber: 70,
                                             columnNumber: 19
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 67,
+                                    lineNumber: 68,
                                     columnNumber: 17
                                 }, undefined)
                             }, index, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 66,
+                                lineNumber: 67,
                                 columnNumber: 15
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 64,
+                        lineNumber: 65,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51967,12 +51984,12 @@ const Result = ()=>{
                             state: "on"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 76,
+                            lineNumber: 77,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 75,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -51992,12 +52009,12 @@ const Result = ()=>{
                             to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 79,
+                            lineNumber: 80,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 78,
+                        lineNumber: 79,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52010,12 +52027,12 @@ const Result = ()=>{
                                     children: stockLabel
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 96,
+                                    lineNumber: 97,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 95,
+                                lineNumber: 96,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52026,7 +52043,7 @@ const Result = ()=>{
                                         stateProp: "off"
                                     }, void 0, false, {
                                         fileName: "src/screens/Result/Result.jsx",
-                                        lineNumber: 99,
+                                        lineNumber: 100,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _two.Two), {
@@ -52034,35 +52051,35 @@ const Result = ()=>{
                                         color: "#7D49F5"
                                     }, void 0, false, {
                                         fileName: "src/screens/Result/Result.jsx",
-                                        lineNumber: 100,
+                                        lineNumber: 101,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 98,
+                                lineNumber: 99,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 94,
+                        lineNumber: 95,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/screens/Result/Result.jsx",
-                lineNumber: 37,
+                lineNumber: 38,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/screens/Result/Result.jsx",
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/Result/Result.jsx",
-        lineNumber: 35,
+        lineNumber: 36,
         columnNumber: 5
     }, undefined);
 };
