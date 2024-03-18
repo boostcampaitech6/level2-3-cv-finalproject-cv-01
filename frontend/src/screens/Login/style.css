@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'Noto Sans KR';
+  src: url(//fonts.googleapis.com/earlyaccess/notosanskr.css) format('woff2');
+}
+
 .login {
   align-items: center;
   background-color: #ffffff;
@@ -105,9 +110,8 @@
 
 .login .label {
   color: var(--variable-collection-kakao-text);
-  font-family: "ABeeZee", Helvetica;
+  font-family: "Noto Sans KR", Helvetica;
   font-size: 15px;
-  font-style: italic;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 22.5px;
