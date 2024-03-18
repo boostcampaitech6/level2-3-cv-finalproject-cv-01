@@ -12,6 +12,7 @@ import { Result } from "./screens/Result";
 import { ResultScreen } from "./screens/ResultScreen";
 import { ResultWrapper } from "./screens/ResultWrapper";
 import { FavoriteWrapper } from "./screens/FavoriteWrapper";
+import { UserProvider } from "./components/UserContext";
 
 const router = createBrowserRouter([
   {
@@ -69,5 +70,9 @@ const router = createBrowserRouter([
 ]);
 
 export const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <UserProvider>
+      <RouterProvider router={router} />;
+    </UserProvider>
+  )
 };
