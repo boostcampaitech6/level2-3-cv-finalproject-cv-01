@@ -173,6 +173,11 @@
   left: -3px;
 }
 
+@font-face {
+  font-family: Noto Sans KR;
+  src: url("//fonts.googleapis.com/earlyaccess/notosanskr.css") format("woff2");
+}
+
 .login {
   background-color: #fff;
   flex-direction: column;
@@ -283,9 +288,8 @@
   white-space: nowrap;
   width: fit-content;
   margin-top: -1px;
-  font-family: ABeeZee, Helvetica;
+  font-family: Noto Sans KR, Helvetica;
   font-size: 15px;
-  font-style: italic;
   font-weight: 400;
   line-height: 22.5px;
   position: relative;
@@ -312,33 +316,6 @@
   font-weight: 400;
   line-height: normal;
   position: relative;
-}
-
-.check {
-  background-color: #f6f6f6;
-  border-radius: 9px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  padding: 10px 25px;
-  display: inline-flex;
-  position: relative;
-}
-
-.check .text-wrapper {
-  color: #1b1b1b;
-  letter-spacing: 0;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: Noto Sans KR, Helvetica;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: normal;
-  position: relative;
-}
-
-.check:hover {
-  background-color: #fdd000;
 }
 
 .login-kakao {
@@ -379,6 +356,33 @@
 
 .login-kakao .design-component-instance-node {
   margin-top: unset !important;
+}
+
+.check {
+  background-color: #f6f6f6;
+  border-radius: 9px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 25px;
+  display: inline-flex;
+  position: relative;
+}
+
+.check .text-wrapper {
+  color: #1b1b1b;
+  letter-spacing: 0;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: Noto Sans KR, Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+}
+
+.check:hover {
+  background-color: #fdd000;
 }
 
 .icon {
@@ -531,95 +535,6 @@
 .menu .icon-variants-instance {
   background-color: #fff !important;
   width: 78px !important;
-}
-
-.heart {
-  background-size: 100% 100%;
-  width: 24px;
-  height: 24px;
-}
-
-.heart.off {
-  background-image: url("heart-off.58504525.svg");
-}
-
-.heart.on {
-  background-image: url("heart-on.79df5424.svg");
-}
-
-.state-off-wrapper {
-  border-color: #ccc6c680;
-  border-top-style: solid;
-  border-top-width: .5px;
-  border-bottom-style: solid;
-  border-bottom-width: .5px;
-  width: 391px;
-  height: 53px;
-  display: block;
-}
-
-.state-off-wrapper .overlap-group {
-  width: 390px;
-  height: 52px;
-  position: relative;
-}
-
-.state-off-wrapper .info {
-  flex-direction: column;
-  align-items: flex-start;
-  display: inline-flex;
-  position: absolute;
-  top: 4px;
-  left: 84px;
-}
-
-.state-off-wrapper .NAVER {
-  color: #000;
-  letter-spacing: -.36px;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: Noto Sans KR, Helvetica;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: normal;
-  position: relative;
-}
-
-.state-off-wrapper .element {
-  color: #000;
-  letter-spacing: -.26px;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: Noto Sans KR, Helvetica;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: normal;
-  position: relative;
-}
-
-.state-off-wrapper .logo {
-  background-image: url("ellipse-15.5315b2bb.png");
-  background-position: 50%;
-  background-size: cover;
-  width: 37px;
-  height: 37px;
-  position: absolute;
-  top: 7px;
-  left: 34px;
-}
-
-.state-off-wrapper .heart-instance {
-  position: absolute !important;
-  top: 14px !important;
-  left: 342px !important;
-}
-
-.state-off-wrapper .state-off {
-  background-color: #f1f0f0;
-}
-
-.state-off-wrapper .state-on {
-  background-color: #f1edff;
 }
 
 .search-screen {
@@ -803,6 +718,95 @@
   font-weight: 700;
   line-height: normal;
   position: relative;
+}
+
+.state-off-wrapper {
+  border-color: #ccc6c680;
+  border-top-style: solid;
+  border-top-width: .5px;
+  border-bottom-style: solid;
+  border-bottom-width: .5px;
+  width: 391px;
+  height: 53px;
+  display: block;
+}
+
+.state-off-wrapper .overlap-group {
+  width: 390px;
+  height: 52px;
+  position: relative;
+}
+
+.state-off-wrapper .info {
+  flex-direction: column;
+  align-items: flex-start;
+  display: inline-flex;
+  position: absolute;
+  top: 4px;
+  left: 84px;
+}
+
+.state-off-wrapper .NAVER {
+  color: #000;
+  letter-spacing: -.36px;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: Noto Sans KR, Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  position: relative;
+}
+
+.state-off-wrapper .element {
+  color: #000;
+  letter-spacing: -.26px;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: Noto Sans KR, Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+}
+
+.state-off-wrapper .logo {
+  background-image: url("ellipse-15.5315b2bb.png");
+  background-position: 50%;
+  background-size: cover;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 7px;
+  left: 34px;
+}
+
+.state-off-wrapper .heart-instance {
+  position: absolute !important;
+  top: 14px !important;
+  left: 342px !important;
+}
+
+.state-off-wrapper .state-off {
+  background-color: #f1f0f0;
+}
+
+.state-off-wrapper .state-on {
+  background-color: #f1edff;
+}
+
+.heart {
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.heart.off {
+  background-image: url("heart-off.58504525.svg");
+}
+
+.heart.on {
+  background-image: url("heart-on.79df5424.svg");
 }
 
 .component-1174 {
