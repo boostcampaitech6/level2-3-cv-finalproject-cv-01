@@ -1,10 +1,12 @@
 from datetime import datetime
 from sqlmodel import SQLModel, Field, create_engine
 from .config import config
+from typing import Optional
 
 class UserInfo(SQLModel,table=True):
     id: int = Field(default=None, primary_key=True) # None: guest user
     created_at: str = Field(default_factory=datetime.now)
+    nickname: str
 
 class FavoriteStocks(SQLModel,table=True):
     user_id: int 
