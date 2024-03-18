@@ -45,7 +45,7 @@ export const SearchScreen = () => {
 
   const handleChange = (selectedOption) => {
     if (selectedOption) {
-      navigate(`/result-1/${selectedOption.value}`, {
+      navigate(`/result/${selectedOption.value}`, {
         state: { stockLabel: selectedOption.label },
       });
     }
