@@ -224,7 +224,6 @@
   border-radius: 15px;
   height: 74px;
   position: relative;
-  top: 105px;
   left: -2px;
   overflow: hidden;
 }
@@ -232,14 +231,14 @@
 .login .text-wrapper-16 {
   color: #fafafa;
   letter-spacing: 0;
-  height: 46px;
+  text-align: center;
+  width: fit-content;
+  margin-top: -1px;
   font-family: Noto Sans KR, Helvetica;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 400;
   line-height: normal;
-  position: absolute;
-  top: 13px;
-  left: 84px;
+  position: relative;
 }
 
 .login .container {
@@ -1644,9 +1643,6 @@
 }
 
 .div-wrapper .logo-3 {
-  background-image: url("ellipse-15.5315b2bb.png");
-  background-position: 50%;
-  background-size: cover;
   width: 37px;
   height: 37px;
   position: absolute;
