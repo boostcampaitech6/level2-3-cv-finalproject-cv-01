@@ -39,6 +39,15 @@ export const ResultScreen = () => {
       });
     }
 
+    const [likes, setLikes] = useState({}); // 각 주식의 '좋아요' 상태를 관리합니다.
+
+    const toggleLike = (symbol) => {
+      setLikes((currentLikes) => ({
+        ...currentLikes,
+        [symbol]: !currentLikes[symbol], // 토글된 상태를 저장합니다.
+      }));
+    };
+
 
   return (
     <div className="result-screen">
@@ -105,7 +114,11 @@ export const ResultScreen = () => {
               <div className="text-wrapper-39">{stockLabel}</div>
             </div>
             <div className="button-5">
-              <Heart className="heart-4" stateProp="off" />
+              <Heart 
+                className="heart-4" 
+                stateProp={likes ? "on" : "off"}
+                onHeartClick={() => toggleLike({symbol})}
+              />
               <Two className="instance-1" color="#BEBEBE" />
             </div>
           </div>

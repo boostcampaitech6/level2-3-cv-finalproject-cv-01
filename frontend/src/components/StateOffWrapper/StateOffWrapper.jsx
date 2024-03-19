@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Heart } from "../Heart";
 import "./style.css";
 
 export const StateOffWrapper = ({ state, className, text, text1, logoClassName, to, onHeartClick }) => {
+  const navigate = useNavigate();
+
   const handleHeartClick = (event) => {
     event.stopPropagation(); // 이벤트 전파를 중단합니다.
     onHeartClick(event); // onHeartClick 핸들러에 이벤트 객체를 전달합니다.

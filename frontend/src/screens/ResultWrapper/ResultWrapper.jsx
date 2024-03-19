@@ -40,6 +40,7 @@ export const ResultWrapper = () => {
     });
   }
 
+
   return (
     <div className="result-wrapper">
       <div className="frame-23" to="/result-3">
