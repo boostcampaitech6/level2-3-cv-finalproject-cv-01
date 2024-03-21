@@ -1,17 +1,13 @@
-# import datetime
-# from sqlmodel import SQLModel, Field, create_engine
+import pymysql
+import pymysql.cursors
 
-# class ValidStock(SQLModel,table=True):
-#     id: str = Field(default=None, primary_key=True)
-#     name: str
-#     code: str
-    
-    
-# class PredictResult(SQLModel, table=True):
-#     id: str = Field(default=None, primary_key=True)
-#     name: str
-#     code: str
-#     predictList: list
+user_name = 'admin'
+pass_my = 'mysqlpw1'
+host_my = '비밀번호 기입'
+db_name = 'airflow_test_db'
 
-
-# engine = create_engine(config.db_url)
+connection = pymysql.connect(host=host_my,
+                             user=user_name,
+                             password=pass_my,
+                             database=db_name,
+                             cursorclass=pymysql.cursors.DictCursor)
