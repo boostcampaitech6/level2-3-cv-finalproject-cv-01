@@ -12,21 +12,19 @@ from dateutil.relativedelta import relativedelta
 import exchange_calendars as ecals
 
 from model import rasterize, inference
+from database import connection
 
 # V1 
 
 default_args = {
     "owner": "sihyun",
     "depends_on_past": False, 
-    "start_date": datetime(2024, 3, 7),
+    "start_date": datetime(2024, 3, 18),
     'retries': 3,  
     'retry_delay': timedelta(minutes=10) 
 }
 
 def validation(date):
-    # ks_date = datetime.strptime(date,'%Y-%m-%d')
-    # ks_date = ks_date + relativedelta(days=1)
-    # ks_date = ks_date.strftime("%Y-%m-%d")
     ks_date = date
 
     XKRX = ecals.get_calendar("XKRX")
@@ -36,44 +34,59 @@ def validation(date):
     return "end"
 
 def predict(date):
-    # ks_date = datetime.strptime(date,'%Y-%m-%d')
-    # ks_date = ks_date + relativedelta(days=1)
-    # ks_date = ks_date.strftime("%Y-%m-%d")
     ks_date = date
 
+    with connection.cursor() as cursor:
+        query = "SELECT * FROM ForTest2"
+        cursor.execute(query)
+        stock_table = cursor.fetchall()
 
-    # 주식 코드 db 테이블에서 반복문으로 각 코드 가져오기
-    file_name = f'./dags/database/symbol_data/korea_stock_symbols_{ks_date}.csv'
-    stock_table = pd.read_csv(file_name)
+    columns = [
+        "stock_code",
+        "date",
+        "pred_1day_result",
+        "pred_1day_percent",
+        "pred_2day_result",
+        "pred_2day_percent",
+        "pred_3day_result",
+        "pred_3day_percent",
+        "pred_4day_result",
+        "pred_4day_percent",
+        "pred_5day_result",
+        "pred_5day_percent",
+        "pred_6day_result",
+        "pred_6day_percent",
+        "pred_7day_result",
+        "pred_7day_percent"
+    ]
+    primary_key_columns = ["stock_code", "date"]
+    update_clause = ", ".join([f"{column} = VALUES({column})" for column in columns if column not in primary_key_columns])
 
-    column = ['Date', 'Name', 'Code', 'Close_Price', \
-                'Day_1', 'Day_2', 'Day_3', 'Day_4', 'Day_5', 'Day_6', 'Day_7']
-    predict_df = pd.DataFrame(columns=column)
+    results = []
 
-    for _, stock in stock_table.iterrows():
+    for dic in stock_table:
         
-        code = stock['value'].split(':')[1]
-        name = stock['label']
+        code = dic['Code']
 
         close_price = fdr.DataReader(code, ks_date, ks_date).iloc[0]['Close']
         stock_image = rasterize(code, ks_date)
         preds = inference(stock_image)
-        preds_result = []
+
+        preds_result = [code,ks_date]
+
         for idx, pct in preds:
-            preds_result.append(str(idx)+'/'+str(round(pct,2)))
-        
-        result = [ks_date, name, code, close_price]
-        result.extend(preds_result)
+            preds_result.extend([idx, pct])
 
-        predict_df = pd.concat([predict_df, pd.DataFrame([result],columns=column)])
+        with connection.cursor() as cursor:
+            # 서비스 전 임시로 사용하는 cnnpredhistory 테이블에 모델 예측 결과들 저장
+            query = f"INSERT INTO cnnpredhistory ({', '.join(columns)}) VALUES ({', '.join(['%s'] * len(columns))}) ON DUPLICATE KEY UPDATE {update_clause}"
+            cursor.execute(query, preds_result)
 
-    save_dir = './dags/database/predict_table'
-    predict_df.to_csv(os.path.join(save_dir, f"predict_{ks_date}.csv"))
+    connection.commit()
 
-    
 
 with DAG(
-    dag_id="cnn_predict",
+    dag_id="cnn_predict_db",
     default_args=default_args,
     schedule_interval="0 14 * * *", 
     tags=['my_dags'],
