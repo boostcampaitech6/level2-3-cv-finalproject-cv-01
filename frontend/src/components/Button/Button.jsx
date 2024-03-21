@@ -11,9 +11,9 @@ export const Button = ({ state, className }) => {
   return (
     <div className={`button state-6-${state} ${className}`}>
       <div className="div-2">
-        {state === "off" && <>분석 결과 저장완료</>}
+        {state === "off" && <>분석 결과 공유하기</>}
 
-        {state === "on" && <>분석 결과 저장하기</>}
+        {state === "on" && <>분석 결과 공유하기</>}
       </div>
     </div>
   );

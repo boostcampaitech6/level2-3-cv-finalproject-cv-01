@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { Heart } from "../../components/Heart";
 import { Menu } from "../../components/Menu";
@@ -10,8 +9,84 @@ import { useParams, useLocation } from "react-router-dom";
 import { AdvancedRealTimeChart} from 'react-ts-tradingview-widgets';
 import React, { useState, useEffect } from 'react';
 
+import { Radar } from 'react-chartjs-2';
+import { Chart as ChartJS } from 'chart.js/auto';
+import { ChartOptions } from 'chart.js';
+
+// 차트 데이터
+const scores = [1, 2, 3, 4, 5];
+
+// 차트 옵션
+const COLOR = {
+  ORANGE_1: 'rgba(255, 108, 61, 1)',  
+  GRAY_9E: 'rgba(158, 158, 158, 1)',  
+  BLACK: '#000000'                    
+};
 
 export const Result = () => {
+
+  // 차트 데이터
+  const chartData = {
+    labels: ['CNN', 'Algorithm', 'News', ['Candle   ', 'Matching'], 'LSTM'],
+    datasets: [
+      {
+        label: '팀 점수',
+        data: scores,
+        backgroundColor: 'rgba(255, 108, 61, 0.2)',
+      },
+    ],
+  };
+
+  // 차트 옵션
+  const chartOptions = {
+      elements: {
+        //데이터 속성.
+        line: {
+          borderWidth: 2,
+          borderColor: COLOR.ORANGE_1,
+        },
+        //데이터 꼭짓점.
+        point: {
+          pointBackgroundColor: COLOR.ORANGE_1,
+        },
+      },
+      scales: {
+        r: {
+          ticks: {
+            stepSize: 2.5,
+            display: false,
+          },
+          grid: {
+            color: COLOR.GRAY_9E,
+          },
+          //라벨 속성 지정.
+          pointLabels: {
+            font: {
+              size: 16,
+              weight: '800',
+              family: "Noto Sans KR",
+            },
+            color: COLOR.BLACK,
+          },
+          angleLines: {
+            display: false,
+          },
+          suggestedMin: 0,
+          suggestedMax: 10,
+        },
+      },
+      //위에 생기는 데이터 속성 label 타이틀을 지워줍니다.
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+      //기본 값은 가운데에서 펴져나가는 애니메이션 형태입니다.
+      animation: {
+        duration: 0,
+      },
+    };
+
   const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
   const location = useLocation();
   const { stockLabel } = location.state || {};
@@ -36,6 +111,9 @@ export const Result = () => {
     <div className="result">
       <div className="frame-11">
         <div className="content-7">
+        <div className="radar-chart-container">
+            <Radar data={chartData} options={chartOptions} />
+          </div>
           <div className="info-4">
             <div className="frame-12">
               <div className="text-wrapper-34">73,300</div>
