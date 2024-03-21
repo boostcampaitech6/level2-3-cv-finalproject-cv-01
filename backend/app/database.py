@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlmodel import SQLModel, Field, create_engine
+from sqlmodel import SQLModel, Field
 from .config import config
 import sqlalchemy
 
