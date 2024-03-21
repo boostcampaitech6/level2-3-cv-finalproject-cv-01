@@ -16,13 +16,8 @@ export const UserProvider = ({ children }) => {
     }
   }, [userInfo]);
 
-  const logout = () => {
-    setUserInfo(null); // userInfo 상태를 null로 설정
-    localStorage.removeItem('userInfo'); // localStorage에서 userInfo 제거
-  };
-
   return (
-    <UserContext.Provider value={{ userInfo, setUserInfo, logout }}>
+    <UserContext.Provider value={{ userInfo, setUserInfo }}>
       {children}
     </UserContext.Provider>
   );
