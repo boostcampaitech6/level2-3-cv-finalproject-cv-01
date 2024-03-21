@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { Heart } from "../../components/Heart";
@@ -9,6 +9,7 @@ import "./style.css";
 import { useParams, useLocation } from "react-router-dom";
 import { AdvancedRealTimeChart} from 'react-ts-tradingview-widgets';
 import React, { useState, useEffect } from 'react';
+
 
 export const Result = () => {
   const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
@@ -55,8 +56,7 @@ export const Result = () => {
           <div className="chart-container">
             <AdvancedRealTimeChart 
               theme="light" 
-              // symbol={symbol}
-              symbol="005930"
+              symbol={symbol}
               autosize={true}
               interval="D"
           />
@@ -94,7 +94,7 @@ export const Result = () => {
           </div>
           <div className="head-5">
             <div className="stock-20">
-              <div className="text-wrapper-36">삼성전자</div>
+              <div className="text-wrapper-36">{stockLabel}</div>
             </div>
             <div className="button-4">
               <Heart className="heart-2" stateProp="off" />
