@@ -26,9 +26,4 @@ WORKDIR /workspace
 # 필요한 파일들을 빌드 스테이지에서 복사
 COPY --from=build /workspace/level2-3-cv-finalproject-cv-01 /workspace
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends git \
-    && cd frontend \
-    && npm install
-
-CMD ["sh", "-c", "cd frontend && npm start"]
-
+	&& apt-get install -y --no-install-recommends git
