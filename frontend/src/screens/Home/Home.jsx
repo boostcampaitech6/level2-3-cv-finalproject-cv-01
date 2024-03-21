@@ -76,14 +76,17 @@ export const Home = () => {
   const customStyles = {
     placeholder: (provided) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
       paddingLeft: '10px', // 원하는 들여쓰기 값으로 조정하세요
     }),
     input: (provided) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
       paddingLeft: '10px', // 입력 텍스트에 대한 들여쓰기
     }),
     control: (provided, { isFocused }) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
       minHeight: '45px', // 최소 높이 설정
       borderColor: isFocused ? '#7d49f5' : provided.borderColor, // 포커스 되었을 때 보라색으로 변경
       boxShadow: isFocused ? '0 0 0 1px #7d49f5' : 'none',
@@ -98,14 +101,33 @@ export const Home = () => {
       color: isFocused ? '#7d49f5':provided.color,  // 화살표 색상을 보라색으로 설정
     }),
 
+    noOptionsMessage: (provided) => ({
+      ...provided,
+      fontFamily: "Noto Sans KR, Helvetica"
+    }),
+
+    loadingMessage: (provided) => ({
+      ...provided,
+      fontFamily: "Noto Sans KR, Helvetica"
+    }),
+
     option: (provided, { isFocused, isSelected }) => {
       return {
         ...provided,
         backgroundColor: isSelected ? '#F2ECFF' : isFocused ? '#F2ECFF' : undefined,
         // 선택된 옵션의 배경색과 포커스 시 배경색
+        fontFamily: "Noto Sans KR, Helvetica",
         paddingLeft: '20px',
       };
     },
+  };
+
+  const handleStockClick = (symbol, label) => {
+    navigate(`/result/${symbol}`, { state: { stockLabel: label } });
+  };
+
+  const handleSearchClick = ( ) => {
+    navigate(`/search`);
   };
 
 
@@ -115,6 +137,7 @@ export const Home = () => {
         <div className="content-4">
           <div className="stock-frame">
             <div className="stocks">
+            <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-7"
@@ -123,6 +146,8 @@ export const Home = () => {
                 spanClassName="stock-6"
                 state="off"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:068270', '셀트리온')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-10"
@@ -133,6 +158,8 @@ export const Home = () => {
                 state="off"
                 text="셀트리온"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:005930', '삼성전자')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-10"
@@ -142,8 +169,9 @@ export const Home = () => {
                 spanClassName="stock-6"
                 state="off"
                 text="삼성전자"
-                to="/result"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:035720', '카카오')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-7"
@@ -154,6 +182,8 @@ export const Home = () => {
                 state="off"
                 text="카카오"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:086520', '에코프로')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-10"
@@ -164,6 +194,8 @@ export const Home = () => {
                 state="off"
                 text="에코프로"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:005380', '현대차')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-7"
@@ -174,25 +206,22 @@ export const Home = () => {
                 state="off"
                 text="현대차"
               />
-              <div className="stock-15">
-                <div className="range">
-                  <div className="text-wrapper-21">-0.53%</div>
-                </div>
-                <div className="price">
-                  <p className="element-2">
-                    <span className="text-wrapper-22">188,000</span>
-                    <span className="text-wrapper-23">원</span>
-                  </p>
-                </div>
-                <div className="name">
-                  <p className="LG">
-                    <span className="text-wrapper-24">LG에너</span>
-                    <span className="text-wrapper-25">지</span>
-                    <span className="text-wrapper-24">솔루션</span>
-                  </p>
-                </div>
-                <div className="logo-5" />
-              </div>
+            </div>
+            
+            <div onClick={() => handleStockClick('KRX:373220', 'LG에너지솔루션')}>
+              <Component1174
+                divClassName="component-1174-instance"
+                divClassName1="stock-30"
+                divClassName2="stock-8"
+                divClassNameOverride="stock-5"
+                logoClassName="stock-15"
+                spanClassName="stock-6"
+                state="off"
+                text="LG에너지솔루션"
+              />
+            </div>
+
+            <div onClick={() => handleStockClick('KRX:000660', 'SK하이닉스')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-16"
@@ -203,6 +232,8 @@ export const Home = () => {
                 state="off"
                 text="SK하이닉스"
               />
+            </div>
+            <div onClick={() => handleStockClick('KRX:024110', '기업은행')}>
               <Component1174
                 divClassName="component-1174-instance"
                 divClassName1="stock-10"
@@ -214,6 +245,7 @@ export const Home = () => {
                 text="기업은행"
               />
             </div>
+            </div>
           </div>
           <div className="text-container">
             <div className="text-6">
@@ -223,7 +255,7 @@ export const Home = () => {
               <p className="text-wrapper-27">관심 있는 주식을 클릭해 보세요.</p>
             </div>
           </div>
-          <Link className="container-wrapper" to="/search">
+          <div className="container-wrapper" onClick={() => handleSearchClick()} onTouchStart={() => handleSearchClick()}>
             <div className="container-3">
             <AsyncSelect
                 styles={customStyles}
@@ -238,7 +270,7 @@ export const Home = () => {
                 formatOptionLabel={formatOptionLabel}
             />
             </div>
-          </Link>
+          </div>
           <div className="menu-wrapper">
             <Menu
               className="menu-2"
