@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { Menu } from "../../components/Menu";
 import { StateOffWrapper } from "../../components/StateOffWrapper";
+import { Heart } from "../../components/Heart";
 import "./style.css";
 import AsyncSelect from 'react-select/async';
 import Papa from 'papaparse';
@@ -44,7 +45,7 @@ export const SearchScreen = () => {
 
   const handleChange = (selectedOption) => {
     if (selectedOption) {
-      navigate(`/result-1/${selectedOption.value}`, {
+      navigate(`/result/${selectedOption.value}`, {
         state: { stockLabel: selectedOption.label },
       });
     }
@@ -105,30 +106,70 @@ export const SearchScreen = () => {
       };
     },
   };
-  
+
+  const handleStockClick = (symbol, label) => {
+    navigate(`/result/${symbol}`, { state: { stockLabel: label } });
+  };
+
+  const [likes, setLikes] = useState({}); // 각 주식의 '좋아요' 상태를 관리합니다.
+
+  const toggleLike = (symbol) => {
+    setLikes((currentLikes) => ({
+      ...currentLikes,
+      [symbol]: !currentLikes[symbol], // 토글된 상태를 저장합니다.
+    }));
+  };
+
 
   return (
     <div className="search-screen">
       <div className="frame-7">
         <div className="content-3">
           <div className="stock-list">
-            <StateOffWrapper className="stock" state="off" text="네이버" />
-            <StateOffWrapper
-              className="component-1169-instance"
-              logoClassName="component-1169"
-              state="off"
-              text="삼성전자"
-              text1="005930"
-              to="/result"
+          <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
+            <StateOffWrapper 
+              className="component-1169-instance" 
+              logoClassName="logo-img"
+              state={likes['KRX:035420'] ? 'on' : 'off'} 
+              text="네이버"
+              text1="035420"
+              onHeartClick={() => toggleLike('KRX:035420')} // onHeartClick prop 추가
             />
+          </div>
+
+          <div onClick={() => handleStockClick('KRX:005930', '삼성전자')}>
             <StateOffWrapper
-              className="component-1169-instance"
-              logoClassName="stock-2"
-              state="off"
-              text="카카오"
-              text1="035720"
+                className="component-1169-instance"
+                logoClassName="component-1169"
+                state={likes['KRX:005930'] ? 'on' : 'off'}
+                text="삼성전자"
+                text1="005930"
+                onHeartClick={() => toggleLike('KRX:005930')}
+              />
+          </div>
+
+          <div onClick={() => handleStockClick('KRX:035720', '카카오')}>
+            <StateOffWrapper
+                className="component-1169-instance"
+                logoClassName="stock-2"
+                state={likes['KRX:035720'] ? 'on' : 'off'}
+                text="카카오"
+                text1="035720"
+                onHeartClick={() => toggleLike('KRX:035720')}
+              />
+          </div>
+            
+          <div onClick={() => handleStockClick('KRX:068270', '셀트리온')}>
+            <StateOffWrapper 
+              className="component-1169-instance" 
+              logoClassName="stock-4" 
+              state={likes['KRX:068270'] ? 'on' : 'off'} 
+              text="셀트리온" 
+              text1="068270" 
+              onHeartClick={() => toggleLike('KRX:068270')}
             />
-            <StateOffWrapper className="stock-3" logoClassName="stock-4" state="off" text="셀트리온" text1="068270" />
+          </div>
+
           </div>
           <div className="text-4">
             <div className="text-wrapper-18">인기 검색어</div>

@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'Noto Sans KR';
+  src: url(//fonts.googleapis.com/earlyaccess/notosanskr.css) format('woff2');
+}
+
 .login {
   align-items: center;
   background-color: #ffffff;
@@ -47,20 +52,19 @@
   left: -2px;
   overflow: hidden;
   position: relative;
-  top: 105px;
 }
 
 .login .text-wrapper-16 {
   color: #fafafa;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 32px;
-  font-weight: 700;
-  height: 46px;
-  left: 84px;
+  font-size: 13px;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 13px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
 
 .login .container {
@@ -105,9 +109,8 @@
 
 .login .label {
   color: var(--variable-collection-kakao-text);
-  font-family: "ABeeZee", Helvetica;
+  font-family: "Noto Sans KR", Helvetica;
   font-size: 15px;
-  font-style: italic;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 22.5px;
