@@ -1,14 +1,10 @@
-from fastapi import FastAPI
-from contextlib import asynccontextmanager
-from loguru import logger 
-from sqlmodel import SQLModel
+from dotenv import load_dotenv
+load_dotenv()  # 환경 변수 로드
 
+from fastapi import FastAPI
 from typing import List
 from utils.newsdata import fetch_news_data
 from fastapi.middleware.cors import CORSMiddleware
-
-# from app.config import config
-from app.database import engine
 from app.api import router
 
 app = FastAPI()
