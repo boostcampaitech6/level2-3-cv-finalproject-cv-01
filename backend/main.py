@@ -11,13 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.database import engine
 from app.api import router
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    logger.info("creating database table")
-    SQLModel.metadata.create_all(engine)
-    yield
-
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 app.include_router(router)
 
 app.add_middleware(
@@ -34,7 +28,6 @@ async def root():
 
 @app.get("/news/", response_model=List[dict])
 async def get_news(query: str = "삼성전자"):
-
     news_data = await fetch_news_data(query)
     return news_data
 
@@ -42,6 +35,3 @@ async def get_news(query: str = "삼성전자"):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
-
-
-# uvicorn main:app --reload
