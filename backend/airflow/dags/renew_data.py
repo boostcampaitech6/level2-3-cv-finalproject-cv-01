@@ -12,20 +12,18 @@ from dateutil.relativedelta import relativedelta
 # from stock_utils import valid_check
 import exchange_calendars as ecals
 
+from database import connection
+
 default_args = {
     "owner": "sihyun",
     "depends_on_past": False, 
-    "start_date": datetime(2024, 3, 7),
+    "start_date": datetime(2024, 3, 17),
     'retries': 3,  
     'retry_delay': timedelta(minutes=5) 
 }
 
 def validation(date):
-    # ks_date = datetime.strptime(date,'%Y-%m-%d')
-    # ks_date = ks_date + relativedelta(days=1)
-    # ks_date = ks_date.strftime("%Y-%m-%d")
     ks_date = date
-
     XKRX = ecals.get_calendar("XKRX")
     if XKRX.is_session(ks_date):
         return "update_stock_task"
@@ -33,50 +31,46 @@ def validation(date):
     return "end"
 
 def update_stock(date):
-    # ks_date = datetime.strptime(date,'%Y-%m-%d')
-    # ks_date = ks_date + relativedelta(days=1)
-    # ks_date = ks_date.strftime("%Y-%m-%d")
+    # db 전체 삭제
+    krx_table = 'ForTest2' # 서비스전 임시로 저장되는 주가 종목 테이블 이름
+
+    with connection.cursor() as cursor:
+        query = f"DELETE FROM {krx_table}"
+        cursor.execute(query)
+        connection.commit()
+    
     ks_date = date
 
-    # 자동 완성을 위한 주가 코드 테이블 갱신
-    folder_name = './dags/database/symbol_data'
-    file_name = f'korea_stock_symbols_{ks_date}.csv'
-    file_path = os.path.join(folder_name, file_name)
+    kospi_df = fdr.StockListing('KOSPI')
+    kosdaq_df = fdr.StockListing('KOSDAQ')
 
-    if not os.path.exists(folder_name):
-        os.makedirs(folder_name)
-    
-    kospi_list = fdr.StockListing('KOSPI')
-    kosdaq_list = fdr.StockListing('KOSDAQ')
+    korea_stock_df = pd.concat([kospi_df, kosdaq_df])
+    korea_stock_symbol = korea_stock_df[['Code', 'Name','Market']]
+    korea_stock_symbol
 
-    korea_stock_list = pd.concat([kospi_list, kosdaq_list])
+    # 주가 종목에서 길이가 40 이하인건 저장안하게 하기
+    rmv_list = []
+    for _,stock in korea_stock_symbol.iterrows():
+        stock_code = stock['Code']
 
-    korea_stock_symbol = korea_stock_list[['Code', 'Name']]
+        if len(fdr.DataReader(stock_code)) < 40:
+            rmv_list.append(stock_code)
 
-    code_list, name_list = [], []
+    krx_df = korea_stock_symbol[~korea_stock_symbol['Code'].isin(rmv_list)]
 
-    for _, stock in korea_stock_symbol.iterrows():
-        code = stock['Code']
-        name = stock['Name']
-
-        if len(fdr.DataReader(code)) < 40 or date not in fdr.DataReader(code).index:
-            continue
-        code_list.append(code)
-        name_list.append(name)
-
-    korea_stock_df = pd.DataFrame({'Code': code_list, 'Name' : name_list})
-    korea_stock_df['Code'] = 'KRX:' + korea_stock_df['Code']
-
-    korea_stock_df.rename(columns={'Name': 'label', 'Code': 'value'}, inplace=True)
-    korea_stock_df.to_csv(file_path, index=False, encoding='utf-8-sig')
-
-
+    with connection.cursor() as cursor:
+        for _, row in krx_df.iterrows():
+            code, name, market = row['Code'], row['Name'], row['Market']
+            query = f"INSERT INTO {krx_table} (Code, Name, Market) VALUES (%s, %s, %s)"
+            values = (code, name, market)
+            cursor.execute(query, values)
+        connection.commit() 
 
 
 with DAG(
-    dag_id="renew_stock_data",
+    dag_id="renew_stock_db",
     default_args=default_args,
-    schedule_interval="0 13 * * *", 
+    schedule_interval="0 12 * * *", 
     tags=['my_dags'],
 ) as dag:
     execution_date = "{{ ds }}"
