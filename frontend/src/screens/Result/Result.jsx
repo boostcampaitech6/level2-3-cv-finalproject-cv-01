@@ -14,7 +14,7 @@ import { Chart as ChartJS } from 'chart.js/auto';
 import { ChartOptions } from 'chart.js';
 
 // 차트 데이터
-const scores = [1, 2, 3, 4, 5];
+const scores = [1, 2, 3, 4, 5,6];
 
 // 차트 옵션
 const COLOR = {
@@ -27,7 +27,7 @@ export const Result = () => {
 
   // 차트 데이터
   const chartData = {
-    labels: ['CNN', 'Algorithm', 'News', ['Candle   ', 'Matching'], 'LSTM'],
+    labels: ['CNN', 'HMM', 'AR', 'News', ['Candle   ', 'Matching'], 'LSTM'],
     datasets: [
       {
         label: '팀 점수',
@@ -63,7 +63,7 @@ export const Result = () => {
           pointLabels: {
             font: {
               size: 16,
-              weight: '800',
+              weight: 'bold',
               family: "Noto Sans KR",
             },
             color: COLOR.BLACK,
@@ -85,6 +85,12 @@ export const Result = () => {
       animation: {
         duration: 0,
       },
+      layout: {
+        padding: {
+          right: 30, // 왼쪽 여백을 20px로 설정
+        },
+      },
+    
     };
 
   const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
@@ -112,7 +118,9 @@ export const Result = () => {
       <div className="frame-11">
         <div className="content-7">
         <div className="radar-chart-container">
+          <div className='radar-chart-color'>
             <Radar data={chartData} options={chartOptions} />
+            </div>
           </div>
           <div className="info-4">
             <div className="frame-12">

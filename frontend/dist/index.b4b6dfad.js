@@ -52045,7 +52045,8 @@ const scores = [
     2,
     3,
     4,
-    5
+    5,
+    6
 ];
 // 차트 옵션
 const COLOR = {
@@ -52059,7 +52060,8 @@ const Result = ()=>{
     const chartData = {
         labels: [
             "CNN",
-            "Algorithm",
+            "HMM",
+            "AR",
             "News",
             [
                 "Candle   ",
@@ -52101,7 +52103,7 @@ const Result = ()=>{
                 pointLabels: {
                     font: {
                         size: 16,
-                        weight: "800",
+                        weight: "bold",
                         family: "Noto Sans KR"
                     },
                     color: COLOR.BLACK
@@ -52122,6 +52124,11 @@ const Result = ()=>{
         //기본 값은 가운데에서 펴져나가는 애니메이션 형태입니다.
         animation: {
             duration: 0
+        },
+        layout: {
+            padding: {
+                right: 30
+            }
         }
     };
     const { symbol } = (0, _reactRouterDom.useParams)(); // URL 파라미터에서 symbol 값을 가져옵니다.
@@ -52149,17 +52156,24 @@ const Result = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "radar-chart-container",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactChartjs2.Radar), {
-                            data: chartData,
-                            options: chartOptions
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "radar-chart-color",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactChartjs2.Radar), {
+                                data: chartData,
+                                options: chartOptions
+                            }, void 0, false, {
+                                fileName: "src/screens/Result/Result.jsx",
+                                lineNumber: 122,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 115,
-                            columnNumber: 13
+                            lineNumber: 121,
+                            columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 114,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52172,12 +52186,12 @@ const Result = ()=>{
                                     children: "73,300"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 119,
+                                    lineNumber: 127,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 118,
+                                lineNumber: 126,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52187,12 +52201,12 @@ const Result = ()=>{
                                     children: "+1,100\xa0(1.52%)"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 122,
+                                    lineNumber: 130,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 121,
+                                lineNumber: 129,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52202,12 +52216,12 @@ const Result = ()=>{
                                     children: "KOSPI\xa0005930"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 125,
+                                    lineNumber: 133,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 124,
+                                lineNumber: 132,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52217,12 +52231,12 @@ const Result = ()=>{
                                     children: "\uC2DC\uAC00\uCD1D\uC561 489.80\uC870"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 128,
+                                    lineNumber: 136,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 127,
+                                lineNumber: 135,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52232,18 +52246,18 @@ const Result = ()=>{
                                     children: "\uC2DC\uAC00\uCD1D\uC561 \u3147\uC704"
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 131,
+                                    lineNumber: 139,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 130,
+                                lineNumber: 138,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 117,
+                        lineNumber: 125,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52255,12 +52269,12 @@ const Result = ()=>{
                             interval: "D"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 135,
+                            lineNumber: 143,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 134,
+                        lineNumber: 142,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52278,7 +52292,7 @@ const Result = ()=>{
                                             children: item.title.replace(/<b>|<\/b>/g, "")
                                         }, void 0, false, {
                                             fileName: "src/screens/Result/Result.jsx",
-                                            lineNumber: 147,
+                                            lineNumber: 155,
                                             columnNumber: 19
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -52286,23 +52300,23 @@ const Result = ()=>{
                                             children: item.description.replace(/<b>|<\/b>/g, "")
                                         }, void 0, false, {
                                             fileName: "src/screens/Result/Result.jsx",
-                                            lineNumber: 148,
+                                            lineNumber: 156,
                                             columnNumber: 19
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 146,
+                                    lineNumber: 154,
                                     columnNumber: 17
                                 }, undefined)
                             }, index, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 145,
+                                lineNumber: 153,
                                 columnNumber: 15
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 143,
+                        lineNumber: 151,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52312,12 +52326,12 @@ const Result = ()=>{
                             state: "on"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 155,
+                            lineNumber: 163,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 154,
+                        lineNumber: 162,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52337,12 +52351,12 @@ const Result = ()=>{
                             to3: "/search"
                         }, void 0, false, {
                             fileName: "src/screens/Result/Result.jsx",
-                            lineNumber: 158,
+                            lineNumber: 166,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 157,
+                        lineNumber: 165,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52355,12 +52369,12 @@ const Result = ()=>{
                                     children: stockLabel
                                 }, void 0, false, {
                                     fileName: "src/screens/Result/Result.jsx",
-                                    lineNumber: 175,
+                                    lineNumber: 183,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 174,
+                                lineNumber: 182,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -52371,7 +52385,7 @@ const Result = ()=>{
                                         stateProp: "off"
                                     }, void 0, false, {
                                         fileName: "src/screens/Result/Result.jsx",
-                                        lineNumber: 178,
+                                        lineNumber: 186,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _two.Two), {
@@ -52379,35 +52393,35 @@ const Result = ()=>{
                                         color: "#7D49F5"
                                     }, void 0, false, {
                                         fileName: "src/screens/Result/Result.jsx",
-                                        lineNumber: 179,
+                                        lineNumber: 187,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/screens/Result/Result.jsx",
-                                lineNumber: 177,
+                                lineNumber: 185,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/screens/Result/Result.jsx",
-                        lineNumber: 173,
+                        lineNumber: 181,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/screens/Result/Result.jsx",
-                lineNumber: 113,
+                lineNumber: 119,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/screens/Result/Result.jsx",
-            lineNumber: 112,
+            lineNumber: 118,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/Result/Result.jsx",
-        lineNumber: 111,
+        lineNumber: 117,
         columnNumber: 5
     }, undefined);
 };

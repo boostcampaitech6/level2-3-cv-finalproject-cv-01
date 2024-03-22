@@ -1924,6 +1924,10 @@
   top: 620px;
 }
 
+.result .radar-chart-color {
+  background-color: #fbf7ee;
+}
+
 .result .radar-chart-container {
   align-items: center;
   width: 100%;
