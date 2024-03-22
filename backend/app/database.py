@@ -12,8 +12,8 @@ class FavoriteStocks(SQLModel,table=True):
     stock_code: str = Field(primary_key=True)
 
 class KRX(SQLModel,table=True):
-    stock_code: str = Field(primary_key=True)
-    stock_name: str
+    code: str = Field(primary_key=True)
+    name: str
     market: str
     close: str
 

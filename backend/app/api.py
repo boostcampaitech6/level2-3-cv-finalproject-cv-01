@@ -89,26 +89,12 @@ def get_user_favorite(user_id: int) -> list[FavoriteStocksResponse]:
         ]
         
 
-@router.post("/stockinfo", tags=["stock"])
-def save_stock_info(): 
-    file = open(config.stock_symbol,'r')
-    file.readline() # drop first row
-    for line in file.readlines():
-        value, label = line.strip().split(',')
-        value = value.split(':')[1]
-        stocks = KRX(stock_code=value, stock_name=label)
-        with Session(engine) as session:
-            session.add(stocks)
-            session.commit()
-            session.refresh(stocks)
-    return KRXResponse(code=stocks.stock_code, name=stocks.stock_name)
-
 @router.get("/stockinfo", tags=["stock"])
 def get_stock_info() -> list[KRXResponse]:
     with Session(engine) as session:
         statement = select(KRX)
         results = session.exec(statement).all()
         return [
-            KRXResponse(code=result.stock_code, name=result.stock_name)
+            KRXResponse(code=result.code, name=result.name, market=result.market, close=result.close)
             for result in results
         ]

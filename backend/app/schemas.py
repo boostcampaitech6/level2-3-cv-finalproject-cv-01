@@ -11,3 +11,5 @@ class FavoriteStocksResponse(BaseModel):
 class KRXResponse(BaseModel):
     code: str 
     name: str
+    market: str
+    close: str
