@@ -1,17 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Menu } from "../../components/Menu";
 import "./style.css";
+import axios from 'axios';
+import { useUser } from '../../components/UserContext';
 
 export const Profile = () => {
+  const { userInfo, setUserInfo } = useUser();
+
+  console.log(userInfo)
+
+  useEffect(() => {
+    const fetchDetailedUserInfo = async () => {
+      // UserContext에 저장된 userInfo에서 사용자 id를 사용
+      if (userInfo && userInfo.id) {
+        try {
+          // 백엔드 API 엔드포인트에서 사용자 ID를 사용하여 요청
+          const response = await axios.get(`http://localhost:8000/user/info/${userInfo.id}`);
+          // 백엔드로부터 받은 상세 정보로 userInfo 상태 업데이트
+          setUserInfo({ ...userInfo, ...response.data, detailedFetched: true });
+        } catch (error) {
+          console.error('Error fetching detailed user info:', error);
+        }
+      }
+    };
+    
+    if (userInfo && !userInfo.detailedFetched) {
+      fetchDetailedUserInfo();
+    }
+  }, [userInfo, setUserInfo]);
+
+
   return (
     <div className="profile">
       <div className="frame-9">
         <div className="content-5">
           <div className="label-2">
-            <div className="text-wrapper-30">주린이1230124</div>
           </div>
           <div className="label-3">
-            <div className="text-wrapper-30">게스트 사용자</div>
+            <div className="text-wrapper-30">
+              {userInfo && userInfo.nickname ? userInfo.nickname : "게스트 사용자"}
+              </div>
           </div>
           <div className="overlap">
             <div className="overlap-2">
@@ -25,7 +53,7 @@ export const Profile = () => {
               </div>
               <div className="img-frame">
                 <div className="ellipse-2" />
-                <img className="image-2" alt="Image" src="/img/image-120.png" />
+                <img className="image-2" alt="Image" src={userInfo && userInfo.profile_image ? userInfo.profile_image : "/img/image-120.png"} />
               </div>
             </div>
             <div className="label-5">
