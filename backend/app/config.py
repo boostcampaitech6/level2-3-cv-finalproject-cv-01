@@ -4,9 +4,7 @@ import os
 
 class Config(BaseSettings):
     pass_my: str = Field(os.getenv('DB_PASS'), env="DB_PASS")
-    stock_symbol: str = Field(default="airflow_result/korea_stock_symbols_2024-03-08.csv")
-    model_pred: str = Field(default="airflow_result/predict_2024-03-08.csv")
-
+    
     @property
     def db_url(self) -> str:
         user_name = 'root'
