@@ -7,7 +7,7 @@ import { Two } from "../../icons/Two";
 import axios from 'axios';
 import "./style.css";
 import { useParams, useLocation } from "react-router-dom";
-import { AdvancedRealTimeChart} from 'react-ts-tradingview-widgets';
+import { AdvancedRealTimeChart, SymbolInfo } from 'react-ts-tradingview-widgets';
 import React, { useState, useEffect } from 'react';
 
 
@@ -37,21 +37,13 @@ export const Result = () => {
       <div className="frame-11">
         <div className="content-7">
           <div className="info-4">
-            <div className="frame-12">
-              <div className="text-wrapper-34">73,300</div>
-            </div>
-            <div className="frame-13">
-              <div className="text-wrapper-34">+1,100 (1.52%)</div>
-            </div>
-            <div className="frame-14">
-              <div className="text-wrapper-35">KOSPI 005930</div>
-            </div>
-            <div className="frame-15">
-              <div className="text-wrapper-35">시가총액 489.80조</div>
-            </div>
-            <div className="frame-16">
-              <div className="text-wrapper-35">시가총액 ㅇ위</div>
-            </div>
+            <SymbolInfo
+              colorTheme="light"
+              symbol={symbol}
+              width="100%"
+              isTransparent={true}
+              marketCap
+            />
           </div>
           <div className="chart-container">
             <AdvancedRealTimeChart 
