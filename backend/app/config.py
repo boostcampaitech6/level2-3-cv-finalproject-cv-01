@@ -9,9 +9,9 @@ class Config(BaseSettings):
 
     @property
     def db_url(self) -> str:
-        user_name = 'admin'
-        host_my = '223.130.147.191'
-        db_name = 'airflow_test_db'
+        user_name = 'root'
+        host_my = '175.45.200.149'
+        db_name = 'STOCK_DB'
         return f"mysql+mysqlconnector://{user_name}:{self.pass_my}@{host_my}/{db_name}"
     
 config = Config()
