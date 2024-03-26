@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+}
+
+
+
 .result {
   align-items: center;
   background-color: #ffffff;
@@ -128,6 +137,87 @@
   
 }
 
+.result .radar-chart-color {
+  background-color: #FBF7EE;
+}
+
+
+.result .radar-chart-container {
+  top: 1150px;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 550px;
+  padding: 15px;
+}
+
+
+.result .gauge-chart-container {
+  top: 1700px;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  font-weight: bold;
+  font-family: 'Noto Sans KR';
+  font-weight: bold;
+}
+
+
+.result .gauge-labels {
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 0px; /* 레이블의 위치를 조정하세요 */
+  left: 0;
+  pointer-events: none; /* 차트와 상호작용하지 않도록 설정 */
+}
+
+.result .gauge-label {
+  color: #000000; /* 레이블 텍스트 색상 설정 */
+  font-size: 12px; /* 레이블 텍스트 크기 설정 */
+  text-align: center;
+  user-select: none; /* 텍스트를 선택할 수 없도록 설정 */
+}
+
+/* 특정 레이블 위치 조정 */
+.result .gauge-label.left {
+  line-height: 1.5;
+  text-align: center;
+  transform: translateX(20%) translateY(100px);
+  
+}
+
+.result .gauge-label.left2 {
+  line-height: 1.5;
+  text-align: center;
+  transform: translateX(-40%) translateY(22px);
+  
+}
+
+.result .gauge-label.right2 {
+  line-height: 1.5;
+  text-align: center;
+  transform: translateX(40%) translateY(22px);
+  
+}
+
+.result .gauge-label.right {
+  line-height: 1.5;
+  text-align: center;
+  transform: translateX(-20%) translateY(100px);
+}
+
+.result .gauge-label.middle {
+  transform: translateY(-5px); /* 중앙 레이블 위치 조정 */
+}
+
+.clickable-cursor {
+  cursor: pointer;
+}
 
 .result .button-wrapper {
   display: flex;
