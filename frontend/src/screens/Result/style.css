@@ -33,7 +33,7 @@
   height: 48px;
   left: 24px;
   position: absolute;
-  top: 126px;
+  top: 100px;
   width: 341px;
 }
 
@@ -110,7 +110,7 @@
 
 
 .result .chart-container {
-  top: 220px;
+  top: 360px;
   align-items: center;
   position: absolute;
   height: 350px; /* 높이 설정 */
@@ -119,7 +119,7 @@
 }
 
 .result .news-container {
-  top: 620px;
+  top: 720px;
   align-items: center;
   position: absolute;
   width: 100%;
