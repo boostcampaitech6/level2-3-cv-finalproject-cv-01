@@ -12,15 +12,16 @@ export const LoginKakao = () => {
   useEffect(() => {
     const code = new URLSearchParams(window.location.search).get("code");
     if (code) {
-      axios.post("http://localhost:8001/auth/kakao", { code })
+      axios.post("http://localhost:8000/auth/kakao", { code })
         .then((response) => {
           // UserContext에 사용자 정보 저장
           console.log(response.data)
-          const { id, nickname } = response.data;
+          const { kakao_id, nickname, profile_image } = response.data;
           
           const formattedUserInfo = {
-            id: id,
+            kakao_id: kakao_id,
             nickname: nickname,
+            profile_image: profile_image
           };
 
           setUserInfo(formattedUserInfo);
