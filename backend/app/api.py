@@ -1,9 +1,8 @@
 from fastapi import APIRouter, HTTPException, status
 from sqlalchemy.exc import IntegrityError
 from sqlmodel import Session, select
-from .schemas import UserInfoResponse, FavoriteStocksResponse, KRXResponse
-from .database import UserInfo, FavoriteStocks, KRX, engine
-from .config import config
+from .schemas import UserInfoResponse, FavoriteStocksResponse, KRXResponse, CNNPredResponse, TimeSeriesPredResponse, BertPredResponse, CandlePredResponse
+from .database import UserInfo, FavoriteStocks, KRX, CNNPredHistory, TimeSeriesPredHistory, BertPredHistory, CandlePredHistory, engine
 
 router = APIRouter()
 
@@ -95,6 +94,56 @@ def get_stock_info() -> list[KRXResponse]:
         statement = select(KRX)
         results = session.exec(statement).all()
         return [
-            KRXResponse(code=result.code, name=result.name, market=result.market, close=result.close)
+            KRXResponse(stock_code=result.code, stock_name=result.name, market=result.market)
+            for result in results
+        ]
+
+@router.get("/pred/cnn", tags=["predict"])
+def get_cnn_pred() -> list[CNNPredResponse]:
+    with Session(engine) as session:
+        statement = select(CNNPredHistory)
+        results = session.exec(statement).all()
+        return [
+            CNNPredResponse(stock_code=result.stock_code, date=result.date, close=result.close,
+                            pred_1day_result=result.pred_1day_result, pred_1day_percent=result.pred_1day_percent,
+                            pred_2day_result=result.pred_2day_result, pred_2day_percent=result.pred_2day_percent,
+                            pred_3day_result=result.pred_3day_result, pred_3day_percent=result.pred_3day_percent,
+                            pred_4day_result=result.pred_4day_result, pred_4day_percent=result.pred_4day_percent,
+                            pred_5day_result=result.pred_5day_result, pred_5day_percent=result.pred_5day_percent,
+                            pred_6day_result=result.pred_6day_result, pred_6day_percent=result.pred_6day_percent,
+                            pred_7day_result=result.pred_7day_result, pred_7day_percent=result.pred_7day_percent)
+            for result in results
+        ]
+    
+@router.get("/pred/timeseries", tags=["predict"])
+def get_timeseries_pred(model: str) -> list[TimeSeriesPredResponse]:
+    with Session(engine) as session:
+        results = session.query(TimeSeriesPredHistory).filter(TimeSeriesPredHistory.model == model).all()
+        return [
+            TimeSeriesPredResponse(stock_code=result.stock_code, date=result.date, close=result.close,
+                                   pred_1day=result.pred_1day, pred_2day=result.pred_2day, pred_3day=result.pred_3day, pred_4day=result.pred_4day,
+                                   pred_5day=result.pred_5day, pred_6day=result.pred_6day, pred_7day=result.pred_7day)
+            for result in results
+        ]
+    
+@router.get("/pred/bert", tags=["predict"])
+def get_lstm_pred() -> list[BertPredResponse]:
+    with Session(engine) as session:
+        statement = select(BertPredHistory)
+        results = session.exec(statement).all()
+        return [
+            BertPredResponse(stock_code=result.stock_code, date=result.date,
+                            yesterday_positive=result.yesterday_positive, yesterday_neutral=result.yesterday_neutral, yesterday_negative=result.yesterday_negative,
+                            today_positive=result.today_positive, today_neutral=result.today_neutral, today_negative=result.today_negative)
+            for result in results
+        ]
+    
+@router.get("/pred/candle", tags=["predict"])
+def get_candle_pred() -> list[CandlePredResponse]:
+    with Session(engine) as session:
+        statement = select(CandlePredHistory)
+        results = session.exec(statement).all()
+        return [
+            CandlePredResponse(stock_code=result.stock_code, date=result.date, candle_name=result.candle_name)
             for result in results
         ]
