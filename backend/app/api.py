@@ -3,8 +3,27 @@ from sqlalchemy.exc import IntegrityError
 from sqlmodel import Session, select
 from .schemas import UserInfoResponse, FavoriteStocksResponse, KRXResponse, CNNPredResponse, TimeSeriesPredResponse, BertPredResponse, CandlePredResponse
 from .database import UserInfo, FavoriteStocks, KRX, CNNPredHistory, TimeSeriesPredHistory, BertPredHistory, CandlePredHistory, engine
+from typing import List
+from utils.newsdata import fetch_news_data
 
 router = APIRouter()
+
+@router.get("/stockinfo", tags=["stock"])
+def get_stock_info() -> list[KRXResponse]:
+    with Session(engine) as session:
+        statement = select(KRX)
+        results = session.exec(statement).all()
+        return [
+            KRXResponse(stock_code=result.code, stock_name=result.name, market=result.market)
+            for result in results
+        ]
+
+
+@router.get("/news", response_model=List[dict])
+async def get_news(query: str = "삼성전자"):
+    news_data = await fetch_news_data(query)
+    return news_data
+
 
 @router.post("/user", tags=["user"])
 def save_user_info(user_id: int): 
@@ -86,17 +105,7 @@ def get_user_favorite(user_id: int) -> list[FavoriteStocksResponse]:
             FavoriteStocksResponse(user_id=result.user_id, stock_code=result.stock_code)
             for result in results
         ]
-        
 
-@router.get("/stockinfo", tags=["stock"])
-def get_stock_info() -> list[KRXResponse]:
-    with Session(engine) as session:
-        statement = select(KRX)
-        results = session.exec(statement).all()
-        return [
-            KRXResponse(stock_code=result.code, stock_name=result.name, market=result.market)
-            for result in results
-        ]
 
 @router.get("/pred/cnn", tags=["predict"])
 def get_cnn_pred() -> list[CNNPredResponse]:

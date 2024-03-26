@@ -1,9 +1,6 @@
 from dotenv import load_dotenv
 load_dotenv()  # 환경 변수 로드
-
 from fastapi import FastAPI
-from typing import List
-from utils.newsdata import fetch_news_data
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import router
 
@@ -21,11 +18,6 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
-
-@app.get("/news/", response_model=List[dict])
-async def get_news(query: str = "삼성전자"):
-    news_data = await fetch_news_data(query)
-    return news_data
 
 
 if __name__ == "__main__":
