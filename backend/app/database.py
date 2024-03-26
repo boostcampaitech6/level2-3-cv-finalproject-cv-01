@@ -5,7 +5,7 @@ import sqlalchemy
 
 class UserInfo(SQLModel,table=True):
     id: int = Field(default=None, primary_key=True) # None: guest user
-    created_at: str = Field(default_factory=datetime.now)
+    created_at: datetime = Field(default_factory=datetime.now)
 
 class FavoriteStocks(SQLModel,table=True):
     user_id: int = Field(primary_key=True)
@@ -18,7 +18,7 @@ class KRX(SQLModel,table=True):
 
 class CNNPredHistory(SQLModel,table=True):
     stock_code: str = Field(primary_key=True)
-    date: str = Field(primary_key=True)
+    date: datetime = Field(primary_key=True)
     close: float
     pred_1day_result: int
     pred_1day_percent: float
@@ -37,7 +37,7 @@ class CNNPredHistory(SQLModel,table=True):
 
 class TimeSeriesPredHistory(SQLModel,table=True):
     stock_code: str = Field(primary_key=True)
-    date: str = Field(primary_key=True)
+    date: datetime = Field(primary_key=True)
     close: float
     model: str
     pred_1day: float
@@ -50,7 +50,7 @@ class TimeSeriesPredHistory(SQLModel,table=True):
 
 class BertPredHistory(SQLModel,table=True):
     stock_code: str = Field(primary_key=True)
-    date: str = Field(primary_key=True)
+    date: datetime = Field(primary_key=True)
     yesterday_positive: int
     yesterday_neutral: int
     yesterday_negative: int
@@ -60,7 +60,7 @@ class BertPredHistory(SQLModel,table=True):
 
 class CandlePredHistory(SQLModel,table=True):
     stock_code: str = Field(primary_key=True)
-    date: str = Field(primary_key=True)
+    date: datetime = Field(primary_key=True)
     candle_name: str
 
 engine = sqlalchemy.create_engine(config.db_url)

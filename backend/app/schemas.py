@@ -1,8 +1,9 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 class UserInfoResponse(BaseModel):
     id: int
-    created_at: str
+    created_at: datetime
 
 class FavoriteStocksResponse(BaseModel):
     user_id: int
@@ -15,7 +16,7 @@ class KRXResponse(BaseModel):
 
 class CNNPredResponse(BaseModel):
     stock_code: str 
-    date: str 
+    date: datetime 
     close: float	    
     pred_1day_result: int
     pred_1day_percent: float
@@ -34,7 +35,7 @@ class CNNPredResponse(BaseModel):
 
 class TimeSeriesPredResponse(BaseModel):
     stock_code: str
-    date: str
+    date: datetime
     close: str
     pred_1day: float
     pred_2day: float
@@ -46,7 +47,7 @@ class TimeSeriesPredResponse(BaseModel):
 
 class BertPredResponse(BaseModel):
     stock_code: str
-    date: str
+    date: datetime
     yesterday_positive: int
     yesterday_neutral: int
     yesterday_negative: int
@@ -56,5 +57,5 @@ class BertPredResponse(BaseModel):
 
 class CandlePredResponse(BaseModel):
     stock_code: str
-    date: str
+    date: datetime
     candle_name: str
