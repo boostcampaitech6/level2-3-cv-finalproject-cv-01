@@ -63,7 +63,7 @@ export const SearchScreen = () => {
       <div>
         {parts.map((part, index) =>
           part.toLowerCase() === inputValue.toLowerCase() ? (
-            <span key={index} style={{ color: '#7d49f5' }}>{part}</span>
+            <span key={index} style={{ color: '#00FF00' }}>{part}</span>
           ) : (
             part
           )
@@ -76,31 +76,37 @@ export const SearchScreen = () => {
     placeholder: (provided) => ({
       ...provided,
       paddingLeft: '10px', // 원하는 들여쓰기 값으로 조정하세요
+      color: 'hsl(0, 0%, 50%)'
     }),
     input: (provided) => ({
       ...provided,
       paddingLeft: '10px', // 입력 텍스트에 대한 들여쓰기
+      color: 'hsl(0, 0%, 50%)'
     }),
     control: (provided, { isFocused }) => ({
       ...provided,
       minHeight: '45px', // 최소 높이 설정
-      borderColor: isFocused ? '#7d49f5' : provided.borderColor, // 포커스 되었을 때 보라색으로 변경
-      boxShadow: isFocused ? '0 0 0 1px #7d49f5' : 'none',
+      backgroundColor: '#2C2C35',
+      borderColor: isFocused ? '#00FF00' : provided.borderColor, // 포커스 되었을 때 보라색으로 변경
+      boxShadow: isFocused ? '0 0 0 1px #00FF00' : 'none',
     // 포커스 되었을 때 보라색 그림자 효과를 줌
       '&:hover': {
-        borderColor: '#7d49f5', // 마우스 호버 시 보라색으로 변경
+        borderColor: '#00FF00', // 마우스 호버 시 보라색으로 변경
       },
      
     }),
-    dropdownIndicator: (provided, { isFocused }) => ({
+    
+
+    menu: (provided) => ({
       ...provided,
-      color: isFocused ? '#7d49f5':provided.color,  // 화살표 색상을 보라색으로 설정
+      backgroundColor: '#2C2C35', // 이 값을 원하는 색깔의 헥사 코드로 변경
     }),
 
     option: (provided, { isFocused, isSelected }) => {
       return {
         ...provided,
-        backgroundColor: isSelected ? '#F2ECFF' : isFocused ? '#F2ECFF' : undefined,
+        backgroundColor: isSelected ? '#3A3A3A' : isFocused ? '#3A3A3A' : undefined,
+        color: isSelected ? 'hsl(0, 0%, 50%)' : isFocused ? 'hsl(0, 0%, 50%)' : 'hsl(0, 0%, 50%)',
         // 선택된 옵션의 배경색과 포커스 시 배경색
         paddingLeft: '20px',
       };
@@ -125,7 +131,7 @@ export const SearchScreen = () => {
     <div className="search-screen">
       <div className="frame-7">
         <div className="content-3">
-          <div className="stock-list">
+          {/* <div className="stock-list">
           <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
             <StateOffWrapper 
               className="component-1169-instance" 
@@ -173,7 +179,7 @@ export const SearchScreen = () => {
           </div>
           <div className="text-4">
             <div className="text-wrapper-18">인기 검색어</div>
-          </div>
+          </div> */}
           <div className="search-bar">
             <div className="container-2">
               <AsyncSelect

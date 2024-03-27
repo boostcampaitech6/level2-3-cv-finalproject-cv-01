@@ -1,6 +1,6 @@
 .search-screen {
   align-items: center;
-  background-color: #ffffff;
+  background-color: #17171B;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -9,7 +9,7 @@
 
 .search-screen .frame-7 {
   align-items: center;
-  background-color: #ffffff;
+  background-color: #17171B;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -23,7 +23,7 @@
 .search-screen .content-3 {
   align-self: stretch;
   display: flex;
-  background-color: #ffffff;
+  background-color: #17171B;
   width: 100%; 
   position: relative;
   min-height: 100vh;
