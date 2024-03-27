@@ -1,45 +1,46 @@
-<div align="center">
-    <img src="https://github.com/FinalCold/Programmers/assets/67350632/b768fead-58ab-4ede-abd7-dc0d77d4a45d" alt="MLflow badge" width="100">
-    <h2 style="margin-bottom: 2px;">알려주가 AI</h2>
-    <h3 style="margin-top: 0px; margin-bottom: 10px">인공지능 주가 예측 서비스</h3>
-    <p align="center">
-        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=FastAPI&logoColor=white" alt="FastAPI badge">
-        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React badge">
-        <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL badge">
-        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=PyTorch&logoColor=white" alt="PyTorch badge">
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white" alt="Python badge">
-        <br>
-        <img src="https://img.shields.io/badge/git-5C3EE8?style=flat-square&logo=git&logoColor=white" alt="git badge">
-        <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white" alt="Figma badge">
-        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white" alt="Docker badge">
-        <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white" alt="Streamlit badge">
-        <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=ApacheAirflow&logoColor=white" alt="Airflow badge">
-        <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=MLflow&logoColor=white" alt="MLflow badge">
-    </p>
-</div>
+<center>
+<img src="https://github.com/FinalCold/Programmers/assets/67350632/b768fead-58ab-4ede-abd7-dc0d77d4a45d" alt="MLflow badge" width="100">
+<h2 style="margin-bottom: 2px;">알려주가 AI</h2>
+<h3 style="margin-top: 0px; margin-bottom: 10px">인공지능 주가 예측 서비스</h3>
+    <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=FastAPI&logoColor=white" alt="FastAPI badge">
+    <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React badge">
+    <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL badge">
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=PyTorch&logoColor=white" alt="PyTorch badge">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white" alt="Python badge">
+    <br>
+    <img src="https://img.shields.io/badge/git-5C3EE8?style=flat-square&logo=git&logoColor=white" alt="git badge">
+    <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white" alt="Figma badge">
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white" alt="Docker badge">
+    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white" alt="Streamlit badge">
+    <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=ApacheAirflow&logoColor=white" alt="Airflow badge">
+    <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=MLflow&logoColor=white" alt="MLflow badge">
+</center>
 
 ## Overview
 알려주가 AI는 인공지능을 활용하여 종목에 대한 분석 결과를 제공함으로써, 
 사용자가 투자의 세계에 쉽게 발을 들여놓을 수 있도록 돕는 서비스입니다.
+<center>
 <div>
-    <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/f6ee5704-f7b1-4bfc-b91c-349dfc1583e5" width="150" style="display: inline-block;">
-    <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/d43a5eaf-ce4a-495d-a69b-d81b2817ad17" width="150" style="display: inline-block;">
-    <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/01343381-74d5-4dec-8720-026ed59cf529" width="150" style="display: inline-block;">
-    <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2277c785-9b19-4505-b269-7d84abd1950b" width="150" style="display: inline-block;">
-
-    
+    <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/f6ee5704-f7b1-4bfc-b91c-349dfc1583e5" width="170" style="display: inline-block;">
+    <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/d43a5eaf-ce4a-495d-a69b-d81b2817ad17" width="170" style="display: inline-block;">
+    <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/01343381-74d5-4dec-8720-026ed59cf529" width="170" style="display: inline-block;">
+    <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2277c785-9b19-4505-b269-7d84abd1950b" width="170" style="display: inline-block;">    
 </div>
+</center>
 
 ## Service Video
 
 
 
 ## System Architecture
-![system](https://github.com/FinalCold/Programmers/assets/67350632/01a4a6a8-b0c0-4d4d-a874-56d54522fc6b)
+<center>
+<img src="https://github.com/FinalCold/Programmers/assets/67350632/01a4a6a8-b0c0-4d4d-a874-56d54522fc6b" width="750">
+</center>
 
 ## Model Architecture
-![model](https://github.com/FinalCold/Programmers/assets/67350632/c0492b26-64a3-4ef7-a0f5-c75a4a610ce0)
-
+<center>
+<img src="https://github.com/FinalCold/Programmers/assets/67350632/c0492b26-64a3-4ef7-a0f5-c75a4a610ce0" width="600">
+</center>
 
 ## Team
 <table>
