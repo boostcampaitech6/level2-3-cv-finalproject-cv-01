@@ -1,20 +1,22 @@
-<center>
-<img src="https://github.com/FinalCold/Programmers/assets/67350632/b768fead-58ab-4ede-abd7-dc0d77d4a45d" alt="MLflow badge" width="100">
-<h2 style="margin-bottom: 2px;">알려주가 AI</h2>
-<h3 style="margin-top: 0px; margin-bottom: 10px">인공지능 주가 예측 서비스</h3>
-    <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=FastAPI&logoColor=white" alt="FastAPI badge">
-    <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React badge">
-    <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL badge">
-    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=PyTorch&logoColor=white" alt="PyTorch badge">
-    <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white" alt="Python badge">
-    <br>
-    <img src="https://img.shields.io/badge/git-5C3EE8?style=flat-square&logo=git&logoColor=white" alt="git badge">
-    <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white" alt="Figma badge">
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white" alt="Docker badge">
-    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white" alt="Streamlit badge">
-    <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=ApacheAirflow&logoColor=white" alt="Airflow badge">
-    <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=MLflow&logoColor=white" alt="MLflow badge">
-</center>
+<div align="center">
+    <img src="https://github.com/FinalCold/Programmers/assets/67350632/b768fead-58ab-4ede-abd7-dc0d77d4a45d" alt="MLflow badge" width="100">
+    <h2 style="margin-bottom: 2px;">알려주가 AI</h2>
+    <h3 style="margin-top: 0px; margin-bottom: 10px">인공지능 주가 예측 서비스</h3>
+    <p align="center">
+        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=FastAPI&logoColor=white" alt="FastAPI badge">
+        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React badge">
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL badge">
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=PyTorch&logoColor=white" alt="PyTorch badge">
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white" alt="Python badge">
+        <br>
+        <img src="https://img.shields.io/badge/git-5C3EE8?style=flat-square&logo=git&logoColor=white" alt="git badge">
+        <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white" alt="Figma badge">
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white" alt="Docker badge">
+        <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white" alt="Streamlit badge">
+        <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=ApacheAirflow&logoColor=white" alt="Airflow badge">
+        <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=MLflow&logoColor=white" alt="MLflow badge">
+    </p>
+</div>
 
 ## Overview
 알려주가 AI는 인공지능을 활용하여 종목에 대한 분석 결과를 제공함으로써, 
