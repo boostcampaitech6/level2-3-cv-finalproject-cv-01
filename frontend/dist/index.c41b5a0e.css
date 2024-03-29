@@ -774,20 +774,6 @@
   background-color: #fdd000;
 }
 
-.search {
-  align-items: flex-start;
-  gap: 10px;
-  padding: 2px;
-  display: inline-flex;
-  position: relative;
-}
-
-.search .union {
-  width: 18.71px;
-  height: 18.71px;
-  position: relative;
-}
-
 .home {
   background-color: #fff;
   flex-direction: column;
@@ -1179,6 +1165,20 @@
   position: relative;
 }
 
+.component-1174 .text-wrapper-5 {
+  color: #fd0000;
+  letter-spacing: -.3px;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: Inter, Helvetica;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: normal;
+  position: relative;
+}
+
 .component-1174 .div-wrapper-3 {
   justify-content: center;
   align-items: center;
@@ -1193,7 +1193,7 @@
   width: fit-content;
   margin-top: -1px;
   font-family: Inter, Helvetica;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   position: relative;
 }
@@ -2060,7 +2060,14 @@
 }
 
 .result-screen .heart-4 {
-  background-image: url("heart-off-7.86991e29.svg") !important;
+  background-image: url("heart-off.58504525.svg") !important;
+  width: 28px !important;
+  height: 28px !important;
+  position: relative !important;
+}
+
+.result-screen .heart-5 {
+  background-image: url("heart-on.79df5424.svg") !important;
   width: 28px !important;
   height: 28px !important;
   position: relative !important;
@@ -2219,34 +2226,33 @@
 .div-wrapper .text-wrapper-5 {
   color: #000;
   letter-spacing: 0;
-  text-align: right;
+  text-align: center;
   width: fit-content;
-  margin-top: -1px;
   font-family: Inter, Helvetica;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 600;
   line-height: normal;
+  display: inline-block;
   position: relative;
 }
 
 .div-wrapper .text-wrapper-6 {
-  color: #2962ff;
+  color: red;
   letter-spacing: 0;
   width: fit-content;
   font-family: Inter, Helvetica;
-  font-size: 8px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
   line-height: normal;
   position: relative;
 }
 
 .div-wrapper .text-wrapper-7 {
   color: #4078ff;
-  letter-spacing: 0;
   width: fit-content;
   font-family: Inter, Helvetica;
-  font-size: 8px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
   line-height: normal;
   position: relative;
 }
