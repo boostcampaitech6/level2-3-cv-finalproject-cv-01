@@ -1,13 +1,13 @@
 import pymysql
 import pymysql.cursors
 
-user_name = 'root'
-password = '비밀번호 기입'
-host_ip = '175.45.200.149'
-db_name = 'stock_db'
+user_name = 'admin'
+pass_my = '비밀번호 기입'
+host_my = '공인 IP'
+db_name = 'airflow_test_db'
 
-connection = pymysql.connect(host=host_ip,
+connection = pymysql.connect(host=host_my,
                              user=user_name,
-                             password=password,
+                             password=pass_my,
                              database=db_name,
                              cursorclass=pymysql.cursors.DictCursor)
