@@ -20,11 +20,6 @@ export const StateOffWrapper = ({ state, className, text, text1, logoClassName, 
           <div className="element">{text1}</div>
         </div>
         <div className={`logo ${logoClassName}`} />
-        <Heart 
-        className="heart-instance" 
-        stateProp={state} 
-        onClick={handleHeartClick} // 여기서 handleHeartClick을 연결합니다.
-      />
       </div>
     </div>
   );

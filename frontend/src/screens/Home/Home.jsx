@@ -2,8 +2,6 @@ import React, { useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Component1174 } from "../../components/Component1174";
 import { Menu } from "../../components/Menu";
-import { StateOffWrapper } from "../../components/StateOffWrapper";
-import { Search } from "../../components/Search";
 import "./style.css";
 import AsyncSelect from 'react-select/async';
 import Papa from 'papaparse';
@@ -138,112 +136,33 @@ export const Home = () => {
           <div className="stock-frame">
             <div className="stocks">
             <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-7"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                spanClassName="stock-6"
-                state="off"
-              />
+              <Component1174 symbol="035420" state="off" divClassName1="stock-7" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="네이버" logoClassName="stock-6" />
             </div>
             <div onClick={() => handleStockClick('KRX:068270', '셀트리온')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-10"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                logoClassName="stock-9"
-                spanClassName="stock-6"
-                state="off"
-                text="셀트리온"
-              />
+            <Component1174 symbol="068270" state="off" divClassName1="stock-10" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="셀트리온" logoClassName="stock-9" />
             </div>
             <div onClick={() => handleStockClick('KRX:005930', '삼성전자')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-10"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                logoClassName="stock-11"
-                spanClassName="stock-6"
-                state="off"
-                text="삼성전자"
-              />
+            <Component1174 symbol="005930" state="off" divClassName1="stock-10" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="삼성전자" logoClassName="stock-11" />
             </div>
             <div onClick={() => handleStockClick('KRX:035720', '카카오')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-7"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                logoClassName="stock-12"
-                spanClassName="stock-6"
-                state="off"
-                text="카카오"
-              />
+            <Component1174 symbol="035720" state="off" divClassName1="stock-7" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="카카오" logoClassName="stock-12" />
             </div>
             <div onClick={() => handleStockClick('KRX:086520', '에코프로')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-10"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                logoClassName="stock-13"
-                spanClassName="stock-6"
-                state="off"
-                text="에코프로"
-              />
+            <Component1174 symbol="086520" state="off" divClassName1="stock-10" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="에코프로" logoClassName="stock-13" />
             </div>
             <div onClick={() => handleStockClick('KRX:005380', '현대차')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-7"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                logoClassName="stock-14"
-                spanClassName="stock-6"
-                state="off"
-                text="현대차"
-              />
+            <Component1174 symbol="005380" state="off" divClassName1="stock-7" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="현대차" logoClassName="stock-14" />
             </div>
             
             <div onClick={() => handleStockClick('KRX:373220', 'LG에너지솔루션')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-30"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                logoClassName="stock-15"
-                spanClassName="stock-6"
-                state="off"
-                text="LG에너지솔루션"
-              />
+            <Component1174 symbol="373220" state="off" divClassName1="stock-30" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="LG에너지솔루션" logoClassName="stock-15" />
             </div>
 
             <div onClick={() => handleStockClick('KRX:000660', 'SK하이닉스')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-16"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                logoClassName="stock-17"
-                spanClassName="stock-6"
-                state="off"
-                text="SK하이닉스"
-              />
+            <Component1174 symbol="000660" state="off" divClassName1="stock-16" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="SK하이닉스" logoClassName="stock-17" />
             </div>
             <div onClick={() => handleStockClick('KRX:024110', '기업은행')}>
-              <Component1174
-                divClassName="component-1174-instance"
-                divClassName1="stock-10"
-                divClassName2="stock-8"
-                divClassNameOverride="stock-5"
-                logoClassName="stock-18"
-                spanClassName="stock-6"
-                state="off"
-                text="기업은행"
-              />
+            <Component1174 symbol="024110" state="off" divClassName1="stock-10" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="기업은행" logoClassName="stock-18" />
             </div>
             </div>
           </div>
