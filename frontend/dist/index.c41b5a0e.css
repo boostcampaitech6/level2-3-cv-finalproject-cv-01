@@ -1857,7 +1857,7 @@
   background-color: #fff;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   position: relative;
 }
@@ -1868,7 +1868,7 @@
   flex: 1;
   align-items: center;
   width: 420px;
-  min-height: 100vh;
+  min-height: auto;
   padding: 0 15px;
   display: flex;
   position: relative;
@@ -1878,7 +1878,7 @@
   background-color: #fff;
   align-self: stretch;
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   position: relative;
 }
@@ -1973,10 +1973,19 @@
 .result-screen .news-container {
   align-items: center;
   width: 100%;
-  height: 550px;
+  height: 700px;
   padding: 15px;
   position: absolute;
   top: 720px;
+}
+
+.result-screen .model-results-container {
+  align-items: center;
+  width: 100%;
+  min-height: 400px;
+  padding: 15px;
+  position: absolute;
+  top: 800px;
 }
 
 .result-screen .button-AI-wrapper {
@@ -2093,6 +2102,47 @@
   font-family: Noto Sans KR, Helvetica;
   font-size: 14px;
   line-height: 1.3;
+}
+
+.model-results-container .gauge-labels {
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 10px;
+  display: flex;
+}
+
+.model-results-container .gauge-label {
+  color: #3c3c3c;
+  text-align: center;
+  white-space: nowrap;
+  font-family: Noto Sans KR, sans-serif;
+  font-size: 14px;
+}
+
+.model-results-container .gauge-label.left, .model-results-container .gauge-label.left2 {
+  color: #df5341;
+  font-weight: bold;
+}
+
+.model-results-container .gauge-label.left2 {
+  color: #782a2b;
+  font-weight: bold;
+}
+
+.model-results-container .gauge-label.middle {
+  color: #42464f;
+  font-weight: bold;
+}
+
+.model-results-container .gauge-label.right2, .model-results-container .gauge-label.right {
+  color: #1f3a82;
+  font-weight: bold;
+}
+
+.model-results-container .gauge-label.right {
+  color: #3764f3;
+  font-weight: bold;
 }
 
 .button-AI {
