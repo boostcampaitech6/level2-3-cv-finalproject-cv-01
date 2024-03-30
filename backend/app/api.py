@@ -19,10 +19,12 @@ def get_stock_info() -> list[KRXResponse]:
             for result in results
         ]
 
+
 @router.get("/news", response_model=List[dict])
 async def get_news(query: str = "삼성전자"):
     news_data = await fetch_news_data(query)
     return news_data
+
 
 @router.get("/user/info/{user_id}", response_model=UserInfoResponse)
 async def get_user_info(user_id: int):
@@ -31,6 +33,7 @@ async def get_user_info(user_id: int):
         if result is None:
             raise HTTPException(status_code=404, detail="User not found")
         return result
+
 
 @router.post("/user/favorite/{user_id}", tags=["user"])
 def save_user_favorite(user_id: int, stock_code: str): # if press favorite button
@@ -104,7 +107,7 @@ def get_timeseries_pred(model: str) -> list[TimeSeriesPredResponse]:
         ]
     
 @router.get("/pred/bert", tags=["predict"])
-def get_lstm_pred() -> list[BertPredResponse]:
+def get_bert_pred() -> list[BertPredResponse]:
     with Session(engine) as session:
         statement = select(BertPredHistory)
         results = session.exec(statement).all()
@@ -124,6 +127,7 @@ def get_candle_pred() -> list[CandlePredResponse]:
             CandlePredResponse(stock_code=result.stock_code, date=result.date, candle_name=result.candle_name)
             for result in results
         ]
+        
         
 @router.post("/auth/kakao", tags=["login"])
 async def kakao_login(code: str = Body(..., embed=True)):
