@@ -28,10 +28,10 @@
 }
 
 .icon .HOME-2 {
-  color: #4a3b3b;
+  color: #ffffff;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 5px;
-  font-weight: 300;
+  font-size: 6px;
+  font-weight: 400;
   letter-spacing: -0.25px;
   line-height: normal;
   position: relative;
@@ -73,10 +73,10 @@
 }
 
 .icon .text-wrapper-2 {
-  color: #4a3b3b;
+  color: #ffffff;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 5px;
-  font-weight: 300;
+  font-size: 6px;
+  font-weight: 400;
   letter-spacing: -0.25px;
   line-height: normal;
   margin-top: -1px;
@@ -101,21 +101,15 @@
   width: 24px;
 }
 
-.icon .HOME {
-  height: 9px;
-  margin-top: -1px;
-  width: 16px;
-}
-
 .icon .icon-SEARCH {
   overflow: hidden;
 }
 
 .icon .icon-0-SAVED {
-  color: #4a3b3b;
+  color: #ffffff;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 5px;
-  font-weight: 300;
+  font-size: 6px;
+  font-weight: 400;
   letter-spacing: -0.25px;
   line-height: normal;
   text-align: center;

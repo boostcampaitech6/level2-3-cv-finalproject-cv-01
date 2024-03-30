@@ -17,12 +17,13 @@ export const Icon = ({
   img = "/img/union-10.svg",
   user = "/img/user-4.svg",
   frameClassName,
+  isFavoriteOn,
 }) => {
   return (
     <div className={`icon ${className}`}>
       {["HOME", "MY"].includes(icon) && <img className="img" alt="Home" src={icon === "MY" ? user : home} />}
 
-      {icon === "FAVORITE" && <Heart3 className="heart-3" />}
+      {icon === "FAVORITE" && <Heart3 className="heart-3" isFavoriteOn={isFavoriteOn} />}
 
       {["FAVORITE", "HOME", "MY"].includes(icon) && (
         <div className="div">
@@ -66,4 +67,5 @@ Icon.propTypes = {
   union: PropTypes.string,
   img: PropTypes.string,
   user: PropTypes.string,
+  isFavoriteOn: PropTypes.bool,
 };

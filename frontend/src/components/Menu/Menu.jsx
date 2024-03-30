@@ -31,9 +31,18 @@ export const Menu = ({
         state={iconVariantsState1}
         to={to}
       />
-      <IconVariants className="icon-variants-instance" icon="FAVORITE" state={iconVariantsState3} to={to1} />
-      <IconVariants className="icon-variants-instance" icon="SEARCH" state={iconVariantsState} to={to3} />
-      <IconVariants className="icon-variants-instance" icon="SAVED" iconUnion={iconVariantsIconUnion} state="off" />
+      <IconVariants 
+        className="icon-variants-instance" 
+        icon="SEARCH" 
+        state={iconVariantsState} 
+        to={to3} 
+      />
+      <IconVariants 
+        className="icon-variants-instance" 
+        icon="FAVORITE" 
+        state={iconVariantsState3} 
+        to={to1} 
+      />
       <IconVariants
         className="icon-variants-instance"
         icon="MY"
