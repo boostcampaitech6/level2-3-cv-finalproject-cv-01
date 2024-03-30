@@ -57,6 +57,6 @@ class CNN20d(nn.Module):
 def get_cnn_model(day):
     model = CNN20d()
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-    state_dict = torch.load(f'./dags/model/weight/I20R{day}_OHLC.tar',map_location=torch.device(device))
+    state_dict = torch.load(f'./dags/cnn_model/weight/I20R{day}_OHLC.tar',map_location=torch.device(device))
     model.load_state_dict(state_dict['model_state_dict'])
     return model
