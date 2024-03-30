@@ -1,20 +1,15 @@
-@font-face{
-  font-family: 'Noto Sans KR';
-  src: url(//fonts.googleapis.com/earlyaccess/notosanskr.css) format('woff2');
-}
-
-.result-screen {
+.result-screen {   /* 전체 프레임 영역*/
   align-items: center;
-  background-color: #ffffff;
+  background-color: #151B24;
   display: flex;
   flex-direction: column;
-  min-height: auto;
+  min-height: 100vh;
   position: relative;
+  overflow: auto;
 }
 
-.result-screen .frame-17 {
+.result-screen .design-frame {    /* 디자인 영역 */
   align-items: center;
-  background-color: #ffffff;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -22,25 +17,43 @@
   padding: 0px 15px;
   position: relative;
   width: 420px;
-  min-height: auto;
+  min-height: 100vh;
 }
 
-.result-screen .content-8 {
-  align-self: stretch;
+.result-screen .header {
   display: flex;
-  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%; 
-  position: relative;
-  min-height: auto;
+  height: 86px;
 }
 
-.result-screen .info-5 {
-  height: 48px;
-  left: 24px;
-  position: absolute;
-  top: 100px;
-  width: 341px;
+.result-screen .text-wrapper-39 {    /* stock label text */
+  color: #fff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
 }
+
+.result-screen .button-5 {    /* heart layout */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 17px;
+  height: 44px;
+  position: relative;
+}
+
 
 .result-screen .frame-18 {
   align-items: center;
@@ -113,8 +126,17 @@
 }
 
 
+
+.result-screen .stock-market-container {
+  top: 100px;
+  align-items: center;
+  position: absolute;
+  width: 100%; /* 부모의 폭에 맞추기 */
+  padding: 10px;
+}
+
 .result-screen .chart-container {
-  top: 360px;
+  top: 384px;
   align-items: center;
   position: absolute;
   height: 350px; /* 높이 설정 */
@@ -123,7 +145,7 @@
 }
 
 .result-screen .news-container {
-  top: 720px;
+  top: 780px;
   align-items: center;
   position: absolute;
   width: 100%;
@@ -159,28 +181,20 @@
   display: flex;
   align-items: center;
   position: fixed;
+  left: 50%; 
+  transform: translateX(-50%); 
+  justify-content: center; 
   bottom: 0px;
   width: 100%;
   min-height: 44px;
 }
 
 .result-screen .menu-6 {
-  box-shadow: 0px -2px 3.2px #0000000d !important;
+  box-shadow: 0px -2px 3.2px #2B344E !important;
   flex: 0 0 auto !important;
 }
 
-.result-screen .head-6 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 40px 24px 0px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; 
-  height: 86px;
-}
+
 
 .result-screen .stock-21 {
   align-items: flex-start;
@@ -190,27 +204,8 @@
   position: relative;
 }
 
-.result-screen .text-wrapper-39 {
-  color: #000000;
-  font-family: "Noto Sans KR", Helvetica;
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  width: fit-content;
-}
 
-.result-screen .button-5 {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  gap: 17px;
-  height: 44px;
-  position: relative;
-}
+
 
 .result-screen .heart-4 {
   background-image: url(../../../static/img/heart-off.svg) !important;
@@ -250,6 +245,7 @@
   font-family: "Noto Sans KR", Helvetica;
   font-size: 18px;
   font-weight: bold;
+  color: #D2D4DC;
   margin-bottom: 8px;
   text-align: justify;
   line-height: 1.3;

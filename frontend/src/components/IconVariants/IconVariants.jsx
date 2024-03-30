@@ -18,10 +18,14 @@ export const IconVariants = ({
   iconUser = "/img/user-1.svg",
   to,
 }) => {
+
+  const isFavoriteOn = icon === "FAVORITE" && state === "on";
+
   return (
     <Link className={`icon-variants ${className}`} to={to}>
       <Icon
         className="icon-instance"
+        isFavoriteOn={isFavoriteOn}
         divClassName={`${state === "on" && icon === "SEARCH" && "class"}`}
         frameClassName={`${
           ((icon === "FAVORITE" && state === "on") ||
