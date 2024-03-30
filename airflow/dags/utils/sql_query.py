@@ -62,7 +62,6 @@ def ts_pred_query():
         pred_6day = VALUES(pred_6day),
         pred_7day = VALUES(pred_7day)
     """
-        # model = VALUES(model),
 
 def sentiment_pred_query():
     bert_table = "bertpredhistory"
