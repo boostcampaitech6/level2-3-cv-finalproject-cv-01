@@ -23,30 +23,36 @@ class LSTMModel(nn.Module):
         predictions = self.linear(lstm_out.view(len(input_seq), -1))
         return predictions[-1]
 
-model_state_dict = torch.load('./dags/ts_model/weight/lstm_model.pth')
-model = LSTMModel()
-model.load_state_dict(model_state_dict)
-model.eval()
 
-def lstm_inference(code, date):
+def lstm_model():
+    model_state_dict = torch.load('./dags/ts_model/weight/lstm_model.pth')
+    model = LSTMModel()
+    model.load_state_dict(model_state_dict)
+    model.eval()
+    return model
+
+def lstm_inference(model, code, date):
     today = datetime.datetime.strptime(date, "%Y-%m-%d")
     bef = today - relativedelta(months=12)
     bef_str = bef.strftime("%Y-%m-%d")
     data = fdr.DataReader(code, bef_str, date)
     
+
     # 데이터 로딩 및 스케일링
     close_data = data[['Close']].ffill()
     scaler = MinMaxScaler(feature_range=(-1, 1))
     close_data_scaled = scaler.fit_transform(close_data.values.reshape(-1, 1))
 
+
     # 일주일 주가 예측
     future_days = 7
     seq_length = 1
     future_predictions = []
+
     with torch.no_grad():
         last_seq = torch.tensor(close_data_scaled[-seq_length:], dtype=torch.float32)
         for _ in range(future_days):
-            pred = model(last_seq.view(1, seq_length, -1))
+            pred = model(last_seq.view(1, seq_length, -1)) # 여기 
             future_predictions.append(pred.item())
             last_seq = torch.cat((last_seq[1:], pred.reshape(1, 1)))
 
