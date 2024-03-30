@@ -4,7 +4,6 @@ import os
 
 class Config(BaseSettings):
     pass_my: str = Field(os.getenv('DB_PASS'), env="DB_PASS")
-    
     @property
     def db_url(self) -> str:
         user_name = 'root'

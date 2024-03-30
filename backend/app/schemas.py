@@ -43,6 +43,7 @@ class TimeSeriesPredResponse(BaseModel):
     stock_code: str
     date: datetime
     close: float
+
     pred_1day: float
     pred_2day: float
     pred_3day: float
