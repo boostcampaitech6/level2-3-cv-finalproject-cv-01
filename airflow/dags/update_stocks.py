@@ -3,79 +3,77 @@ from datetime import datetime, timedelta
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator, BranchPythonOperator
 
-import os
 import pandas as pd
 import FinanceDataReader as fdr
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
 
-# from stock_utils import valid_check
 import exchange_calendars as ecals
 
 from database import connection
 
+from utils import logical_date, update_stock_query
+
+
 default_args = {
     "owner": "sihyun",
     "depends_on_past": False, 
-    "start_date": datetime(2024, 3, 17),
+    "start_date": datetime(2024, 3, 27),
     'retries': 3,  
     'retry_delay': timedelta(minutes=5) 
 }
 
 def validation(date):
-    ks_date = date
+    date = logical_date(date)
+    print(f"========== Execution date is {date} ==========")
+
     XKRX = ecals.get_calendar("XKRX")
-    if XKRX.is_session(ks_date):
+    if XKRX.is_session(date):
         return "update_stock_task"
     
-    return "end"
+    return "close_date"
 
 def update_stock(date):
-    # db 전체 삭제
-    krx_table = 'ForTest2' # 서비스전 임시로 저장되는 주가 종목 테이블 이름
-
-    with connection.cursor() as cursor:
-        query = f"DELETE FROM {krx_table}"
-        cursor.execute(query)
-        connection.commit()
-    
-    ks_date = date
+    date = logical_date(date)
 
     kospi_df = fdr.StockListing('KOSPI')
     kosdaq_df = fdr.StockListing('KOSDAQ')
 
     korea_stock_df = pd.concat([kospi_df, kosdaq_df])
     korea_stock_symbol = korea_stock_df[['Code', 'Name','Market']]
-    korea_stock_symbol
 
-    # 주가 종목에서 길이가 40 이하인건 저장안하게 하기
-    rmv_list = []
+    result = []
+
     for _,stock in korea_stock_symbol.iterrows():
-        stock_code = stock['Code']
+        code, name, market = stock['Code'], stock['Name'], stock['Market']
 
-        if len(fdr.DataReader(stock_code)) < 40:
-            rmv_list.append(stock_code)
+        df = fdr.DataReader(code,'2024',date)
 
-    krx_df = korea_stock_symbol[~korea_stock_symbol['Code'].isin(rmv_list)]
+        if len(df) < 40 or str(df.index[-1]).split(' ')[0] != date: # 모델이 추론 불가능한 데이터 -> 추가 안함
+            continue 
+        else:
+            row_data = [ code, name, market, date ]
+            result.append(row_data)
+
+    # 데이터 베이스 갱신
+    update_query = update_stock_query()
 
     with connection.cursor() as cursor:
-        for _, row in krx_df.iterrows():
-            code, name, market = row['Code'], row['Name'], row['Market']
-            query = f"INSERT INTO {krx_table} (Code, Name, Market) VALUES (%s, %s, %s)"
-            values = (code, name, market)
-            cursor.execute(query, values)
-        connection.commit() 
+        for data in result:
+            cursor.execute(update_query, data)
+
+    connection.commit()
+    connection.close()
 
 
 with DAG(
-    dag_id="renew_stock_db",
+    dag_id="update_stock_db",
     default_args=default_args,
-    schedule_interval="0 12 * * *", 
-    tags=['my_dags'],
+    schedule_interval="0 10 * * *", 
+    tags=['Single-run DAG'],
 ) as dag:
     execution_date = "{{ ds }}"
 
-    end = EmptyOperator(task_id="end")
+    close_date = EmptyOperator(task_id="close_date")
 
     valid_check_task = BranchPythonOperator(
         task_id="valid_check_task",
@@ -93,5 +91,5 @@ with DAG(
         }
     )
 
-    valid_check_task >> [update_stock_task, end]
+    valid_check_task >> [update_stock_task, close_date]
 
