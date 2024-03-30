@@ -1,15 +1,15 @@
-.home {
+.home {   /* 전체 프레임 영역*/
   align-items: center;
-  background-color: #ffffff;
+  background-color: #151B24;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  overflow: auto;
 }
 
-.home .frame-8 {
+.home .frame-8 {   /* 디자인 영역 */
   align-items: center;
-  background-color: #ffffff;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -20,42 +20,46 @@
   min-height: 100vh;
 }
 
-.home .content-4 {
-  align-self: stretch;
-  display: flex;
-  background-color: #ffffff;
-  width: 100%;
-  position: relative;
-  min-height: 100vh;
+.home .stock-container {
+  top: 350px;
+  align-items: center;
+  position: absolute;
+  width: 100%; /* 부모의 폭에 맞추기 */
+  padding: 10px;
+  height: 420px;
 }
 
 .home .stock-frame {
+  display: flex; /* Flexbox를 사용합니다 */
+  align-items: center; /* 세로축에서 중앙에 배치합니다 */
+  justify-content: center; /* 가로축에서 중앙에 배치합니다 */
   background-color: #d9d9d933;
   border-radius: 5px;
-  height: 351px;
-  left: 0;
+  height: 351px; /* 필요에 따라 조정하세요 */
   overflow: hidden;
-  position: absolute;
-  top: 321px;
-  width: 390px;
+  position: relative; /* 상대적 위치 지정 */
 }
 
 .home .stocks {
-  align-items: flex-start;
   display: flex;
+  justify-content: center;
+  align-items: center; 
   flex-wrap: wrap;
   gap: 6px 6px;
-  left: 42px;
   position: relative;
-  top: 17px;
-  width: 306px;
+  width: 100%;
+  padding: 10px;
+  height: auto; 
 }
-
-
 
 
 .home .component-1174-instance {
   left: 25px !important;
+}
+
+.component-1174:hover {
+  background-color: #DAFFC8; 
+  cursor: pointer; 
 }
 
 .home .stock-5 {
@@ -216,29 +220,30 @@
 }
 
 .home .text-container {
-  align-items: center;
-  display: inline-flex;
-  flex-direction: column;
-  left: 123px;
-  position: absolute;
   top: 244px;
+  align-items: center;
+  position: absolute;
+  width: 100%; /* 부모의 폭에 맞추기 */
+  padding: 10px;
+
 }
 
 .home .text-6 {
   align-items: center;
   display: inline-flex;
   flex: 0 0 auto;
-  gap: 10px;
   justify-content: center;
   padding: 10px;
   position: relative;
+  width: 100%;
+  padding-bottom: 30px;
 }
 
 .home .text-wrapper-26 {
-  color: #000000;
+  color: #ffffff;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
   letter-spacing: -0.96px;
   line-height: 10px;
   margin-top: -1px;
@@ -252,17 +257,17 @@
   align-items: center;
   display: inline-flex;
   flex: 0 0 auto;
-  gap: 10px;
   justify-content: center;
   margin-top: -5px;
   padding: 10px;
   position: relative;
+  width: 100%;
 }
 
 .home .text-wrapper-27 {
   color: #808080;
   font-family: "Noto Sans KR", Helvetica;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.6px;
   line-height: 10px;
@@ -272,15 +277,12 @@
   width: fit-content;
 }
 
-.home .container-wrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  left: 0;
-  position: absolute;
+.home .search-box-container {
   top: 136px;
-  width: 390px;
+  align-items: center;
+  position: absolute;
+  width: 100%; /* 부모의 폭에 맞추기 */
+  padding: 10px;
 }
 
 .home .container-3 {
@@ -288,7 +290,7 @@
   height: 45px;
   overflow: hidden;
   position: relative;
-  width: 390px;
+  width: 100%;
 }
 
 .home .text-8 {
@@ -324,34 +326,37 @@
   display: flex;
   align-items: center;
   position: fixed;
+  left: 50%; 
+  transform: translateX(-50%); 
+  justify-content: center; 
   bottom: 0px;
   width: 100%;
   min-height: 44px;
 }
 
 .home .menu-2 {
-  box-shadow: 0px -2px 3.2px #0000000d !important;
+  box-shadow: 0px -2px 3.2px #2B344E !important;
   flex: 0 0 auto !important;
 }
 
 .home .head-2 {
   align-items: flex-start;
-  background-color: #ffffff;
   display: flex;
   gap: 8px;
   height: 86px;
   left: 0;
-  padding: 40px 24px 0px;
+  padding: 40px 0px 0px;
   position: absolute;
   top: 0;
   width: 390px;
 }
 
 .home .text-wrapper-29 {
-  color: #000000;
-  font-family: "Inter", Helvetica;
-  font-size: 36px;
-  font-weight: 700;
+  color: #ffffff;
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 40px;
   letter-spacing: 0;
   line-height: normal;
   margin-top: -1px;
