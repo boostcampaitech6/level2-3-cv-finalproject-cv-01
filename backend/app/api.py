@@ -7,6 +7,7 @@ from typing import List
 from utils.newsdata import fetch_news_data
 from utils.score import TimeSeriesScore, CNNScore, BERTScore, CANDLEScore
 import httpx
+import os
 
 router = APIRouter()
 
@@ -162,8 +163,8 @@ async def kakao_login(code: str = Body(..., embed=True)):
     
     payload = {
         "grant_type": "authorization_code",
-        "client_id": '9e848430d64c21d951929df1b19f8617',  # 카카오 REST API 키
-        "redirect_uri": 'http://localhost:9980/login-kakao',  # 카카오 개발자 설정에 등록한 리다이렉트 URI
+        "client_id": os.getenv("REST_API_KEY"),  # 카카오 REST API 키
+        "redirect_uri": f'http://{os.getenv("SERVER_IP")}:3001/login-kakao',  # 카카오 개발자 설정에 등록한 리다이렉트 URI
         "code": code,  # 카카오 로그인 인증 과정에서 받은 인증 코드
     }
     async with httpx.AsyncClient() as client:
@@ -194,7 +195,7 @@ async def kakao_login(code: str = Body(..., embed=True)):
                 except IntegrityError:
                     session.rollback()
                     raise HTTPException(status_code=400, detail="User already exists")
-        print(user_info)
+                
         return_info = {'kakao_id': kakao_id, 'nickname': nickname, 'profile_image': profile_image}
 
         return return_info
