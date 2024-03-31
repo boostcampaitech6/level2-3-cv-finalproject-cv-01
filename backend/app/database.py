@@ -10,7 +10,7 @@ class UserInfo(SQLModel,table=True):
     nickname: str
 
 class FavoriteStocks(SQLModel,table=True):
-    user_id: int = Field(primary_key=True)
+    user_id: int = Field(default=None, sa_column=Column(BigInteger, primary_key=True))
     stock_code: str = Field(primary_key=True)
 
 class KRX(SQLModel,table=True):
