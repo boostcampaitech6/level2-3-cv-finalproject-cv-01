@@ -6,6 +6,7 @@ from .database import UserInfo, FavoriteStocks, KRX, CNNPredHistory, TimeSeriesP
 from typing import List
 from utils.newsdata import fetch_news_data
 import httpx
+import os
 
 router = APIRouter()
 
@@ -136,8 +137,8 @@ async def kakao_login(code: str = Body(..., embed=True)):
     
     payload = {
         "grant_type": "authorization_code",
-        "client_id": '9e848430d64c21d951929df1b19f8617',  # 카카오 REST API 키
-        "redirect_uri": 'http://localhost:3001/login-kakao',  # 카카오 개발자 설정에 등록한 리다이렉트 URI
+        "client_id": os.getenv("REST_API_KEY"),  # 카카오 REST API 키
+        "redirect_uri": f'http://{os.getenv("SERVER_IP")}:3001/login-kakao',  # 카카오 개발자 설정에 등록한 리다이렉트 URI
         "code": code,  # 카카오 로그인 인증 과정에서 받은 인증 코드
     }
     async with httpx.AsyncClient() as client:
