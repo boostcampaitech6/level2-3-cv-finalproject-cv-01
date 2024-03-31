@@ -21,7 +21,7 @@ export const Component1174 = ({
   useEffect(() => {
     const fetchStockData = async () => {
       try {
-        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/api/stock/${symbol}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:${process.env.PORT}/api/stock/${symbol}`);
         const data = response.data;
         const changeFormatted = (data.change * 100).toFixed(2);
         setStockInfo({ change: changeFormatted, price: data.close });
