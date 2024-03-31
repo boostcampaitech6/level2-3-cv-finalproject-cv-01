@@ -3,26 +3,14 @@ from datetime import datetime
 
 class UserInfoResponse(BaseModel):
     id: int
-<<<<<<< HEAD
-<<<<<<< HEAD
     created_at: datetime
     nickname: str
-<<<<<<< HEAD
-=======
-    created_at: str
->>>>>>> 9c2bce90 (feat: mysql server connect)
-=======
-    created_at: datetime
->>>>>>> 6d9a786d (fix: date type from str to datetime)
-=======
->>>>>>> 01ac45c1 (feat: kakao api, user info)
 
 class FavoriteStocksResponse(BaseModel):
     user_id: int
     stock_code: int
 
 class KRXResponse(BaseModel):
-<<<<<<< HEAD
     stock_code: str 
     stock_name: str
     market: str
@@ -45,11 +33,12 @@ class CNNPredResponse(BaseModel):
     pred_6day_percent: float
     pred_7day_result: int
     pred_7day_percent: float
+    score: float
 
 class TimeSeriesPredResponse(BaseModel):
     stock_code: str
     date: datetime
-    close: str
+    close: float
     pred_1day: float
     pred_2day: float
     pred_3day: float
@@ -57,6 +46,7 @@ class TimeSeriesPredResponse(BaseModel):
     pred_5day: float
     pred_6day: float
     pred_7day: float
+    score: float
 
 class BertPredResponse(BaseModel):
     stock_code: str
@@ -67,16 +57,10 @@ class BertPredResponse(BaseModel):
     today_positive: int
     today_neutral: int
     today_negative: int
+    score: float
 
 class CandlePredResponse(BaseModel):
     stock_code: str
     date: datetime
-<<<<<<< HEAD
     candle_name: str
-=======
-    code: str 
-    name: str
->>>>>>> 9c2bce90 (feat: mysql server connect)
-=======
-    candle_name: str
->>>>>>> 6d9a786d (fix: date type from str to datetime)
+    score: float
