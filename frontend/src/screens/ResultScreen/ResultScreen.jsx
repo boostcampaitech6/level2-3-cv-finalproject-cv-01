@@ -106,7 +106,7 @@ export const ResultScreen = () => {
     const fetchNewsData = async () => {
       try {
         console.log(stockLabel)
-        const response = await axios.get(`http://localhost:8001/news?query=${encodeURIComponent(stockLabel)}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/news?query=${encodeURIComponent(stockLabel)}`);
         setNewsData(response.data);
       } catch (error) {
         console.error("Error fetching news data:", error);
@@ -118,7 +118,7 @@ export const ResultScreen = () => {
     const fetchCANDLEData = async () => {
       try {
         const formattedStockCode = symbol.slice(-6);
-        const response = await axios.get(`http://localhost:8001/pred/candle?stock_code=${encodeURIComponent(formattedStockCode)}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/pred/candle?stock_code=${encodeURIComponent(formattedStockCode)}`);
         setCANDLEData(response.data); // 상태 업데이트
         console.log(response.data);
       } catch (error) {
@@ -131,7 +131,7 @@ export const ResultScreen = () => {
     const fetchBERTData = async () => {
       try {
         const formattedStockCode = symbol.slice(-6);
-        const response = await axios.get(`http://localhost:8001/pred/bert?stock_code=${encodeURIComponent(formattedStockCode)}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/pred/bert?stock_code=${encodeURIComponent(formattedStockCode)}`);
         setBERTData(response.data); // 상태 업데이트
         console.log(response.data);
       } catch (error) {
@@ -144,7 +144,7 @@ export const ResultScreen = () => {
     const fetchCNNData = async () => {
       try {
         const formattedStockCode = symbol.slice(-6);
-        const response = await axios.get(`http://localhost:8001/pred/cnn?stock_code=${encodeURIComponent(formattedStockCode)}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/pred/cnn?stock_code=${encodeURIComponent(formattedStockCode)}`);
         setCNNData(response.data); // 상태 업데이트
         console.log(response.data);
       } catch (error) {
@@ -160,7 +160,7 @@ export const ResultScreen = () => {
         // 모델 이름을 'lstm'으로 설정합니다.
         const model = 'lstm';
         const formattedStockCode = symbol.slice(-6);
-        const response = await axios.get(`http://localhost:8001/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
         setLSTMData(response.data); // 상태 업데이트
         console.log(response.data);
       } catch (error) {
@@ -175,7 +175,7 @@ export const ResultScreen = () => {
         // 모델 이름을 'ar'으로 설정합니다.
         const model = 'ar';
         const formattedStockCode = symbol.slice(-6);
-        const response = await axios.get(`http://localhost:8001/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
         setARData(response.data); // 상태 업데이트
         console.log(response.data);
       } catch (error) {
@@ -190,7 +190,7 @@ export const ResultScreen = () => {
         // 모델 이름을 'hmm'으로 설정합니다.
         const model = 'hmm';
         const formattedStockCode = symbol.slice(-6);
-        const response = await axios.get(`http://localhost:8001/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
         setHMMData(response.data); // 상태 업데이트
         console.log(response.data);
       } catch (error) {
@@ -217,7 +217,7 @@ export const ResultScreen = () => {
   // 사용자의 좋아요 상태를 로드하는 함수
   const loadLikes = async () => {
     try {
-      const response = await axios.get(`http://localhost:8001/user/favorite/${userInfo.kakao_id}`);
+      const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/favorite/${userInfo.kakao_id}`);
       const fetchedLikes = response.data; // 서버 응답 구조에 맞게 조정
       // fetchedLikes가 좋아요한 주식의 배열이라고 가정하고, 이를 객체로 변환
       const likesUpdate = fetchedLikes.reduce((acc, cur) => ({
@@ -246,7 +246,7 @@ export const ResultScreen = () => {
     console.log(`Sending request for ${symbol} with body:`, requestBody); // 전송되는 요청 본문 로깅
   
     try {
-      const response = await axios.post(`http://localhost:8001/user/favorite/${userInfo.kakao_id}`, requestBody);
+      const response = await axios.post(`http://${process.env.SERVER_IP}:8001/user/favorite/${userInfo.kakao_id}`, requestBody);
       console.log(`Response for ${symbol}:`, response); // 요청에 대한 응답 로깅
   
       // 상태 업데이트
