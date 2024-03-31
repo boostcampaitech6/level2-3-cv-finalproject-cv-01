@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=KoreanGGSR:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Apple+SD+Gothic+Neo:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-noto-sans-kr: "Noto Sans KR";
+  --font-koreanggsr: KoreanGGSR;
+  --wwwtherichio-apple-sd-gothic-neo-regular-13: "Apple SD Gothic Neo";
+
+  /* font sizes */
+  --font-size-21xl: 40px;
+  --font-size-53xl: 72px;
+  --font-size-45xl: 64px;
+  --font-size-xl: 20px;
+  --font-size-29xl: 48px;
+  --wwwtherichio-apple-sd-gothic-neo-regular-13-size: 13px;
+  --font-size-mini: 15px;
+
+  /* Colors */
+  --color-gray-100: #fafafa;
+  --wwwtherichio-gray: #808080;
+  --color-gray-200: #202637;
+  --wwwtherichio-mirage: #1b1f2c;
+  --color-gray-300: #131722;
+  --color-lightgray: #cfcdda;
+  --color-indianred: #b55247;
+  --color-darkkhaki: #a4bd61;
+  --color-mediumslateblue: #2962ff;
+  --color-darkslategray: #272f45;
+  --color-crimson: #f23645;
+  --wwwtherichio-silver: #c5c5c5;
+
+  /* Gaps */
+  --gap-3xs: 10px;
+  --gap-xs-9: 11.9px;
+  --gap-0: 0px;
+
+  /* Paddings */
+  --padding-mini: 15px;
+  --padding-lg-4: 18.4px;
+  --padding-10xs: 3px;
+  --padding-144xl-6: 163.6px;
+  --padding-4xs: 9px;
+  --padding-2xs: 11px;
+  --padding-12xs-2: 0.2px;
+  --padding-12xs-5: 0.5px;
+
+  /* Border radiuses */
+  --br-mini: 15px;
+  --br-xs: 12px;
+  --br-base: 16px;
+}
