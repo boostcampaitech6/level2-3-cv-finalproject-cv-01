@@ -44,17 +44,18 @@ def BERTScore(yesterday_positive, yesterday_neutral, yesterday_negative,
 # CANDLE
 # 최종 점수 = 기본 점수 + (상승 - 하락) / (상승 + 하락) * 50 * 가중치
 def CANDLEScore(candle_name):
-    df = pd.read_csv('/backend/utils/candle_patterns_db.csv')
+    df = pd.read_csv('/workspace/backend/utils/candle_patterns_db.csv')
 
     pattern_list = candle_name.split(',')
-
+    print(pattern_list)
+    
     highest_rank = float('inf')
     highest_rank_code = None
     pattern_info = None
     
     for pattern in pattern_list:
         filtered_df = df[df['code'].str.strip() == pattern.strip()]
-
+        print(filtered_df)
         if not filtered_df.empty:
                 current_highest_rank_row = filtered_df.loc[filtered_df['rank'].idxmin()]
                 
