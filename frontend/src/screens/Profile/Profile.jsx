@@ -21,7 +21,7 @@ export const Profile = () => {
       if (userInfo && userInfo.kakao_id) {
         try {
           // 백엔드 API 엔드포인트에서 사용자 ID를 사용하여 요청
-          const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/info/${userInfo.id}`);
+          const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/info/${userInfo.kakao_id}`);
           // 백엔드로부터 받은 상세 정보로 userInfo 상태 업데이트
           setUserInfo({ ...userInfo, ...response.data, detailedFetched: true });
         } catch (error) {
@@ -39,7 +39,9 @@ export const Profile = () => {
   return (
     <div className="profile">
       <div className="frame-9">
-        <div className="content-5">
+      <div className="line">
+                  <img className="line-2" alt="Line" src="/img/line-2.svg" />
+                </div>
           <div className="label-2">
           </div>
           <div className="label-3">
@@ -53,9 +55,6 @@ export const Profile = () => {
                 <div className="label-4">
                   <div className="text-wrapper-30">사용자 정보</div>
                 </div>
-                <div className="line">
-                  <img className="line-2" alt="Line" src="/img/line-2.svg" />
-                </div>
               </div>
               <div className="img-frame">
                 <div className="ellipse-2" />
@@ -64,9 +63,19 @@ export const Profile = () => {
             </div>
             <div className="label-5">
             {userInfo ? (
-              <button onClick={logout} className="logout-button">로그아웃</button>
+              <button  onClick={logout}  className="button-2">
+              <img className="kakao-logo" alt="Kakao logo" src="/img/kakao-logo.svg" />
+              <div className="label-wrapper">
+                <div className="label">Logout</div>
+              </div>
+            </button>
             ) : (
-              <button onClick={handleLogin} className="login-button">로그인</button>
+              <button  onClick={handleLogin}   className="button-2">
+              <img className="kakao-logo" alt="Kakao logo" src="/img/kakao-logo.svg" />
+              <div className="label-wrapper">
+                <div className="label">Login</div>
+              </div>
+            </button>
             )}
             </div>
           </div>
@@ -89,6 +98,5 @@ export const Profile = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
