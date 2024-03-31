@@ -61,7 +61,7 @@
   display: inline-flex;
   flex-direction: column;
   gap: 10px;
-  left: 0;
+  width: 380px;
   padding: 10px;
   position: absolute;
   top: 160px;
@@ -72,7 +72,7 @@
   margin-top: -1px;
   object-fit: cover;
   position: relative;
-  width: 390px;
+  width: 360px;
 }
 
 
@@ -167,5 +167,56 @@
   line-height: normal;
   margin-top: -1px;
   position: relative;
+  width: fit-content;
+}
+
+
+.favorite-screen .button-2 {
+  all: unset;
+  align-items: center;
+  background-color: var(--variable-collection-kakao-bg-duplicate);
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0px 14px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 220px;
+  margin: 15 auto; /* 버튼을 수평 중앙에 배치 */
+}
+
+.favorite-screen .button-2:hover {
+  cursor: pointer; 
+}
+
+.favorite-screen .kakao-logo {
+  height: 15px;
+  position: relative;
+  width: 15px;
+}
+
+.favorite-screen .label-wrapper {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  padding: 0px 18px;
+  position: relative;
+}
+
+.favorite-screen .label {
+  color: var(--variable-collection-kakao-text);
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 22.5px;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
   width: fit-content;
 }
