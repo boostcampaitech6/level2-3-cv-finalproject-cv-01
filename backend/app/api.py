@@ -169,7 +169,7 @@ async def kakao_login(code: str = Body(..., embed=True)):
                 except IntegrityError:
                     session.rollback()
                     raise HTTPException(status_code=400, detail="User already exists")
-        print(user_info)
+                
         return_info = {'kakao_id': kakao_id, 'nickname': nickname, 'profile_image': profile_image}
 
         return return_info
