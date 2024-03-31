@@ -8,6 +8,8 @@
   overflow: auto;
 }
 
+
+
 .search-screen .frame-7 {   /* 디자인 영역 */
   align-items: center;
   display: flex;
@@ -18,7 +20,10 @@
   position: relative;
   width: 420px;
   min-height: 100vh;
+  
 }
+
+
 
 .search-screen .stock-list-container {
   top: 286px;
@@ -27,7 +32,10 @@
   width: 100%; /* 부모의 폭에 맞추기 */
   padding: 10px;
   height: 350px;
+  
 }
+
+
 
 
 .search-screen .stock-list {
@@ -37,7 +45,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  
 }
+
+
 
 .search-screen .stock {
   margin-left: -0.5px !important;
@@ -46,10 +57,48 @@
   position: relative !important;
 }
 
-.overlap-group:hover {
+.state-off-wrapper {
+  border-bottom-width: 0; /* 줄을 없애기 위해 테두리 두께를 0으로 설정 */
+  border-top-width: 0; /* 줄을 없애기 위해 테두리 두께를 0으로 설정 */
+  /* 기타 스타일 */
+}
+
+.state-off-wrapper .NAVER {
+  color: #cccccc !important;
+}
+
+.state-off-wrapper .element {
+  color: #cccccc !important;
+}
+
+
+/* 호버 상태의 텍스트 색상 */
+.state-off-wrapper:hover .NAVER,
+.state-off-wrapper:hover .SAMSUNG,
+.state-off-wrapper:hover .KAKAO,
+.state-off-wrapper:hover .CELLTRION,
+.state-off-wrapper:hover .element
+ {
+  color: #000000 !important; /* 호버 상태에서 텍스트를 검정색으로 변경 */
+}
+
+
+
+/* 기본 상태의 배경색 */
+.overlap-group.state-off {
+  background-color: #2c2c34; 
+  
+}
+
+/* hover 상태의 배경색 */
+.overlap-group.state-off:hover {
   background-color: #DAFFC8; 
+  
   cursor: pointer; 
 }
+
+
+
 
 .search-screen .component-1169 {
   background-image: url(../../../static/img/ellipse-15-1.png) !important;
@@ -150,6 +199,8 @@
 }
 
 .search-screen .search-instance {
+  background-color: #DAFFC8; 
+
   left: 338px !important;
   position: absolute !important;
   top: 16px !important;
@@ -196,3 +247,4 @@
   position: relative;
   width: fit-content;
 }
+
