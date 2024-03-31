@@ -20,14 +20,6 @@
   min-height: 100vh;
 }
 
-.profile .content-5 {
-  align-self: stretch;
-  display: flex;
-  width: 100%; 
-  position: relative;
-  min-height: 100vh;
-}
-
 .profile .label-2 {
   align-items: center;
   display: flex;
@@ -40,7 +32,7 @@
 }
 
 .profile .text-wrapper-30 {
-  color: #000000;
+  color: #ffffff;
   font-family: "Inter", Helvetica;
   font-size: 18px;
   font-weight: 400;
@@ -118,40 +110,40 @@
 }
 
 .profile .img-frame {
-  align-items: flex-start;
-  display: inline-flex;
-  gap: 10px;
-  left: 248px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 248px; /* 이 위치를 조정해 이미지가 원 가운데 오도록 할 수 있습니다 */
   position: absolute;
   top: 0;
 }
 
 .profile .ellipse-2 {
   background-color: #d9d9d9;
-  border-radius: 58px;
+  border-radius: 50%; /* 원형 모양으로 만듦 */
+  overflow: hidden; /* 이미지가 원 밖으로 나가지 않도록 함 */
   height: 116px;
-  position: relative;
   width: 116px;
 }
 
 .profile .image-2 {
-  height: 93px;
-  left: 12px;
-  object-fit: cover;
+  height: 116px; /* 이미지 높이를 조절 */
+  width: 116px; /* 이미지 너비를 조절 */
+  object-fit: cover; /* 이미지가 컨테이너에 꽉 차게 조정 */
   position: absolute;
-  top: 12px;
-  width: 93px;
+  top: 0;
+  left: 0;
 }
 
 .profile .label-5 {
   align-items: center;
   display: flex;
   gap: 10px;
-  left: 10px;
-  padding: 8px 24px;
+  left: -5px;
+  padding: 8px 24px 8px 36px;
   position: absolute;
   top: 12px;
-  width: 205px;
+  width: 180px;
 }
 
 .profile .text-wrapper-31 {
@@ -171,6 +163,9 @@
   display: flex;
   align-items: center;
   position: fixed;
+  left: 50%; 
+  transform: translateX(-50%); 
+  justify-content: center; 
   bottom: 0px;
   width: 100%;
   min-height: 44px;
@@ -187,7 +182,7 @@
   gap: 8px;
   height: 86px;
   left: 0;
-  padding: 40px 0px 0px;
+  padding: 40px 24px 0px;
   position: absolute;
   top: 0;
   width: 390px;
@@ -203,5 +198,54 @@
   line-height: normal;
   margin-top: -1px;
   position: relative;
+  width: fit-content;
+}
+
+.profile .button-2 {
+  all: unset;
+  align-items: center;
+  background-color: var(--variable-collection-kakao-bg-duplicate);
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0px 14px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 292px;
+}
+
+.profile .button-2:hover {
+  cursor: pointer; 
+}
+
+.profile .kakao-logo {
+  height: 15px;
+  position: relative;
+  width: 15px;
+}
+
+.profile .label-wrapper {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  padding: 0px 18px;
+  position: relative;
+}
+
+.profile .label {
+  color: var(--variable-collection-kakao-text);
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 22.5px;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
   width: fit-content;
 }
