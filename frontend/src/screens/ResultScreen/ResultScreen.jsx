@@ -310,6 +310,26 @@ export const ResultScreen = () => {
             </div>
           </div>
 
+          <div className="button-AI-wrapper" onClick={handleButtonClick}>
+              <ButtonAi className="button-AI-instance" />
+            </div>
+            <div className="menu-bar-4">
+              <Menu
+                className="menu-6"
+                iconVariantsIconHome="/img/home-7.svg"
+                iconVariantsIconUnion="/img/union-9.svg"
+                iconVariantsIconUser="/img/user.svg"
+                iconVariantsState="off"
+                iconVariantsState1="off"
+                iconVariantsState2="off"
+                iconVariantsState3="off"
+                to="/home"
+                to1="/favorite"
+                to2="/profile"
+                to3="/search"
+              />
+          </div>
+
 
         <div className="stock-market-container">
           <SymbolInfo
@@ -354,6 +374,7 @@ export const ResultScreen = () => {
             </div>
             <div className="model-results-container clickable-cursor" onClick={handleClick}>
               <GaugeChart id="gauge-chart3" 
+                style={width="390px"}
                 animate={true}
                 hideText={true}
                 nrOfLevels={5}
@@ -377,27 +398,6 @@ export const ResultScreen = () => {
               </div>
             )}
             </div>
-            
-
-            <div className="button-AI-wrapper" onClick={handleButtonClick}>
-              <ButtonAi className="button-AI-instance" />
-            </div>
-            <div className="menu-bar-4">
-              <Menu
-                className="menu-6"
-                iconVariantsIconHome="/img/home-7.svg"
-                iconVariantsIconUnion="/img/union-9.svg"
-                iconVariantsIconUser="/img/user.svg"
-                iconVariantsState="off"
-                iconVariantsState1="off"
-                iconVariantsState2="off"
-                iconVariantsState3="off"
-                to="/home"
-                to1="/favorite"
-                to2="/profile"
-                to3="/search"
-              />
-          </div>
         </div>
       </div>
   );
