@@ -18,7 +18,7 @@ export const Profile = () => {
   useEffect(() => {
     const fetchDetailedUserInfo = async () => {
       // UserContext에 저장된 userInfo에서 사용자 id를 사용
-      if (userInfo && userInfo.id) {
+      if (userInfo && userInfo.kakao_id) {
         try {
           // 백엔드 API 엔드포인트에서 사용자 ID를 사용하여 요청
           const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/info/${userInfo.id}`);

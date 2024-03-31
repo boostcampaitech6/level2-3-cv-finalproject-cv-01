@@ -11,8 +11,6 @@ import { AdvancedRealTimeChart, SymbolInfo} from 'react-ts-tradingview-widgets';
 import { Radar } from 'react-chartjs-2';
 import GaugeChart from 'react-gauge-chart'
 
-// 차트 데이터
-const scores = [1, 2, 3, 4, 5, 6];
 
 // 차트 옵션
 const COLOR = {
@@ -42,19 +40,6 @@ export const ResultScreen = () => {
     setTimeout(() => setPercent(0.6), 0);
   };
 
-
-  // 차트 데이터
-  const chartData = {
-    labels: ['CNN', 'HMM', 'AR', 'News', ['Candle   ', 'Matching'], 'LSTM'],
-    datasets: [
-      {
-        label: '팀 점수',
-        data: scores,
-        backgroundColor: 'rgba(255, 108, 61, 0.2)',
-      },
-    ],
-  };
-
   // 차트 옵션
   const chartOptions = {
       elements: {
@@ -71,7 +56,7 @@ export const ResultScreen = () => {
       scales: {
         r: {
           ticks: {
-            stepSize: 2.5,
+            stepSize: 20,
             display: false,
           },
           grid: {
@@ -90,7 +75,7 @@ export const ResultScreen = () => {
             display: false,
           },
           suggestedMin: 0,
-          suggestedMax: 10,
+          suggestedMax: 100,
         },
       },
       //위에 생기는 데이터 속성 label 타이틀을 지워줍니다.
@@ -111,6 +96,15 @@ export const ResultScreen = () => {
     
     };
 
+  const [CNNData, setCNNData] = useState([]);
+  const [LSTMData, setLSTMData] = useState([]);
+  const [ARData, setARData] = useState([]);
+  const [HMMData, setHMMData] = useState([]);
+  const [BertData, setBERTData] = useState([]);
+  const [CandleData, setCANDLEData] = useState([]);
+
+  
+
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
@@ -123,7 +117,95 @@ export const ResultScreen = () => {
     };
 
     fetchNewsData();
-  }, []);
+
+    const fetchCANDLEData = async () => {
+      try {
+        const formattedStockCode = symbol.slice(-6);
+        const response = await axios.get(`http://localhost:8000/pred/candle?stock_code=${encodeURIComponent(formattedStockCode)}`);
+        setCANDLEData(response.data); // 상태 업데이트
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching time series data:", error);
+      }
+    };
+
+    fetchCANDLEData();
+
+    const fetchBERTData = async () => {
+      try {
+        const formattedStockCode = symbol.slice(-6);
+        const response = await axios.get(`http://localhost:8000/pred/bert?stock_code=${encodeURIComponent(formattedStockCode)}`);
+        setBERTData(response.data); // 상태 업데이트
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching time series data:", error);
+      }
+    };
+
+    fetchBERTData();
+
+    const fetchCNNData = async () => {
+      try {
+        const formattedStockCode = symbol.slice(-6);
+        const response = await axios.get(`http://localhost:8000/pred/cnn?stock_code=${encodeURIComponent(formattedStockCode)}`);
+        setCNNData(response.data); // 상태 업데이트
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching time series data:", error);
+      }
+    };
+
+    fetchCNNData();
+
+
+    const fetchLSTMData = async () => {
+      try {
+        // 모델 이름을 'lstm'으로 설정합니다.
+        const model = 'lstm';
+        const formattedStockCode = symbol.slice(-6);
+        const response = await axios.get(`http://localhost:8000/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
+        setLSTMData(response.data); // 상태 업데이트
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching time series data:", error);
+      }
+    };
+
+    fetchLSTMData();
+
+    const fetchARData = async () => {
+      try {
+        // 모델 이름을 'ar'으로 설정합니다.
+        const model = 'ar';
+        const formattedStockCode = symbol.slice(-6);
+        const response = await axios.get(`http://localhost:8000/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
+        setARData(response.data); // 상태 업데이트
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching time series data:", error);
+      }
+    };
+
+    fetchARData();
+
+    const fetchHMMData = async () => {
+      try {
+        // 모델 이름을 'hmm'으로 설정합니다.
+        const model = 'hmm';
+        const formattedStockCode = symbol.slice(-6);
+        const response = await axios.get(`http://localhost:8000/pred/timeseries?model=${encodeURIComponent(model)}&stock_code=${encodeURIComponent(formattedStockCode)}`);
+        setHMMData(response.data); // 상태 업데이트
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching time series data:", error);
+      }
+    };
+
+    fetchHMMData();
+
+  }, [stockLabel, symbol]);
+
+  
 
   const handleButtonClick = () => {
     setShowAdditionalResults(true); // ButtonAi 클릭 시 추가 결과를 보여줄 상태로 변경
@@ -137,6 +219,41 @@ export const ResultScreen = () => {
         [symbol]: !currentLikes[symbol], // 토글된 상태를 저장합니다.
       }));
     };
+
+  const [chartScores, setChartScores] = useState([]);
+
+  useEffect(() => {
+    // 모든 모델의 score 값 추출
+    const scores = [
+      CNNData.length > 0 ? CNNData[0].score : null,
+      HMMData.length > 0 ? HMMData[0].score : null,
+      ARData.length > 0 ? ARData[0].score : null,
+      BertData.length > 0 ? BertData[0].score : null,
+      CandleData.length > 0 ? CandleData[0].score : null,
+      LSTMData.length > 0 ? LSTMData[0].score : null,
+    ].filter(score => score != null);
+  
+    // 차트 데이터 업데이트
+    if (scores.length > 0) {
+      setChartScores(scores);
+    }
+  }, [CNNData, HMMData, ARData, BertData, CandleData, LSTMData]);
+  
+  const averageScorePercent = chartScores.length > 0
+    ? chartScores.reduce((acc, curr) => acc + curr, 0) / chartScores.length / 100
+    : 0; // 모델 점수가 없는 경우 0으로 설정
+
+  // 차트 데이터
+  const chartData = {
+    labels: ['CNN', 'HMM', 'AR', 'BERT', 'CANDLE', 'LSTM'],
+    datasets: [
+      {
+        label: 'Model Score',
+        data: chartScores,
+        backgroundColor: 'rgba(255, 108, 61, 0.2)',
+      },
+    ],
+  };
 
 
   return (
@@ -173,12 +290,13 @@ export const ResultScreen = () => {
 
             {showAdditionalResults && (
             <div className="additional-results-container">
-              <div className="radar-chart-container">
+
+        <div className="radar-chart-container">
           <div className='radar-chart-color'>
             <Radar data={chartData} options={chartOptions} />
             </div>
           </div>
-          <div className="gauge-chart-container clickable-cursor" onClick={handleClick}>
+          <div className="model-results-container clickable-cursor" onClick={handleClick}>
             <GaugeChart id="gauge-chart3" 
               animate={true}
               hideText={true}
@@ -186,7 +304,7 @@ export const ResultScreen = () => {
               cornerRadius={0}
               arcWidth={0.06}
               arcPadding={0.015}
-              percent={0.6}
+              percent={averageScorePercent}
               textColor="#3C3C3C"
               needleColor="#7d49f5"
               needleBaseColor="#4616B5"
