@@ -374,7 +374,7 @@ export const ResultScreen = () => {
             </div>
             <div className="model-results-container clickable-cursor" onClick={handleClick}>
               <GaugeChart id="gauge-chart3" 
-                style={width="390px"}
+                style={{ width: '390px' }}
                 animate={true}
                 hideText={true}
                 nrOfLevels={5}
