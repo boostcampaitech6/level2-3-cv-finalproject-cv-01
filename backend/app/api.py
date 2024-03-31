@@ -1,13 +1,12 @@
 from fastapi import APIRouter, HTTPException, status, Body
 from sqlalchemy.exc import IntegrityError
 from sqlmodel import Session, select
-from .schemas import UserInfoResponse, FavoriteStocksResponse, KRXResponse, CNNPredResponse, TimeSeriesPredResponse, BertPredResponse, CandlePredResponse
+from .schemas import UserInfoResponse, FavoriteStocksResponse, StockCode, KRXResponse, CNNPredResponse, TimeSeriesPredResponse, BertPredResponse, CandlePredResponse
 from .database import UserInfo, FavoriteStocks, KRX, CNNPredHistory, TimeSeriesPredHistory, BertPredHistory, CandlePredHistory, engine
 from typing import List
 from utils.newsdata import fetch_news_data
 from utils.score import TimeSeriesScore, CNNScore, BERTScore, CANDLEScore
 import httpx
-import os
 
 router = APIRouter()
 
@@ -20,6 +19,27 @@ def get_stock_info() -> list[KRXResponse]:
             KRXResponse(stock_code=result.code, stock_name=result.name, market=result.market)
             for result in results
         ]
+
+@router.get("/api/stock/{symbol}")
+async def get_stock_data(symbol: str):
+    df = fdr.DataReader(symbol, '2024-01-01')
+    if df.empty:
+        return {"error": "No data found for the symbol"}
+    
+    with Session(engine) as session:
+        stock_info = session.query(KRX).filter(KRX.stock_code == symbol).first()
+        if stock_info is None:
+            raise HTTPException(status_code=404, detail="Stock not found")
+        
+        latest_data = df.iloc[-1]
+        data = {
+            "symbol": symbol,
+            "stock_name": stock_info.stock_name,
+            "close": latest_data['Close'],
+            "volume": latest_data['Volume'],
+            "change": latest_data['Change'],
+        }
+        return data
 
 @router.get("/news", response_model=List[dict])
 async def get_news(query: str = "삼성전자"):
@@ -35,27 +55,39 @@ async def get_user_info(user_id: int):
         return result
 
 @router.post("/user/favorite/{user_id}", tags=["user"])
-def save_user_favorite(user_id: int, stock_code: str): # if press favorite button
+def update_user_favorite(user_id: int, stock: StockCode = Body(...)):
     with Session(engine) as session:
-        # UserInfo 에 저장되어 있는 값인지 확인
-        user_info = session.query(UserInfo).filter(UserInfo.id == user_id).first()
-        if not user_info:
-            # `UserInfo`에 `user_id`가 없으면 404 에러를 반환
-            raise HTTPException(status_code=404, detail="User not found")
+        user_exists = session.query(UserInfo).filter(UserInfo.id == user_id).first()
+        if not user_exists:
+            raise HTTPException(
+                detail="User not found", 
+                status_code=status.HTTP_404_NOT_FOUND
+            )
+            
+        if stock.like:
+            # 좋아요 추가
+            try:
+                result = FavoriteStocks(user_id=user_id, stock_code=stock.stock_code)
+                session.add(result)
+                session.commit()
+                return {"user_id": user_id, "stock_code": stock.stock_code, "like": stock.like}
+            except IntegrityError:
+                session.rollback()
+                raise HTTPException(status_code=409, detail="Already exists")
+        else:
+            # 좋아요 삭제
+            try:
+                result = session.query(FavoriteStocks).filter(FavoriteStocks.user_id == user_id, FavoriteStocks.stock_code == stock.stock_code).one()
+                session.delete(result)
+                session.commit()
+                return {"message": "Like removed"}
+            except NoResultFound:
+                session.rollback()
+                raise HTTPException(status_code=404, detail="Like not found")
 
-        # 사용자가 존재하면 favorite 저장
-        result = FavoriteStocks(user_id=user_id, stock_code=stock_code)
-        try:
-            session.add(result)
-            session.commit()
-            session.refresh(result)
-        except IntegrityError:
-            session.rollback()
-            print('Existed')
-    return FavoriteStocksResponse(user_id=result.user_id, stock_code=result.stock_code)
-
-@router.get("/user/favorite/{user_id}", tags=["user"])
-def get_user_favorite(user_id: int) -> list[FavoriteStocksResponse]:
+@router.get("/user/favorite/{user_id}", response_model=List[FavoriteStocksResponse], tags=["user"])
+def get_user_favorite(user_id: int) -> List[FavoriteStocksResponse]:
+    # 데이터베이스 세션을 가져오는 의존성
     with Session(engine) as session:
         # UserInfo에 관련 레코드가 있는지 먼저 확인
         user_exists = session.query(UserInfo).filter(UserInfo.id == user_id).first()
@@ -68,13 +100,10 @@ def get_user_favorite(user_id: int) -> list[FavoriteStocksResponse]:
         # user_id로 FavoriteStocks에서 관련 레코드를 모두 찾음
         results = session.query(FavoriteStocks).filter(FavoriteStocks.user_id == user_id).all()
         if not results:
-            raise HTTPException(
-                detail=f"There's no {user_id}'s favorite stocks", status_code=status.HTTP_404_NOT_FOUND
-            )
-        return [
-            FavoriteStocksResponse(user_id=result.user_id, stock_code=result.stock_code)
-            for result in results
-        ]
+            # 사용자의 좋아요한 주식이 없는 경우, 빈 리스트 반환
+            return []
+
+        return [FavoriteStocksResponse(user_id=result.user_id, stock_code=result.stock_code) for result in results]
 
 
 @router.get("/pred/cnn", tags=["predict"])
@@ -99,17 +128,17 @@ def get_cnn_pred(stock_code: str) -> list[CNNPredResponse]:
     
 @router.get("/pred/timeseries", tags=["predict"])
 def get_timeseries_pred(model: str, stock_code: str) -> list[TimeSeriesPredResponse]:
-    print(model, stock_code)
+
     with Session(engine) as session:
         result = session.query(TimeSeriesPredHistory)\
                     .filter(TimeSeriesPredHistory.stock_code == stock_code, 
                             TimeSeriesPredHistory.model == model)\
                     .order_by(TimeSeriesPredHistory.date.desc())\
                     .first()
-        print(result)
+
         
         score = TimeSeriesScore(result.close, result.pred_1day)
-        print(score)
+
         return [
         TimeSeriesPredResponse(
             stock_code=result.stock_code,
@@ -135,7 +164,7 @@ def get_bert_pred(stock_code: str) -> list[BertPredResponse]:
                     .first()
         score = BERTScore(yesterday_positive=result.yesterday_positive, yesterday_neutral=result.yesterday_neutral, yesterday_negative=result.yesterday_negative,
                             today_positive=result.today_positive, today_neutral=result.today_neutral, today_negative=result.today_negative)
-        print(score)
+
         return [
             BertPredResponse(stock_code=result.stock_code, date=result.date,
                             yesterday_positive=result.yesterday_positive, yesterday_neutral=result.yesterday_neutral, yesterday_negative=result.yesterday_negative,
@@ -195,7 +224,7 @@ async def kakao_login(code: str = Body(..., embed=True)):
                 except IntegrityError:
                     session.rollback()
                     raise HTTPException(status_code=400, detail="User already exists")
-                
+        print(user_info)
         return_info = {'kakao_id': kakao_id, 'nickname': nickname, 'profile_image': profile_image}
 
         return return_info
