@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ButtonAi } from "../../components/ButtonAi";
 import { Heart } from "../../components/Heart";
 import { Menu } from "../../components/Menu";
@@ -20,6 +20,8 @@ const COLOR = {
 
 
 export const ResultScreen = () => {
+  const chartSectionRef = useRef(null);
+
   const navigate = useNavigate();
   const { userInfo } = useUser();
   const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
@@ -88,11 +90,6 @@ export const ResultScreen = () => {
       animation: {
         duration: 0,
       },
-      layout: {
-        padding: {
-          right: 30, // 왼쪽 여백을 20px로 설정
-        },
-      },
     
     };
 
@@ -109,7 +106,7 @@ export const ResultScreen = () => {
     const fetchNewsData = async () => {
       try {
         console.log(stockLabel)
-        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/news/?query=${encodeURIComponent(stockLabel)}`);
+        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/news?query=${encodeURIComponent(stockLabel)}`);
         setNewsData(response.data);
       } catch (error) {
         console.error("Error fetching news data:", error);
@@ -209,6 +206,10 @@ export const ResultScreen = () => {
 
   const handleButtonClick = () => {
     setShowAdditionalResults(true); // ButtonAi 클릭 시 추가 결과를 보여줄 상태로 변경
+
+    if (chartSectionRef.current) {
+      chartSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const [likes, setLikes] = useState({}); // 각 주식의 '좋아요' 상태를 관리합니다.
@@ -297,91 +298,8 @@ export const ResultScreen = () => {
 
   return (
     <div className="result-screen">
-      <div className="frame-17">
-        <div className="content-8">
-          <div className="info-5">
-            <SymbolInfo
-              colorTheme="light"
-              symbol={symbol}
-              width="100%"
-              isTransparent={true}
-              marketCap
-            />
-          </div>            
-          <div className="chart-container">
-            <AdvancedRealTimeChart 
-              theme="light" 
-              symbol={symbol}
-              autosize={true}
-              interval="D"
-          />
-          </div>
-
-          <div className="news-container">
-            {newsData.map((item, index) => (
-              <div key={index} className="news-item">
-                <a href={item.link} target="_blank" rel="noopener noreferrer" className="news-link">
-                  <h2 className="news-title">{item.title.replace(/<b>|<\/b>/g, '')}</h2>
-                  <p className="news-description">{item.description.replace(/<b>|<\/b>/g, '')}</p>
-                </a>
-              </div>
-            ))}
-
-            {showAdditionalResults && (
-            <div className="additional-results-container">
-
-        <div className="radar-chart-container">
-          <div className='radar-chart-color'>
-            <Radar data={chartData} options={chartOptions} />
-            </div>
-          </div>
-          <div className="model-results-container clickable-cursor" onClick={handleClick}>
-            <GaugeChart id="gauge-chart3" 
-              animate={true}
-              hideText={true}
-              nrOfLevels={5}
-              cornerRadius={0}
-              arcWidth={0.06}
-              arcPadding={0.015}
-              percent={averageScorePercent}
-              textColor="#3C3C3C"
-              needleColor="#7d49f5"
-              needleBaseColor="#4616B5"
-              colors={["#DF5341", "#782A2B", "#42464F", "#1F3A82","#3764F3" ]}
-            />
-            <div className="gauge-labels">
-              <span className="gauge-label left">STRONG<br />SELL</span>
-              <span className="gauge-label left2">SELL</span>
-              <span className="gauge-label middle">NEUTRAL</span>
-              <span className="gauge-label right2">BUY</span>
-              <span className="gauge-label right">STRONG<br /> BUY</span>
-            </div>
-          </div>
-            </div>
-          )}
-          </div>
-          
-
-          <div className="button-AI-wrapper" onClick={handleButtonClick}>
-            <ButtonAi className="button-AI-instance" />
-          </div>
-          <div className="menu-bar-4">
-            <Menu
-              className="menu-6"
-              iconVariantsIconHome="/img/home-7.svg"
-              iconVariantsIconUnion="/img/union-9.svg"
-              iconVariantsIconUser="/img/user.svg"
-              iconVariantsState="off"
-              iconVariantsState1="off"
-              iconVariantsState2="off"
-              iconVariantsState3="off"
-              to="/home"
-              to1="/favorite"
-              to2="/profile"
-              to3="/search"
-            />
-          </div>
-          <div className="head-6">
+      <div className="design-frame">
+        <div className="header">
             <div className="stock-21">
               <div className="text-wrapper-39">{stockLabel}</div>
             </div>
@@ -392,8 +310,107 @@ export const ResultScreen = () => {
               />
             </div>
           </div>
+
+          <div className="button-AI-wrapper" onClick={handleButtonClick}>
+              <ButtonAi className="button-AI-instance" />
+            </div>
+            <div className="menu-bar-4">
+              <Menu
+                className="menu-6"
+                iconVariantsIconHome="/img/home-7.svg"
+                iconVariantsIconUnion="/img/union-9.svg"
+                iconVariantsIconUser="/img/user.svg"
+                iconVariantsState="off"
+                iconVariantsState1="off"
+                iconVariantsState2="off"
+                iconVariantsState3="off"
+                to="/home"
+                to1="/favorite"
+                to2="/profile"
+                to3="/search"
+              />
+          </div>
+
+
+        <div className="stock-market-container">
+          <SymbolInfo
+            colorTheme="dark"
+            symbol={symbol}
+            width="100%"
+            //isTransparent={true}
+          />
+        </div>            
+
+        <div className="chart-container">
+          <AdvancedRealTimeChart 
+            theme="dark" 
+            hide_top_toolbar={true}
+            hide_legend={true}
+            withdateranges={true}
+            hide_side_toolbar={true}
+            symbol={symbol}
+            autosize={true}
+            interval="D"
+            style="1"
+          />
         </div>
-      </div>
-    </div>
+
+        <div className="news-container">
+          {newsData.map((item, index) => (
+            <div key={index} className="news-item">
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="news-link">
+                <h2 className="news-title">{item.title.replace(/<b>|<\/b>/g, '')}</h2>
+                <p className="news-description">{item.description.replace(/<b>|<\/b>/g, '')}</p>
+              </a>
+            </div>
+          ))}
+          </div>
+   
+      {showAdditionalResults && (
+        <div className="additional-results-container">
+          
+          <div className="text-container" ref={chartSectionRef}>
+              <div className="text">
+                  <div className='text-style'>
+                    알려주가AI가<br /> 분석한 결과에요 😎
+                  </div>
+                </div>
+              </div>
+       
+          <div className="radar-chart-container">
+            <div className='radar-chart-color'>
+              <Radar data={chartData} options={chartOptions} />
+              </div>
+            </div>
+
+
+            <div className="model-results-container clickable-cursor" onClick={handleClick}>
+              <GaugeChart id="gauge-chart3" 
+                style={{ width: '390px' }}
+                animate={true}
+                hideText={true}
+                nrOfLevels={5}
+                cornerRadius={0}
+                arcWidth={0.06}
+                arcPadding={0.015}
+                percent={averageScorePercent}
+                textColor="#3C3C3C"
+                needleColor="#7d49f5"
+                needleBaseColor="#4616B5"
+                colors={["#DF5341", "#782A2B", "#42464F", "#1F3A82","#3764F3" ]}
+              />
+              
+            </div>
+            <div className="gauge-labels">
+                <span className="gauge-label left">STRONG<br />SELL</span>
+                <span className="gauge-label left2">SELL</span>
+                <span className="gauge-label middle">NEUTRAL</span>
+                <span className="gauge-label right2">BUY</span>
+                <span className="gauge-label right">STRONG<br /> BUY</span>
+              </div>
+              </div>
+            )}
+            </div>
+        </div>
   );
 };
