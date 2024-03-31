@@ -1,9 +1,15 @@
 from pydantic import Field
 from pydantic_settings import BaseSettings
+import os
 
 class Config(BaseSettings):
-    db_url: str = Field(default="sqlite:///./db.sqlite3", env="DB_URL")
-    model_path: str = Field(default="model.joblib", env="MODEL_PATH")
-    app_env: str = Field(default="local", env="APP_ENV")
-
+    pass_my: str = Field(os.getenv('DB_PASS'), env="DB_PASS")
+    
+    @property
+    def db_url(self) -> str:
+        user_name = 'root'
+        host_my = '175.45.200.149'
+        db_name = 'STOCK_DB'
+        return f"mysql+mysqlconnector://{user_name}:{self.pass_my}@{host_my}/{db_name}"
+    
 config = Config()
