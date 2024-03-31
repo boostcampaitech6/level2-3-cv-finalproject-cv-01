@@ -18,10 +18,36 @@ export const FavoriteScreen = () => {
             </Link>
           </div>
           <div className="favorite-list">
-            <DivWrapper className="component-1175" />
-            <DivWrapper className="component-1175-instance" />
-            <DivWrapper className="component-1175-instance" />
-            <DivWrapper className="stock-19" />
+            <DivWrapper
+              className="component-1175"
+              companyName="네이버"
+              symbol="035420"
+              price="184,100 원"
+              change="-2,000"
+              percentChange="-1.07%"
+              graph="/img/frame-40.svg" 
+              logo="/img/ellipse-15.png"
+            />
+            <DivWrapper
+              className="component-1175"
+              companyName="삼성전자"
+              symbol="005930"
+              price="72,800 원"
+              change="+5,00"
+              percentChange="+0.69%"
+              graph="/img/frame-40.svg" 
+              logo="/img/ellipse-15-1.png"
+            />
+            <DivWrapper
+              className="component-1175"
+              companyName="카카오"
+              symbol="035720"
+              price="53,000 원"
+              change="-1,100"
+              percentChange="-2.03%"
+              graph="/img/frame-40.svg" 
+              logo="/img/ellipse-15-9.png"
+            />
           </div>
           <div className="menu-bar-2">
             <Menu

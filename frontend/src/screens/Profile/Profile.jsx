@@ -1,10 +1,19 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
-import { useUser } from '../../components/UserContext'; // UserContext 파일의 경로에 맞게 조정
+import React, { useEffect } from "react";
 import { Menu } from "../../components/Menu";
+import "./style.css";
+import axios from 'axios';
+import { useUser } from '../../components/UserContext';
+import { useNavigate } from "react-router-dom"; 
 
 export const Profile = () => {
-  const { userInfo, setUserInfo } = useUser(); // UserContext에서 사용자 정보 사용
+  const { userInfo, setUserInfo, logout } = useUser();
+  const navigate = useNavigate(); // v6 사용 시
+
+  const handleLogin = () => {
+    navigate("/login"); // 로그인 페이지로 이동
+  };
+
+  console.log(userInfo)
 
   useEffect(() => {
     const fetchDetailedUserInfo = async () => {
@@ -20,37 +29,65 @@ export const Profile = () => {
         }
       }
     };
-
-    // detailedFetched 플래그를 사용하여 상세 정보가 이미 있는지 확인
+    
     if (userInfo && !userInfo.detailedFetched) {
       fetchDetailedUserInfo();
     }
   }, [userInfo, setUserInfo]);
 
+
   return (
     <div className="profile">
-      <div className="div-10">
-        {/* 프로필 정보 표시 로직 */}
-        <div className="text-wrapper-29">{userInfo ? userInfo.nickname : '게스트 사용자'}</div>
-        {userInfo && (
-          <>
-            <div className="text-wrapper-30">사용자 닉네임: {userInfo.nickname}</div>
-            <div className="text-wrapper-31">프로필 편집</div>
-            <div className="overlap-group-4">
-              <div className="ellipse-2" />
-              {/* 이미지 주소는 예시로 사용된 것이므로 실제로 존재하는 URL을 사용하세요 */}
-              <img className="image" alt="Profile" src="/img/image-120.png" />
+      <div className="frame-9">
+        <div className="content-5">
+          <div className="label-2">
+          </div>
+          <div className="label-3">
+            <div className="text-wrapper-30">
+              {userInfo && userInfo.nickname ? userInfo.nickname : "게스트 사용자"}
+              </div>
+          </div>
+          <div className="overlap">
+            <div className="overlap-2">
+              <div className="overlap-group-4">
+                <div className="label-4">
+                  <div className="text-wrapper-30">사용자 정보</div>
+                </div>
+                <div className="line">
+                  <img className="line-2" alt="Line" src="/img/line-2.svg" />
+                </div>
+              </div>
+              <div className="img-frame">
+                <div className="ellipse-2" />
+                <img className="image-2" alt="Image" src={userInfo && userInfo.profile_image ? userInfo.profile_image : "/img/image-120.png"} />
+              </div>
             </div>
-          </>
-        )}
-        <Menu
-            className="menu-instance"
-            to="/home"
-            to1="/favorite"
-            to2="/search-1"
-            to3="/saved"
-            to4="/profile"
-          />
+            <div className="label-5">
+            {userInfo ? (
+              <button onClick={logout} className="logout-button">로그아웃</button>
+            ) : (
+              <button onClick={handleLogin} className="login-button">로그인</button>
+            )}
+            </div>
+          </div>
+          <div className="menu-instance-wrapper">
+            <Menu
+              className="menu-3"
+              iconVariantsIconHome="/img/home-3.svg"
+              iconVariantsIconUnion="/img/union-9.svg"
+              iconVariantsIconUser="/img/user-6.svg"
+              iconVariantsState="off"
+              iconVariantsState1="off"
+              iconVariantsState2="on"
+              to="/home"
+              to1="/favorite"
+              to3="/search"
+            />
+          </div>
+          <div className="head-3">
+            <div className="text-wrapper-32">Profile</div>
+          </div>
+        </div>
       </div>
     </div>
   );
