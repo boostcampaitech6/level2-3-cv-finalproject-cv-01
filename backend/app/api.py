@@ -5,6 +5,7 @@ from .schemas import UserInfoResponse, FavoriteStocksResponse, KRXResponse, CNNP
 from .database import UserInfo, FavoriteStocks, KRX, CNNPredHistory, TimeSeriesPredHistory, BertPredHistory, CandlePredHistory, engine
 from typing import List
 from utils.newsdata import fetch_news_data
+from utils.score import TimeSeriesScore, CNNScore, BERTScore, CANDLEScore
 import httpx
 import os
 
@@ -20,12 +21,10 @@ def get_stock_info() -> list[KRXResponse]:
             for result in results
         ]
 
-
 @router.get("/news", response_model=List[dict])
 async def get_news(query: str = "삼성전자"):
     news_data = await fetch_news_data(query)
     return news_data
-
 
 @router.get("/user/info/{user_id}", response_model=UserInfoResponse)
 async def get_user_info(user_id: int):
@@ -34,7 +33,6 @@ async def get_user_info(user_id: int):
         if result is None:
             raise HTTPException(status_code=404, detail="User not found")
         return result
-
 
 @router.post("/user/favorite/{user_id}", tags=["user"])
 def save_user_favorite(user_id: int, stock_code: str): # if press favorite button
@@ -80,10 +78,13 @@ def get_user_favorite(user_id: int) -> list[FavoriteStocksResponse]:
 
 
 @router.get("/pred/cnn", tags=["predict"])
-def get_cnn_pred() -> list[CNNPredResponse]:
+def get_cnn_pred(stock_code: str) -> list[CNNPredResponse]:
     with Session(engine) as session:
-        statement = select(CNNPredHistory)
-        results = session.exec(statement).all()
+        result = session.query(CNNPredHistory)\
+                    .filter(CNNPredHistory.stock_code == stock_code)\
+                    .order_by(CNNPredHistory.date.desc())\
+                    .first()
+        score = CNNScore(result.pred_1day_result, result.pred_1day_percent)
         return [
             CNNPredResponse(stock_code=result.stock_code, date=result.date, close=result.close,
                             pred_1day_result=result.pred_1day_result, pred_1day_percent=result.pred_1day_percent,
@@ -92,43 +93,68 @@ def get_cnn_pred() -> list[CNNPredResponse]:
                             pred_4day_result=result.pred_4day_result, pred_4day_percent=result.pred_4day_percent,
                             pred_5day_result=result.pred_5day_result, pred_5day_percent=result.pred_5day_percent,
                             pred_6day_result=result.pred_6day_result, pred_6day_percent=result.pred_6day_percent,
-                            pred_7day_result=result.pred_7day_result, pred_7day_percent=result.pred_7day_percent)
-            for result in results
+                            pred_7day_result=result.pred_7day_result, pred_7day_percent=result.pred_7day_percent,
+                            score=score)
         ]
     
 @router.get("/pred/timeseries", tags=["predict"])
-def get_timeseries_pred(model: str) -> list[TimeSeriesPredResponse]:
+def get_timeseries_pred(model: str, stock_code: str) -> list[TimeSeriesPredResponse]:
+    print(model, stock_code)
     with Session(engine) as session:
-        results = session.query(TimeSeriesPredHistory).filter(TimeSeriesPredHistory.model == model).all()
+        result = session.query(TimeSeriesPredHistory)\
+                    .filter(TimeSeriesPredHistory.stock_code == stock_code, 
+                            TimeSeriesPredHistory.model == model)\
+                    .order_by(TimeSeriesPredHistory.date.desc())\
+                    .first()
+        print(result)
+        
+        score = TimeSeriesScore(result.close, result.pred_1day)
+        print(score)
         return [
-            TimeSeriesPredResponse(stock_code=result.stock_code, date=result.date, close=result.close,
-                                   pred_1day=result.pred_1day, pred_2day=result.pred_2day, pred_3day=result.pred_3day, pred_4day=result.pred_4day,
-                                   pred_5day=result.pred_5day, pred_6day=result.pred_6day, pred_7day=result.pred_7day)
-            for result in results
-        ]
+        TimeSeriesPredResponse(
+            stock_code=result.stock_code,
+            date=result.date,
+            close=result.close,
+            pred_1day=result.pred_1day,
+            pred_2day=result.pred_2day,
+            pred_3day=result.pred_3day,
+            pred_4day=result.pred_4day,
+            pred_5day=result.pred_5day,
+            pred_6day=result.pred_6day,
+            pred_7day=result.pred_7day,
+            score=score
+        )
+    ]
     
 @router.get("/pred/bert", tags=["predict"])
-def get_bert_pred() -> list[BertPredResponse]:
+def get_bert_pred(stock_code: str) -> list[BertPredResponse]:
     with Session(engine) as session:
-        statement = select(BertPredHistory)
-        results = session.exec(statement).all()
+        result = session.query(BertPredHistory)\
+                    .filter(BertPredHistory.stock_code == stock_code)\
+                    .order_by(BertPredHistory.date.desc())\
+                    .first()
+        score = BERTScore(yesterday_positive=result.yesterday_positive, yesterday_neutral=result.yesterday_neutral, yesterday_negative=result.yesterday_negative,
+                            today_positive=result.today_positive, today_neutral=result.today_neutral, today_negative=result.today_negative)
+        print(score)
         return [
             BertPredResponse(stock_code=result.stock_code, date=result.date,
                             yesterday_positive=result.yesterday_positive, yesterday_neutral=result.yesterday_neutral, yesterday_negative=result.yesterday_negative,
-                            today_positive=result.today_positive, today_neutral=result.today_neutral, today_negative=result.today_negative)
-            for result in results
+                            today_positive=result.today_positive, today_neutral=result.today_neutral, today_negative=result.today_negative,
+                            score=score)
         ]
     
 @router.get("/pred/candle", tags=["predict"])
-def get_candle_pred() -> list[CandlePredResponse]:
+def get_candle_pred(stock_code: str) -> list[CandlePredResponse]:
     with Session(engine) as session:
-        statement = select(CandlePredHistory)
-        results = session.exec(statement).all()
-        return [
-            CandlePredResponse(stock_code=result.stock_code, date=result.date, candle_name=result.candle_name)
-            for result in results
-        ]
+        result = session.query(CandlePredHistory)\
+                    .filter(CandlePredHistory.stock_code == stock_code)\
+                    .order_by(CandlePredHistory.date.desc())\
+                    .first()
         
+        score = CANDLEScore(result.candle_name)
+        return [
+            CandlePredResponse(stock_code=result.stock_code, date=result.date, candle_name=result.candle_name, score=score)
+        ]
         
 @router.post("/auth/kakao", tags=["login"])
 async def kakao_login(code: str = Body(..., embed=True)):
@@ -173,4 +199,3 @@ async def kakao_login(code: str = Body(..., embed=True)):
         return_info = {'kakao_id': kakao_id, 'nickname': nickname, 'profile_image': profile_image}
 
         return return_info
-
