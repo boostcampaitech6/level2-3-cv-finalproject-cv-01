@@ -25,17 +25,13 @@ export const FavoriteScreen = () => {
       const fetchFavorites = async () => {
         try {
           // 백엔드 API로부터 즐겨찾기 목록을 불러옴
-<<<<<<< HEAD
           const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/favorite/${userInfo.kakao_id}`);
-=======
-          const response = await axios.get(`http://localhost:8001/user/favorite/${userInfo.kakao_id}`);
->>>>>>> fb78fdec7ebd8425ef81f282532647de57c1e7c9
           const favoriteStocks = response.data; // 응답 데이터
 
           const stockDetails = await Promise.all(favoriteStocks.map(async (stock) => {
             // 각 즐겨찾기 주식의 상세 정보를 불러옴
             const symbol = stock.stock_code.slice(-6);
-            const detailResponse = await axios.get(`http://localhost:8001/api/stock/${symbol}`);
+            const detailResponse = await axios.get(`http://${process.env.SERVER_IP}:8001/api/stock/${symbol}`);
             return { ...detailResponse.data,
               change: (detailResponse.data.change * 100).toFixed(2)
             };
