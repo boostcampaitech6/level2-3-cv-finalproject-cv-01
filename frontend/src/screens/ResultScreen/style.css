@@ -330,3 +330,8 @@
   font-weight: bold; /* 강한 매수 시그널은 굵게 */
   color: #3764F3; /* 강한 매수 - 밝은 파란색 */
 }
+
+/* .news-link:hover .news-title,
+.news-link:hover .news-description {
+  color: #ffffff; 
+} */
