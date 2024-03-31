@@ -21,6 +21,7 @@ httptools = "^0.6.1"
 httpx-oauth = "^0.13.2"
 mysql-connector-python = "^8.3.0"
 pymysql = "^1.1.0"
+finance-datareader = "^0.9.90"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.2"
