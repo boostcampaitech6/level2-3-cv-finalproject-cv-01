@@ -4,6 +4,7 @@ from datetime import datetime
 class UserInfoResponse(BaseModel):
     id: int
     created_at: datetime
+    nickname: str
 
 class FavoriteStocksResponse(BaseModel):
     user_id: int
