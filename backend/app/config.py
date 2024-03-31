@@ -8,7 +8,7 @@ class Config(BaseSettings):
     @property
     def db_url(self) -> str:
         user_name = 'root'
-        host_my = '175.45.200.149'
+        host_my = os.getenv('SERVER_IP')
         db_name = 'STOCK_DB'
         return f"mysql+mysqlconnector://{user_name}:{self.pass_my}@{host_my}/{db_name}"
     
