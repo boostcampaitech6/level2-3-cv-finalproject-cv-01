@@ -24,7 +24,7 @@ export const ResultWrapper = () => {
     const fetchNewsData = async () => {
       try {
         console.log(stockLabel)
-        const response = await axios.get(`http://${process.env.SERVER_IP}:8001/news/?query=${encodeURIComponent(stockLabel)}`);
+        const response = await axios.get(`http://localhost:8000/news/?query=${encodeURIComponent(stockLabel)}`);
         setNewsData(response.data);
       } catch (error) {
         console.error("Error fetching news data:", error);

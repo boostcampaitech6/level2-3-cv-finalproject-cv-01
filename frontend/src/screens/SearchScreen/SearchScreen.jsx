@@ -63,7 +63,7 @@ export const SearchScreen = () => {
       <div>
         {parts.map((part, index) =>
           part.toLowerCase() === inputValue.toLowerCase() ? (
-            <span key={index} style={{ color: '#7d49f5' }}>{part}</span>
+            <span key={index} style={{ color: '#52FF00' }}>{part}</span>
           ) : (
             part
           )
@@ -75,33 +75,53 @@ export const SearchScreen = () => {
   const customStyles = {
     placeholder: (provided) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
+      fontSize: '14.5px',
       paddingLeft: '10px', // 원하는 들여쓰기 값으로 조정하세요
     }),
     input: (provided) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
       paddingLeft: '10px', // 입력 텍스트에 대한 들여쓰기
+      color: '#D2D4DC', // 입력 텍스트 색상
     }),
     control: (provided, { isFocused }) => ({
       ...provided,
+      fontFamily: "Noto Sans KR, Helvetica",
       minHeight: '45px', // 최소 높이 설정
-      borderColor: isFocused ? '#7d49f5' : provided.borderColor, // 포커스 되었을 때 보라색으로 변경
-      boxShadow: isFocused ? '0 0 0 1px #7d49f5' : 'none',
-    // 포커스 되었을 때 보라색 그림자 효과를 줌
+      backgroundColor: '#2C2C35', // 배경색
+      borderColor: isFocused ? '#52FF00' : provided.borderColor, 
+      boxShadow: isFocused ? '0 0 0 0.5px #52FF00' : 'none',
       '&:hover': {
-        borderColor: '#7d49f5', // 마우스 호버 시 보라색으로 변경
+        borderColor: '#52FF00', // 마우스 호버 시 색변경
       },
      
     }),
     dropdownIndicator: (provided, { isFocused }) => ({
       ...provided,
-      color: isFocused ? '#7d49f5':provided.color,  // 화살표 색상을 보라색으로 설정
+      color: isFocused ? '#52FF00':provided.color,  // 화살표 색상 변경
+    }),
+    noOptionsMessage: (provided) => ({
+      ...provided,
+      fontFamily: "Noto Sans KR, Helvetica"
+    }),
+
+    menu: (provided) => ({
+      ...provided,
+      backgroundColor: '#2C2C35', 
+    }),
+    loadingMessage: (provided) => ({
+      ...provided,
+      fontFamily: "Noto Sans KR, Helvetica"
     }),
 
     option: (provided, { isFocused, isSelected }) => {
       return {
         ...provided,
-        backgroundColor: isSelected ? '#F2ECFF' : isFocused ? '#F2ECFF' : undefined,
+        backgroundColor: isSelected ? '#3A3A3A' : isFocused ? '#3A3A3A' : undefined,
+        color: isSelected ? '#D2D4DC' : isFocused ? '#D2D4DC' : '#D2D4DC',
         // 선택된 옵션의 배경색과 포커스 시 배경색
+        fontFamily: "Noto Sans KR, Helvetica",
         paddingLeft: '20px',
       };
     },
@@ -124,7 +144,7 @@ export const SearchScreen = () => {
   return (
     <div className="search-screen">
       <div className="frame-7">
-        <div className="content-3">
+        <div className="stock-list-container">
           <div className="stock-list">
           <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
             <StateOffWrapper 
@@ -148,6 +168,7 @@ export const SearchScreen = () => {
               />
           </div>
 
+
           <div onClick={() => handleStockClick('KRX:035720', '카카오')}>
             <StateOffWrapper
                 className="component-1169-instance"
@@ -169,12 +190,12 @@ export const SearchScreen = () => {
               onHeartClick={() => toggleLike('KRX:068270')}
             />
           </div>
-
+          </div>
           </div>
           <div className="text-4">
             <div className="text-wrapper-18">인기 검색어</div>
           </div>
-          <div className="search-bar">
+          <div className="search-box-container">
             <div className="container-2">
               <AsyncSelect
               autoFocus
@@ -207,6 +228,6 @@ export const SearchScreen = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };

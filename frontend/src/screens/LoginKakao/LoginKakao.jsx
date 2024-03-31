@@ -4,6 +4,7 @@ import axios from "axios";
 import { Check } from "../../components/Check";
 import { useUser } from "../../components/UserContext";
 import "./style.css";
+import { SyncLoader } from "react-spinners";
 
 export const LoginKakao = () => {
   const navigate = useNavigate();
@@ -25,7 +26,11 @@ export const LoginKakao = () => {
           };
 
           setUserInfo(formattedUserInfo);
+          
+         // 1초 동안 홀딩 후 홈페이지로 이동
+         setTimeout(() => {
           navigate("/home");
+        }, 800);
         })
         .catch((error) => {
           console.error("Login error:", error);
@@ -35,14 +40,21 @@ export const LoginKakao = () => {
 
   return (
     <div className="login-kakao">
-      <div className="loading-text">로그인 중...</div>
       <div className="login-kakao-wrapper">
-        <div className="overlap-group-wrapper">
-          <div className="check-wrapper">
-            <Check className="check-instance" divClassName="design-component-instance-node" />
+        <div className="loading-container">
+          <div className="loading-text">
+            <div className="loading-text-style">
+            Logging in
+            </div>
+            </div>
+          <div className="loading-p">
+          <div className="loading-GIF">
+            <SyncLoader color="#52FF00" />
+            </div>
+          </div>
           </div>
         </div>
       </div>
-    </div>
+
   );
 };

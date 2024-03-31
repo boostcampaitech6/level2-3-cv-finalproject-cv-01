@@ -62,7 +62,7 @@ export const Home = () => {
       <div>
         {parts.map((part, index) =>
           part.toLowerCase() === inputValue.toLowerCase() ? (
-            <span key={index} style={{ color: '#7d49f5' }}>{part}</span>
+            <span key={index} style={{ color: '#52FF00' }}>{part}</span>
           ) : (
             part
           )
@@ -75,35 +75,40 @@ export const Home = () => {
     placeholder: (provided) => ({
       ...provided,
       fontFamily: "Noto Sans KR, Helvetica",
+      fontSize: '14.5px',
       paddingLeft: '10px', // 원하는 들여쓰기 값으로 조정하세요
     }),
     input: (provided) => ({
       ...provided,
       fontFamily: "Noto Sans KR, Helvetica",
       paddingLeft: '10px', // 입력 텍스트에 대한 들여쓰기
+      color: '#D2D4DC', // 입력 텍스트 색상
     }),
     control: (provided, { isFocused }) => ({
       ...provided,
       fontFamily: "Noto Sans KR, Helvetica",
       minHeight: '45px', // 최소 높이 설정
-      borderColor: isFocused ? '#7d49f5' : provided.borderColor, // 포커스 되었을 때 보라색으로 변경
-      boxShadow: isFocused ? '0 0 0 1px #7d49f5' : 'none',
-    // 포커스 되었을 때 보라색 그림자 효과를 줌
+      backgroundColor: '#2C2C35', // 배경색
+      borderColor: isFocused ? '#52FF00' : provided.borderColor, 
+      boxShadow: isFocused ? '0 0 0 0.5px #52FF00' : 'none',
       '&:hover': {
-        borderColor: '#7d49f5', // 마우스 호버 시 보라색으로 변경
+        borderColor: '#52FF00', // 마우스 호버 시 색변경
       },
      
     }),
     dropdownIndicator: (provided, { isFocused }) => ({
       ...provided,
-      color: isFocused ? '#7d49f5':provided.color,  // 화살표 색상을 보라색으로 설정
+      color: isFocused ? '#52FF00':provided.color,  // 화살표 색상 변경
     }),
-
     noOptionsMessage: (provided) => ({
       ...provided,
       fontFamily: "Noto Sans KR, Helvetica"
     }),
 
+    menu: (provided) => ({
+      ...provided,
+      backgroundColor: '#2C2C35', 
+    }),
     loadingMessage: (provided) => ({
       ...provided,
       fontFamily: "Noto Sans KR, Helvetica"
@@ -112,7 +117,8 @@ export const Home = () => {
     option: (provided, { isFocused, isSelected }) => {
       return {
         ...provided,
-        backgroundColor: isSelected ? '#F2ECFF' : isFocused ? '#F2ECFF' : undefined,
+        backgroundColor: isSelected ? '#3A3A3A' : isFocused ? '#3A3A3A' : undefined,
+        color: isSelected ? '#D2D4DC' : isFocused ? '#D2D4DC' : '#D2D4DC',
         // 선택된 옵션의 배경색과 포커스 시 배경색
         fontFamily: "Noto Sans KR, Helvetica",
         paddingLeft: '20px',
@@ -132,10 +138,26 @@ export const Home = () => {
   return (
     <div className="home">
       <div className="frame-8">
-        <div className="content-4">
+        <div className="search-box-container" onClick={() => handleSearchClick()} onTouchStart={() => handleSearchClick()}>
+              <div className="container-3">
+              <AsyncSelect
+                  styles={customStyles}
+                  cacheOptions
+                  loadOptions={loadOptions}
+                  onInputChange={(value) => {
+                    setInputValue(value);
+                    return value;
+                  }}
+                  onChange={handleChange}
+                  placeholder="주식 종목을 입력하세요"
+                  formatOptionLabel={formatOptionLabel}
+              />
+              </div>
+            </div>
+        <div className="stock-container">
           <div className="stock-frame">
             <div className="stocks">
-            <div onClick={() => handleStockClick('KRX:035420', '네이버')}>
+            <div onClick={() => handleStockClick('KRX:035420', '네이버')} >
               <Component1174 symbol="035420" state="off" divClassName1="stock-7" divClassName2="stock-8" divClassNameOverride="stock-5" spanClassName="stock-6" text="네이버" logoClassName="stock-6" />
             </div>
             <div onClick={() => handleStockClick('KRX:068270', '셀트리온')}>
@@ -166,7 +188,8 @@ export const Home = () => {
             </div>
             </div>
           </div>
-          <div className="text-container">
+        </div>
+        <div className="text-container">
             <div className="text-6">
               <div className="text-wrapper-26">이런 종목은 어때요?</div>
             </div>
@@ -174,22 +197,8 @@ export const Home = () => {
               <p className="text-wrapper-27">관심 있는 주식을 클릭해 보세요.</p>
             </div>
           </div>
-          <div className="container-wrapper" onClick={() => handleSearchClick()} onTouchStart={() => handleSearchClick()}>
-            <div className="container-3">
-            <AsyncSelect
-                styles={customStyles}
-                cacheOptions
-                loadOptions={loadOptions}
-                onInputChange={(value) => {
-                  setInputValue(value);
-                  return value;
-                }}
-                onChange={handleChange}
-                placeholder="주식 종목을 입력하세요"
-                formatOptionLabel={formatOptionLabel}
-            />
-            </div>
-          </div>
+
+          
           <div className="menu-wrapper">
             <Menu
               className="menu-2"
@@ -207,6 +216,5 @@ export const Home = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
