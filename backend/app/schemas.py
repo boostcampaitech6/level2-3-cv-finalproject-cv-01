@@ -8,7 +8,11 @@ class UserInfoResponse(BaseModel):
 
 class FavoriteStocksResponse(BaseModel):
     user_id: int
-    stock_code: int
+    stock_code: str
+
+class StockCode(BaseModel):
+    stock_code: str
+    like: bool
 
 class KRXResponse(BaseModel):
     stock_code: str 
