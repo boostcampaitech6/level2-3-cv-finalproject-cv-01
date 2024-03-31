@@ -31,7 +31,7 @@ export const FavoriteScreen = () => {
           const stockDetails = await Promise.all(favoriteStocks.map(async (stock) => {
             // 각 즐겨찾기 주식의 상세 정보를 불러옴
             const symbol = stock.stock_code.slice(-6);
-            const detailResponse = await axios.get(`http://localhost:8000/api/stock/${symbol}`);
+            const detailResponse = await axios.get(`http://localhost:8001/api/stock/${symbol}`);
             return { ...detailResponse.data,
               change: (detailResponse.data.change * 100).toFixed(2)
             };

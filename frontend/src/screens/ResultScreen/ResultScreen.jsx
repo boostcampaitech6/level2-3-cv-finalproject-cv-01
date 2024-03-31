@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ButtonAi } from "../../components/ButtonAi";
 import { Heart } from "../../components/Heart";
 import { Menu } from "../../components/Menu";
@@ -20,6 +20,8 @@ const COLOR = {
 
 
 export const ResultScreen = () => {
+  const chartSectionRef = useRef(null);
+
   const navigate = useNavigate();
   const { userInfo } = useUser();
   const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
@@ -204,6 +206,10 @@ export const ResultScreen = () => {
 
   const handleButtonClick = () => {
     setShowAdditionalResults(true); // ButtonAi 클릭 시 추가 결과를 보여줄 상태로 변경
+
+    if (chartSectionRef.current) {
+      chartSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const [likes, setLikes] = useState({}); // 각 주식의 '좋아요' 상태를 관리합니다.
@@ -358,15 +364,26 @@ export const ResultScreen = () => {
               </a>
             </div>
           ))}
-
+          </div>
+   
       {showAdditionalResults && (
         <div className="additional-results-container">
-
+          
+          <div className="text-container" ref={chartSectionRef}>
+              <div className="text">
+                  <div className='text-style'>
+                    알려주가AI가<br /> 분석한 결과에요 😎
+                  </div>
+                </div>
+              </div>
+       
           <div className="radar-chart-container">
             <div className='radar-chart-color'>
               <Radar data={chartData} options={chartOptions} />
               </div>
             </div>
+
+
             <div className="model-results-container clickable-cursor" onClick={handleClick}>
               <GaugeChart id="gauge-chart3" 
                 style={{ width: '390px' }}
@@ -382,18 +399,18 @@ export const ResultScreen = () => {
                 needleBaseColor="#4616B5"
                 colors={["#DF5341", "#782A2B", "#42464F", "#1F3A82","#3764F3" ]}
               />
-              <div className="gauge-labels">
+              
+            </div>
+            <div className="gauge-labels">
                 <span className="gauge-label left">STRONG<br />SELL</span>
                 <span className="gauge-label left2">SELL</span>
                 <span className="gauge-label middle">NEUTRAL</span>
                 <span className="gauge-label right2">BUY</span>
                 <span className="gauge-label right">STRONG<br /> BUY</span>
               </div>
-            </div>
               </div>
             )}
             </div>
         </div>
-      </div>
   );
 };

@@ -62,7 +62,6 @@
   flex-direction: column;
   gap: 10px;
   width: 380px;
-  padding: 10px;
   position: absolute;
   top: 160px;
 }
@@ -72,7 +71,7 @@
   margin-top: -1px;
   object-fit: cover;
   position: relative;
-  width: 360px;
+  width: 380px;
 }
 
 
