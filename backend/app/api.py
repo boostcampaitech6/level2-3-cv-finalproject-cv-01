@@ -7,6 +7,8 @@ from typing import List
 from utils.newsdata import fetch_news_data
 from utils.score import TimeSeriesScore, CNNScore, BERTScore, CANDLEScore
 import httpx
+import os
+import FinanceDataReader as fdr
 
 router = APIRouter()
 
@@ -224,7 +226,7 @@ async def kakao_login(code: str = Body(..., embed=True)):
                 except IntegrityError:
                     session.rollback()
                     raise HTTPException(status_code=400, detail="User already exists")
-        print(user_info)
+  
         return_info = {'kakao_id': kakao_id, 'nickname': nickname, 'profile_image': profile_image}
 
         return return_info
