@@ -1,13 +1,18 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 class UserInfoResponse(BaseModel):
     id: int
+<<<<<<< HEAD
 <<<<<<< HEAD
     created_at: datetime
     nickname: str
 =======
     created_at: str
 >>>>>>> 9c2bce90 (feat: mysql server connect)
+=======
+    created_at: datetime
+>>>>>>> 6d9a786d (fix: date type from str to datetime)
 
 class FavoriteStocksResponse(BaseModel):
     user_id: int
@@ -63,8 +68,12 @@ class BertPredResponse(BaseModel):
 class CandlePredResponse(BaseModel):
     stock_code: str
     date: datetime
+<<<<<<< HEAD
     candle_name: str
 =======
     code: str 
     name: str
 >>>>>>> 9c2bce90 (feat: mysql server connect)
+=======
+    candle_name: str
+>>>>>>> 6d9a786d (fix: date type from str to datetime)
