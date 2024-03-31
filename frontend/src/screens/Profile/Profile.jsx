@@ -39,6 +39,9 @@ export const Profile = () => {
   return (
     <div className="profile">
       <div className="frame-9">
+      <div className="line">
+                  <img className="line-2" alt="Line" src="/img/line-2.svg" />
+                </div>
           <div className="label-2">
           </div>
           <div className="label-3">
@@ -51,9 +54,6 @@ export const Profile = () => {
               <div className="overlap-group-4">
                 <div className="label-4">
                   <div className="text-wrapper-30">사용자 정보</div>
-                </div>
-                <div className="line">
-                  <img className="line-2" alt="Line" src="/img/line-2.svg" />
                 </div>
               </div>
               <div className="img-frame">

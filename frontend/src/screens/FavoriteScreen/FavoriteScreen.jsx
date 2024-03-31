@@ -8,6 +8,8 @@ import { useUser } from '../../components/UserContext'; // UserContext 사용
 import { useNavigate } from "react-router-dom";
 
 export const FavoriteScreen = () => {
+  const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_KAKAO_CLIENT_ID}&redirect_uri=${encodeURIComponent(process.env.REACT_APP_KAKAO_REDIRECT_URI)}&response_type=code`;
+
   const navigate = useNavigate(); // v6 사용 시
 
   const handleLogin = () => {
@@ -78,8 +80,19 @@ export const FavoriteScreen = () => {
             </>
           ) : (
             <div className="favorite-list">
-              <p>즐겨찾기를 보려면 로그인해주세요.</p>
-              <button onClick={handleLogin} className="login-button">로그인</button>
+              <div className="text-container">
+                    <div className="text">
+                  <p className='text-style'>즐겨찾기를 보려면 로그인해주세요.</p>
+                  </div>
+                  <a href={KAKAO_AUTH_URL} className="button-kakao-login">
+                  <button  onClick={handleLogin}   className="button-2">
+              <img className="kakao-logo" alt="Kakao logo" src="/img/kakao-logo.svg" />
+              <div className="label-wrapper">
+                <div className="label">카카오 로그인</div>
+              </div>
+            </button>
+            </a>
+                  </div>
             </div>
           )}
          <div className="line">

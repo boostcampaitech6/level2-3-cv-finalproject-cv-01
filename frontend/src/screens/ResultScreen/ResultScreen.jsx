@@ -88,11 +88,6 @@ export const ResultScreen = () => {
       animation: {
         duration: 0,
       },
-      layout: {
-        padding: {
-          right: 30, // 왼쪽 여백을 20px로 설정
-        },
-      },
     
     };
 

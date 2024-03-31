@@ -29,7 +29,7 @@
   top: 286px;
   align-items: center;
   position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
+  width: 390px; /* 부모의 폭에 맞추기 */
   padding: 10px;
   height: 350px;
   
@@ -79,7 +79,7 @@
 .state-off-wrapper:hover .CELLTRION,
 .state-off-wrapper:hover .element
  {
-  color: #000000 !important; /* 호버 상태에서 텍스트를 검정색으로 변경 */
+  color: #ffffff !important; /* 호버 상태에서 텍스트를 검정색으로 변경 */
 }
 
 
@@ -92,7 +92,7 @@
 
 /* hover 상태의 배경색 */
 .overlap-group.state-off:hover {
-  background-color: #DAFFC8; 
+  background-color: #71985e; 
   
   cursor: pointer; 
 }
@@ -129,7 +129,7 @@
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  left: 14px;
+  left: 24px;
   position: absolute;
   top: 253px;
 }
@@ -151,7 +151,7 @@
   top: 136px;
   align-items: center;
   position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
+  width: 390px; /* 부모의 폭에 맞추기 */
   padding: 10px;
 }
 

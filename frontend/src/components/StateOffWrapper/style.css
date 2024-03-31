@@ -1,25 +1,23 @@
 .state-off-wrapper {
-  border-bottom-style: solid;
-  border-bottom-width: 0.5px;
   border-color: #ccc6c680;
-  border-top-style: solid;
-  border-top-width: 0.5px;
   display: block;
   height: 53px;
-  width: 391px;
+  width: 370px;
+  margin-bottom: 3px;
 }
 
 .state-off-wrapper .overlap-group {
   height: 52px;
   position: relative;
-  width: 390px;
+  width: 370px;
+  border-radius: 4px;
 }
 
 .state-off-wrapper .info {
   align-items: flex-start;
   display: inline-flex;
   flex-direction: column;
-  left: 84px;
+  left: 90px;
   position: absolute;
   top: 4px;
 }

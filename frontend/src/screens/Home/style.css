@@ -24,7 +24,7 @@
   top: 350px;
   align-items: center;
   position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
+  width: 390px; /* 부모의 폭에 맞추기 */
   padding: 10px;
   height: 420px;
 }
@@ -34,7 +34,7 @@
   align-items: center; /* 세로축에서 중앙에 배치합니다 */
   justify-content: center; /* 가로축에서 중앙에 배치합니다 */
   background-color: #d9d9d933;
-  border-radius: 5px;
+  border-radius: 8px;
   height: 351px; /* 필요에 따라 조정하세요 */
   overflow: hidden;
   position: relative; /* 상대적 위치 지정 */
@@ -71,12 +71,7 @@
   letter-spacing: -0.03px !important;
 }
 
-.home .stock-7 {
-  left: 32px !important;
-}
-.home .stock-30 {
- left: 11px !important
-}
+
 
 .home .stock-8 {
   font-size: 12px !important;
@@ -87,9 +82,6 @@
   background-image: url(../../../static/img/ellipse-15-3.png) !important;
 }
 
-.home .stock-10 {
-  left: 26px !important;
-}
 
 .home .stock-11 {
   background-image: url(../../../static/img/ellipse-15-1.png) !important;
@@ -207,9 +199,7 @@
   width: 37px;
 }
 
-.home .stock-16 {
-  left: 18px !important;
-}
+
 
 .home .stock-17 {
   background-image: url(../../../static/img/ellipse-15-7.png) !important;
@@ -223,7 +213,7 @@
   top: 244px;
   align-items: center;
   position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
+  width: 390px; /* 부모의 폭에 맞추기 */
   padding: 10px;
 
 }
@@ -281,7 +271,7 @@
   top: 136px;
   align-items: center;
   position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
+  width: 390px; /* 부모의 폭에 맞추기 */
   padding: 10px;
 }
 
