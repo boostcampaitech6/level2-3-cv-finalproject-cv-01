@@ -33,11 +33,12 @@ class CNNPredResponse(BaseModel):
     pred_6day_percent: float
     pred_7day_result: int
     pred_7day_percent: float
+    score: float
 
 class TimeSeriesPredResponse(BaseModel):
     stock_code: str
     date: datetime
-    close: str
+    close: float
     pred_1day: float
     pred_2day: float
     pred_3day: float
@@ -45,6 +46,7 @@ class TimeSeriesPredResponse(BaseModel):
     pred_5day: float
     pred_6day: float
     pred_7day: float
+    score: float
 
 class BertPredResponse(BaseModel):
     stock_code: str
@@ -55,8 +57,10 @@ class BertPredResponse(BaseModel):
     today_positive: int
     today_neutral: int
     today_negative: int
+    score: float
 
 class CandlePredResponse(BaseModel):
     stock_code: str
     date: datetime
     candle_name: str
+    score: float
