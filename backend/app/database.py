@@ -2,10 +2,12 @@ from datetime import datetime
 from sqlmodel import SQLModel, Field
 from .config import config
 import sqlalchemy
+from sqlalchemy import Column, BigInteger
 
 class UserInfo(SQLModel,table=True):
-    id: int = Field(default=None, primary_key=True) # None: guest user
+    id: int = Field(default=None, sa_column=Column(BigInteger, primary_key=True))
     created_at: datetime = Field(default_factory=datetime.now)
+    nickname: str
 
 class FavoriteStocks(SQLModel,table=True):
     user_id: int = Field(primary_key=True)
