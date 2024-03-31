@@ -8,8 +8,6 @@ import { useUser } from '../../components/UserContext'; // UserContext 사용
 import { useNavigate } from "react-router-dom";
 
 export const FavoriteScreen = () => {
-  const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_KAKAO_CLIENT_ID}&redirect_uri=${encodeURIComponent(process.env.REACT_APP_KAKAO_REDIRECT_URI)}&response_type=code`;
-
   const navigate = useNavigate(); // v6 사용 시
 
   const handleLogin = () => {
@@ -25,13 +23,13 @@ export const FavoriteScreen = () => {
       const fetchFavorites = async () => {
         try {
           // 백엔드 API로부터 즐겨찾기 목록을 불러옴
-          const response = await axios.get(`http://localhost:8001/user/favorite/${userInfo.kakao_id}`);
+          const response = await axios.get(`http://localhost:8000/user/favorite/${userInfo.kakao_id}`);
           const favoriteStocks = response.data; // 응답 데이터
 
           const stockDetails = await Promise.all(favoriteStocks.map(async (stock) => {
             // 각 즐겨찾기 주식의 상세 정보를 불러옴
             const symbol = stock.stock_code.slice(-6);
-            const detailResponse = await axios.get(`http://localhost:8001/api/stock/${symbol}`);
+            const detailResponse = await axios.get(`http://localhost:8000/api/stock/${symbol}`);
             return { ...detailResponse.data,
               change: (detailResponse.data.change * 100).toFixed(2)
             };
@@ -51,6 +49,7 @@ export const FavoriteScreen = () => {
   return (
     <div className="favorite-screen">
       <div className="frame-10">
+        <div className="content-6">
           {userInfo ? (
             <>
               <div className="button-3">
@@ -70,34 +69,16 @@ export const FavoriteScreen = () => {
                     logo={favorite.logo}
                 />
                 )) : (
-                  <div className="text-container">
-                    <div className="text">
-                  <p className='text-style'>즐겨찾기 목록이 비어 있습니다.</p>
-                  </div>
-                  </div>
+                  <p>즐겨찾기 목록이 비어 있습니다.</p>
                 )}
               </div>
             </>
           ) : (
             <div className="favorite-list">
-              <div className="text-container">
-                    <div className="text">
-                  <p className='text-style'>즐겨찾기를 보려면 로그인해주세요.</p>
-                  </div>
-                  <a href={KAKAO_AUTH_URL} className="button-kakao-login">
-                  <button  onClick={handleLogin}   className="button-2">
-              <img className="kakao-logo" alt="Kakao logo" src="/img/kakao-logo.svg" />
-              <div className="label-wrapper">
-                <div className="label">카카오 로그인</div>
-              </div>
-            </button>
-            </a>
-                  </div>
+              <p>즐겨찾기를 보려면 로그인해주세요.</p>
+              <button onClick={handleLogin} className="login-button">로그인</button>
             </div>
           )}
-         <div className="line">
-                  <img className="line-2" alt="Line" src="/img/line-2.svg" />
-                </div>
           <div className="menu-bar-2">
             <Menu
               className="menu-4"
@@ -118,5 +99,6 @@ export const FavoriteScreen = () => {
           </div>
         </div>
       </div>
+    </div>
   );
 };

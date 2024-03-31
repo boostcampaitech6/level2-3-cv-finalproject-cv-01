@@ -213,7 +213,14 @@
 }
 
 .result-screen .heart-4 {
-  background-image: url(../../../static/img/heart-off-7.svg) !important;
+  background-image: url(../../../static/img/heart-off.svg) !important;
+  height: 28px !important;
+  position: relative !important;
+  width: 28px !important;
+}
+
+.result-screen .heart-5 {
+  background-image: url(../../../static/img/heart-on.svg) !important;
   height: 28px !important;
   position: relative !important;
   width: 28px !important;

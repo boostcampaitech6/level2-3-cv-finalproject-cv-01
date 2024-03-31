@@ -1,54 +1,24 @@
 .component-1174 {
   border-radius: 5px;
-  box-shadow: 0px 2px 4px #d7d6d633;
+  box-shadow: 0px 2px 4px #00000033;
   display: block;
   height: 102px;
   overflow: hidden;
   position: relative;
   width: 96px;
-  justify-content: center;
-  align-items: center;
 }
 
-/* 가운데 정렬을 위해 수정된 클래스 */
-.component-1174 .div-wrapper-2,
-.component-1174 .div-wrapper-3,
-.component-1174 .div-wrapper-4 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* 등락률을 표시하는 div-wrapper-2는 상단에 정렬 */
 .component-1174 .div-wrapper-2 {
-  top: 85px; /* 조정하여 위치를 맞추세요 */
-}
-
-/* 주가를 표시하는 div-wrapper-3은 중간에 정렬 */
-.component-1174 .div-wrapper-3 {
-  top: 69px; /* 조정하여 위치를 맞추세요 */
-}
-
-.component-1174 .div-wrapper-4 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 31px;
   position: absolute;
-  left: 50%;
-  top: 49px; /* 세로 위치를 조정하세요 */
-  transform: translateX(-50%);
-  width: 100%; /* 너비를 100%로 설정하여 text-align: center가 작동하도록 함 */
+  top: 85px;
 }
-
-/* 로고 이미지도 가운데 정렬 */
-.component-1174 .logo-2 {
-  position: absolute;
-  left: 50%;
-  top: 7px; /* 조정하여 위치를 맞추세요 */
-  transform: translateX(-50%);
-}
-
-
 
 .component-1174 .text-wrapper-3 {
-  color: #5380FF;
+  color: #2961ff;
   font-family: "Inter", Helvetica;
   font-size: 10px;
   font-weight: 500;
@@ -62,7 +32,7 @@
 }
 
 .component-1174 .text-wrapper-5 {
-  color: #F23645;
+  color: #fd0000;
   font-family: "Inter", Helvetica;
   font-size: 10px;
   font-weight: 500;
@@ -75,10 +45,16 @@
   width: fit-content;
 }
 
-
+.component-1174 .div-wrapper-3 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  top: 69px;
+}
 
 .component-1174 .p {
-  color: #ffffff;
+  color: #000000;
   font-family: "Inter", Helvetica;
   font-weight: 500;
   line-height: normal;
@@ -93,10 +69,16 @@
   letter-spacing: -0.04px;
 }
 
-
+.component-1174 .div-wrapper-4 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  top: 49px;
+}
 
 .component-1174 .text-wrapper-4 {
-  color: #ffffff;
+  color: #000000;
   font-family: "Inter", Helvetica;
   font-weight: 600;
   line-height: normal;
@@ -104,9 +86,6 @@
   position: relative;
   text-align: center;
   width: fit-content;
-  text-align: center; /* 텍스트를 div 내부에서 가운데 정렬 */
-  width: 100%; /* 부모의 100% 너비를 차지하도록 설정 */
-  margin: 0; /* margin을 리셋하여 추가 공간을 제거 */
 }
 
 .component-1174 .logo-2 {
@@ -114,17 +93,26 @@
   background-position: 50% 50%;
   background-size: cover;
   height: 37px;
+  left: 29px;
   position: absolute;
   top: 7px;
   width: 37px;
 }
 
 .component-1174.state-0-off {
-  background-color: #2c2c34;
+  background-color: #ffffff;
 }
 
 .component-1174.state-0-on {
-  background-color: 88fc4d;
+  background-color: #f1edff;
+}
+
+.component-1174.state-0-off .div-wrapper-3 {
+  left: 23px;
+}
+
+.component-1174.state-0-on .div-wrapper-3 {
+  left: 21px;
 }
 
 .component-1174.state-0-off .p {
@@ -148,6 +136,13 @@
   letter-spacing: -0.03px;
 }
 
+.component-1174.state-0-off .div-wrapper-4 {
+  left: 30px;
+}
+
+.component-1174.state-0-on .div-wrapper-4 {
+  left: 29px;
+}
 
 .component-1174.state-0-off .text-wrapper-4 {
   font-size: 13px;
