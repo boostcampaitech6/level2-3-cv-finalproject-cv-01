@@ -25,7 +25,7 @@ export const FavoriteScreen = () => {
       const fetchFavorites = async () => {
         try {
           // 백엔드 API로부터 즐겨찾기 목록을 불러옴
-          const response = await axios.get(`http://${process.env.SERVER_IP}&:8001/user/favorite/${userInfo.kakao_id}`);
+          const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/favorite/${userInfo.kakao_id}`);
           const favoriteStocks = response.data; // 응답 데이터
 
           const stockDetails = await Promise.all(favoriteStocks.map(async (stock) => {
