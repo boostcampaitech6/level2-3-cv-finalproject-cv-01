@@ -30,7 +30,7 @@ export const LoginKakao = () => {
          // 1초 동안 홀딩 후 홈페이지로 이동
          setTimeout(() => {
           navigate("/home");
-        }, 5000);
+        }, 800);
         })
         .catch((error) => {
           console.error("Login error:", error);
