@@ -7,12 +7,15 @@ class UserInfoResponse(BaseModel):
 <<<<<<< HEAD
     created_at: datetime
     nickname: str
+<<<<<<< HEAD
 =======
     created_at: str
 >>>>>>> 9c2bce90 (feat: mysql server connect)
 =======
     created_at: datetime
 >>>>>>> 6d9a786d (fix: date type from str to datetime)
+=======
+>>>>>>> 01ac45c1 (feat: kakao api, user info)
 
 class FavoriteStocksResponse(BaseModel):
     user_id: int
