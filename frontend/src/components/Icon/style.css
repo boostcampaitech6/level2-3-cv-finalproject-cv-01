@@ -1,0 +1,125 @@
+.icon {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.icon .img {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.icon .heart-3 {
+  height: 24px !important;
+  position: relative !important;
+  width: 24px !important;
+}
+
+.icon .div {
+  align-items: center;
+  display: flex;
+  height: 9px;
+  justify-content: center;
+  margin-top: -2px;
+  position: relative;
+  width: 24px;
+}
+
+.icon .HOME-2 {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 6px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+}
+
+.icon .flag {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.icon .union-2 {
+  height: 16px;
+  left: 6px;
+  position: absolute;
+  top: 4px;
+  width: 12px;
+}
+
+.icon .frame {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 10px;
+  left: -7px;
+  padding: 10px;
+  position: relative;
+  top: -7px;
+}
+
+.icon .union-3 {
+  height: 18.71px;
+  position: relative;
+  width: 18.71px;
+}
+
+.icon .SAVED-2 {
+  position: relative;
+}
+
+.icon .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 6px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 24px;
+}
+
+.icon .FAVORITE {
+  width: 24px;
+}
+
+.icon .SAVED {
+  width: 24px;
+}
+
+.icon .SEARCH {
+  width: 24px;
+}
+
+.icon .MY {
+  width: 24px;
+}
+
+.icon .icon-SEARCH {
+  overflow: hidden;
+}
+
+.icon .icon-0-SAVED {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 6px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: normal;
+  text-align: center;
+  width: 24px;
+}
+
+.icon .icon-0-SEARCH {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+}

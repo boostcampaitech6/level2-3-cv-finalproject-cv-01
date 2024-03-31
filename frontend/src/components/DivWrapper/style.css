@@ -1,0 +1,119 @@
+.div-wrapper {
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  border-color: #ccc6c6;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  height: 53px;
+  width: 361px;
+}
+
+.div-wrapper .overlap-group-2 {
+  height: 52px;
+  position: relative;
+  width: 390px;
+}
+
+.div-wrapper .background {
+  background-color: #ffffff;
+  height: 52px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 390px;
+}
+
+.div-wrapper .frame-2 {
+  height: 52px;
+  left: 169px;
+  position: absolute;
+  top: 0;
+  width: 96px;
+}
+
+.div-wrapper .frame-3 {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 6px;
+  left: 302px;
+  position: absolute;
+  top: 12px;
+  width: 66px;
+}
+
+.div-wrapper .text-wrapper-5 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  display: inline-block; /* 가운데 정렬을 위해 필요한 경우 추가 */
+  width: fit-content;
+}
+
+.div-wrapper .text-wrapper-6 {
+  color: #ff0000;
+  font-family: "Inter", Helvetica;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.div-wrapper .text-wrapper-7 {
+  color: #4078ff;
+  font-family: "Inter", Helvetica;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.div-wrapper .info-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  left: 72px;
+  position: absolute;
+  top: 4px;
+}
+
+.div-wrapper .text-wrapper-8 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.div-wrapper .text-wrapper-9 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.26px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.div-wrapper .logo-3 {
+  height: 37px; 
+  width: 37px;
+  left: 22px;
+  position: absolute;
+  top: 7px;
+}

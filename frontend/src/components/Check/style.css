@@ -1,0 +1,26 @@
+.check {
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 9px;
+  display: inline-flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 10px 25px;
+  position: relative;
+}
+
+.check .text-wrapper {
+  color: #1b1b1b;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.check:hover {
+  background-color: #fdd000;
+}
