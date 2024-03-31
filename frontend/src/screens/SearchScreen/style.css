@@ -79,7 +79,7 @@
 .state-off-wrapper:hover .CELLTRION,
 .state-off-wrapper:hover .element
  {
-  color: #ffffff !important; /* 호버 상태에서 텍스트를 검정색으로 변경 */
+ color: #ffffff !important;  /* 호버 상태에서 텍스트를 검정색으로 변경 */
 }
 
 

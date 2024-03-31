@@ -56,6 +56,7 @@ export const FavoriteScreen = () => {
               <div className="button-3">
                 <Link to="/search"><img className="img-2" alt="Plus" src="/img/plus.svg" /></Link>
               </div>
+            <div className="favorite-list-container">
               <div className="favorite-list">
                 {favorites.length > 0 ? favorites.map((favorite, index) => (
                   <DivWrapper
@@ -77,10 +78,11 @@ export const FavoriteScreen = () => {
                   </div>
                 )}
               </div>
+              </div>
             </>
           ) : (
             <div className="favorite-list">
-              <div className="text-container">
+              <div className="text-container-2">
                     <div className="text">
                   <p className='text-style'>즐겨찾기를 보려면 로그인해주세요.</p>
                   </div>
@@ -95,6 +97,7 @@ export const FavoriteScreen = () => {
                   </div>
             </div>
           )}
+
          <div className="line">
                   <img className="line-2" alt="Line" src="/img/line-2.svg" />
                 </div>
