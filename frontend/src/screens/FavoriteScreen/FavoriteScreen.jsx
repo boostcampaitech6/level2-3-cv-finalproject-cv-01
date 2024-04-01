@@ -16,6 +16,10 @@ export const FavoriteScreen = () => {
     navigate("/login"); // 로그인 페이지로 이동
   };
 
+  const handleStockClick = (symbol, label, isFavorited) => {
+    navigate(`/result/KRX:${symbol}`, { state: { stockLabel: label, isFavorited: isFavorited } });
+  };
+
   const { userInfo } = useUser(); // UserContext로부터 사용자 정보를 가져옴
   const [favorites, setFavorites] = useState([]); // 즐겨찾기 목록 상태
 
@@ -60,8 +64,10 @@ export const FavoriteScreen = () => {
               <div className="button-3">
                 <Link to="/search"><img className="img-2" alt="Plus" src="/img/plus.svg" /></Link>
               </div>
+            <div className="favorite-list-container">
               <div className="favorite-list">
                 {favorites.length > 0 ? favorites.map((favorite, index) => (
+
                   <DivWrapper
                     key={index}
                     className="component-1175"
@@ -72,7 +78,9 @@ export const FavoriteScreen = () => {
                     volume={`Volume: ${favorite.volume}`}
                     graph="/img/frame-40.svg"
                     logo={favorite.logo}
+                    onClick={() => handleStockClick(favorite.symbol, favorite.stock_name, favorite.isFavorited)} // Add this line
                 />
+
                 )) : (
                   <div className="text-container">
                     <div className="text">
@@ -81,10 +89,11 @@ export const FavoriteScreen = () => {
                   </div>
                 )}
               </div>
+              </div>
             </>
           ) : (
             <div className="favorite-list">
-              <div className="text-container">
+              <div className="text-container-2">
                     <div className="text">
                   <p className='text-style'>즐겨찾기를 보려면 로그인해주세요.</p>
                   </div>
@@ -99,6 +108,7 @@ export const FavoriteScreen = () => {
                   </div>
             </div>
           )}
+          
          <div className="line">
                   <img className="line-2" alt="Line" src="/img/line-2.svg" />
                 </div>
