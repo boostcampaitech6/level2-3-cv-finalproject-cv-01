@@ -1,5 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReactGA from 'react-ga4'; // GA4 버전을 사용한다고 가정
 import { Loading } from "./screens/Loading";
 import { Share } from "./screens/Share";
 import { Login } from "./screens/Login";
@@ -14,6 +15,17 @@ import { ResultWrapper } from "./screens/ResultWrapper";
 import { FavoriteWrapper } from "./screens/FavoriteWrapper";
 import { UserProvider } from "./components/UserContext";
 
+// Google Analytics의 추적 ID
+const TRACKING_ID = "G-8QXBPGZNVR";
+ReactGA.initialize(TRACKING_ID);
+
+// 사용자 정의 미들웨어를 통해 라우트 변경을 추적
+const trackPageView = async (args) => {
+  const location = args.location || args.router.location;
+  const page = location.pathname + location.search;
+  ReactGA.send({ hitType: "pageview", page: page });
+};
+
 const router = createBrowserRouter([
   {
     path: "/*",
@@ -26,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/share",
     element: <Share />,
+  },
+  {
+     // 라우터에 미들웨어 추가
+    enhancers: [trackPageView],
   },
   {
     path: "/login",
