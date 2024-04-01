@@ -13,7 +13,7 @@ export const DivWrapper = ({ className, companyName, graph, symbol, price, chang
         <div className="background">
           <div className="frame-2">
             <div className="text-wrapper-5">{price}</div>
-          </div>
+          
           <div className="frame-3">
             <div className="text-wrapper-6">{change}</div>
             <div className="text-wrapper-7">{volume}</div>
@@ -24,6 +24,7 @@ export const DivWrapper = ({ className, companyName, graph, symbol, price, chang
           <div className="text-wrapper-9">{symbol}</div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
