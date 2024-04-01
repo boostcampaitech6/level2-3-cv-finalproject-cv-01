@@ -54,6 +54,10 @@
   position: relative;
 }
 
+.result-screen .button-5:hover {    /* heart layout */
+  cursor: pointer;
+}
+
 
 .result-screen .frame-18 {
   align-items: center;
@@ -160,6 +164,7 @@
   display: flex;
   justify-content: center; 
   height: auto; 
+  width: 380px;
   position: relative;
 }
 
@@ -172,6 +177,7 @@
   position: relative;
   width: 100%;
   padding-bottom: 30px;
+  word-wrap: break-word;
 }
 
 .result-screen .text-style {
@@ -188,38 +194,55 @@
   width: fit-content;
 }
 
-
-.result-screen .radar-chart-color {
-  background-color: #FBF7EE;
+.result-screen .text-style-2 {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.96px;
+  line-height: 50px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
 }
 
 
 .result-screen .radar-chart-container {
-  top: 1700px;
+  top: 2250px;
   display: flex;
   justify-content: center; 
-  height: 300px; 
+  height: 420px; 
+  position: absolute; 
+  left: 15px;
+}
+
+.result-screen .radar-chart {
+  display: flex;
+  justify-content: center; 
+  height: 350px; 
   position: relative; 
 }
 
 
 
 .result-screen .model-results-container {
-  top: 1100px; 
+  top: 1980px; 
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
 
   
 }
 
 .result-screen .image-container {
-  position: relative;
-  width: 100%; /* 이미지 컨테이너의 너비를 지정합니다. 필요에 따라 조정하세요. */
-  height: 1800px; /* 이미지 컨테이너의 높이를 지정합니다. 필요에 따라 조정하세요. */
+  top: 1500px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; 
+  width: 390px;
+  height: 300px; 
+  position: absolute;
   overflow: hidden; /* 컨테이너 바깥으로 나가는 이미지를 숨깁니다. */
 }
 
@@ -231,10 +254,24 @@
 }
 
 .result-screen .message-container {
+  top: 1850px;
+  width: 380px;
+  display: flex;
   justify-content: center; 
   height: auto; 
-  position: relative;
+  position: absolute;
 }
+
+
+.result-screen .message-container-2 {
+  top: 2600px;
+  width: 380px;
+  display: flex;
+  justify-content: center; 
+  height: 300; 
+  position: absolute;
+}
+
 
 .result-screen .button-AI-wrapper {
   z-index: 1000;
@@ -245,6 +282,21 @@
   justify-content: center; 
   align-items: center; 
   bottom: 88px;
+}
+
+.result-screen .button-AI-wrapper-2 {
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  left: 50%; 
+  transform: translateX(-50%); 
+  justify-content: center; 
+  align-items: center; 
+  bottom: 150px;
+}
+
+.result-screen .button-AI-wrapper {    /* heart layout */
+  cursor: pointer;
 }
 
 .result-screen .button-AI-instance {
@@ -338,10 +390,10 @@
 }
 
 .result-screen .gauge-labels {
-  top: 1100px; 
+  top: 2160px; 
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
   width: 360px;
   justify-content: space-between; /* 레이블 사이에 공간을 균등하게 분배 */
   width: 380px;
@@ -371,7 +423,7 @@
 /* 가운데 정렬 레이블 */
 .result-screen .gauge-label.middle {
   font-weight: bold;
-  color: #42464F; /* 중립 - 어두운 회색 */
+  color: #ccc; /* 중립 - 어두운 회색 */
 }
 
 /* 오른쪽 정렬 레이블 */
@@ -390,3 +442,7 @@
 .news-link:hover .news-description {
   color: #ffffff; 
 } */
+
+.gauge-chart-text {
+  font-family: "Bungee", sans-serif; /* 여기서 'Your Font Name'을 원하는 폰트 이름으로 변경하세요. */
+}
