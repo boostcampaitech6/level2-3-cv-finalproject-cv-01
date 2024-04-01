@@ -470,7 +470,7 @@ export const ResultScreen = () => {
                 cornerRadius={0}
                 arcWidth={0.06}
                 arcPadding={0.015}
-                percent={averageScorePercent.toFixed(2)}
+                percent={parseFloat(averageScorePercent.toFixed(2))}
                 textColor="#ffffff"
                 needleColor="#ACC2A1"
                 needleBaseColor="#71985e"
