@@ -6,9 +6,9 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 import React from "react";
 import "./style.css";
 
-export const DivWrapper = ({ className, companyName, graph, symbol, price, change, volume, logo }) => {
+export const DivWrapper = ({ className, companyName, graph, symbol, price, change, volume, logo, onClick }) => {
   return (
-    <div className={`div-wrapper ${className}`}>
+    <div className={`div-wrapper ${className}`} onClick={onClick}>
       <div className="overlap-group-2">
         <div className="background">
           <div className="frame-2">

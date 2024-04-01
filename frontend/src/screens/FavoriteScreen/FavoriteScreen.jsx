@@ -16,6 +16,10 @@ export const FavoriteScreen = () => {
     navigate("/login"); // 로그인 페이지로 이동
   };
 
+  const handleStockClick = (symbol, label, isFavorited) => {
+    navigate(`/result/${symbol}`, { state: { stockLabel: label, isFavorited: isFavorited } });
+  };
+
   const { userInfo } = useUser(); // UserContext로부터 사용자 정보를 가져옴
   const [favorites, setFavorites] = useState([]); // 즐겨찾기 목록 상태
 
@@ -59,6 +63,7 @@ export const FavoriteScreen = () => {
             <div className="favorite-list-container">
               <div className="favorite-list">
                 {favorites.length > 0 ? favorites.map((favorite, index) => (
+                   
                   <DivWrapper
                     key={index}
                     className="component-1175"
@@ -69,7 +74,9 @@ export const FavoriteScreen = () => {
                     volume={`Volume: ${favorite.volume}`}
                     graph="/img/frame-40.svg"
                     logo={favorite.logo}
+                    onClick={() => handleStockClick(favorite.symbol, favorite.stock_name, favorite.isFavorited)} // Add this line
                 />
+
                 )) : (
                   <div className="text-container">
                     <div className="text">

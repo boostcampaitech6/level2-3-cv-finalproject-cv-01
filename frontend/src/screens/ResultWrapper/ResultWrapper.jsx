@@ -16,7 +16,7 @@ export const ResultWrapper = () => {
   
   const { symbol } = useParams(); // URL 파라미터에서 symbol 값을 가져옵니다.
   const location = useLocation();
-  const { stockLabel } = location.state || {};
+  const { stockLabel,isFavorited } = location.state || {};
 
   const [newsData, setNewsData] = useState([]);
 
