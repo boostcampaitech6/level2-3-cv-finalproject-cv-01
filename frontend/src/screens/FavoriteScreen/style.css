@@ -24,7 +24,7 @@
   top: 150px;
   align-items: center;
   position: absolute;
-  width: 100%; /* 부모의 폭에 맞추기 */
+  width: 365px; /* 부모의 폭에 맞추기 */
   padding: 10px;
 
 }
@@ -121,12 +121,18 @@
   cursor: pointer; 
 }
 
-.favorite-screen .background:hover .text-wrapper-5 {
+.favorite-screen .background:hover .text-wrapper-5{
   color: #ffffff !important; 
 }
-.favorite-screen .overlap-group-2:hover .text-wrapper-8{
+
+.favorite-screen .background:hover .text-wrapper-8{
   color: #ffffff !important; 
 }
+
+.favorite-screen .background:hover .text-wrapper-9{
+  color: #ffffff !important; 
+}
+
 
 .favorite-screen .component-1175 {
   align-self: stretch !important;

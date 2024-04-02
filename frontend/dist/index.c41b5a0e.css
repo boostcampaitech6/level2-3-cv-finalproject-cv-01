@@ -12,7 +12,7 @@
 
 .video {
   object-fit: cover;
-  max-height: 115%;
+  max-height: 118%;
 }
 
 .desktop-video {
@@ -1598,7 +1598,7 @@
   display: flex;
   position: absolute;
   top: 12px;
-  left: 260px;
+  left: 110px;
 }
 
 .div-wrapper .text-wrapper-5 {
@@ -1702,7 +1702,7 @@
 
 .favorite-screen .text-container {
   align-items: center;
-  width: 100%;
+  width: 365px;
   padding: 10px;
   position: absolute;
   top: 150px;
@@ -1796,7 +1796,7 @@
   background-color: #71985e;
 }
 
-.favorite-screen .background:hover .text-wrapper-5, .favorite-screen .overlap-group-2:hover .text-wrapper-8 {
+.favorite-screen .background:hover .text-wrapper-5, .favorite-screen .background:hover .text-wrapper-8, .favorite-screen .background:hover .text-wrapper-9 {
   color: #fff !important;
 }
 
@@ -2629,7 +2629,7 @@
 }
 
 .news-description {
-  color: #555;
+  color: #868892;
   text-align: justify;
   word-wrap: break-word;
   margin-bottom: 8px;
