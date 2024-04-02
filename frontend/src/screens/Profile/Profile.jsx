@@ -21,7 +21,7 @@ export const Profile = () => {
       if (userInfo && userInfo.kakao_id) {
         try {
           // 백엔드 API 엔드포인트에서 사용자 ID를 사용하여 요청
-          const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/info/${userInfo.kakao_id}`);
+          const response = await axios.get(`http://${process.env.SERVER_IP}:${process.env.PORT}/user/info/${userInfo.kakao_id}`);
           // 백엔드로부터 받은 상세 정보로 userInfo 상태 업데이트
           setUserInfo({ ...userInfo, ...response.data, detailedFetched: true });
         } catch (error) {
