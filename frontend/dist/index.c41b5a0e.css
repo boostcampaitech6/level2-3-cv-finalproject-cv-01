@@ -2295,6 +2295,10 @@
   position: relative;
 }
 
+.result-screen .button-5:hover {
+  cursor: pointer;
+}
+
 .result-screen .frame-18 {
   justify-content: center;
   align-items: center;
@@ -2393,6 +2397,7 @@
 
 .result-screen .text-container {
   justify-content: center;
+  width: 380px;
   height: auto;
   display: flex;
   position: relative;
@@ -2400,6 +2405,7 @@
 }
 
 .result-screen .text {
+  word-wrap: break-word;
   flex: none;
   justify-content: center;
   align-items: center;
@@ -2423,23 +2429,76 @@
   position: relative;
 }
 
-.result-screen .radar-chart-color {
-  background-color: #fbf7ee;
+.result-screen .text-style-2 {
+  color: #fff;
+  letter-spacing: -.96px;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: Noto Sans KR, Helvetica;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 50px;
+  position: relative;
 }
 
 .result-screen .radar-chart-container {
   justify-content: center;
-  height: 300px;
+  height: 420px;
+  display: flex;
+  position: absolute;
+  top: 2250px;
+  left: 15px;
+}
+
+.result-screen .radar-chart {
+  justify-content: center;
+  height: 350px;
   display: flex;
   position: relative;
-  top: 1700px;
 }
 
 .result-screen .model-results-container {
   justify-content: center;
   display: flex;
+  position: absolute;
+  top: 1980px;
+}
+
+.result-screen .image-container {
+  justify-content: center;
+  width: 390px;
+  height: 300px;
+  display: flex;
+  position: absolute;
+  top: 1500px;
+  overflow: hidden;
+}
+
+.result-screen .image {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
   position: relative;
-  top: 1100px;
+}
+
+.result-screen .message-container {
+  justify-content: center;
+  width: 380px;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 1850px;
+}
+
+.result-screen .message-container-2 {
+  justify-content: center;
+  width: 380px;
+  height: 300px;
+  display: flex;
+  position: absolute;
+  top: 2600px;
 }
 
 .result-screen .button-AI-wrapper {
@@ -2451,6 +2510,21 @@
   bottom: 88px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.result-screen .button-AI-wrapper-2 {
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.result-screen .button-AI-wrapper {
+  cursor: pointer;
 }
 
 .result-screen .button-AI-instance {
@@ -2542,8 +2616,8 @@
   justify-content: space-between;
   width: 380px;
   display: flex;
-  position: relative;
-  top: 1100px;
+  position: absolute;
+  top: 2160px;
 }
 
 .result-screen .gauge-label {
@@ -2565,7 +2639,7 @@
 }
 
 .result-screen .gauge-label.middle {
-  color: #42464f;
+  color: #ccc;
   font-weight: bold;
 }
 
@@ -2577,6 +2651,10 @@
 .result-screen .gauge-label.right {
   color: #3764f3;
   font-weight: bold;
+}
+
+.gauge-chart-text {
+  font-family: Bungee, sans-serif;
 }
 
 .loding {
