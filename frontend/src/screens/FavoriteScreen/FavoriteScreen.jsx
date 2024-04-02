@@ -16,22 +16,26 @@ export const FavoriteScreen = () => {
     navigate("/login"); // 로그인 페이지로 이동
   };
 
+  const handleStockClick = (symbol, label, isFavorited) => {
+    navigate(`/result/KRX:${symbol}`, { state: { stockLabel: label, isFavorited: isFavorited } });
+  };
+
   const { userInfo } = useUser(); // UserContext로부터 사용자 정보를 가져옴
   const [favorites, setFavorites] = useState([]); // 즐겨찾기 목록 상태
 
   useEffect(() => {
-    // 사용자가 로그인한 경우에만 즐겨찾기 정보를 불러옴
+     // 사용자가 로그인한 경우에만 즐겨찾기 정보를 불러옴
     if (userInfo) {
       const fetchFavorites = async () => {
         try {
           // 백엔드 API로부터 즐겨찾기 목록을 불러옴
-          const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/favorite/${userInfo.kakao_id}`);
+          const response = await axios.get(`http://${process.env.SERVER_IP}:${process.env.PORT}/user/favorite/${userInfo.kakao_id}`);
           const favoriteStocks = response.data; // 응답 데이터
 
           const stockDetails = await Promise.all(favoriteStocks.map(async (stock) => {
             // 각 즐겨찾기 주식의 상세 정보를 불러옴
             const symbol = stock.stock_code.slice(-6);
-            const detailResponse = await axios.get(`http://${process.env.SERVER_IP}:8001/api/stock/${symbol}`);
+            const detailResponse = await axios.get(`http://${process.env.SERVER_IP}:${process.env.PORT}/api/stock/${symbol}`);
             return { ...detailResponse.data,
               change: (detailResponse.data.change * 100).toFixed(2)
             };
@@ -56,8 +60,10 @@ export const FavoriteScreen = () => {
               <div className="button-3">
                 <Link to="/search"><img className="img-2" alt="Plus" src="/img/plus.svg" /></Link>
               </div>
+            <div className="favorite-list-container">
               <div className="favorite-list">
                 {favorites.length > 0 ? favorites.map((favorite, index) => (
+
                   <DivWrapper
                     key={index}
                     className="component-1175"
@@ -68,7 +74,9 @@ export const FavoriteScreen = () => {
                     volume={`Volume: ${favorite.volume}`}
                     graph="/img/frame-40.svg"
                     logo={favorite.logo}
+                    onClick={() => handleStockClick(favorite.symbol, favorite.stock_name, favorite.isFavorited)} // Add this line
                 />
+
                 )) : (
                   <div className="text-container">
                     <div className="text">
@@ -77,10 +85,11 @@ export const FavoriteScreen = () => {
                   </div>
                 )}
               </div>
+              </div>
             </>
           ) : (
             <div className="favorite-list">
-              <div className="text-container">
+              <div className="text-container-2">
                     <div className="text">
                   <p className='text-style'>즐겨찾기를 보려면 로그인해주세요.</p>
                   </div>
@@ -95,6 +104,7 @@ export const FavoriteScreen = () => {
                   </div>
             </div>
           )}
+          
          <div className="line">
                   <img className="line-2" alt="Line" src="/img/line-2.svg" />
                 </div>
