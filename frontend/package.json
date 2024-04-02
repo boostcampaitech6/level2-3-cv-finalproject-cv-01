@@ -5,7 +5,7 @@
   "source": "./index.html",
   "scripts": {
     "build": "parcel build --public-url ./ --no-scope-hoist",
-    "dev": "parcel --port 3001",
+    "dev": "parcel --port 80",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
