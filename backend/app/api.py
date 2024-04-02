@@ -195,7 +195,7 @@ async def kakao_login(code: str = Body(..., embed=True)):
     payload = {
         "grant_type": "authorization_code",
         "client_id": os.getenv("REST_API_KEY"),  # 카카오 REST API 키
-        "redirect_uri": f'http://{os.getenv("SERVER_IP")}:3001/login-kakao',  # 카카오 개발자 설정에 등록한 리다이렉트 URI
+        "redirect_uri": f'http://{os.getenv("SERVER_IP")}:80/login-kakao',  # 카카오 개발자 설정에 등록한 리다이렉트 URI
         "code": code,  # 카카오 로그인 인증 과정에서 받은 인증 코드
     }
     async with httpx.AsyncClient() as client:
