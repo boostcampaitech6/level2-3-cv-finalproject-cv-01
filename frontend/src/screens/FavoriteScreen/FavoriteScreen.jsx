@@ -24,33 +24,40 @@ export const FavoriteScreen = () => {
   const [favorites, setFavorites] = useState([]); // 즐겨찾기 목록 상태
 
   useEffect(() => {
-    // 사용자가 로그인한 경우에만 즐겨찾기 정보를 불러옴
     if (userInfo) {
-      const fetchFavorites = async () => {
-        try {
-          // 백엔드 API로부터 즐겨찾기 목록을 불러옴
-          const response = await axios.get(`http://${process.env.SERVER_IP}:8001/user/favorite/${userInfo.kakao_id}`);
-          const favoriteStocks = response.data; // 응답 데이터
-
-          const stockDetails = await Promise.all(favoriteStocks.map(async (stock) => {
-            // 각 즐겨찾기 주식의 상세 정보를 불러옴
-            const symbol = stock.stock_code.slice(-6);
-            const detailResponse = await axios.get(`http://${process.env.SERVER_IP}:8001/api/stock/${symbol}`);
-            return { ...detailResponse.data,
-              change: (detailResponse.data.change * 100).toFixed(2)
-            };
-          }));
-          console.log(stockDetails)
-          setFavorites(stockDetails);
-        } catch (error) {
-          console.error("Error fetching favorites:", error);
-          setFavorites([]);
-        }
-      };
-
-      fetchFavorites();
+      const cachedFavorites = localStorage.getItem('favorites');
+      if (cachedFavorites) {
+        setFavorites(JSON.parse(cachedFavorites));
+      } else {
+        const fetchFavorites = async () => {
+          try {
+            const response = await axios.get(`http://${process.env.SERVER_IP}:${process.env.PORT}/user/favorite/${userInfo.kakao_id}`);
+            const favoriteStocks = response.data;
+  
+            const stockDetails = await Promise.all(favoriteStocks.map(async (stock) => {
+              const symbol = stock.stock_code.slice(-6);
+              const detailResponse = await axios.get(`http://${process.env.SERVER_IP}:${process.env.PORT}/api/stock/${symbol}`);
+              return { ...detailResponse.data, change: (detailResponse.data.change * 100).toFixed(2) };
+            }));
+  
+            localStorage.setItem('favorites', JSON.stringify(stockDetails));
+            setFavorites(stockDetails);
+          } catch (error) {
+            console.error("Error fetching favorites:", error);
+            // 에러 발생 시 콘솔에 로그를 남깁니다.
+          }
+        };
+  
+        fetchFavorites();
+      }
     }
-  }, [userInfo]); // user가 변경될 때마다 이 useEffect가 실행됨
+  }, [userInfo]);
+
+  const fetchFavorites = async () => {
+    // ...기존의 fetchFavorites 함수...
+    // 성공적으로 데이터를 불러온 후
+    localStorage.setItem('favorites', JSON.stringify(stockDetails)); // 즐겨찾기 목록을 로컬 스토리지에 저장
+  };
 
   return (
     <div className="favorite-screen">
