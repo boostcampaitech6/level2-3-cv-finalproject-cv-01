@@ -236,8 +236,6 @@
   
 }
 
-<<<<<<< HEAD
-=======
 .result-screen .image-container {
   top: 1500px;
   display: flex;
@@ -275,7 +273,6 @@
 }
 
 
->>>>>>> 504155e8 (feat: modify result page)
 .result-screen .button-AI-wrapper {
   z-index: 1000;
   display: flex;
