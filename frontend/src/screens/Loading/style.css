@@ -4,20 +4,22 @@
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
 .video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: cover; 
+  max-height: 118%;
 }
 
 .desktop-video {
   display: block;
 }
 
-.mobile-video {
+.mobile-image {
   display: none;
 }
 
@@ -26,7 +28,7 @@
   .desktop-video {
     display: none;
   }
-  .mobile-video {
+  .mobile-image {
     display: block;
   }
 }

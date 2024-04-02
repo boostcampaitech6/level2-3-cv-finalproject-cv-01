@@ -14,7 +14,6 @@
   flex: 1;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
   padding: 0px 15px;
   position: relative;
   width: 420px;
@@ -23,6 +22,15 @@
 
 .favorite-screen .text-container {
   top: 150px;
+  align-items: center;
+  position: absolute;
+  width: 365px; /* 부모의 폭에 맞추기 */
+  padding: 10px;
+
+}
+
+.favorite-screen .text-container-2 {
+  top: 250px;
   align-items: center;
   position: absolute;
   width: 100%; /* 부모의 폭에 맞추기 */
@@ -81,7 +89,7 @@
   gap: 1px;
   right: 30px;
   position: absolute;
-  top: 136px;
+  top: 120px;
 }
 
 .favorite-screen .img-2 {
@@ -91,15 +99,40 @@
   width: 24px;
 }
 
+.favorite-screen .favorite-list-container {
+  top: 180px;
+  align-items: center;
+  position: absolute;
+  width: 390px; /* 부모의 폭에 맞추기 */
+  padding: 10px;
+  height: 500px;
+}
+
 .favorite-screen .favorite-list {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  left: 0;
   position: absolute;
-  top: 172px;
-  width: 390px;
+  width: 100%;
 }
+
+.favorite-screen .background:hover {
+  background-color: #71985e; 
+  cursor: pointer; 
+}
+
+.favorite-screen .background:hover .text-wrapper-5{
+  color: #ffffff !important; 
+}
+
+.favorite-screen .background:hover .text-wrapper-8{
+  color: #ffffff !important; 
+}
+
+.favorite-screen .background:hover .text-wrapper-9{
+  color: #ffffff !important; 
+}
+
 
 .favorite-screen .component-1175 {
   align-self: stretch !important;
