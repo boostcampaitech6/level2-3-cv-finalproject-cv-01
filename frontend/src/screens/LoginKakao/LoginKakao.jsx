@@ -13,7 +13,7 @@ export const LoginKakao = () => {
   useEffect(() => {
     const code = new URLSearchParams(window.location.search).get("code");
     if (code) {
-      axios.post(`http://${process.env.SERVER_IP}:${process.env.PORT}/auth/kakao`, { code })
+      axios.post(`http://${process.env.SERVER_IP}:8001/auth/kakao`, { code })
         .then((response) => {
           // UserContext에 사용자 정보 저장
           console.log(response.data)
