@@ -18,23 +18,19 @@ COPY id_rsa /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa
 
 # install poetry settings
-COPY pyproject.toml .
-RUN pip install --upgrade pip \
-    && pip install poetry \
-	&& poetry export -f requirements.txt --output requirements.txt --without-hashes \
-	&& git clone -b develop git@github.com:boostcampaitech6/level2-3-cv-finalproject-cv-01.git
+# COPY pyproject.toml poetry.lock* ./
+RUN git clone -b release/0.0 git@github.com:boostcampaitech6/level2-3-cv-finalproject-cv-01.git
 
 # Stage 2 : Runtime
 FROM python:3.10-slim as runtime
 
-WORKDIR /workspace
+WORKDIR /backend
 
 # 필요한 파일들을 빌드 스테이지에서 복사
-COPY --from=build /workspace/level2-3-cv-finalproject-cv-01 /workspace
-COPY --from=build /workspace/requirements.txt .
-RUN pip install --no-cache-dir --upgrade -r requirements.txt \
-	&& rm requirements.txt \
-	&& apt-get update \
-	&& apt-get install -y --no-install-recommends git
-
-CMD ["python", "backend/main.py"]
+COPY --from=build /workspace/level2-3-cv-finalproject-cv-01/backend /backend
+RUN pip install --upgrade pip \
+	&& pip install poetry \
+	&& poetry config virtualenvs.create false \
+    && poetry install --no-root --no-interaction --no-ansi
+ENV PATH="$PATH:/root/.poetry/bin"
+CMD ["sh", "-c", "poetry run python main.py"]

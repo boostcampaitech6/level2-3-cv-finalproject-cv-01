@@ -16,14 +16,14 @@ RUN mkdir -p -m 0600 /root/.ssh \
 # COPY local SSH Key into Docker container
 COPY id_rsa /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa \
-    && git clone -b develop git@github.com:boostcampaitech6/level2-3-cv-finalproject-cv-01.git
+    && git clone -b release/0.0 git@github.com:boostcampaitech6/level2-3-cv-finalproject-cv-01.git
 
 # Stage 2 : Runtime
 FROM node:lts-slim as runtime
 
-WORKDIR /workspace
-
 # 필요한 파일들을 빌드 스테이지에서 복사
-COPY --from=build /workspace/level2-3-cv-finalproject-cv-01 /workspace
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends git
+COPY --from=build /workspace/level2-3-cv-finalproject-cv-01/frontend /frontend
+
+WORKDIR /frontend
+RUN rm -rf node_modules .parcel-cache
+CMD ["sh", "-c", "npm install && npm run build && npm run dev"]
