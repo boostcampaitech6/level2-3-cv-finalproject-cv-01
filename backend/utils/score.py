@@ -44,7 +44,7 @@ def BERTScore(yesterday_positive, yesterday_neutral, yesterday_negative,
 # CANDLE
 # 최종 점수 = 기본 점수 + (상승 - 하락) / (상승 + 하락) * 50 * 가중치
 def CANDLEScore(candle_name):
-    df = pd.read_csv('/workspace/backend/utils/candle_patterns_db.csv')
+    df = pd.read_csv('/backend/utils/candle_patterns_db.csv')
 
     pattern_list = candle_name.split(',')
 
