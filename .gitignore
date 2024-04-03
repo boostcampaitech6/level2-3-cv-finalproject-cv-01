@@ -140,3 +140,5 @@ node_modules/
 # frontend
 frontend/node_modules/
 frontend/.parcel-cache/
+
+frontend/id_rsa
