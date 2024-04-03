@@ -1,24 +1,33 @@
 # docker-compose.yaml
-version: "3.10"
+version: "3.3"
 
 services:
 
   frontend:
-    image: kchaea/stock-frontend:v1.0
+    image: kchaea/stock-frontend:v2.0
     build:
       context: frontend/.
       dockerfile: Dockerfile
     container_name: front
     tty: true
     ports:
-      - 3000:3000
+      - 80:80
+    environment:
+      SERVER_IP: "${SERVER_IP}"
+      PORT: "${PORT}"
+      REACT_APP_KAKAO_CLIENT_ID: "${REACT_APP_KAKAO_CLIENT_ID}"
+      REACT_APP_KAKAO_REDIRECT_URI: "${REACT_APP_KAKAO_REDIRECT_URI}"
 
   backend:
-    image: kchaea/stock-backend:v1.0
+    image: kchaea/stock-backend:v2.0
     build:
       context: backend/.
       dockerfile: Dockerfile
     container_name: back
     tty: true
     ports:
-      - 8000:8000
+      - 8001:8001
+    environment:
+      SERVER_IP: "${SERVER_IP}"
+      DB_PASS: "${DB_PASS}"
+      REACT_APP_KAKAO_CLIENT_ID: "${REACT_APP_KAKAO_CLIENT_ID}"
