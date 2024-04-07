@@ -30,4 +30,4 @@ services:
     environment:
       SERVER_IP: "${SERVER_IP}"
       DB_PASS: "${DB_PASS}"
-      REACT_APP_KAKAO_CLIENT_ID: "${REACT_APP_KAKAO_CLIENT_ID}"
+      REST_API_KEY: "${REACT_APP_KAKAO_CLIENT_ID}"
