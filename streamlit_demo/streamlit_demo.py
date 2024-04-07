@@ -4,8 +4,41 @@ import yfinance as yf
 from models import cnn_model_inference
 import streamlit.components.v1 as components
 from PIL import Image
+import streamlit_analytics
+
+
+ga_tracking_code = """
+                        <!-- Google tag (gtag.js) -->
+                        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
+                        <script>
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-8QXBPGZNVR');
+                        </script>
+                        """
+
+
+components.html(ga_tracking_code, height=0)
+
+st.markdown(
+                """
+                    <!-- Global site tag (gtag.js) - Google Analytics -->
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXBPGZNVR"></script>
+                    <script>
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-**********');
+                    </script>
+                """, unsafe_allow_html=True)
+
 
 def app():
+
+    
+
     # st.set_page_config(layout="wide")
     # 첫 화면
     img = Image.open('첫화면테스트.png')
@@ -72,6 +105,7 @@ def app():
         "Apple": "AAPL",
         "Google": "GOOGL",
         "Nvidia": "NVDA",
+        "AMD": "AMD",
         'Samsung': '005930.KS',
         'Naver': '035420.KS',
         'Kakao': '035720.KS',
@@ -177,9 +211,9 @@ def app():
     """
      ### 🤖알려주가AI 주가 예측 서비스가 도움이 되셨나요? \n
      아래의 설문을 통해 의견을 남겨주세요! \n
-     단 1분의 시간만 투자해주신다면 \n
-     알려주가AI를 더 나은 서비스로 발전시키는데 큰 힘이 됩니다! \n
+     설문을 완료해주신 분들 중 \n
      추첨을 통해 스타벅스 기프티콘을 드립니다!
+     🤖알려주가AI를 더 나은 서비스로 발전시키는데 큰 힘이 됩니다! \n
     """
     )
     # 설문
@@ -197,7 +231,17 @@ def app():
 
 
     components.html("""
-                        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    
+                        <style>
+                            .container {
+                                background-color: #0f1116; /* Change the background color to black */
+                                /* Add other styles such as padding or border if needed */
+                            }
+                        </style>
+
+                        <div class="container" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+
+                        # <div style="display: flex; justify-content: center; align-items : center; gap: 20px;">
                             <!-- KakaoTalk Channel Add Button -->
                             <div id="kakao-talk-channel-add-button" data-channel-public-id="_kWpaG" data-size="large" data-support-multiple-densities="true"></div>
 
@@ -319,4 +363,6 @@ def app():
 )
 
 if __name__ == "__main__":
-    app()
+    with streamlit_analytics.track(save_to_json='tracked.json'):
+        app()
+    # app()
