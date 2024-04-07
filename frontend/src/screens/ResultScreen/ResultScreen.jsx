@@ -7,10 +7,11 @@ import "./style.css";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { AdvancedRealTimeChart, SymbolInfo} from 'react-ts-tradingview-widgets';
 import { Radar } from 'react-chartjs-2';
+import { Chart as ChartJS, defaults} from 'chart.js';
+import 'chart.js/auto';
 import GaugeChart from 'react-gauge-chart'
 import { useUser } from '../../components/UserContext';
 import { SyncLoader } from "react-spinners";
-
 // 차트 옵션
 const COLOR = {
   ORANGE_1: 'rgba(255, 108, 61, 1)',  
