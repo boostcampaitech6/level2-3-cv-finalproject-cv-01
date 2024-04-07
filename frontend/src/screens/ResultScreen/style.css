@@ -446,3 +446,7 @@
 .gauge-chart-text {
   font-family: "Bungee", sans-serif; /* 여기서 'Your Font Name'을 원하는 폰트 이름으로 변경하세요. */
 }
+
+.clickable-cursor {
+  cursor: pointer;
+}
