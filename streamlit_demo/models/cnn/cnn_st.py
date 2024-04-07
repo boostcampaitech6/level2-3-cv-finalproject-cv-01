@@ -129,6 +129,9 @@ def cnn_model_inference(company, ticker, period, interval):
                 elif company == 'Tesla':
                     img = Image.open('models/cnn/tesla.jpg')
                     # img = Image.open('models/cnn/tesla.jpg').resize((256,256))
+                elif company == 'AMD':
+                    img = Image.open('models/cnn/서학개미.png')
+                    # img = Image.open('models/cnn/tesla.jpg').resize((256,256))
                 elif company == 'Samsung':
                     img = Image.open('models/cnn/samsung.png')
                     # img = Image.open('models/cnn/samsung.png').resize((256,256))
