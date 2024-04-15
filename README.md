@@ -28,10 +28,6 @@
     <img src="https://github.com/Eddie-JUB/Portfolio/assets/71426994/2277c785-9b19-4505-b269-7d84abd1950b" width="180" style="display: inline-block;">
 </div>
 
-## Service Video
-
-
-
 ## System Architecture
 <div align="center">
 <img src="https://github.com/FinalCold/Programmers/assets/67350632/01a4a6a8-b0c0-4d4d-a874-56d54522fc6b" width="820">
