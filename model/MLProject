@@ -1,4 +1,0 @@
-name: model_training
-entry_points:
-  main:
-    command: "python train.py -c config.json"
