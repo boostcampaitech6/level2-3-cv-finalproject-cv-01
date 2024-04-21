@@ -135,9 +135,9 @@ dmypy.json
 cython_debug/
 
 # model
-model/saved
+saved
+stock_csv
+pickle_data
 
 # MLflow
 mlruns
-
-frontend/node_modules/
