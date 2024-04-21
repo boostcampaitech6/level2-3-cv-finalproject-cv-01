@@ -1,0 +1,34 @@
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video {
+  object-fit: cover; 
+  max-height: 118%;
+}
+
+.desktop-video {
+  display: block;
+}
+
+.mobile-image {
+  display: none;
+}
+
+/* 모바일 화면 크기에 따른 스타일 */
+@media screen and (max-width: 430px) {
+  .desktop-video {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+  }
+}

@@ -1,0 +1,46 @@
+:root {
+  --bg: rgba(73, 162, 245, 0.2);
+  --colors-b-h-white: rgba(255, 255, 255, 1);
+  --general-font-family: "Noto Sans KR", Helvetica;
+  --general-font-size: 14px;
+  --general-font-style: normal;
+  --general-font-weight: 400;
+  --general-letter-spacing: 0px;
+  --general-line-height: normal;
+  --point-color: rgba(125, 73, 245, 1);
+  --variable-collection-color: rgba(125, 73, 245, 1);
+  --variable-collection-kakao-bg: rgba(254, 229, 0, 1);
+  --variable-collection-kakao-bg-duplicate: rgba(254, 229, 0, 1);
+  --variable-collection-kakao-logo: rgba(0, 0, 0, 1);
+  --variable-collection-kakao-text: rgba(0, 0, 0, 0.85);
+  --variable-collection-login-demo: initial;
+  --variable-collection-login-height: 1080px;
+  --variable-collection-state-home: none;
+  --variable-collection-state-login: none;
+  --variable-collection-state-predic: none;
+  --variable-collection-state-profile: none;
+  --variable-collection-state-search: none;
+  --white: rgba(255, 255, 255, 1);
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-variable-collection-mode="mode-1">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-variable-collection-mode="mode-1"] {
+  --variable-collection-login-demo: initial;
+  --variable-collection-login-height: 1080px;
+}
+
+[data-variable-collection-mode="mode-2"] {
+  --variable-collection-login-demo: none;
+  --variable-collection-login-height: 450px;
+}

@@ -1,0 +1,10 @@
+.menu {
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+}
+
+.menu .icon-variants-instance {
+  background-color: #151B24 !important;
+  width: 97.5px !important;
+}

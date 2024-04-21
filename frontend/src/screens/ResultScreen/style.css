@@ -1,0 +1,452 @@
+.result-screen {   /* 전체 프레임 영역*/
+  align-items: center;
+  background-color: #151B24;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow: auto;
+}
+
+.result-screen .design-frame {    /* 디자인 영역 */
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0px 15px;
+  position: relative;
+  width: 420px;
+  min-height: 100vh;
+}
+
+.result-screen .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px 0px;
+  position: absolute;
+  top: 0;
+  left: 13px;
+  width: 390px; 
+  height: 86px;
+}
+
+.result-screen .text-wrapper-39 {    /* stock label text */
+  color: #fff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.result-screen .button-5 {    /* heart layout */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 17px;
+  height: 44px;
+  position: relative;
+}
+
+.result-screen .button-5:hover {    /* heart layout */
+  cursor: pointer;
+}
+
+
+.result-screen .frame-18 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 32px;
+}
+
+.result-screen .text-wrapper-37 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.39px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.result-screen .frame-19 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 94px;
+  position: absolute;
+  top: 32px;
+}
+
+.result-screen .frame-20 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.result-screen .text-wrapper-38 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.39px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.result-screen .frame-21 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 238px;
+  position: absolute;
+  top: 0;
+}
+
+.result-screen .frame-22 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  left: 238px;
+  position: absolute;
+  top: 32px;
+}
+
+
+
+.result-screen .stock-market-container {
+  top: 100px;
+  align-items: center;
+  position: absolute;
+  width: 390px; /* 부모의 폭에 맞추기 */
+  padding: 10px;
+}
+
+.result-screen .chart-container {
+  top: 384px;
+  align-items: center;
+  position: absolute;
+  height: 350px; /* 높이 설정 */
+  width: 390px; /* 부모의 폭에 맞추기 */
+  padding: 10px;
+}
+
+.result-screen .news-container {
+  top: 780px;
+  align-items: center;
+  position: absolute;
+  width: 390px;
+  height: 530px;
+  padding: 15px;
+  
+}
+
+
+.result-screen .text-container {
+  top: 1350px;
+  display: flex;
+  justify-content: center; 
+  height: auto; 
+  width: 380px;
+  position: relative;
+}
+
+.result-screen .text {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 30px;
+  word-wrap: break-word;
+}
+
+.result-screen .text-style {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.96px;
+  line-height: 50px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.result-screen .text-style-2 {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.96px;
+  line-height: 50px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+
+.result-screen .radar-chart-container {
+  top: 2250px;
+  display: flex;
+  justify-content: center; 
+  height: 420px; 
+  position: absolute; 
+  left: 15px;
+}
+
+.result-screen .radar-chart {
+  display: flex;
+  justify-content: center; 
+  height: 350px; 
+  position: relative; 
+}
+
+
+
+.result-screen .model-results-container {
+  top: 1980px; 
+  display: flex;
+  justify-content: center;
+  position: absolute;
+
+  
+}
+
+.result-screen .image-container {
+  top: 1500px;
+  display: flex;
+  justify-content: center; 
+  width: 390px;
+  height: 300px; 
+  position: absolute;
+  overflow: hidden; /* 컨테이너 바깥으로 나가는 이미지를 숨깁니다. */
+}
+
+.result-screen .image {
+  max-height: 100%; /* 이미지가 컨테이너 높이를 초과하지 않도록 합니다. */
+  max-width: 100%; /* 이미지가 컨테이너 너비를 초과하지 않도록 합니다. */
+  object-fit: contain; /* 이미지 비율을 유지하면서, 컨테이너 내에 전체 이미지를 보여줍니다. */
+  position: relative; /* 필요에 따라 조정. 이미지를 중앙에 배치하기 위해 상위 컨테이너를 기준으로 합니다. */
+}
+
+.result-screen .message-container {
+  top: 1850px;
+  width: 380px;
+  display: flex;
+  justify-content: center; 
+  height: auto; 
+  position: absolute;
+}
+
+
+.result-screen .message-container-2 {
+  top: 2600px;
+  width: 380px;
+  display: flex;
+  justify-content: center; 
+  height: 300; 
+  position: absolute;
+}
+
+
+.result-screen .button-AI-wrapper {
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  left: 50%; 
+  transform: translateX(-50%); 
+  justify-content: center; 
+  align-items: center; 
+  bottom: 88px;
+}
+
+.result-screen .button-AI-wrapper-2 {
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  left: 50%; 
+  transform: translateX(-50%); 
+  justify-content: center; 
+  align-items: center; 
+  bottom: 150px;
+}
+
+.result-screen .button-AI-wrapper {    /* heart layout */
+  cursor: pointer;
+}
+
+.result-screen .button-AI-instance {
+  flex: 0 0 auto !important;
+}
+
+.result-screen .menu-bar-4 {
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 50%; 
+  transform: translateX(-50%); 
+  justify-content: center; 
+  bottom: 0px;
+  width: 100%;
+  min-height: 44px;
+}
+
+.result-screen .menu-6 {
+  z-index: 1000;
+  box-shadow: 0px -2px 3.2px #2B344E !important;
+  flex: 0 0 auto !important;
+}
+
+
+
+.result-screen .stock-21 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  position: relative;
+}
+
+
+
+
+.result-screen .heart-4 {
+  background-image: url(../../../static/img/heart-off.svg) !important;
+  height: 28px !important;
+  position: relative !important;
+  width: 28px !important;
+}
+
+.result-screen .heart-5 {
+  background-image: url(../../../static/img/heart-on.svg) !important;
+  height: 28px !important;
+  position: relative !important;
+  width: 28px !important;
+}
+
+.result-screen .instance-1 {
+  height: 23px !important;
+  position: relative !important;
+  width: 17.45px !important;
+}
+
+.news-item {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 10px 0;
+}
+
+.news-content {
+  margin-left: 15px;
+}
+
+.news-link {
+  text-decoration: none;
+  color: black;
+}
+
+.news-title {
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  color: #D2D4DC;
+  margin-bottom: 8px;
+  text-align: justify;
+  line-height: 1.3;
+}
+
+.news-description {
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 14px;
+  color: #868892;
+  text-align: justify;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.result-screen .gauge-labels {
+  top: 2160px; 
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 360px;
+  justify-content: space-between; /* 레이블 사이에 공간을 균등하게 분배 */
+  width: 380px;
+
+}
+
+.result-screen .gauge-label {
+  font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
+  color: #3C3C3C; /* 글자 색상 */
+  font-size: 14px; /* 글자 크기 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+/* 왼쪽 정렬 레이블 */
+.result-screen .gauge-label.left, 
+.result-screen .gauge-label.left2 {
+  font-weight: bold;
+  color: #DF5341; /* 강한 매도 - 빨간색 계열 */
+}
+
+.result-screen .gauge-label.left2 {
+  font-weight: bold;
+  color: #782A2B; /* 매도 - 진한 빨간색/버건디 */
+}
+
+/* 가운데 정렬 레이블 */
+.result-screen .gauge-label.middle {
+  font-weight: bold;
+  color: #ccc; /* 중립 - 어두운 회색 */
+}
+
+/* 오른쪽 정렬 레이블 */
+.result-screen .gauge-label.right2, 
+.result-screen .gauge-label.right {
+  font-weight: bold;
+  color: #1F3A82; /* 매수 - 진한 파란색 */
+}
+
+.result-screen .gauge-label.right {
+  font-weight: bold; /* 강한 매수 시그널은 굵게 */
+  color: #3764F3; /* 강한 매수 - 밝은 파란색 */
+}
+
+/* .news-link:hover .news-title,
+.news-link:hover .news-description {
+  color: #ffffff; 
+} */
+
+.gauge-chart-text {
+  font-family: "Bungee", sans-serif; /* 여기서 'Your Font Name'을 원하는 폰트 이름으로 변경하세요. */
+}
+
+.clickable-cursor {
+  cursor: pointer;
+}
